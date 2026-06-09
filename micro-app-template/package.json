@@ -1,0 +1,20 @@
+{
+  "name": "micro-app-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "微前端开发调试模板：基座 + 微应用一体化",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n base,micro -c blue,green \"npm -w @template/base run dev\" \"npm -w @template/micro run dev\"",
+    "dev:base": "npm -w @template/base run dev",
+    "dev:micro": "npm -w @template/micro run dev",
+    "build": "npm -w @template/micro run build",
+    "build:all": "npm -w @template/base run build && npm -w @template/micro run build",
+    "preview:micro": "npm -w @template/micro run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

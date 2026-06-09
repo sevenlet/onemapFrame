@@ -1,0 +1,20 @@
+
+html,
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+}
+.playWnd {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 200px;
+        color: #fff;
+}
+.no-data-text {
+      font-size: var(--business-text-size-14);
+      color: var(--business-white);
+}

@@ -1,0 +1,1934 @@
+<template>
+  <div id="t-l-c-ssqyMonitoringInformation" class="t-l-c-ssqyMonitoringInformation" ><t-row v-if="state.monitorData.length === 0" id="t-row-aaa8.2f09edebc" class="ssqyMonitoringInformation-t-row-0-0"  :c-style="tRowx0x0ComputedData.cStyle" :gutter="tRowx0x0ComputedData.gutter" :justify="tRowx0x0ComputedData.justify" :align="tRowx0x0ComputedData.align"><t-text-common id="t-text-common-f4c0.73526289e" class="ssqyMonitoringInformation-t-text-common-0-0-0"  :label="tTextCommonx0x0x0ComputedData.label" :editable="tTextCommonx0x0x0ComputedData.editable" :c-style="tTextCommonx0x0x0ComputedData.cStyle"></t-text-common></t-row><t-component id="t-component-c019.99b6d840a" class="ssqyMonitoringInformation-t-component-0-1"  :name="tComponentx0x1ComputedData.name" :c-style="tComponentx0x1ComputedData.cStyle" :src="tComponentx0x1ComputedData.src" :component-name="tComponentx0x1ComputedData.componentName" :page-id="tComponentx0x1ComputedData.pageId" :page-code="tComponentx0x1ComputedData.pageCode"></t-component><t-text id="t-text-62b3.48b14905c" class="ssqyMonitoringInformation-t-text-0-2"  :label="tTextx0x2ComputedData.label" :editable="tTextx0x2ComputedData.editable" :c-style="tTextx0x2ComputedData.cStyle"></t-text><t-scrollable-cards v-if="state.monitorData.length !== 0" id="t-scrollable-cards-455f.ff3a2c962" class="ssqyMonitoringInformation-t-scrollable-cards-0-3"  :c-style="tScrollableCardsx0x3ComputedData.cStyle" :show-icon="tScrollableCardsx0x3ComputedData.showIcon" :auto-scroll="tScrollableCardsx0x3ComputedData.autoScroll" :tab="tScrollableCardsx0x3ComputedData.tab" :key-word="tScrollableCardsx0x3ComputedData.keyWord" :default-checked="tScrollableCardsx0x3ComputedData.defaultChecked" :speed="tScrollableCardsx0x3ComputedData.speed" :interval="tScrollableCardsx0x3ComputedData.interval" :card-space="tScrollableCardsx0x3ComputedData.cardSpace" :direction="tScrollableCardsx0x3ComputedData.direction" :data-alias="tScrollableCardsx0x3ComputedData.dataAlias" :data="replaceCssVariables(filterData(state.monitorData, componentPropBindingMap?.['t-scrollable-cards-455f.ff3a2c962']['data'].filters || []), global?.theme || global?.activeTheme || '默认主题')"></t-scrollable-cards><t-row id="t-row-3ae9.949fc1c3b" class="ssqyMonitoringInformation-t-row-0-4"  :c-style="tRowx0x4ComputedData.cStyle" :gutter="tRowx0x4ComputedData.gutter" :justify="tRowx0x4ComputedData.justify" :align="tRowx0x4ComputedData.align"><t-col id="t-col-5c12.21387b6cc" class="ssqyMonitoringInformation-t-col-0-4-0"  :span="tColx0x4x0ComputedData.span" :offset="tColx0x4x0ComputedData.offset" :push="tColx0x4x0ComputedData.push" :pull="tColx0x4x0ComputedData.pull" :c-style="tColx0x4x0ComputedData.cStyle"><t-select id="t-select-4582.d978e7d49" class="ssqyMonitoringInformation-t-select-0-4-0-0"  :active-value="replaceCssVariables(filterData(state.currentPointCode, componentPropBindingMap?.['t-select-4582.d978e7d49']['activeValue'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :options="replaceCssVariables(filterData(state.pointList, componentPropBindingMap?.['t-select-4582.d978e7d49']['options'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :alias="tSelectx0x4x0x0ComputedData.alias" :multiple="tSelectx0x4x0x0ComputedData.multiple" :placeholder="tSelectx0x4x0x0ComputedData.placeholder" :clearable="tSelectx0x4x0x0ComputedData.clearable" :disabled="tSelectx0x4x0x0ComputedData.disabled" :name="tSelectx0x4x0x0ComputedData.name" :autocomplete="tSelectx0x4x0x0ComputedData.autocomplete" :filterable="tSelectx0x4x0x0ComputedData.filterable" :no-match-text="tSelectx0x4x0x0ComputedData.no-match-text" :no-data-text="tSelectx0x4x0x0ComputedData.no-data-text" :c-style="tSelectx0x4x0x0ComputedData.cStyle" @change="onchange1767581288441_0_0"></t-select></t-col><t-col id="t-col-facf.ef4316657" class="ssqyMonitoringInformation-t-col-0-4-1"  :span="tColx0x4x1ComputedData.span" :offset="tColx0x4x1ComputedData.offset" :push="tColx0x4x1ComputedData.push" :pull="tColx0x4x1ComputedData.pull" :c-style="tColx0x4x1ComputedData.cStyle"><t-tabs-base id="t-tabs-base-bb7d.4596104d4" class="ssqyMonitoringInformation-t-tabs-base-0-4-1-0"  :data="replaceCssVariables(filterData(state.dateList, componentPropBindingMap?.['t-tabs-base-bb7d.4596104d4']['data'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :space="tTabsBasex0x4x1x0ComputedData.space" :selected-tab-val="replaceCssVariables(filterData(state.tabSelect, componentPropBindingMap?.['t-tabs-base-bb7d.4596104d4']['selectedTabVal'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :inner-shadow-color="tTabsBasex0x4x1x0ComputedData.innerShadowColor" :active-inner-shadow-color="tTabsBasex0x4x1x0ComputedData.activeInnerShadowColor" :alias="tTabsBasex0x4x1x0ComputedData.alias" :c-style="tTabsBasex0x4x1x0ComputedData.cStyle" @tab-click="ontabClick1767581775067_0_0"></t-tabs-base><t-date-picker v-if="state.tabSelect === 'day'" id="t-date-picker-d90a.f32e32cda" class="ssqyMonitoringInformation-t-date-picker-0-4-1-1"  :placeholder="tDatePickerx0x4x1x1ComputedData.placeholder" :start-placeholder="tDatePickerx0x4x1x1ComputedData.startPlaceholder" :end-placeholder="tDatePickerx0x4x1x1ComputedData.endPlaceholder" :type="tDatePickerx0x4x1x1ComputedData.type" :clearable="tDatePickerx0x4x1x1ComputedData.clearable" :range-separator="tDatePickerx0x4x1x1ComputedData.rangeSeparator" :default-date="replaceCssVariables(filterData(state.timeRange, componentPropBindingMap?.['t-date-picker-d90a.f32e32cda']['default-date'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :separator="tDatePickerx0x4x1x1ComputedData.separator" :readonly="tDatePickerx0x4x1x1ComputedData.readonly" :editable="tDatePickerx0x4x1x1ComputedData.editable" :c-style="tDatePickerx0x4x1x1ComputedData.cStyle" @date-change="ondateChange1767779170144_0_0"></t-date-picker><t-date-picker v-if="state.tabSelect === 'hour'" id="t-date-picker-fa39.f1f4b1652" class="ssqyMonitoringInformation-t-date-picker-0-4-1-2"  :placeholder="tDatePickerx0x4x1x2ComputedData.placeholder" :start-placeholder="tDatePickerx0x4x1x2ComputedData.startPlaceholder" :end-placeholder="tDatePickerx0x4x1x2ComputedData.endPlaceholder" :type="replaceCssVariables(filterData(state.dateType, componentPropBindingMap?.['t-date-picker-fa39.f1f4b1652']['type'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :clearable="tDatePickerx0x4x1x2ComputedData.clearable" :range-separator="tDatePickerx0x4x1x2ComputedData.rangeSeparator" :default-date="replaceCssVariables(filterData(state.timeRange, componentPropBindingMap?.['t-date-picker-fa39.f1f4b1652']['default-date'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :separator="tDatePickerx0x4x1x2ComputedData.separator" :readonly="tDatePickerx0x4x1x2ComputedData.readonly" :editable="tDatePickerx0x4x1x2ComputedData.editable" :c-style="tDatePickerx0x4x1x2ComputedData.cStyle" @date-change="ondateChange1767948867605_0_0"></t-date-picker></t-col></t-row><t-table v-if="state.showType === 'table'" id="t-table-a03c.38ecd6b87" class="ssqyMonitoringInformation-t-table-0-5"  :height="tTablex0x5ComputedData.height" :stripe="tTablex0x5ComputedData.stripe" :border="tTablex0x5ComputedData.border" :auto-scroll="tTablex0x5ComputedData.autoScroll" :speed="tTablex0x5ComputedData.speed" :columns="replaceCssVariables(filterData(state.tableColumns, componentPropBindingMap?.['t-table-a03c.38ecd6b87']['columns'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :data="replaceCssVariables(filterData(state.listData, componentPropBindingMap?.['t-table-a03c.38ecd6b87']['data'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :default-sort="tTablex0x5ComputedData.defaultSort" :c-style="tTablex0x5ComputedData.cStyle" @cell-click="oncellClick1767773230043_0_0"></t-table><t-row id="t-row-9111.1b5dc7cd5" class="ssqyMonitoringInformation-t-row-0-6"  :c-style="tRowx0x6ComputedData.cStyle" :gutter="tRowx0x6ComputedData.gutter" :justify="tRowx0x6ComputedData.justify" :align="tRowx0x6ComputedData.align"><t-col id="t-col-46bf.19e16152f" class="ssqyMonitoringInformation-t-col-0-6-0"  :span="tColx0x6x0ComputedData.span" :offset="tColx0x6x0ComputedData.offset" :push="tColx0x6x0ComputedData.push" :pull="tColx0x6x0ComputedData.pull" :c-style="tColx0x6x0ComputedData.cStyle"><t-text id="t-text-6063.4db73323" class="ssqyMonitoringInformation-t-text-0-6-0-0"  :label="tTextx0x6x0x0ComputedData.label" :editable="tTextx0x6x0x0ComputedData.editable" :c-style="tTextx0x6x0x0ComputedData.cStyle"></t-text></t-col><t-col id="t-col-9e29.dc84c516" class="ssqyMonitoringInformation-t-col-0-6-1"  :span="tColx0x6x1ComputedData.span" :offset="tColx0x6x1ComputedData.offset" :push="tColx0x6x1ComputedData.push" :pull="tColx0x6x1ComputedData.pull" :c-style="tColx0x6x1ComputedData.cStyle"><t-select id="t-select-3fcb.c00f74209" class="ssqyMonitoringInformation-t-select-0-6-1-0"  :active-value="replaceCssVariables(filterData(state.currentPolluteCode, componentPropBindingMap?.['t-select-3fcb.c00f74209']['activeValue'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :options="replaceCssVariables(filterData(state.polluteList, componentPropBindingMap?.['t-select-3fcb.c00f74209']['options'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :alias="tSelectx0x6x1x0ComputedData.alias" :multiple="tSelectx0x6x1x0ComputedData.multiple" :placeholder="tSelectx0x6x1x0ComputedData.placeholder" :clearable="tSelectx0x6x1x0ComputedData.clearable" :disabled="tSelectx0x6x1x0ComputedData.disabled" :name="tSelectx0x6x1x0ComputedData.name" :autocomplete="tSelectx0x6x1x0ComputedData.autocomplete" :filterable="tSelectx0x6x1x0ComputedData.filterable" :no-match-text="tSelectx0x6x1x0ComputedData.no-match-text" :no-data-text="tSelectx0x6x1x0ComputedData.no-data-text" :c-style="tSelectx0x6x1x0ComputedData.cStyle" @change="onchange1733973555614"></t-select><t-select id="t-select-6362.7b6ac7966" class="ssqyMonitoringInformation-t-select-0-6-1-1"  :active-value="replaceCssVariables(filterData(state.showType, componentPropBindingMap?.['t-select-6362.7b6ac7966']['activeValue'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :options="tSelectx0x6x1x1ComputedData.options" :alias="tSelectx0x6x1x1ComputedData.alias" :multiple="tSelectx0x6x1x1ComputedData.multiple" :placeholder="tSelectx0x6x1x1ComputedData.placeholder" :clearable="tSelectx0x6x1x1ComputedData.clearable" :disabled="tSelectx0x6x1x1ComputedData.disabled" :name="tSelectx0x6x1x1ComputedData.name" :autocomplete="tSelectx0x6x1x1ComputedData.autocomplete" :filterable="tSelectx0x6x1x1ComputedData.filterable" :no-match-text="tSelectx0x6x1x1ComputedData.no-match-text" :no-data-text="tSelectx0x6x1x1ComputedData.no-data-text" :c-style="tSelectx0x6x1x1ComputedData.cStyle" @change="onchange1767772766838_0_0"></t-select></t-col></t-row><t-row id="t-row-bed0.5ca83a488" class="ssqyMonitoringInformation-t-row-0-7"  :c-style="tRowx0x7ComputedData.cStyle" :gutter="tRowx0x7ComputedData.gutter" :justify="tRowx0x7ComputedData.justify" :align="tRowx0x7ComputedData.align"><t-text id="t-text-b39c.b6c03321c" class="ssqyMonitoringInformation-t-text-0-7-0"  :label="replaceCssVariables(filterData(state.lastTime, componentPropBindingMap?.['t-text-b39c.b6c03321c']['label'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :editable="tTextx0x7x0ComputedData.editable" :c-style="tTextx0x7x0ComputedData.cStyle"></t-text></t-row><t-chart-line-single v-if="state.showType === 'line'" id="t-chart-line-single-66ab.046d9e183" class="ssqyMonitoringInformation-t-chart-line-single-0-8"  :empty-img="replaceCssVariables(filterData(state.noDataImg, componentPropBindingMap?.['t-chart-line-single-66ab.046d9e183']['emptyImg'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :c-style="tChartLineSinglex0x8ComputedData.cStyle" :show-item-bg="tChartLineSinglex0x8ComputedData.showItemBg" :options="tChartLineSinglex0x8ComputedData.options" :data="replaceCssVariables(filterData(state.chartList, componentPropBindingMap?.['t-chart-line-single-66ab.046d9e183']['data'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :series-setting="tChartLineSinglex0x8ComputedData.seriesSetting" :line="componentState.tChartLineSinglex0x8.line"></t-chart-line-single><t-text v-if="state.isShowchartUnit === true" id="t-text-f8f0.bc97393c" class="ssqyMonitoringInformation-t-text-0-9"  :label="replaceCssVariables(filterData(state.chartUint, componentPropBindingMap?.['t-text-f8f0.bc97393c']['label'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :editable="tTextx0x9ComputedData.editable" :c-style="tTextx0x9ComputedData.cStyle"></t-text><t-row id="t-row-c025.0c716512b" class="ssqyMonitoringInformation-t-row-0-10"  :c-style="tRowx0x10ComputedData.cStyle" :gutter="tRowx0x10ComputedData.gutter" :justify="tRowx0x10ComputedData.justify" :align="tRowx0x10ComputedData.align"><t-col id="t-col-369f.48a6953e6" class="ssqyMonitoringInformation-t-col-0-10-0"  :span="tColx0x10x0ComputedData.span" :offset="tColx0x10x0ComputedData.offset" :push="tColx0x10x0ComputedData.push" :pull="tColx0x10x0ComputedData.pull" :c-style="tColx0x10x0ComputedData.cStyle"><t-text id="t-text-ae91.1376522" class="ssqyMonitoringInformation-t-text-0-10-0-0"  :label="tTextx0x10x0x0ComputedData.label" :editable="tTextx0x10x0x0ComputedData.editable" :c-style="tTextx0x10x0x0ComputedData.cStyle"></t-text></t-col><t-col id="t-col-51ea.f9142968" class="ssqyMonitoringInformation-t-col-0-10-1"  :span="tColx0x10x1ComputedData.span" :offset="tColx0x10x1ComputedData.offset" :push="tColx0x10x1ComputedData.push" :pull="tColx0x10x1ComputedData.pull" :c-style="tColx0x10x1ComputedData.cStyle"></t-col></t-row></div>
+</template>
+
+<script>
+import _ from 'lodash';
+import {
+  reactive, ref, computed, watch, watchEffect,
+  onMounted, onUnmounted, onBeforeMount, onBeforeUnmount,
+  provide, inject, toRefs, toRef, nextTick, isRef,
+  shallowRef, shallowReactive, triggerRef,
+  h, createVNode, createElementBlock, openBlock,
+  withCtx, withDirectives, withModifiers,
+  resolveComponent, defineAsyncComponent,
+  markRaw, toRaw, toDisplayString, createElementVNode,
+} from 'vue';
+import { useRoute } from 'vue-router';
+import http from '@/http.js';
+import { ComponentLoader, watchComponentVisible, generateCacheKey, requestApi, ResourceLoader, replaceCssVariables, getUrlParam, getQueryParam, guid, runAnimation, setPageScale, mountDynamicComponent, loadInitialApis, fetchApiData, getDataValue, applyFilter, filterData, convertCharacter } from '@/utils.js';
+import { themes } from '@/theme.js';
+import * as echarts from 'echarts';
+import { TChartLineSingle, TCol, TComponent, TDatePicker, TRow, TScrollableCards, TSelect, TTable, TTabsBase, TText, TTextCommon } from '@ths/design';
+
+export default {
+  components: {
+    TChartLineSingle,
+    TCol,
+    TComponent,
+    TDatePicker,
+    TRow,
+    TScrollableCards,
+    TSelect,
+    TTable,
+    TTabsBase,
+    TText,
+    TTextCommon,
+  },
+  setup() {
+const componentPropBindingMap = {"body":{"attributeName":"tBodyx0x0"},"t-row-aaa8.2f09edebc":{"attributeName":"tRowx0x0","cStyle":{"filters":[]},"gutter":{"filters":[]},"justify":{"filters":[]},"align":{"filters":[]}},"t-text-common-f4c0.73526289e":{"attributeName":"tTextCommonx0x0x0","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-component-c019.99b6d840a":{"attributeName":"tComponentx0x1","name":{"filters":[]},"cStyle":{"filters":[]},"src":{"filters":[]},"componentName":{"filters":[]},"pageId":{"filters":[]},"pageCode":{"filters":[]}},"t-text-62b3.48b14905c":{"attributeName":"tTextx0x2","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-scrollable-cards-455f.ff3a2c962":{"attributeName":"tScrollableCardsx0x3","cStyle":{"filters":[]},"showIcon":{"filters":[]},"autoScroll":{"filters":[]},"tab":{"filters":[]},"keyWord":{"filters":[]},"defaultChecked":{"filters":[]},"speed":{"filters":[]},"interval":{"filters":[]},"cardSpace":{"filters":[]},"direction":{"filters":[]},"dataAlias":{"filters":[]},"data":{"filters":[]}},"t-row-3ae9.949fc1c3b":{"attributeName":"tRowx0x4","cStyle":{"filters":[]},"gutter":{"filters":[]},"justify":{"filters":[]},"align":{"filters":[]}},"t-col-5c12.21387b6cc":{"attributeName":"tColx0x4x0","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-select-4582.d978e7d49":{"attributeName":"tSelectx0x4x0x0","activeValue":{"filters":[]},"options":{"filters":[]},"alias":{"filters":[]},"multiple":{"filters":[]},"placeholder":{"filters":[]},"clearable":{"filters":[]},"disabled":{"filters":[]},"name":{"filters":[]},"autocomplete":{"filters":[]},"filterable":{"filters":[]},"no-match-text":{"filters":[]},"no-data-text":{"filters":[]},"cStyle":{"filters":[]}},"t-col-facf.ef4316657":{"attributeName":"tColx0x4x1","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-tabs-base-bb7d.4596104d4":{"attributeName":"tTabsBasex0x4x1x0","data":{"filters":[]},"space":{"filters":[]},"selectedTabVal":{"filters":[]},"innerShadowColor":{"filters":[]},"activeInnerShadowColor":{"filters":[]},"alias":{"filters":[]},"cStyle":{"filters":[]}},"t-date-picker-d90a.f32e32cda":{"attributeName":"tDatePickerx0x4x1x1","placeholder":{"filters":[]},"startPlaceholder":{"filters":[]},"endPlaceholder":{"filters":[]},"type":{"filters":[]},"clearable":{"filters":[]},"rangeSeparator":{"filters":[]},"default-date":{"filters":[]},"separator":{"filters":[]},"readonly":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-date-picker-fa39.f1f4b1652":{"attributeName":"tDatePickerx0x4x1x2","placeholder":{"filters":[]},"startPlaceholder":{"filters":[]},"endPlaceholder":{"filters":[]},"type":{"filters":[]},"clearable":{"filters":[]},"rangeSeparator":{"filters":[]},"default-date":{"filters":[]},"separator":{"filters":[]},"readonly":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-table-a03c.38ecd6b87":{"attributeName":"tTablex0x5","height":{"filters":[]},"stripe":{"filters":[]},"border":{"filters":[]},"autoScroll":{"filters":[]},"speed":{"filters":[]},"columns":{"filters":[]},"data":{"filters":[]},"defaultSort":{"filters":[]},"cStyle":{"filters":[]}},"t-row-9111.1b5dc7cd5":{"attributeName":"tRowx0x6","cStyle":{"filters":[]},"gutter":{"filters":[]},"justify":{"filters":[]},"align":{"filters":[]}},"t-col-46bf.19e16152f":{"attributeName":"tColx0x6x0","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-text-6063.4db73323":{"attributeName":"tTextx0x6x0x0","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-col-9e29.dc84c516":{"attributeName":"tColx0x6x1","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-select-3fcb.c00f74209":{"attributeName":"tSelectx0x6x1x0","activeValue":{"filters":[]},"options":{"filters":[]},"alias":{"filters":[]},"multiple":{"filters":[]},"placeholder":{"filters":[]},"clearable":{"filters":[]},"disabled":{"filters":[]},"name":{"filters":[]},"autocomplete":{"filters":[]},"filterable":{"filters":[]},"no-match-text":{"filters":[]},"no-data-text":{"filters":[]},"cStyle":{"filters":[]}},"t-select-6362.7b6ac7966":{"attributeName":"tSelectx0x6x1x1","activeValue":{"filters":[]},"options":{"filters":[]},"alias":{"filters":[]},"multiple":{"filters":[]},"placeholder":{"filters":[]},"clearable":{"filters":[]},"disabled":{"filters":[]},"name":{"filters":[]},"autocomplete":{"filters":[]},"filterable":{"filters":[]},"no-match-text":{"filters":[]},"no-data-text":{"filters":[]},"cStyle":{"filters":[]}},"t-row-bed0.5ca83a488":{"attributeName":"tRowx0x7","cStyle":{"filters":[]},"gutter":{"filters":[]},"justify":{"filters":[]},"align":{"filters":[]}},"t-text-b39c.b6c03321c":{"attributeName":"tTextx0x7x0","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-chart-line-single-66ab.046d9e183":{"attributeName":"tChartLineSinglex0x8","emptyImg":{"filters":[]},"cStyle":{"filters":[]},"showItemBg":{"filters":[]},"options":{"filters":[]},"data":{"filters":[]},"seriesSetting":{"filters":[]}},"t-text-f8f0.bc97393c":{"attributeName":"tTextx0x9","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-row-c025.0c716512b":{"attributeName":"tRowx0x10","cStyle":{"filters":[]},"gutter":{"filters":[]},"justify":{"filters":[]},"align":{"filters":[]}},"t-col-369f.48a6953e6":{"attributeName":"tColx0x10x0","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-text-ae91.1376522":{"attributeName":"tTextx0x10x0x0","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-col-51ea.f9142968":{"attributeName":"tColx0x10x1","span":{"filters":[]},"offset":{"filters":[]},"push":{"filters":[]},"pull":{"filters":[]},"cStyle":{"filters":[]}},"t-circle-185e.47bd1a289":{"attributeName":"tCirclex0x10x1x0"},"t-text-9ccd.9c718492f":{"attributeName":"tTextx0x10x1x1"}};
+// 页面内注入全局变量和事件
+const rootData = inject('root');
+const global = reactive({
+...toRefs(rootData)
+});
+// 路由
+const route = useRoute();
+// 创建 DOM 引用
+
+// 当前页面使用的变量
+const state = reactive({
+   screenSize: "",
+   treemapLabelFontSize: 14,
+   chartUint: "浓度（mg/L）",
+   lastTime: "",
+   currentPolluteCode: "",
+   isShowchartUnit: true,
+   chartList: [],
+   standEnterId: "",
+   tableColumns: [{"label":"序号","key":"index","align":"center","operationList":[],"stateList":[],"width":"66PX","showOverflowTooltip":true,"style":{"fontStyle":{}}},{"label":"监测时间","key":"moniterTime","stateKey":"waterQualityTargetValue","align":"center","type":"default","operationList":[],"style":{"fontStyle":{"width":"40PX","height":"PX"}}},{"label":"COD（mg/L）","key":"pollute","stateKey":"","align":"center","type":"default","operationList":[],"width":"355px","style":{"fontStyle":{"width":"PX","height":"PX","borderRadius":"PX","background":""}}}],
+   showType: "line",
+   currentPointCode: "",
+   dateType: "datetimerangehour",
+   pointList: [],
+   polluteList: [{"label":"总磷","value":"W21011","disabled":false},{"label":"氨氮","value":"W21003","disabled":false},{"label":"化学需氧量","value":"W01018","disabled":false},{"label":"pH值","value":"W01001","disabled":false},{"label":"流量","value":"W00000","disabled":false}],
+   options: "",
+   myChart: "",
+   isBz: false,
+   seriesData: [],
+   standardSeriesData: [],
+   noDataImg: "assets/images/2024-12-26/f1200f84c82a4a1698a450dfa89ceedb.svg",
+   dataSourcetype: "",
+   variationTrendData: {"title":"近12个月水质变化趋势","activeTarget":"","chartOptions":{"series":[]},"chartShow":true},
+   monitorData: [],
+   baseInfoData: [{"title":"行政区","num":"-"},{"title":"所在水体","num":"-"},{"title":"控制级别","num":"-"},{"title":"断面属性","num":"-"},{"title":"水质目标","num":"-","color":""},{"title":"超标污染物","num":"-","color":"#FF2B2B"}],
+   assessType: "",
+   pointCode: "",
+   monitorTime: "",
+   timeRange: [],
+   endTime: "",
+   startTime: "",
+   tabsActiveValue: "monthly",
+   tabSelect: "hour",
+   dateList: [{"label":"小时","value":"hour"},{"label":"日","value":"day"}],
+   listData: [],
+});
+// 选中的图表主题
+const activeChartTheme = computed(() => {
+const activeTheme = _.cloneDeep(themes.find((item) => item.name === global.activeTheme));
+return activeTheme.chartVariables;
+});
+// 选中的图表主题的options
+const activeChartThemeOptions = computed(() => {
+if (activeChartTheme.value) {
+// 公用的主题配置
+const themeConfig = {
+backgroundColor: activeChartTheme.value.backgroundColor, // 背景色
+color: activeChartTheme.value.color, // 系列颜色
+title: activeChartTheme.value.title, // 标题
+legend: activeChartTheme.value.legend, // 图例
+tooltip: activeChartTheme.value.tooltip, // 提示框
+xAxis: activeChartTheme.value.categoryAxis, // x轴
+yAxis: activeChartTheme.value.valueAxis, // y轴
+};
+return themeConfig;
+} else {
+return {};
+}
+});
+// 当前页面中组件的属性
+const componentState = reactive({
+tRowx0x0: {
+defaultStyle: {
+            default: {"width":"100%","height":"64px","display":"flex","justifyContent":"center","alignItems":"center","position":"unset","left":"0px","top":"131px"},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"64px","display":"flex","justifyContent":"center","alignItems":"center","position":"unset","left":"0px","top":"131px"}}},
+gutter:0,
+justify:"space-between",
+align:"middle", 
+ },
+},
+tTextCommonx0x0x0: {
+defaultStyle: {
+            default: {"width":"96px","height":"20px","color":"var(--business-white)","fontFamily":"微软雅黑","fontWeight":"400","fontSize":"var(--business-text-size-14)","lineHeight":"20px","letterSpacing":"0px","textAlign":"center","whiteSpace":"wrap","textOverflow":"unset","overflow":"unset","display":"inline-block","filter":"unset","border":"unset","position":"unset","left":"467px","top":"308px","background":"unset","backgroundClip":"unset"},
+            
+            },
+ default: { 
+ 
+label:"暂无数据",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"96px","height":"20px","color":"var(--business-white)","fontFamily":"微软雅黑","fontWeight":"400","fontSize":"var(--business-text-size-14)","lineHeight":"20px","letterSpacing":"0px","textAlign":"center","whiteSpace":"wrap","textOverflow":"unset","overflow":"unset","display":"inline-block","filter":"unset","border":"unset","position":"unset","left":"467px","top":"308px","background":"unset","backgroundClip":"unset"}},"emptyText":{"default":{"fontSize":"var(--business-text-size-14)","color":"var(--business-white)"}}}, 
+ },
+},
+tComponentx0x1: {
+defaultStyle: {
+            default: {"width":"100%","height":"28px","margin":"0 auto","backgroundColor":"rgba(255, 255, 255, 0)","position":"unset","left":"0px","top":"0px","animationName":""},
+            
+            },
+ default: { 
+ 
+name:"dialogTitleFirstBgWidthFitComponent",
+cStyle:{"wrapper":{"default":{"width":"100%","height":"28px","margin":"0 auto","backgroundColor":"rgba(255, 255, 255, 0)","position":"unset","left":"0px","top":"0px","animationName":""}}},
+src:"/lego-generated-apps/lego_file/app/src/18547eef59454bff840ff42ee0d03b78_6/index.html#/dialogTitleFirstBgWidthFit",
+componentName:"dialogTitleFirstBgWidthFitComponent",
+pageId:"6a42ef046fd548f4b728657d19422187",
+pageCode:"dialogTitleFirstBgWidthFit", 
+ },
+},
+tTextx0x2: {
+defaultStyle: {
+            default: {"width":"140px","height":"20px","color":"rgba(255, 255, 255, 0.9)","position":"unset","left":"29px","top":"4px","fontFamily":"方正综艺","fontSize":"var(--business-text-size-14)","animationName":"","lineHeight":"20px"},
+            
+            },
+ default: { 
+ 
+label:"水质监测信息",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"140px","height":"20px","color":"rgba(255, 255, 255, 0.9)","position":"unset","left":"29px","top":"4px","fontFamily":"方正综艺","fontSize":"var(--business-text-size-14)","animationName":"","lineHeight":"20px"}}}, 
+ },
+},
+tScrollableCardsx0x3: {
+defaultStyle: {
+            default: {"width":"100%","height":"64px","borderRadius":"8px","padding":"11px 9px 8px","background":"linear-gradient(180deg, #219DFF 0%, rgba(0,213,255,0.00) 190%)","top":"131px","left":"0px","position":"unset","paddingLeft":"0px","paddingTop":"0px","paddingRight":"0px","paddingBottom":"0px","backgroundColor":"","backgroundImage":"linear-gradient(0deg,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0) 99.54954954954955%)","-webkit-mask-image":"","backgroundRepeat":"repeat","-webkit-mask-repeat":"","backgroundSize":"auto","-webkit-mask-size":"","backgroundPosition":"0% 0%","-webkit-mask-position":"","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","fontSize":"var(--business-text-size-18)","animationName":""},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"64px","borderRadius":"8px","padding":"11px 9px 8px","background":"linear-gradient(180deg, #219DFF 0%, rgba(0,213,255,0.00) 190%)","top":"131px","left":"0px","position":"unset","paddingLeft":"0px","paddingTop":"0px","paddingRight":"0px","paddingBottom":"0px","backgroundColor":"","backgroundImage":"linear-gradient(0deg,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0) 99.54954954954955%)","-webkit-mask-image":"","backgroundRepeat":"repeat","-webkit-mask-repeat":"","backgroundSize":"auto","-webkit-mask-size":"","backgroundPosition":"0% 0%","-webkit-mask-position":"","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","fontSize":"var(--business-text-size-18)","animationName":""}},"itemWrapper":{"default":{"width":"20%","height":"64px","marginLeft":"0px","marginRight":"8px !important","cursor":"auto","backgroundColor":"var(--business-scroll-card-bg)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","display":"flex","flexDirection":"column-reverse","justify-content":"center"},"active":{}},"container":{"default":{"width":"824%","height":"auto","paddingLeft":"0px","paddingTop":"0px","backgroundImage":"","-webkit-mask-image":"","backgroundRepeat":"","-webkit-mask-repeat":"","backgroundSize":"","-webkit-mask-size":"","backgroundPosition":"","-webkit-mask-position":"","marginLeft":"12px","paddingRight":"0px","marginRight":"12px"}},"cardLabel":{"default":{"fontSize":"var(--text-size-14)","lineHeight":"24px","color":"var(--business-text-avianize)","fontFamily":"微软雅黑","height":"24px","display":"flex","justify-content":"center"}},"cardLabelIcon":{"default":{"width":"18px","height":"18px","marginLeft":"4px"}},"cardValue":{"default":{"fontSize":"var(--text-size-14)","fontWeight":"500","fontFamily":"DIN-bold","color":"var(--business-white)","lineHeight":"24px","height":"24px","display":"flex","justify-content":"center"}},"cardValueUnit":{"default":{"fontSize":"var(--business-text-size-14)","fontWeight":"normal","fontFamily":"微软雅黑","marginLeft":"4px","color":"var(--business-text-avianize)"}},"leftArrowButton":{"default":{"color":"rgba(255, 255, 255, 1) !important","backgroundColor":"var(--business-scroll-card-bg)","width":"24px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid rgba(23,62,228,0)","borderTop":"1px solid rgba(23,62,228,0)","borderRight":"1px solid rgba(23,62,228,0)","borderBottom":"1px solid rgba(23,62,228,0)"},"hover":{"color":"var(--business-theme) !important","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-btn-default)","borderTop":"1px solid var(--business-btn-default)","borderRight":"1px solid var(--business-btn-default)","borderBottom":"1px solid var(--business-btn-default)"}},"leftArrow":{"default":{"color":"inherit !important"}},"rightArrow":{"default":{"color":"inherit !important"}},"rightArrowButton":{"default":{"color":"rgba(255, 255, 255, 1) !important","backgroundColor":"var(--business-scroll-card-bg)","width":"24px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid rgba(23,62,228,0)","borderTop":"1px solid rgba(23,62,228,0)","borderRight":"1px solid rgba(23,62,228,0)","borderBottom":"1px solid rgba(23,62,228,0)"},"hover":{"color":"var(--business-theme) !important","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-btn-default)","borderTop":"1px solid var(--business-btn-default)","borderRight":"1px solid var(--business-btn-default)","borderBottom":"1px solid var(--business-btn-default)"}}},
+showIcon:true,
+autoScroll:false,
+tab:false,
+keyWord:"",
+defaultChecked:"",
+speed:3,
+interval:0.5,
+cardSpace:0,
+direction:"left",
+dataAlias:{"value":"value","label":"label","checked":"checked"},
+data:[], 
+ },
+},
+tRowx0x4: {
+defaultStyle: {
+            default: {"width":"100%","height":"32px","display":"flex","justifyContent":"center","alignItems":"center","position":"unset","left":"-1px","top":"43px"},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"32px","display":"flex","justifyContent":"center","alignItems":"center","position":"unset","left":"-1px","top":"43px"}}},
+gutter:0,
+justify:"space-between",
+align:"middle", 
+ },
+},
+tColx0x4x0: {
+defaultStyle: {
+            default: {"width":"100px","height":"32px","display":"flex","justifyContent":"left","alignItems":"center"},
+            
+            },
+ default: { 
+ 
+span:8,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"32px","display":"flex","justifyContent":"left","alignItems":"center"}}}, 
+ },
+},
+tSelectx0x4x0x0: {
+defaultStyle: {
+            default: {"width":"260px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)","marginLeft":"1px"},
+            
+            },
+ default: { 
+ 
+activeValue:"",
+options:[],
+alias:{"label":"label","value":"value","disabled":"disabled"},
+multiple:false,
+placeholder:"暂无数据",
+clearable:false,
+disabled:false,
+name:"",
+autocomplete:"off",
+filterable:false,
+'no-match-text':"无匹配数据",
+'no-data-text':"无数据",
+cStyle:{"wrapper":{"default":{"width":"260px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)","marginLeft":"1px"},"focus":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"dropdownArrow":{"default":{"display":"none"}},"arrow":{"default":{"color":"var(--business-unit-icon)"}},"placeholder":{"default":{"color":"var(--business-text-avianize)"}},"dropdownWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"dropdownItem":{"active":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-theme)"},"hover":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)"},"default":{"fontSize":"var(--business-text-size-14)","color":"var(--business-white)"}}}, 
+ },
+},
+tColx0x4x1: {
+defaultStyle: {
+            default: {"width":"100px","height":"32px","display":"flex","justifyContent":"right","alignItems":"center"},
+            
+            },
+ default: { 
+ 
+span:16,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"32px","display":"flex","justifyContent":"right","alignItems":"center"}},"emptyText":{"default":{"position":"absolute"}}}, 
+ },
+},
+tTabsBasex0x4x1x0: {
+defaultStyle: {
+            default: {"width":"180px","height":"32px","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","backgroundColor":"var(--business-show-bg30)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","animationName":"","position":"unset","left":"234px","top":"-142px","marginRight":"15px"},
+            
+            },
+ default: { 
+ 
+data:[{"label":"小时","value":"hour"},{"label":"日","value":"day"}],
+space:1,
+selectedTabVal:"hour",
+innerShadowColor:"transparent",
+activeInnerShadowColor:"transparent",
+alias:{"label":"label","value":"value","disabled":false},
+cStyle:{"wrapper":{"default":{"width":"180px","height":"32px","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","backgroundColor":"var(--business-show-bg30)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","animationName":"","position":"unset","left":"234px","top":"-142px","marginRight":"15px"}},"itemWrapper":{"default":{"width":"80px","height":"32px","fontSize":"var(--business-text-size-14)","lineHeight":"32px","backgroundColor":"rgba(112, 41, 221, 0)","borderLeft":"0px none rgb(23,62,228)","borderTop":"0px none rgb(23,62,228)","borderRight":"0px none rgb(23,62,228)","borderBottom":"0px none rgb(23,62,228)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","marginTop":"-1px","marginRight":"0px !important"},"active":{"backgroundImage":"","backgroundRepeat":"","backgroundSize":"","backgroundPosition":"","fontSize":"var(--business-text-size-14)","lineHeight":"32px","fontWeight":"400","-webkit-mask-image":"","-webkit-mask-size":"","-webkit-mask-position":"","-webkit-mask-repeat":"","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","box-shadow":"","height":"32px","background":"var(--business-tab-content-active-bg)"},"hover":{"backgroundImage":"","backgroundRepeat":"","backgroundSize":"","backgroundPosition":"","fontSize":"var(--business-text-size-14)","lineHeight":"32px","fontWeight":"400","-webkit-mask-image":"","-webkit-mask-size":"","-webkit-mask-position":"","-webkit-mask-repeat":"","background":"var(--business-tab-content-active-bg)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","box-shadow":"","height":"32px"},"disabled":{"lineHeight":"32px"}},"label":{"default":{"fontSize":"var(--text-size-14)","color":"var(--business-text-avianize)","fontFamily":"微软雅黑","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px"},"active":{"fontWeight":"400","backgroundImage":"","-webkit-mask-image":"","backgroundRepeat":"","-webkit-mask-repeat":"","backgroundSize":"","-webkit-mask-size":"","backgroundPosition":"","-webkit-mask-position":"","background":"var(--business-tab-content-active-text)","-webkit-background-clip":"text","-webkit-text-fill-color":"transparent","fontSize":"var(--text-size-14)"},"hover":{"fontSize":"var(--text-size-14)"}}}, 
+ },
+},
+tDatePickerx0x4x1x1: {
+defaultStyle: {
+            default: {"width":"380px","height":"32px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},
+            
+            },
+ default: { 
+ 
+placeholder:"请选择日期",
+startPlaceholder:"开始日期",
+endPlaceholder:"结束日期",
+type:"daterange",
+clearable:true,
+rangeSeparator:"-",
+'default-date':[],
+separator:"-",
+readonly:false,
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"380px","height":"32px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"inputWrapper":{"default":{"backgroundColor":"var(--business-show-bg30)","borderLeft":"1px none var(--business-show-bg50)","borderTop":"1px none var(--business-show-bg50)","borderRight":"1px none var(--business-show-bg50)","borderBottom":"1px none var(--business-show-bg50)","color":"var(--business-white)","fontSize":"var(--business-text-size-14)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","height":"100%"}},"inputDateIcons":{"default":{"color":"var(--business-text-avianize)"}},"dateWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"prevAndNextMonthDate":{"default":{"color":"var(--skin-font-color-40)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","fontSize":"var(--business-text-size-12)"}},"todayWrapper":{"default":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px","fontSize":"var(--business-text-size-12)"}},"currentDateWrapper":{"default":{"color":"var(--skin-font-color-80)","fontSize":"var(--business-text-size-12)"},"hover":{"color":"var(--business-theme)"},"active":{"color":"rgba(255, 255, 255, 1)","backgroundColor":"var(--business-btn-default)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"selCurrentDateWrapper":{"default":{"backgroundColor":"var(--business-btn-default)","color":"rgba(255, 255, 255, 1)"}},"operatorArrow":{"default":{"color":"var(--business-white)"},"hover":{"color":"var(--business-theme)"}},"dateHeaderWrapper":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-16) !important"},"hover":{"color":"var(--business-theme)"}},"weekWrapper":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-12)"}},"textBtnWrapper":{"default":{"borderLeft":"1px none rgba(253,9,1,0)","borderTop":"1px none rgba(253,9,1,0)","borderRight":"1px none rgba(253,9,1,0)","borderBottom":"1px none rgba(253,9,1,0)","color":"var(--business-btn-default)"},"hover":{"color":"var(--business-theme)"}},"okWrapper":{"default":{"color":"var(--business-white)","borderLeft":"1px solid var(--business-white)","borderTop":"1px solid var(--business-white)","borderRight":"1px solid var(--business-white)","borderBottom":"1px solid var(--business-white)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"timePanelWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"rgba(239, 0, 0, 1)"}},"timePanelNumWrapper":{"default":{"color":"var(--business-white)"},"hover":{"color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"currentWeekWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"rgba(255, 255, 255, 1)"}},"rangeInputWrapper":{"default":{"backgroundColor":"rgba(255, 255, 255, 0)","fontSize":"var(--text-size-14)","height":"100%"}},"rangeTimeWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"}}}, 
+ },
+},
+tDatePickerx0x4x1x2: {
+defaultStyle: {
+            default: {"width":"380px","height":"32px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},
+            
+            },
+ default: { 
+ 
+placeholder:"请选择日期",
+startPlaceholder:"开始日期",
+endPlaceholder:"结束日期",
+type:"datetimerangehour",
+clearable:true,
+rangeSeparator:"-",
+'default-date':[],
+separator:"-",
+readonly:false,
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"380px","height":"32px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"inputWrapper":{"default":{"backgroundColor":"var(--business-show-bg30)","borderLeft":"1px none var(--business-show-bg50)","borderTop":"1px none var(--business-show-bg50)","borderRight":"1px none var(--business-show-bg50)","borderBottom":"1px none var(--business-show-bg50)","color":"var(--business-white)","fontSize":"var(--business-text-size-14)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","height":"100%","paddingLeft":"10px","paddingRight":"10px"}},"inputDateIcons":{"default":{"color":"var(--business-text-avianize)","display":"none"}},"dateWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"prevAndNextMonthDate":{"default":{"color":"var(--skin-font-color-40)","fontSize":"var(--business-text-size-12)"}},"todayWrapper":{"default":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px","fontSize":"var(--business-text-size-12)"}},"currentDateWrapper":{"default":{"color":"var(--skin-font-color-80)","fontSize":"var(--business-text-size-12)"},"hover":{"color":"var(--business-theme)"},"active":{"color":"var(--business-white)","backgroundColor":"var(--business-btn-default)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"selCurrentDateWrapper":{"default":{"backgroundColor":"var(--business-btn-default)","color":"var(--business-white)","fontSize":"var(--business-text-size-12)"}},"operatorArrow":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-12)"},"hover":{"color":"var(--business-theme)"}},"dateHeaderWrapper":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-16) !important","lineHeight":"var(--business-text-size-16) !important"},"hover":{"color":"var(--business-theme)"}},"weekWrapper":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-12)"}},"textBtnWrapper":{"default":{"borderLeft":"1px none rgba(253,9,1,0)","borderTop":"1px none rgba(253,9,1,0)","borderRight":"1px none rgba(253,9,1,0)","borderBottom":"1px none rgba(253,9,1,0)","color":"var(--business-white) !important","fontSize":"var(--business-text-size-12)","lineHeight":"var(--business-text-size-12)"},"hover":{"color":"var(--business-theme)"}},"okWrapper":{"default":{"color":"var(--business-white)","borderLeft":"1px solid var(--business-white)","borderTop":"1px solid var(--business-white)","borderRight":"1px solid var(--business-white)","borderBottom":"1px solid var(--business-white)","fontSize":"var(--business-text-size-12)","lineHeight":"var(--business-text-size-12)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"timePanelWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"rgba(239, 0, 0, 1)"}},"timePanelNumWrapper":{"default":{"color":"var(--business-white)","fontSize":"var(--business-text-size-12)"},"hover":{"color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"currentWeekWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-white)"}},"rangeInputWrapper":{"default":{"backgroundColor":"rgba(255, 255, 255, 0)","fontSize":"var(--business-text-size-14)","height":"100%"}},"rangeTimeWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"}},"dateHeaderMonthBtnWrapper":{"default":{"fontSize":"var(--business-text-size-12)"}}}, 
+ },
+},
+tTablex0x5: {
+defaultStyle: {
+            default: {"width":"100%","height":"calc(100% - 270px)","paddingTop":"0px","borderBottom":"0px solid ","animationName":"","--el-text-color-secondary":"var(--business-show-bg60)","marginBottom":"12px"},
+            
+            },
+ default: { 
+ 
+height:"95%",
+stripe:true,
+border:false,
+autoScroll:false,
+speed:6,
+columns:[{"label":"序号","key":"index","align":"center","operationList":[],"stateList":[],"width":"66PX","showOverflowTooltip":true,"style":{"fontStyle":{}}},{"label":"监测时间","key":"moniterTime","stateKey":"waterQualityTargetValue","align":"center","type":"default","operationList":[],"style":{"fontStyle":{"width":"40PX","height":"PX"}}},{"label":"COD（mg/L）","key":"pollute","stateKey":"","align":"center","type":"default","operationList":[],"width":"355px","style":{"fontStyle":{"width":"PX","height":"PX","borderRadius":"PX","background":""}}}],
+data:[],
+defaultSort:{"prop":"number","order":"ascending"},
+cStyle:{"wrapper":{"default":{"width":"100%","height":"calc(100% - 270px)","paddingTop":"0px","borderBottom":"0px solid ","animationName":"","--el-text-color-secondary":"var(--business-show-bg60)","marginBottom":"12px"}},"headerCell":{"default":{"borderBottom":"1px solid rgba(26,27,31,0)","borderLeft":"0px solid rgba(164,54,144,0)","borderRight":"0px solid rgba(164,54,144,0)","borderTop":"0px solid rgba(164,54,144,0)","color":"var(--business-white)","fontSize":"var(--business-text-size-14)","fontWeight":"400","marginRight":"0px","backgroundColor":"var(--table-head-backgroundColor-opaque)","marginBottom":"2px","width":"418px","height":"32px","paddingTop":"4px","paddingBottom":"4px"}},"bodyCell":{"default":{"backgroundColor":"var(--table-interval-backgroundColor-opaque)","borderBottom":"2px solid rgba(24,37,64,0)","borderLeft":"0px solid rgba(24,37,64,1)","borderRight":"0px solid rgba(24,37,64,1)","borderTop":"2px solid rgba(24,37,64,0)","color":"var(--business-white)","paddingTop":"8px","paddingBottom":"8px","fontSize":"var(--business-text-size-14)"},"hover":{"backgroundColor":"var(--table-interval-backgroundColor-opaque)","cursor":"pointer"}},"stripeBodyCell":{"default":{"backgroundColor":"rgba(233, 98, 25, 0)","borderBottom":"2px solid rgba(23,62,228,0)","paddingTop":"7px","paddingBottom":"7px"}},"headerRowWrapper":{"default":{"backgroundColor":"var(--table-head-backgroundColor-opaque)","color":"var(--business-white)"}},"stripeBodyRow":{"default":{"backgroundColor":"rgba(23, 62, 228, 0)"}},"rowWrapper":{"hover":{"backgroundColor":"var(--table-interval-backgroundColor-opaque)"}},"highlightRow":{"default":{"backgroundColor":"var(--table-interval-backgroundColor-opaque)"}},"emptyText":{"default":{"fontSize":"var(--business-text-size-14)","color":"var(--business-white)"}}}, 
+ },
+},
+tRowx0x6: {
+defaultStyle: {
+            default: {"width":"100%","height":"34px","display":"flex","justifyContent":"space-between","alignItems":"center","position":"unset","left":"0px","top":"210px","pointerEvents":"none","gap":"auto","backgroundColor":"rgba(12, 62, 139, 0)"},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"34px","display":"flex","justifyContent":"space-between","alignItems":"center","position":"unset","left":"0px","top":"210px","pointerEvents":"none","gap":"auto","backgroundColor":"rgba(12, 62, 139, 0)"}}},
+gutter:0,
+justify:"space-between",
+align:"middle", 
+ },
+},
+tColx0x6x0: {
+defaultStyle: {
+            default: {"width":"100px","height":"34px","display":"flex","justifyContent":"left","alignItems":"center"},
+            
+            },
+ default: { 
+ 
+span:12,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"34px","display":"flex","justifyContent":"left","alignItems":"center"}}}, 
+ },
+},
+tTextx0x6x0x0: {
+defaultStyle: {
+            default: {"width":"240px","height":"32px","color":"var(--business-theme)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"208px","left":"1px","position":"unset","textAlign":"left","marginLeft":"15px"},
+            
+            },
+ default: { 
+ 
+label:"污染物变化趋势",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"240px","height":"32px","color":"var(--business-theme)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"208px","left":"1px","position":"unset","textAlign":"left","marginLeft":"15px"}},"cardValue":{"default":{"fontSize":"var(--text-size-14)"}}}, 
+ },
+},
+tColx0x6x1: {
+defaultStyle: {
+            default: {"width":"100px","height":"34px","display":"flex","justifyContent":"right","alignItems":"center"},
+            
+            },
+ default: { 
+ 
+span:12,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"34px","display":"flex","justifyContent":"right","alignItems":"center"}}}, 
+ },
+},
+tSelectx0x6x1x0: {
+defaultStyle: {
+            default: {"width":"180px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)"},
+            
+            },
+ default: { 
+ 
+activeValue:"",
+options:[{"label":"总磷","value":"W21011","disabled":false},{"label":"氨氮","value":"W21003","disabled":false},{"label":"化学需氧量","value":"W01018","disabled":false},{"label":"pH值","value":"W01001","disabled":false},{"label":"流量","value":"W00000","disabled":false}],
+alias:{"label":"label","value":"value","disabled":"disabled"},
+multiple:false,
+placeholder:"暂无数据",
+clearable:false,
+disabled:false,
+name:"",
+autocomplete:"off",
+filterable:false,
+'no-match-text':"无匹配数据",
+'no-data-text':"无数据",
+cStyle:{"wrapper":{"default":{"width":"180px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)"},"focus":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"dropdownArrow":{"default":{"display":"none"}},"arrow":{"default":{"color":"var(--business-unit-icon)"}},"placeholder":{"default":{"color":"var(--business-text-avianize)"}},"dropdownWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"dropdownItem":{"active":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-theme)"},"hover":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)"},"default":{"fontSize":"var(--business-text-size-14)","color":"var(--business-white)"}}}, 
+ },
+},
+tSelectx0x6x1x1: {
+defaultStyle: {
+            default: {"width":"180px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)"},
+            
+            },
+ default: { 
+ 
+activeValue:"line",
+options:[{"label":"折线图","value":"line","disabled":false},{"label":"数据表","value":"table","disabled":false}],
+alias:{"label":"label","value":"value","disabled":"disabled"},
+multiple:false,
+placeholder:"请选择",
+clearable:false,
+disabled:false,
+name:"",
+autocomplete:"off",
+filterable:false,
+'no-match-text':"无匹配数据",
+'no-data-text':"无数据",
+cStyle:{"wrapper":{"default":{"width":"180px","height":"32px","animationName":"","paddingLeft":"12px","paddingRight":"12px","fontSize":"var(--business-text-size-14)","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--business-white)","--el-select-border-color-hover":"var(--business-theme)"},"focus":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"dropdownArrow":{"default":{"display":"none"}},"arrow":{"default":{"color":"var(--business-unit-icon)"}},"placeholder":{"default":{"color":"var(--business-text-avianize)"}},"dropdownWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"dropdownItem":{"active":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-theme)"},"hover":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)"},"default":{"fontSize":"var(--business-text-size-14)","color":"var(--business-white)"}}}, 
+ },
+},
+tRowx0x7: {
+defaultStyle: {
+            default: {"width":"100%","height":"28px","display":"flex","justifyContent":"right","alignItems":"center","left":"0px","top":"0px"},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"28px","display":"flex","justifyContent":"right","alignItems":"center","left":"0px","top":"0px"}}},
+gutter:0,
+justify:"space-between",
+align:"middle", 
+ },
+},
+tTextx0x7x0: {
+defaultStyle: {
+            default: {"width":"164px","height":"28px","color":"rgba(255, 255, 255, 0.9)","top":"124.5px","left":"645px","textAlign":"right","fontSize":"var(--business-text-size-14)","position":"unset","marginRight":"50px","lineHeight":"28px"},
+            
+            },
+ default: { 
+ 
+label:"",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"164px","height":"28px","color":"rgba(255, 255, 255, 0.9)","top":"124.5px","left":"645px","textAlign":"right","fontSize":"var(--business-text-size-14)","position":"unset","marginRight":"50px","lineHeight":"28px"}}}, 
+ },
+},
+tChartLineSinglex0x8: {
+defaultStyle: {
+            default: {"width":"100%","height":"calc(100% - 270px)","position":"unset","left":"0px","top":"270px"},
+            
+            },
+line: computed(() => activeChartTheme.value?.line),
+ default: { 
+ 
+emptyImg:"assets/images/2024-12-26/f1200f84c82a4a1698a450dfa89ceedb.svg",
+cStyle:{"wrapper":{"default":{"width":"100%","height":"calc(100% - 270px)","position":"unset","left":"0px","top":"270px"}},"emptyText":{"default":{"fontSize":"var(--business-text-size-14)","width":"auto","color":"var(--business-white)"}},"emptyImg":{"default":{"display":"none"}}},
+showItemBg:false,
+options: computed(() => _.merge({}, activeChartThemeOptions.value, {"grid":{"containLabel":true,"left":"1%","bottom":"2%","top":"5%","right":"1%"},"legend":{"show":false},"xAxis":{"axisLine":{"lineStyle":{"type":"dashed","color":"var(--business-white)"}},"axisLabel":{"color":"var(--business-white)","fontSize":state.treemapLabelFontSize}},"yAxis":{"axisLabel":{"color":"var(--business-white)","fontSize":state.treemapLabelFontSize},"axisLine":{"lineStyle":{"color":"var(--business-white)"},"show":false}},"tooltip":{"textStyle":{"fontSize":state.treemapLabelFontSize}}})),
+data:[],
+seriesSetting:{"xAxisLabel":"MONITORTIME","data":[{"name":"浓度","dataKey":"AVGSTRENGTH","style":{"label":{"show":false},"symbolSize":[4,4],"symbol":"none"}}]}, 
+ },
+},
+tTextx0x9: {
+defaultStyle: {
+            default: {"width":"144px","height":"32px","color":"var(--business-text-avianize)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"249px","left":"-17px","position":"unset","textAlign":"left","marginLeft":"20px","animationName":""},
+            
+            },
+ default: { 
+ 
+label:"浓度（mg/L）",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"144px","height":"32px","color":"var(--business-text-avianize)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"249px","left":"-17px","position":"unset","textAlign":"left","marginLeft":"20px","animationName":""}},"cardValue":{"default":{"fontSize":"var(--text-size-14)"}}}, 
+ },
+},
+tRowx0x10: {
+defaultStyle: {
+            default: {"width":"100%","height":"34px","display":"flex","justifyContent":"space-between","alignItems":"center","position":"unset","left":"0px","top":"83px","gap":"auto","backgroundColor":"rgba(12, 62, 139, 0)"},
+            
+            },
+ default: { 
+ 
+cStyle:{"wrapper":{"default":{"width":"100%","height":"34px","display":"flex","justifyContent":"space-between","alignItems":"center","position":"unset","left":"0px","top":"83px","gap":"auto","backgroundColor":"rgba(12, 62, 139, 0)"}}},
+gutter:0,
+justify:"space-between",
+align:"middle", 
+ },
+},
+tColx0x10x0: {
+defaultStyle: {
+            default: {"width":"100px","height":"34px","display":"flex","justifyContent":"left","alignItems":"center"},
+            
+            },
+ default: { 
+ 
+span:12,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"34px","display":"flex","justifyContent":"left","alignItems":"center"}}}, 
+ },
+},
+tTextx0x10x0x0: {
+defaultStyle: {
+            default: {"width":"240px","height":"32px","color":"var(--business-theme)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"87px","left":"2px","position":"unset","animationName":"","marginLeft":"15px","textAlign":"left","backgroundColor":""},
+            
+            },
+ default: { 
+ 
+label:"污染物排放浓度",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"240px","height":"32px","color":"var(--business-theme)","lineHeight":"32px","fontSize":"var(--business-text-size-14)","fontFamily":"方正综艺","top":"87px","left":"2px","position":"unset","animationName":"","marginLeft":"15px","textAlign":"left","backgroundColor":""}},"cardValue":{"default":{"fontSize":"var(--text-size-14)"}}}, 
+ },
+},
+tColx0x10x1: {
+defaultStyle: {
+            default: {"width":"100px","height":"34px","display":"flex","justifyContent":"right","alignItems":"center","backgroundColor":"","paddingRight":"15px"},
+            
+            },
+ default: { 
+ 
+span:12,
+offset:0,
+push:0,
+pull:0,
+cStyle:{"wrapper":{"default":{"width":"100px","height":"34px","display":"flex","justifyContent":"right","alignItems":"center","backgroundColor":"","paddingRight":"15px"}}}, 
+ },
+},
+});
+const handleWaterTarget = () => {
+// 水质目标发生变化执行---------------------
+
+// 先隐藏图表
+state.variationTrendData.chartShow = false;
+// 图表为空
+state.variationTrendData.chartOptions = {
+  series: []
+};
+
+// 水质
+if (state.variationTrendData.activeTarget === 'waterLevelChange') {
+  state.variationTrendData.title = '近12个月水质变化趋势';
+
+  // 水质接口
+  apiRegistry.getWaterVariationTrend.request();
+} else {
+  // 其他污染物
+  state.variationTrendData.title = '近12个月污染物浓度变化趋势';
+
+  // 污染物接口
+  apiRegistry.getPollutantVariationTrend.request();
+}
+// 显示图表，延迟为了处理数据不刷新的问题
+setTimeout(() => {
+  state.variationTrendData.chartShow = true;
+}, 100)
+};
+const getWaterChartLabel = (value) => {
+// 设置x轴显示的文本
+if (value === 1) {
+  value = 'Ⅰ类';
+} else if (value === 2) {
+  value = 'Ⅱ类';
+} else if (value === 3) {
+  value = 'Ⅲ类';
+} else if (value === 4) {
+  value = 'Ⅳ类';
+} else if (value === 5) {
+  value = 'Ⅴ类';
+} else if (value === 6) {
+  value = '劣Ⅴ类';
+} else {
+  value = '-';
+}
+return value;
+
+};
+const getChartOptions = () => {
+// 图表配置项
+let chartOption = {};
+const toolbox = {
+  show: true,
+  top: 5,
+  right: 130,
+  iconStyle: {
+    color: '#fff'
+  },
+  feature: {
+    magicType: {
+      type: ["line", "bar"],
+      title: {
+        line: '转为折线图',
+        bar: '转为柱状图'
+      }
+    },
+  }
+};
+if (state.variationTrendData.activeTarget === 'waterLevelChange') {
+  // 水质的图表配置
+  chartOption = {
+    "dataZoom": [
+      {
+        "type": "slider",
+        "height": 10,
+
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+        textStyle: {
+          color: '#fff'
+        }
+      },
+      {
+        type: 'inside',      // 内置缩放，支持鼠标滚轮缩放
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+      }
+    ],
+    toolbox,
+    grid: {
+      top: "15%",
+      left: '6%',
+      right: '2%',
+      bottom: '100px'
+    },
+    color: ['#00FFFF', '#FFF200', '#FF8400', '#43D156', '#EE70FF'],
+    legend: {
+      show: true,
+      icon: 'rect',
+      itemWidth: 10,
+      itemHeight: 10,
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)',
+        fontSize: 13
+      },
+      // data: ['当月值', '累计均值', '去年同期', '去年累计均值指标']
+      data: ['当月值',  '去年同期']
+
+    },
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      borderColor: 'rgba(255, 255, 255, 0.5)',
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)'
+      },
+      "formatter": (formatterParams) => {
+        if (!formatterParams[0].data?.tooltipXAxisLabel) return;
+        let str = '';
+        const name = formatterParams[0].data?.tooltipXAxisLabel || '--';
+        formatterParams.forEach((item) => {
+          const unit = item.data?.unit || '';
+          const valueName = handleNoVal(item.data?.valueName);
+          // 如果值是数组，则取最后一项，参考官网值为数组；
+          const curValue = Array.isArray(item.value) ? item.value[item.value.length - 1] : item.value;
+          // hiddenInTooltip 是否在tooltip中隐藏
+          if (item.data?.hiddenInTooltip) return;
+          // ${handleNoVal(curValue) !== '--' ? unit : ''}
+          str += `<div style="margin: 10px 0 0;line-height: 1">${item.marker}<span>${item.seriesName}</span>
+    <span style="float: right;margin-left: 10px;">
+    ${item.data?.showValueName ? valueName : getWaterChartLabel(Number(curValue) || 0)}${unit}</span><br/></div>`;
+        });
+        return `${name}<br/>${str}`;
+      }
+    },
+    xAxis: {
+      type: 'category',
+      data: [],
+      axisLabel: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13,
+        rotate: 45
+      },
+      axisLine: {
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      axisTick: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        fontSize: 13
+      }
+    },
+    yAxis: {
+      type: 'value',
+      max: 6,
+      axisLabel: {
+        formatter: function (value) {
+          return getWaterChartLabel(value);
+        },
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13
+      },
+      axisLine: {
+        show: true,
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      name: '',
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        align: 'right',
+        padding: [0, 0, 10, -24],
+        fontSize: 13
+      },
+      splitLine: {
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(255, 255, 255, 0.2)'
+        }
+      }
+    },
+    series: []
+  };
+} else if (state.variationTrendData.activeTarget === 'W01001') {
+  // ph 的图表配置
+  chartOption = {
+    "dataZoom": [
+      {
+        "type": "slider",
+        "height": 10,
+
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+        textStyle: {
+          color: '#fff'
+        }
+      },
+      {
+        type: 'inside',      // 内置缩放，支持鼠标滚轮缩放
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+      }
+      // {
+      //   "type": "slider",
+      //   "backgroundColor": getCssVariable('--business-show-bg30'),
+      //   "borderColor": getCssVariable('--business-show-bg30'),
+      //   "borderRadius": 0,
+      //   "showDetail": false,
+      //   "showDataShadow": false,
+      //   "zoomLock": true,
+      //   "height": 7,
+      //   "end": 50,
+      //   "brushSelect": false,
+      //   "bottom": "0%",
+      //   "brushStyle": {
+      //     "color": "#000"
+      //   },
+      //   "fillerColor": getCssVariable('--business-btn-default'),
+      //   "handleIcon": "none",
+      //   "handleStyle": {
+      //     "color": "#2D955A",
+      //     "borderColor": "#D1D5D9",
+      //     "borderCap": "round"
+      //   }
+      // }
+    ],
+    grid: {
+      top: '15%',
+      left: '5%',
+      right: '4%',
+      // bottom: '12%'
+      bottom: '100px'
+    },
+    color: ['#00FFFF', '#FFF200', '#FF8400', '#43D156', '#EE70FF'],
+    legend: {
+      show: true,
+      icon: 'rect',
+      itemWidth: 10,
+      itemHeight: 10,
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)',
+        fontSize: 13
+      },
+      data: ['当月值', '去年同期']
+    },
+    toolbox,
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      borderColor: 'rgba(255, 255, 255, 0.5)',
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)'
+      },
+      "formatter": (value) => handleTooltipFormatter(value)
+    },
+    xAxis: {
+      type: 'category',
+      data: [],
+      axisLabel: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13,
+        rotate: 45
+      },
+      axisLine: {
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      axisTick: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        fontSize: 13
+      }
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13
+      },
+      axisLine: {
+        show: true,
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      name: '',
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        align: 'right',
+        padding: [0, 0, 10, -24],
+        fontSize: 13
+      },
+      splitLine: {
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(255, 255, 255, 0.2)'
+        }
+      }
+    },
+    series: []
+  }
+} else {
+  // 其他污染物
+  chartOption = {
+    "dataZoom": [
+      // {
+      //   "type": "slider",
+      //   "backgroundColor": getCssVariable('--business-show-bg30'),
+      //   "borderColor": getCssVariable('--business-show-bg30'),
+      //   "borderRadius": 0,
+      //   "showDetail": false,
+      //   "showDataShadow": false,
+      //   "zoomLock": true,
+      //   "height": 7,
+      //   "end": 50,
+      //   "brushSelect": false,
+      //   "bottom": "0%",
+      //   "brushStyle": {
+      //     "color": "#000"
+      //   },
+      //   "fillerColor": getCssVariable('--business-btn-default'),
+      //   "handleIcon": "none",
+      //   "handleStyle": {
+      //     "color": "#2D955A",
+      //     "borderColor": "#D1D5D9",
+      //     "borderCap": "round"
+      //   }
+      // }
+      {
+        "type": "slider",
+        "height": 10,
+
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+        textStyle: {
+          color: '#fff'
+        }
+      },
+      {
+        type: 'inside',      // 内置缩放，支持鼠标滚轮缩放
+        xAxisIndex: [0, 1, 2], // 控制所有三个x轴
+      }
+    ],
+    grid: {
+      top: '15%',
+      left: '5%',
+      right: '4%',
+      // bottom: '12%'
+      bottom: '100px'
+    },
+    color: ['#00FFFF', '#FFF200', '#FF8400', '#43D156', '#EE70FF'],
+    legend: {
+      show: true,
+      icon: 'rect',
+      itemWidth: 10,
+      itemHeight: 10,
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)',
+        fontSize: 13
+      },
+       data: ['当月值',  '去年同期']
+    },
+    toolbox,
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      borderColor: 'rgba(255, 255, 255, 0.5)',
+      textStyle: {
+        color: 'rgba(255, 255, 255, 1)'
+      },
+      "formatter": (value) => handleTooltipFormatter(value)
+    },
+    xAxis: {
+      type: 'category',
+      data: [],
+      axisLabel: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13,
+        rotate: 45
+      },
+      axisLine: {
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      axisTick: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        fontSize: 13
+      }
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        fontSize: 13
+      },
+      axisLine: {
+        show: true,
+        lineStyle: {
+          type: 'solid',
+          color: 'rgba(255, 255, 255, 0.4)'
+        }
+      },
+      name: 'mg/L',
+      nameTextStyle: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        align: 'right',
+        padding: [0, 0, 10, -24],
+        fontSize: 13
+      },
+      splitLine: {
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(255, 255, 255, 0.2)'
+        }
+      }
+    },
+    series: []
+  }
+}
+
+return chartOption;
+};
+const initPageData = () => {
+	// 获取主题字号
+const initChartFontSize = () => {
+  state.treemapLabelFontSize = parseInt(getCssVariable('--business-text-size-16')) || 16
+  state.chartTreemapOptionTooltip = {
+    textStyle: {
+      fontSize: parseInt(getCssVariable('--business-text-size-14')) || 14
+    }
+  }
+}
+initChartFontSize()
+
+// 处理参数
+state.tabSelect = 'hour'
+state.dateType = 'datetimerangehour';
+// state.standEnterId = '913507005616846687001P'
+state.standEnterId = global.businessDialog.dialogParmas?.POINT_CODE || '';
+async function getData() {
+  // 获取站点列表
+  await apiRegistry.getPointList.request();
+  if (state.currentPointCode) {
+    // 获取最新时间
+    await apiRegistry.getLatestTime.request();
+    // 获取污染物排放浓度
+    await apiRegistry.getMonitorData.request();
+
+    if (state.currentPointCode) {
+      // 获取污染物变化趋势
+      await apiRegistry.getPollutantVariationTrend.request();
+    }
+  }
+}
+getData()
+};
+const setNoDataIcon = () => {
+// 设置暂无数据图标
+state.noDataImg= getCssVariable('--business-no-data-img');
+};
+const getWaterLevelSrc = (key) => {
+// 图标路径
+const waterLevelSrc = [
+    "6678a04114a34021a947caa73ebcf17f",
+    "7cd40b10184443b6bdff4282e363f9de",
+    "3a76262a85f24b9b983339ab06117f78",
+    "1f1734ed58db4ed991edd563a803baef",
+    "411e6a8a398246b1a82e117669795e44",
+    "7732a1ec888e44e2bd34cb304dd71a0a",
+    "85937bae863347139a4039c3df87e4b2"
+]
+return `url(assets/images/2024-12-30/${waterLevelSrc[Number(key) || 0]}.svg)`
+};
+const changeTime = (time) => {
+state.timeRange = time || [];
+state.startTime = time[0] || '';
+state.endTime = time[1] || '';
+async function getData (){
+  // 获取污染物排放浓度
+  await apiRegistry.getMonitorData.request();
+  // 获取污染物变化趋势
+  await apiRegistry.getPollutantVariationTrend.request();
+}
+getData()
+};
+const changeStandard = () => {
+if (
+  Array.isArray(state.seriesData)
+  && Array.isArray(state.standardSeriesData)
+) {
+  // 没有标准值的
+  state.variationTrendData.chartOptions.series = [
+    ...state.seriesData,
+  ];
+  // 有标准值的
+  state.options = _.cloneDeep(state.variationTrendData.chartOptions)
+  state.options.series = [
+    ...state.seriesData,
+    ...state.standardSeriesData
+  ];
+}
+console.log('没有标准值的',state.variationTrendData.chartOptions)
+console.log('有标准值的', state.options)
+};
+const handleWaterLevelStandard = (seriesName,lineColor,labelPosition) => {
+// 默认线条颜色
+const defaultLineColor = '#465FFF';
+return {
+  name: seriesName,
+  "type": "line",
+  "symbol": "none",
+  "lineStyle": {
+    "type": "dashed",
+    "width": 0
+  },
+  itemStyle: {
+    color: lineColor || defaultLineColor,
+  },
+  markLine: {
+    'symbol': 'none',
+    "label": {
+      position: labelPosition || 'insideEndTop',
+      "color": lineColor || defaultLineColor,
+      "fontSize": 12,
+      formatter: (params) => {
+        return `${handleNoVal(seriesName)}：${getWaterChartLabel(Number(params.value) || 0)}`
+      }
+    },
+    "data": [
+      {
+        "0": {
+          "valueIndex": 1,
+          "type": "max"
+        },
+        "type": "average"
+      }
+    ],
+    "silent": true
+  },
+}
+};
+const handleCharts = (myChart) => {
+console.log('myChart', myChart)
+state.myChart = myChart
+};
+const setCardStyle = () => {
+const sheet = new CSSStyleSheet();
+sheet.insertRule(`.t-scrollable-cards.ssqyMonitoringInformation-t-scrollable-cards-0-3 .scrollable-cards-container .scrollable-cards-body {
+width: 100% !important;
+}
+`);
+sheet.insertRule(`.t-date-picker .el-picker-panel__body-wrapper .el-time-panel .el-time-panel__footer .el-time-panel__btn {
+  color: var(--business-white) !important;
+}
+`);
+
+document.adoptedStyleSheets = [sheet];
+
+
+};
+const changeTopTabs = (data) => {
+// 如果第二个下拉框选中all 那就把入参 selectTwo置为空
+state.selectTwo = state.selectTwoValue === 'all' ? '' : state.selectTwoValue;
+state.surfaceWaterParamsState.ASSESSTYPE = state.tabsActiveValue
+// 整体评价结果-卡片
+getPJResultCard();
+// 断面评价结果-列表
+getSZPLList();
+
+rootData.rootSocket.emit('message', {
+  room: global.socketRoom,// 房间号
+  type: "runInteractive", // 消息名称
+  // 给地图发消息
+  data: [
+    {
+      "code": "id",
+      "shareCode": "ASSESSTYPE",
+      "defaultValue": "",
+      "runtimeValue": data.value,
+    },
+    {
+      "code": "text",
+      "shareCode": "",
+      "defaultValue": "",
+      "runtimeValue": data.label
+    },
+    {
+      "code": "defaultTab",
+      "name": "",
+      "defaultValue": "pointWq",
+      "shareCode": "defaultTab",
+      "runtimeValue": "pointWq"
+    }
+  ]
+});
+};
+const handleLocation = (column,row) => {
+/**
+ * 处理定位
+ */
+
+if (["定位", '断面名称', '行政区', '管理类型', '水质现状'].includes(column.label)) {
+  rootData.rootSocket.emit('message', {
+    room: global.socketRoom,// 房间号
+    type: 'runInteractive', // 消息名称
+    data: [
+      {
+        code: 'point_code',
+        shareCode: 'POINT_CODE',
+        defaultValue: '',
+        runtimeValue: row.POINT_CODE
+      }
+    ]
+  });
+}
+
+};
+const isShowChartUnit = () => {
+watch([() => state.showType, () => state.currentPolluteCode], () =>{
+  if(state.showType === 'table' || state.currentPolluteCode === 'W01001' || !state.chartList.length){
+    state.isShowchartUnit = false
+  }else{
+    state.isShowchartUnit = true
+  }
+  if(state.currentPolluteCode === 'W00000'){
+    state.chartUint = 'm³/s'
+  }else{
+    state.chartUint = '浓度（mg/L）'
+  }
+})
+};
+const changePointCode = () => {
+async function getData (){
+  // 获取最新时间
+  await apiRegistry.getLatestTime.request();
+  // 获取污染物排放浓度
+  await apiRegistry.getMonitorData.request();
+  // 获取污染物变化趋势
+  await apiRegistry.getPollutantVariationTrend.request();
+}
+getData()
+};
+const onchange1767581288441_0_0 = (value,selectValueArr,selectValueItem) => {
+// 设置变量值
+state.currentPointCode = value;
+// 执行自定义方法
+changePointCode();
+};
+const ontabClick1767581775067_0_0 = (data) => {
+// 设置变量值
+state.tabSelect = data.value;
+// 执行自定义方法
+changePointCode();
+};
+const ondateChange1767779170144_0_0 = (data) => {
+// 执行自定义方法
+changeTime(data);
+};
+const ondateChange1767948867605_0_0 = (data) => {
+// 执行自定义方法
+changeTime(data);
+};
+const oncellClick1767773230043_0_0 = (row,column,cell,event) => {
+// 执行自定义方法
+handleLocation(column,row);
+};
+const onchange1733973555614 = (value,selectValueArr,selectValueItem) => {
+// 设置变量值
+state.currentPolluteCode = value;
+// 事件交互-请求调用接口
+apiRegistry.getPollutantVariationTrend.request().then((res) => {
+// 接口调取成功
+}).catch((error) => {
+// 接口调取失败
+});
+};
+const onchange1767772766838_0_0 = (value,selectValueArr,selectValueItem) => {
+// 设置变量值
+state.showType = value;
+};let apiRegistry = {}; 
+
+        // 添加接口数据管理
+        const apiDataMap = reactive({});
+        // 接口数据缓存
+        const apiDataCache = reactive({});
+        
+        // 接口注册表
+        apiRegistry = {
+// 接口函数
+ getPointList: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"STANDENTERID":"state.standEnterId","interfaceId":"5e6f674a38e4cb79099dd20685fa2195"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"STANDENTERID":state.standEnterId,"interfaceId":"5e6f674a38e4cb79099dd20685fa2195"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"STANDENTERID":state.standEnterId,"interfaceId":"5e6f674a38e4cb79099dd20685fa2195"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getPointList'] = res.data;
+                
+     const { data, head } = res.data;
+if (head.statusCode === '200' && data.length) {
+  state.pointList = data.map(item =>{
+    return{
+      label: item.OUTPUTNAME,
+      value: item.OUTPUTCODE,
+      disabled: false
+    }
+  })
+  state.currentPointCode = state.pointList[0].value
+}else{
+  state.pointList = []
+  state.currentPointCode = ''
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getLatestTime: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"TIME_TYPE":"state.tabSelect","OUTPUTCODE":"state.currentPointCode","STANDENTERID":"state.standEnterId","interfaceId":"35a7891cbace335f2f8cee6c55d72692"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"TIME_TYPE":state.tabSelect,"OUTPUTCODE":state.currentPointCode,"STANDENTERID":state.standEnterId,"interfaceId":"35a7891cbace335f2f8cee6c55d72692"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"TIME_TYPE":state.tabSelect,"OUTPUTCODE":state.currentPointCode,"STANDENTERID":state.standEnterId,"interfaceId":"35a7891cbace335f2f8cee6c55d72692"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getLatestTime'] = res.data;
+                
+     const { data, head } = res.data;
+if (head.statusCode === '200' && data) {
+  state.startTime = data.MONITOR_START_TIME || '';
+  state.endTime = data.MONITOR_END_TIME || '';
+  state.lastTime = data.MONITOR_END_TIME
+  state.timeRange = [state.startTime, state.endTime];
+} else {
+  state.startTime = '';
+  state.endTime = '';
+  state.timeRange = [];
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getPollutantVariationTrend: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"TIME_TYPE":"state.tabSelect","OUTPUTCODE":"state.currentPointCode","POLLUTANTCODE":"state.currentPolluteCode","STANDENTERID":"state.standEnterId","MONITOR_END_TIME":"state.endTime","MONITOR_START_TIME":"state.startTime","interfaceId":"f9d3adb437d23112c048219c06bf0b59"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"TIME_TYPE":state.tabSelect,"OUTPUTCODE":state.currentPointCode,"POLLUTANTCODE":state.currentPolluteCode,"STANDENTERID":state.standEnterId,"MONITOR_END_TIME":state.endTime,"MONITOR_START_TIME":state.startTime,"interfaceId":"f9d3adb437d23112c048219c06bf0b59"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"TIME_TYPE":state.tabSelect,"OUTPUTCODE":state.currentPointCode,"POLLUTANTCODE":state.currentPolluteCode,"STANDENTERID":state.standEnterId,"MONITOR_END_TIME":state.endTime,"MONITOR_START_TIME":state.startTime,"interfaceId":"f9d3adb437d23112c048219c06bf0b59"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getPollutantVariationTrend'] = res.data;
+                
+     console.log(res);
+state.seriesData = []
+state.standardSeriesData = []
+const { data, head } = res.data;
+
+if (head.statusCode === '200' && data.length) {
+  state.chartList = data
+  state.listData = data.map((item, index) => {
+    return {
+      "index": index + 1,
+      "moniterTime": item.MONITORTIME || '-',
+      "pollute": item.AVGSTRENGTH || '-'
+    }
+  })
+  const polluteName = data[0].POLLUTANTNAME
+  state.tableColumns = [
+    {
+      "label": "序号",
+      "key": "index",
+      "align": "center",
+      "operationList": [],
+      "stateList": [],
+      "width": "66PX",
+      "showOverflowTooltip": true,
+      "style": {
+        "fontStyle": {
+          "fontSize": "var(--business-text-size-14)"
+        }
+      }
+    },
+    {
+      "label": "监测时间",
+      "key": "moniterTime",
+      "stateKey": "waterQualityTargetValue",
+      "align": "center",
+      "type": "default",
+      "operationList": [],
+      "style": {
+        "fontStyle": {
+          "width": "40PX",
+          "height": "PX"
+        }
+      }
+    },
+    {
+      "label": `${polluteName}（mg/L）`,
+      "key": "pollute",
+      "stateKey": "",
+      "align": "center",
+      "type": "default",
+      "operationList": [],
+      "width": "355px",
+      "style": {
+        "fontStyle": {
+          "fontSize": "var(--business-text-size-12)",
+          "width": "PX",
+          "height": "PX",
+          "borderRadius": "PX",
+          "background": ""
+        }
+      }
+    }
+  ]
+} else {
+  state.chartList = []
+  state.listData = []
+  state.tableColumns = []
+  state.isShowchartUnit = false
+}
+
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      
+
+state.seriesData = []
+state.standardSeriesData = []
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getMonitorData: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"TIME_TYPE":"state.tabSelect","STANDENTERID":"state.standEnterId","OUTPUTCODE":"state.currentPointCode","MONITORTIME":"state.endTime","interfaceId":"80aed9ed099626e6a7ce834975e2c3eb"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"TIME_TYPE":state.tabSelect,"STANDENTERID":state.standEnterId,"OUTPUTCODE":state.currentPointCode,"MONITORTIME":state.endTime,"interfaceId":"80aed9ed099626e6a7ce834975e2c3eb"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"TIME_TYPE":state.tabSelect,"STANDENTERID":state.standEnterId,"OUTPUTCODE":state.currentPointCode,"MONITORTIME":state.endTime,"interfaceId":"80aed9ed099626e6a7ce834975e2c3eb"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getMonitorData'] = res.data;
+                
+     console.log(res);
+const { data, head } = res.data;
+if (head?.statusCode === '200' && data.length) {
+  // 超标和达标的样式
+  // const exceedStandardStyle = {
+  //   cardIconStyle: { background: "#FF2B2B" },
+  //   valueStyle: { color: "#FF2B2B" },
+  //   labelIconStyle: {}
+  // };
+
+  // const meetStandardStyle = {
+  //   cardIconStyle: { background: "#00DA2A" },
+  //   labelIconStyle: {}
+  // };
+
+  // const handleStyle = (item) => {
+  //   let style = {}
+  //   if (item?.ISOVER === '0') {
+  //     style = { ...exceedStandardStyle };
+  //   } else if (item?.ISOVER === '1' || item.ISOVER === '') {
+  //     style = { ...meetStandardStyle };
+  //   }
+  //   return style
+  // }
+  // 污染物排放浓度
+  state.monitorData = data.map(item => {
+    return {
+      ...item,
+      "value": item.AVGSTRENGTH,
+      "label": item.POLLUTE_NAME,
+      "unit": item.POLLUTE_NAME === 'pH值' ? '' : "mg/L",
+      "code": item.POLLUTANTCODE,
+      // "style": handleStyle(item)
+    }
+  })
+  // 污染物下拉列表
+  state.polluteList = data.map(item => {
+    return {
+      ...item,
+      "value": item.POLLUTANTCODE,
+      "label": item.POLLUTE_NAME,
+    }
+  })
+  state.currentPolluteCode = state.monitorData[0]?.code || ''
+} else {
+  state.monitorData = []
+  state.polluteList = []
+  state.currentPolluteCode = ''
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      
+
+      reject(error);
+    });
+  });
+},
+              },
+};
+ function handleWindowResize() {
+                            setPageScale('t-l-c-ssqyMonitoringInformation', global.appScaleMode, 'normal');
+                           
+                            // 获取窗口的宽度和高度
+                            var windowWidth = window.innerWidth;
+
+}
+// 执行自定义方法
+setNoDataIcon();
+// 执行自定义方法
+initPageData();
+// 执行自定义方法
+isShowChartUnit();
+onMounted(() => {
+setPageScale('t-l-c-ssqyMonitoringInformation', global.appScaleMode, 'normal');
+window.addEventListener('resize', handleWindowResize);
+handleWindowResize();
+// 执行自定义方法
+setCardStyle();
+});
+// 页面离开时的操作
+onUnmounted(() => {
+// 移除监听事件
+window.removeEventListener('resize', handleWindowResize);
+});
+ const tRowx0x0ComputedData = computed(() => _.merge({}, componentState.tRowx0x0.default, componentState.tRowx0x0?.[state.screenSize]));
+
+ const tTextCommonx0x0x0ComputedData = computed(() => _.merge({}, componentState.tTextCommonx0x0x0.default, componentState.tTextCommonx0x0x0?.[state.screenSize]));
+
+ const tComponentx0x1ComputedData = computed(() => _.merge({}, componentState.tComponentx0x1.default, componentState.tComponentx0x1?.[state.screenSize]));
+
+ const tTextx0x2ComputedData = computed(() => _.merge({}, componentState.tTextx0x2.default, componentState.tTextx0x2?.[state.screenSize]));
+
+ const tScrollableCardsx0x3ComputedData = computed(() => _.merge({}, componentState.tScrollableCardsx0x3.default, componentState.tScrollableCardsx0x3?.[state.screenSize]));
+
+ const tRowx0x4ComputedData = computed(() => _.merge({}, componentState.tRowx0x4.default, componentState.tRowx0x4?.[state.screenSize]));
+
+ const tColx0x4x0ComputedData = computed(() => _.merge({}, componentState.tColx0x4x0.default, componentState.tColx0x4x0?.[state.screenSize]));
+
+ const tSelectx0x4x0x0ComputedData = computed(() => _.merge({}, componentState.tSelectx0x4x0x0.default, componentState.tSelectx0x4x0x0?.[state.screenSize]));
+
+ const tColx0x4x1ComputedData = computed(() => _.merge({}, componentState.tColx0x4x1.default, componentState.tColx0x4x1?.[state.screenSize]));
+
+ const tTabsBasex0x4x1x0ComputedData = computed(() => _.merge({}, componentState.tTabsBasex0x4x1x0.default, componentState.tTabsBasex0x4x1x0?.[state.screenSize]));
+
+ const tDatePickerx0x4x1x1ComputedData = computed(() => _.merge({}, componentState.tDatePickerx0x4x1x1.default, componentState.tDatePickerx0x4x1x1?.[state.screenSize]));
+
+ const tDatePickerx0x4x1x2ComputedData = computed(() => _.merge({}, componentState.tDatePickerx0x4x1x2.default, componentState.tDatePickerx0x4x1x2?.[state.screenSize]));
+
+ const tTablex0x5ComputedData = computed(() => _.merge({}, componentState.tTablex0x5.default, componentState.tTablex0x5?.[state.screenSize]));
+
+ const tRowx0x6ComputedData = computed(() => _.merge({}, componentState.tRowx0x6.default, componentState.tRowx0x6?.[state.screenSize]));
+
+ const tColx0x6x0ComputedData = computed(() => _.merge({}, componentState.tColx0x6x0.default, componentState.tColx0x6x0?.[state.screenSize]));
+
+ const tTextx0x6x0x0ComputedData = computed(() => _.merge({}, componentState.tTextx0x6x0x0.default, componentState.tTextx0x6x0x0?.[state.screenSize]));
+
+ const tColx0x6x1ComputedData = computed(() => _.merge({}, componentState.tColx0x6x1.default, componentState.tColx0x6x1?.[state.screenSize]));
+
+ const tSelectx0x6x1x0ComputedData = computed(() => _.merge({}, componentState.tSelectx0x6x1x0.default, componentState.tSelectx0x6x1x0?.[state.screenSize]));
+
+ const tSelectx0x6x1x1ComputedData = computed(() => _.merge({}, componentState.tSelectx0x6x1x1.default, componentState.tSelectx0x6x1x1?.[state.screenSize]));
+
+ const tRowx0x7ComputedData = computed(() => _.merge({}, componentState.tRowx0x7.default, componentState.tRowx0x7?.[state.screenSize]));
+
+ const tTextx0x7x0ComputedData = computed(() => _.merge({}, componentState.tTextx0x7x0.default, componentState.tTextx0x7x0?.[state.screenSize]));
+
+ const tChartLineSinglex0x8ComputedData = computed(() => replaceCssVariables(_.merge({}, componentState.tChartLineSinglex0x8.default, componentState.tChartLineSinglex0x8?.[state.screenSize]), global?.theme || global?.activeTheme || '默认主题'));
+
+ const tTextx0x9ComputedData = computed(() => _.merge({}, componentState.tTextx0x9.default, componentState.tTextx0x9?.[state.screenSize]));
+
+ const tRowx0x10ComputedData = computed(() => _.merge({}, componentState.tRowx0x10.default, componentState.tRowx0x10?.[state.screenSize]));
+
+ const tColx0x10x0ComputedData = computed(() => _.merge({}, componentState.tColx0x10x0.default, componentState.tColx0x10x0?.[state.screenSize]));
+
+ const tTextx0x10x0x0ComputedData = computed(() => _.merge({}, componentState.tTextx0x10x0x0.default, componentState.tTextx0x10x0x0?.[state.screenSize]));
+
+ const tColx0x10x1ComputedData = computed(() => _.merge({}, componentState.tColx0x10x1.default, componentState.tColx0x10x1?.[state.screenSize]));
+
+      if (apiRegistry && Object.keys(apiRegistry).length) {
+        // 加载初始接口
+        loadInitialApis(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+
+        /* 监听组件可视变化，获取组件绑定的接口数据 */
+        watchComponentVisible(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+      }
+       
+       /* 获取接口数据 */
+       const getApiData = (id, key) => {
+          return computed(() => getDataValue(apiDataMap, componentPropBindingMap[id][key]));
+       };
+      
+return {
+replaceCssVariables,
+getApiData,
+filterData,
+componentPropBindingMap,
+global,
+state,
+componentState,
+tRowx0x0ComputedData,
+tTextCommonx0x0x0ComputedData,
+tComponentx0x1ComputedData,
+tTextx0x2ComputedData,
+tScrollableCardsx0x3ComputedData,
+tRowx0x4ComputedData,
+tColx0x4x0ComputedData,
+tSelectx0x4x0x0ComputedData,
+tColx0x4x1ComputedData,
+tTabsBasex0x4x1x0ComputedData,
+tDatePickerx0x4x1x1ComputedData,
+tDatePickerx0x4x1x2ComputedData,
+tTablex0x5ComputedData,
+tRowx0x6ComputedData,
+tColx0x6x0ComputedData,
+tTextx0x6x0x0ComputedData,
+tColx0x6x1ComputedData,
+tSelectx0x6x1x0ComputedData,
+tSelectx0x6x1x1ComputedData,
+tRowx0x7ComputedData,
+tTextx0x7x0ComputedData,
+tChartLineSinglex0x8ComputedData,
+tTextx0x9ComputedData,
+tRowx0x10ComputedData,
+tColx0x10x0ComputedData,
+tTextx0x10x0x0ComputedData,
+tColx0x10x1ComputedData,
+onchange1767581288441_0_0,
+ontabClick1767581775067_0_0,
+ondateChange1767779170144_0_0,
+ondateChange1767948867605_0_0,
+oncellClick1767773230043_0_0,
+onchange1733973555614,
+onchange1767772766838_0_0,
+};
+},
+}
+</script>
+
+<style scoped>
+.t-l-c-ssqyMonitoringInformation {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 824px;
+height: 580px;
+background-color: rgba(255, 12, 12, 0);
+}
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-row-0-0 {
+position: absolute !important;
+top: 131px;
+left: 0px;
+width: 100%;
+height: 64px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-common-0-0-0 {
+position: unset;
+top: -247px;
+left: -188px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-component-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-0-2 {
+position: absolute !important;
+top: 4px;
+left: 29px;
+width: 140px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-scrollable-cards-0-3 {
+position: absolute !important;
+top: 131px;
+left: 0px;
+width: 100%;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-row-0-4 {
+position: absolute !important;
+top: 43px;
+left: -1px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-4-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-select-0-4-0-0 {
+position: unset;
+top: 294px;
+left: 714px;
+width: 260px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-4-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-tabs-base-0-4-1-0 {
+position: unset;
+top: -142px;
+left: 234px;
+width: 180px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-date-picker-0-4-1-1 {
+position: unset;
+top: 294px;
+left: 404px;
+width: 380px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-date-picker-0-4-1-2 {
+position: unset;
+top: 304px;
+left: 414px;
+width: 380px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-table-0-5 {
+position: absolute !important;
+top: 270px;
+left: 0px;
+width: 100%;
+height: calc(100% - 270px);
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-row-0-6 {
+position: absolute !important;
+top: 210px;
+left: 0px;
+width: 100%;
+height: 34px;
+pointer-events: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: auto;
+background-color: rgba(12, 62, 139, 0);
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-6-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 34px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-0-6-0-0 {
+position: unset;
+top: 208px;
+left: 1px;
+width: 240px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-6-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 34px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-select-0-6-1-0 {
+position: unset;
+top: 208px;
+left: 704px;
+width: 180px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-select-0-6-1-1 {
+position: unset;
+top: 218px;
+left: 714px;
+width: 180px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-row-0-7 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-0-7-0 {
+position: unset;
+top: 124.5px;
+left: 645px;
+width: 164px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-chart-line-single-0-8 {
+position: absolute !important;
+top: 270px;
+left: 0px;
+width: 100%;
+height: calc(100% - 270px);
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-0-9 {
+position: absolute !important;
+top: 249px;
+left: -17px;
+width: 144px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-row-0-10 {
+position: absolute !important;
+top: 83px;
+left: 0px;
+width: 100%;
+height: 34px;
+pointer-events: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: auto;
+background-color: rgba(12, 62, 139, 0);
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-10-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 34px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-text-0-10-0-0 {
+position: unset;
+top: 87px;
+left: 2px;
+width: 240px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ssqyMonitoringInformation .ssqyMonitoringInformation-t-col-0-10-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 34px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: ;
+padding-right: 15px;
+}
+</style>

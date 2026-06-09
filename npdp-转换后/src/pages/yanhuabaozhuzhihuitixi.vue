@@ -1,0 +1,168 @@
+<template>
+  <div id="t-l-c-yanhuabaozhuzhihuitixi" class="t-l-c-yanhuabaozhuzhihuitixi" ><t-image-base id="t-image-base-f10d.5858772d6" class="yanhuabaozhuzhihuitixi-t-image-base-0-0"  :src="tImageBasex0x0ComputedData.src" :fit="tImageBasex0x0ComputedData.fit" :c-style="tImageBasex0x0ComputedData.cStyle"></t-image-base></div>
+</template>
+
+<script>
+import _ from 'lodash';
+import {
+  reactive, ref, computed, watch, watchEffect,
+  onMounted, onUnmounted, onBeforeMount, onBeforeUnmount,
+  provide, inject, toRefs, toRef, nextTick, isRef,
+  shallowRef, shallowReactive, triggerRef,
+  h, createVNode, createElementBlock, openBlock,
+  withCtx, withDirectives, withModifiers,
+  resolveComponent, defineAsyncComponent,
+  markRaw, toRaw, toDisplayString, createElementVNode,
+} from 'vue';
+import { useRoute } from 'vue-router';
+import http from '@/http.js';
+import { ComponentLoader, watchComponentVisible, generateCacheKey, requestApi, ResourceLoader, replaceCssVariables, getUrlParam, getQueryParam, guid, runAnimation, setPageScale, mountDynamicComponent, loadInitialApis, fetchApiData, getDataValue, applyFilter, filterData, convertCharacter } from '@/utils.js';
+import { themes } from '@/theme.js';
+import * as echarts from 'echarts';
+import { TImageBase } from '@ths/design';
+
+export default {
+  components: {
+    TImageBase,
+  },
+  setup() {
+const componentPropBindingMap = {"body":{"attributeName":"tBodyx0x0"},"t-image-base-f10d.5858772d6":{"attributeName":"tImageBasex0x0","src":{"filters":[]},"fit":{"filters":[]},"cStyle":{"filters":[]}}};
+// 页面内注入全局变量和事件
+const rootData = inject('root');
+const global = reactive({
+...toRefs(rootData)
+});
+// 路由
+const route = useRoute();
+// 创建 DOM 引用
+
+// 当前页面使用的变量
+const state = reactive({
+   screenSize: "",
+});
+// 选中的图表主题
+const activeChartTheme = computed(() => {
+const activeTheme = _.cloneDeep(themes.find((item) => item.name === global.activeTheme));
+return activeTheme.chartVariables;
+});
+// 选中的图表主题的options
+const activeChartThemeOptions = computed(() => {
+if (activeChartTheme.value) {
+// 公用的主题配置
+const themeConfig = {
+backgroundColor: activeChartTheme.value.backgroundColor, // 背景色
+color: activeChartTheme.value.color, // 系列颜色
+title: activeChartTheme.value.title, // 标题
+legend: activeChartTheme.value.legend, // 图例
+tooltip: activeChartTheme.value.tooltip, // 提示框
+xAxis: activeChartTheme.value.categoryAxis, // x轴
+yAxis: activeChartTheme.value.valueAxis, // y轴
+};
+return themeConfig;
+} else {
+return {};
+}
+});
+// 当前页面中组件的属性
+const componentState = reactive({
+tImageBasex0x0: {
+defaultStyle: {
+            default: {"width":"1600px","min-height":"900px","height":"1102px","position":"unset","left":"849px","top":"571px","transform":"translate(-50%, -50%)","backgroundColor":"rgba(255, 255, 255, 1)"},
+            
+            },
+ default: { 
+ 
+src:"assets/images/2026-02-09/951d7944079e4df6990fce0901e3c82e.png",
+fit:"fill",
+cStyle:{"wrapper":{"default":{"width":"1600px","min-height":"900px","height":"1102px","position":"unset","left":"849px","top":"571px","transform":"translate(-50%, -50%)","backgroundColor":"rgba(255, 255, 255, 1)"}}}, 
+ },
+},
+});
+const openPdfUrl = () => {
+window.open('http://192.168.24.106:10157/tqyj.pdf', '_blank');
+};let apiRegistry = {}; 
+
+ function handleWindowResize() {
+                            setPageScale('t-l-c-yanhuabaozhuzhihuitixi', global.appScaleMode, 'normal');
+                           
+                            // 获取窗口的宽度和高度
+                            var windowWidth = window.innerWidth;
+
+}
+onMounted(() => {
+setPageScale('t-l-c-yanhuabaozhuzhihuitixi', global.appScaleMode, 'normal');
+window.addEventListener('resize', handleWindowResize);
+handleWindowResize();
+});
+// 页面离开时的操作
+onUnmounted(() => {
+// 移除监听事件
+window.removeEventListener('resize', handleWindowResize);
+});
+ const tImageBasex0x0ComputedData = computed(() => _.merge({}, componentState.tImageBasex0x0.default, componentState.tImageBasex0x0?.[state.screenSize]));
+
+      if (apiRegistry && Object.keys(apiRegistry).length) {
+        // 加载初始接口
+        loadInitialApis(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+
+        /* 监听组件可视变化，获取组件绑定的接口数据 */
+        watchComponentVisible(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+      }
+       
+       /* 获取接口数据 */
+       const getApiData = (id, key) => {
+          return computed(() => getDataValue(apiDataMap, componentPropBindingMap[id][key]));
+       };
+      
+return {
+replaceCssVariables,
+getApiData,
+filterData,
+componentPropBindingMap,
+global,
+state,
+componentState,
+tImageBasex0x0ComputedData,
+};
+},
+}
+</script>
+
+<style scoped>
+.t-l-c-yanhuabaozhuzhihuitixi {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 100%;
+width: 1700px;
+overflow-y: auto;
+overflow-x: hidden;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-yanhuabaozhuzhihuitixi .yanhuabaozhuzhihuitixi-t-image-base-0-0 {
+position: absolute !important;
+top: 571px;
+left: 849px;
+width: 1600px;
+height: 1102px;
+pointer-events: auto;
+}
+</style>

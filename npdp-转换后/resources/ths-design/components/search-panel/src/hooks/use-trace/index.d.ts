@@ -1,0 +1,75 @@
+import { GeoJSONLayerOption } from './types/thsLayerOption';
+import { TraceLayerType } from './types/common/common';
+export interface TracePointData {
+    ISDELETE: string;
+    ENTERADDRESS: string;
+    DATA_CODE: string;
+    VALIDBEGINTIME: string;
+    TYSHXYDM: string;
+    TRADENAME: string;
+    STATUS: string;
+    DATA_TYPES_CODE: string;
+    YDD_JSON: string;
+    id: string;
+    DATA_TYPES: string;
+    DATA_IMAGE_URL_RELATIVE: string;
+    ENTERCODE: string;
+    ALLREGION_NAME: string;
+    CODE_CONTROLLEVEL: string;
+    REGION_CODE: string;
+    CODE_TRADE: string;
+    ROW_NUM: number;
+    DATA_IMAGE_URL: string;
+    LON: string;
+    WSYSTEMNAME: string;
+    VALIENDTIME: string;
+    DATA_NAME: string;
+    FZTIME: string;
+    PKID: string;
+    REGION_NAME: string;
+    DATA_INTRODUCTION: string;
+    CODE_WSYSTEM: string;
+    CORPCODE: string;
+    ENTERNAME: string;
+    LAT: string;
+    LICENSENUM: string;
+}
+export interface TraceBufferData {
+    queryArgs: {
+        gisType: string;
+        locationField: string;
+        ISDELETE: string;
+        pointValue: string;
+        DATA_TYPES_CODE: string;
+        queryField: string;
+        pageSize: string;
+        ENTITY_CODE: string;
+        pageNum: string;
+    };
+    page: {
+        pageNum: number;
+        pageSize: number;
+        size: number;
+        orderBy: string;
+        startRow: number;
+        endRow: number;
+        total: number;
+        pages: number;
+        list: TracePointData[];
+        prePage: number;
+        nextPage: number;
+        isFirstPage: boolean;
+        isLastPage: boolean;
+        hasPreviousPage: boolean;
+        hasNextPage: boolean;
+        navigatePages: number;
+        navigatepageNums: number;
+        navigateFirstPage: number;
+        navigateLastPage: number;
+        first: number;
+        firstPage: number;
+        lastPage: number;
+    };
+}
+export declare function addAirTraceabilityEffect(longitude: number, latitude: number, renderListFunc: (bufferData: TraceBufferData, layers: GeoJSONLayerOption[]) => void, regionCode?: string, isAddPanel?: boolean): Promise<void>;
+export declare const addAirTraceabilityEffectByTraceLayerType: (traceLayerType: TraceLayerType, renderListFunc: (bufferData: TraceBufferData, layers: GeoJSONLayerOption[]) => void) => void;

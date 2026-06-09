@@ -1,0 +1,127 @@
+
+.layer {
+          height: 100%;
+          width: 100%;
+          /* 调试时可打开背景注释 */
+          /* background: black; */
+
+          --menu-padding-left: 22px;
+}
+span.online-status1 {
+        color: green;
+}
+span.online-status0 {
+        color: red;
+}
+.layer .el-scrollbar__view {
+          padding-right: 8px;
+}
+
+      /* 复选框样式 */
+.layer .el-checkbox {
+          --el-checkbox-background-color: var(--left-menu-checkbox-bg);
+          --el-border-base: 1px solid var(--left-menu-checkbox-border);
+          --el-checkbox-checked-background-color: var(--left-menu-checkbox-bgc-hover);
+          --el-checkbox-checked-input-border-color: var(--left-menu-checkbox-border-hover);
+          --el-checkbox-input-border-color-hover: var(--left-menu-checkbox-border-hover);
+}
+.layer .el-checkbox__input.is-focus:not(.is-checked) .el-checkbox__inner:not(:hover) {
+          border-color: var(--left-menu-checkbox-border);
+}
+
+      /* 树样式 */
+.layer .el-tree {
+          --el-tree-node-hover-background-color: transparent;
+          --el-tree-font-color: var(--left-menu-content-title);
+          --el-tree-expand-icon-color: #fff;
+
+          background: transparent;
+}
+
+      /* 树-箭头样式-非叶子节点 */
+.layer .el-icon-caret-right:not(.is-leaf):before {
+          border-radius: 3px;
+          background: var(--left-menu-tree-unpack-bg);
+}
+
+      /* 树-箭头样式 */
+.layer .el-icon-caret-right:before {
+          padding: 3px;
+          font-size: 9px;
+}
+.layer .el-tree .el-tree-node .el-tree-node__content {
+          padding-right: 6px;
+}
+
+      /* 树节点 */
+.layer .el-tree-node__content {
+          height: 36px;
+}
+
+      /* 所有菜单项的复选框 */
+.layer .el-tree-node__content>label.el-checkbox {
+          margin-right: 6px;
+}
+
+      /* 菜单（非一级）的高亮样式 */
+.layer .el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+          background-color: transparent;
+}
+
+      /* 超出内容宽度的省略号样式 */
+.layer .custom-tree-node {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: space-between;
+          min-width: 10px;
+}
+
+      /* 自定义树节点文本的样式 */
+.layer .custom-tree-node .custom-tree-node-text {
+          flex: 1;
+          min-width: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: var(--business-text-size-14);
+          line-height: 20px;
+          color: #fff;
+}
+
+      /* 菜单文本高亮 */
+.layer .custom-tree-node .custom-tree-node-text.active {
+          color: var(--business-theme);
+          /* color: #FFEC9F;
+            text-shadow: 0px 0px 10px rgba(255, 235, 187, 0.5);
+            font-weight: bold; */
+}
+.layer .custom-tree-node.disabled {
+          cursor: not-allowed !important;
+          pointer-events: none !important;
+}
+
+      /* 操作按钮组 */
+.layer .operation-btns {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+}
+
+      /* 移动图层的按钮 */
+.layer .move-btn {
+          width: 22px;
+          height: 17px;
+          background: #74897D;
+          mask: no-repeat center center / cover;
+}
+
+      /* 移动图层的按钮 */
+.layer .move-btn:hover {
+          background: #fff;
+}
+.layer .el-scrollbar {
+          --el-scrollbar-opacity: 1;
+          --el-scrollbar-background-color: var(--left-menu-scrollbar-bg);
+          --el-scrollbar-hover-opacity: 1;
+          --el-scrollbar-hover-background-color: var(--left-menu-scrollbar-bg);
+}

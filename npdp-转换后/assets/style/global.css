@@ -1,0 +1,150 @@
+/* body 增加背景色 */
+body {
+  background: var(--t-body-background);
+}
+
+/* 文本颜色 */
+.font-color-theme {
+  color: var(--theme-color);
+}
+
+/* 文本粗细 */
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-weight-light {
+  font-weight: 400;
+}
+
+.font-size12 {
+  font-size: 12px;
+}
+
+.font-size14 {
+  font-size: 14px;
+}
+
+.font-size16 {
+  font-size: 16px;
+}
+
+.font-size18 {
+  font-size: 18px;
+}
+
+.font-size20 {
+  font-size: 20px;
+}
+
+.font-size24 {
+  font-size: 24px;
+}
+
+.font-size28 {
+  font-size: 28px;
+}
+
+.font-size30 {
+  font-size: 30px;
+}
+
+.font-family-num {
+  font-family: 'SY-DATA';
+}
+
+.font-family-din {
+  font-family: 'SY-DATA';
+}
+
+.font-family-light {
+  font-family: ReductoCondensedSSiCondensed-Regular;
+}
+
+.font-family-odd {
+  font-family: Source Han Sans CN Bold, Source Han Sans CN Bold-Bold;
+}
+
+/* 文本省略号 */
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 清除浮动 */
+.clear-float {
+  clear: both;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.direction-col {
+  flex-direction: column;
+}
+
+.flex.direction-row {
+  flex-direction: row;
+}
+
+.flex.flex-between-center {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex.flex-around-center {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex.flex-center {
+  align-items: center;
+}
+
+.flex.flex-right {
+  justify-content: flex-end;
+}
+
+.flex.flex-end {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex.flex-start {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex.flex-justify-center {
+  justify-content: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.m-t-sm {
+  margin-top: 10px;
+}
+
+.m-r-xs {
+  margin-right: 5px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.m-l-xs {
+  margin-left: 5px;
+}
+
+.m-r-xs {
+  margin-right: 5px;
+}
