@@ -257,6 +257,31 @@ function readFile(filePath) {
   return fs.readFileSync(filePath, 'utf-8');
 }
 
+// ============================================================
+// 模板读取（templates/ 目录与脚本同级）
+// ------------------------------------------------------------
+// 用法：
+//   readTemplate('bridge.js')                       // 原样返回内容
+//   readTemplate('index.html', { title: '我的应用' }) // 替换 {{title}} 占位符
+//
+// 占位符规则：{{key}} → vars[key]；未提供 vars 时不做替换。
+// ============================================================
+const TEMPLATES_DIR = path.join(__dirname, 'templates');
+
+function readTemplate(name, vars) {
+  const tplPath = path.join(TEMPLATES_DIR, name);
+  if (!fs.existsSync(tplPath)) {
+    throw new Error(`模板文件不存在: ${tplPath}`);
+  }
+  let content = fs.readFileSync(tplPath, 'utf-8');
+  if (vars && typeof vars === 'object') {
+    content = content.replace(/\{\{(\w+)\}\}/g, (m, key) => {
+      return Object.prototype.hasOwnProperty.call(vars, key) ? String(vars[key]) : m;
+    });
+  }
+  return content;
+}
+
 function copyDirSync(src, dest) {
   ensureDir(dest);
   const entries = fs.readdirSync(src, { withFileTypes: true });
@@ -363,6 +388,10 @@ function main() {
   generateRoutes(absOutputDir, pageList);
   log('路由生成完成', 'success');
 
+  // Step 7.5: 注入微前端框架（基座侧 bridge.js）
+  injectMicroAppFramework(absOutputDir);
+  log('微前端框架注入完成', 'success');
+
   // Step 8: 清理
   cleanUp(absOutputDir);
   log('清理完成', 'success');
@@ -393,7 +422,7 @@ function generateScaffold(projectDir) {
       'echarts': '^5.4.0',
       'echarts-liquidfill': '^3.0.0',
       'echarts-wordcloud': '^2.0.0',
-      '@ths/design': '^1.1.27',
+      '@ths/design': '^1.1.28',
       'vue': '^3.4.0',
       'vue-router': '^4.3.0',
       'axios': '^1.6.0',
@@ -423,43 +452,14 @@ function generateScaffold(projectDir) {
   };
   writeFile(path.join(projectDir, 'package.json'), JSON.stringify(packageJson, null, 2));
 
-  // vite.config.js
-  const viteConfig = `import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import path from 'path';
-
-export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
-  css: {
-    preprocessorOptions: {},
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'element-plus': ['element-plus'],
-          'vue-vendor': ['vue', 'vue-router'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-  },
-  server: {
-    port: 3000,
-  },
-});
-`;
-  writeFile(path.join(projectDir, 'vite.config.js'), viteConfig);
+  // vite.config.js（模板：templates/vite.config.js）
+  writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
 
   // 组件库已自带兼容 .vue 扁平结构的 loader（自 1.1.27 起），
   // 不再需要 postinstall patch 脚本
 
-  // index.html
+  // index.html（模板：templates/index.html，占位符 {{title}}）
+  // 从源 index.html 的 <title> 抽取标题，没有就用 'Dashboard'
   const originalIndexHtmlPath = path.join(projectDir, 'index.html');
   const originalIndexHtml = fs.existsSync(originalIndexHtmlPath)
     ? readFile(originalIndexHtmlPath)
@@ -467,27 +467,7 @@ export default defineConfig({
   const titleMatch = originalIndexHtml.match(/<title>([^<]+)<\/title>/);
   const title = titleMatch ? titleMatch[1] : 'Dashboard';
 
-  const newIndexHtml = `<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${title}</title>
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-    <link rel="stylesheet" href="/assets/style/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/element-plus@2.7.0/dist/index.css" />
-    <link rel="stylesheet" href="/assets/style/ths-design.css" />
-    <link rel="stylesheet" href="/resources/video-js.css" />
-    <link rel="stylesheet" href="/assets/style/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/style/themes.css" />
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
-`;
-  writeFile(path.join(projectDir, 'index.html'), newIndexHtml);
+  writeFile(path.join(projectDir, 'index.html'), readTemplate('index.html', { title }));
 }
 
 // ============================================================
@@ -656,281 +636,7 @@ const componentModules = import.meta.glob('./pages/*.vue');
 function convertMainFile(projectDir) {
   const srcDir = path.join(projectDir, 'src');
 
-  const mainJs = `/**
- * 应用入口
- */
-import {
-  createApp, reactive, ref, watch, watchEffect, provide, inject,
-  toRefs, nextTick, onMounted,
-} from 'vue';
-import { useRoute, createWebHashHistory, createRouter } from 'vue-router';
-import ElementPlus from 'element-plus';
-import ElementPlusLocaleZhCn from 'element-plus/es/locale/lang/zh-cn';
-import { createI18n } from 'vue-i18n';
-import mitt from 'mitt';
-import { routes } from './route.js';
-import http from './http.js';
-import { replaceCssVariables, guid, getUrlParam, getQueryParam } from './utils.js';
-import { initSocket } from './websocket.js';
-import { loadGlobalVariables, loadGlobalFunctions } from './globals/index.js';
-import { themes } from './theme.js';
-import RootComponent from './pages/root.vue';
-
-import microApp from '@micro-zoe/micro-app'
-microApp.start() 
-
-// 必须全局注册的 ths-design 组件（mountDynamicComponent 等工具函数通过 appContext.components 查找）
-import { TDialog } from '@ths/design';
-
-import i18nMessages from './resources/lang.js';
-const i18n = createI18n({
-  legacy: false,
-  locale: 'zh-cn',
-  fallbackLocale: 'zh-cn',
-  messages: i18nMessages,
-});
-
-const router = createRouter({
-  history: createWebHashHistory('/'),
-  routes,
-});
-
-// 防止 t-component 动态加载组件时重复添加同 path 路由
-// ths-design 的 ComponentLoader.loadComponent 会调用 router.addRoute，
-// 若不拦截，同一 path 会被添加多次，导致 router-view 反复渲染（"阴影叠加"症状）。
-const originalAddRoute = router.addRoute;
-router.addRoute = function(route) {
-  // 同 name 路由 Vue Router 4 会自动替换，但同 path 不同 name 会导致重复
-  // 检查 path 是否已存在，存在则跳过
-  const exists = router.getRoutes().some(r => r.path === route.path);
-  if (!exists) {
-    return originalAddRoute.call(router, route);
-  }
-  console.log('路由已存在，跳过重复添加:', route.path);
-};
-
-window.router = router;
-
-const MainComponent = {
-  template: '<router-view></router-view>',
-  components: { rootComponent: RootComponent },
-  setup() {
-    const internalKey = ref(0);
-    window.internalKeyRef = internalKey;
-
-    const rootEmitter = mitt();
-
-    let global = reactive({});
-
-    function initGlobal() {
-      const mergedVars = {
-        ...(window.publicGlobalVariables || {}),
-        ...(window.legoGlobalVariables || {}),
-      };
-      Object.assign(global, mergedVars);
-      global = reactive(global);
-      console.log('全局变量初始化完成', global);
-    }
-
-    if (window.globalFilesLoaded) {
-      initGlobal();
-    } else {
-      document.addEventListener('globalFilesLoaded', initGlobal, { once: true });
-    }
-
-    loadGlobalVariables();
-    loadGlobalFunctions();
-
-    const setSocketRoomId = () => {
-      let roomId = getUrlParam('roomId');
-      if (!roomId) {
-        roomId = guid(true, 'lego');
-      }
-      global.socketRoom = roomId;
-      return roomId;
-    };
-    setSocketRoomId();
-
-    let socket = ref(null);
-    async function initSocketIO() {
-      const { io } = await import('socket.io-client');
-      return io;
-    }
-
-    if (global.socketIp) {
-      initSocketIO().then(io => {
-        const options = {};
-        if (global?.socketPath) options.path = global.socketPath;
-        socket.value = io(global.socketIp, options);
-      });
-    }
-
-    function sendMessage(obj) {
-      if (!global.webSocketUrl) return;
-      let message = new FormData();
-      message.append('message', JSON.stringify(obj));
-      http.post(global.webSocketUrl + "/interact/" + global.socketRoom + "_/message", message);
-    }
-
-    let webSocket = null;
-    const createWebSocket = (newValue) => {
-      if (global.webSocketUrl && window?.ths) {
-        webSocket = window.ths.initSocket(global.webSocketUrl, global.socketRoom, function (messageStr) {
-          const message = JSON.parse(messageStr);
-          if (message.type.toLowerCase() === "runinteractive" && message.data) {
-            const data = message.data;
-            rootEmitter.emit('rootSocket:change', {
-              type: 'runInteractiveChange',
-              data: data?.data || data,
-            });
-          }
-        });
-      }
-    };
-
-    watch(() => global.socketRoom, (newValue) => {
-      if (global.socketRoom) {
-        sessionStorage.setItem('customClientCode', global.socketRoom);
-        createWebSocket(global.socketRoom);
-      }
-    }, { immediate: true });
-
-    rootEmitter.on('rootData:change', async (obj) => {
-      const _ = await import('lodash').then(m => m.default || m);
-      global = _.set(global, obj.key, obj.value);
-      if (global.socketIp && global.socketRoom && socket.value) {
-        socket.value.emit('message', {
-          room: global.socketRoom,
-          type: 'internalType:ChangeGlobalValue',
-          data: obj,
-        });
-      }
-    });
-
-    watch(() => global.socketIp, async (val) => {
-      const io = await initSocketIO();
-      if (socket.value) socket.value.close();
-      if (val) {
-        const options = {};
-        if (global?.socketPath) options.path = global.socketPath;
-        socket.value = io(val, options);
-      } else {
-        socket.value = null;
-      }
-    });
-
-    watch(() => global.socketRoom, (val, oldVal) => {
-      if (socket.value) {
-        socket.value.emit('leave-room', oldVal);
-        socket.value.emit('join-room', val);
-      }
-    });
-
-    watchEffect(async (onCleanup) => {
-      if (socket.value) {
-        const _ = await import('lodash').then(m => m.default || m);
-        const messageHandler = (data) => {
-          if (data.type === 'internalType:ChangeGlobalValue') {
-            global = _.set(global, data.data.key, data.data.value);
-          } else {
-            rootEmitter.emit('rootSocket:change', data);
-          }
-        };
-        const connectHandler = () => {
-          if (global.socketRoom) socket.value.emit('join-room', global.socketRoom);
-        };
-        const disconnectHandler = () => console.log('Socket disconnected');
-        socket.value.on('message', messageHandler);
-        socket.value.on('connect', connectHandler);
-        socket.value.on('disconnect', disconnectHandler);
-        onCleanup(() => {
-          socket.value?.off('message', messageHandler);
-          socket.value?.off('connect', connectHandler);
-          socket.value?.off('disconnect', disconnectHandler);
-        });
-      }
-    });
-
-    watch(() => global.activeTheme, (val) => {
-      if (val) document.getElementsByTagName('body')[0].className = val;
-    }, { immediate: true });
-
-    const getUserToken = (casut, casLoginUrl) => {
-      try {
-        const getUserTokenUrl = global.loginByCasConfig?.getUserTokenUrl;
-        http.get(getUserTokenUrl, { params: { casut } }).then((res) => {
-          if (res.status === 200 && res.data.status === '1') {
-            const { user, userToken } = res.data;
-            localStorage.setItem('token', userToken);
-            localStorage.setItem('lastUserName', user.userName);
-            localStorage.setItem('lastLoginName', user.loginName);
-            localStorage.setItem('lastUserId', user.userId);
-            sessionStorage.setItem('userToken', userToken);
-            global.userId = user.userId;
-          } else {
-            localStorage.removeItem('token');
-            sessionStorage.removeItem('userToken');
-            window.location.href = casLoginUrl;
-          }
-        });
-      } catch (error) {
-        console.error('单点登录失败', error);
-        localStorage.removeItem('token');
-        sessionStorage.removeItem('userToken');
-        window.location.href = casLoginUrl;
-      }
-    };
-
-    if (global.loginByCasConfig?.open) {
-      const token = localStorage.getItem('token');
-      const userToken = sessionStorage.getItem('userToken');
-      const casUrl = global.loginByCasConfig?.casUrl;
-      const serviceUrl = global.loginByCasConfig?.serviceUrl;
-      const goToUrl = window.location.href;
-      if (casUrl && serviceUrl && goToUrl) {
-        const casLoginUrl = casUrl + '?service=' + serviceUrl + '?gotourl=' + goToUrl;
-        const casUt = getQueryParam('casut');
-        if (token && userToken) {
-          console.log('已经登录了');
-        } else if (casUt) {
-          getUserToken(casUt, casLoginUrl);
-        } else {
-          window.location.href = casLoginUrl;
-        }
-      } else {
-        console.error('单点登录配置错误');
-      }
-    }
-
-    const rootValue = {
-      ...toRefs(global),
-      rootEmit: rootEmitter.emit,
-      rootOn: rootEmitter.on,
-      rootOff: rootEmitter.off,
-      get rootSocket() { return socket.value; },
-      setSocketRoomId,
-      sendMessage,
-    };
-    provide('root', rootValue);
-    window.__lego_root = rootValue;
-  },
-};
-
-const app = createApp(MainComponent);
-app.use(i18n).use(router)
-  .use(ElementPlus, {
-    size: 'small',
-    locale: ElementPlusLocaleZhCn,
-    i18n: (key, value) => i18n.global.t(key, value),
-  });
-
-// 全局注册必须用到的 ths-design 组件
-app.component('TDialog', TDialog);
-
-app.mount('#app');
-window.app = app;
-`;
-  writeFile(path.join(srcDir, 'main.js'), mainJs);
+  writeFile(path.join(srcDir, 'main.js'), readTemplate('main.js'));
 }
 
 // ============================================================
@@ -2045,6 +1751,20 @@ ${entries.join('\n')}
   writeFile(path.join(projectDir, 'src', 'route.js'), routeContent);
 
   log(`  生成了 ${entries.length} 条路由`);
+}
+
+// ============================================================
+// Step 7.5: 注入微前端框架（基座侧 bridge.js）
+// ------------------------------------------------------------
+// 模板源：templates/bridge.js（同步自 micro-app-template/packages/base/src/bridge.js）
+// 写入：<输出>/src/bridge.js。
+// main.js 中的 micro-app 启动与 bindReactiveToGlobal 调用由
+// convertMainFile() 一并从 templates/main.js 渲染生成。
+// ============================================================
+function injectMicroAppFramework(projectDir) {
+  const bridgePath = path.join(projectDir, 'src', 'bridge.js');
+  writeFile(bridgePath, readTemplate('bridge.js'));
+  log(`  写入 src/bridge.js（基座侧通信桥，三通道）`);
 }
 
 // ============================================================
