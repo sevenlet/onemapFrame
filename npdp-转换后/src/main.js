@@ -3,7 +3,7 @@
  */
 import {
   createApp, reactive, ref, watch, watchEffect, provide, inject,
-  toRefs, nextTick, onMounted,
+  toRefs, nextTick, onMounted, computed, onUnmounted
 } from 'vue';
 import { useRoute, createWebHashHistory, createRouter } from 'vue-router';
 import ElementPlus from 'element-plus';
@@ -19,7 +19,9 @@ import { themes } from './theme.js';
 import RootComponent from './pages/root.vue';
 
 import microApp from '@micro-zoe/micro-app'
-microApp.start() 
+microApp.start()
+
+import { bindReactiveToGlobal } from './bridge.js';
 
 // 必须全局注册的 ths-design 组件（mountDynamicComponent 等工具函数通过 appContext.components 查找）
 import { TDialog } from '@ths/design';
@@ -41,7 +43,7 @@ const router = createRouter({
 // ths-design 的 ComponentLoader.loadComponent 会调用 router.addRoute，
 // 若不拦截，同一 path 会被添加多次，导致 router-view 反复渲染（"阴影叠加"症状）。
 const originalAddRoute = router.addRoute;
-router.addRoute = function(route) {
+router.addRoute = function (route) {
   // 同 name 路由 Vue Router 4 会自动替换，但同 path 不同 name 会导致重复
   // 检查 path 是否已存在，存在则跳过
   const exists = router.getRoutes().some(r => r.path === route.path);
@@ -70,7 +72,6 @@ const MainComponent = {
         ...(window.legoGlobalVariables || {}),
       };
       Object.assign(global, mergedVars);
-      global = reactive(global);
       console.log('全局变量初始化完成', global);
     }
 
@@ -82,6 +83,12 @@ const MainComponent = {
 
     loadGlobalVariables();
     loadGlobalFunctions();
+
+    // ===== micro-app 全局数据双向同步 =====
+    // bridge.js 封装好的：把基座 global 与所有子应用的 globalData 双向绑定
+    // 包含：防回环、防空对象覆盖、初始值拉取、卸载自动清理
+    const unbindGlobal = bindReactiveToGlobal(global);
+    onUnmounted(unbindGlobal);
 
     const setSocketRoomId = () => {
       let roomId = getUrlParam('roomId');
@@ -140,6 +147,7 @@ const MainComponent = {
     rootEmitter.on('rootData:change', async (obj) => {
       const _ = await import('lodash').then(m => m.default || m);
       global = _.set(global, obj.key, obj.value);
+      // global 改了之后，bindReactiveToGlobal 内部的 watch 会自动推给所有子应用，无需手写 setGlobalData
       if (global.socketIp && global.socketRoom && socket.value) {
         socket.value.emit('message', {
           room: global.socketRoom,
@@ -268,6 +276,10 @@ app.use(i18n).use(router)
 
 // 全局注册必须用到的 ths-design 组件
 app.component('TDialog', TDialog);
+
+// 全局注册基座弹窗内容组件（供 t-dialog 的 contentComName 动态引用）
+import DemoDialogContent from './dialogs/DemoDialogContent.vue';
+app.component('DemoDialogContent', DemoDialogContent);
 
 app.mount('#app');
 window.app = app;
