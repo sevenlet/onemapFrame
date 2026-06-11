@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.35/esri/copyright.txt for details.
+//>>built
+var __extends=this&&this.__extends||function(){var g=function(f,c){g=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(d,e){d.__proto__=e}||function(d,e){for(var b in e)e.hasOwnProperty(b)&&(d[b]=e[b])};return g(f,c)};return function(f,c){function d(){this.constructor=f}g(f,c);f.prototype=null===c?Object.create(c):(d.prototype=c.prototype,new d)}}();
+define("esri/arcade/ImmutablePathArray",["require","exports","./ImmutableArray","./ImmutablePointArray"],function(g,f,c,d){return function(e){function b(a,h,k,l,m){a=e.call(this,a)||this;a._lazyPath=[];a._hasZ=!1;a._hasM=!1;a._hasZ=k;a._hasM=l;a._spRef=h;a._cacheId=m;return a}__extends(b,e);b.prototype.get=function(a){if(void 0===this._lazyPath[a]){var h=this._elements[a];if(void 0===h)return;this._lazyPath[a]=new d(h,this._spRef,this._hasZ,this._hasM,this._cacheId,a)}return this._lazyPath[a]};b.prototype.equalityTest=
+function(a){return a===this?!0:null===a||!1===a instanceof b?!1:a.getUniqueHash()===this.getUniqueHash()};b.prototype.getUniqueHash=function(){return this._cacheId.toString()};return b}(c)});

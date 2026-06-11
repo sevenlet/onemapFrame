@@ -1,0 +1,44 @@
+.t-l-c-zrstProtectAnimal {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+filter: ;
+z-index: 1;
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+width: 1600px;
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+position: Static;
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+pointer-events: auto;
+height: 900px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-zrstProtectAnimal .zrstProtectAnimal-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 800px;
+height: 580px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstProtectAnimal .zrstProtectAnimal-t-text-0-3 {
+position: absolute !important;
+top: 9px;
+left: 25px;
+width: 1544px;
+height: 54px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstProtectAnimal .zrstProtectAnimal-t-list-0-4 {
+position: absolute !important;
+top: 70px;
+left: 20px;
+width: 1563px;
+height: 786px;
+pointer-events: auto;
+}

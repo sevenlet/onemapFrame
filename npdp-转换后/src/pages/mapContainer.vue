@@ -324,7 +324,8 @@ if (hideMap === 'true') {
   }
 
 } else {
-  state.mapUrl = `${global.mapBaseUrl}?${decodeURIComponent(searchParams.toString())}`;
+  // state.mapUrl = `${global.mapBaseUrl}?${decodeURIComponent(searchParams.toString())}`;
+  state.mapUrl = 'http://localhost:4000/mapgo5.0/map2D/index.html?appID=6db7a3cc92ed4ccfaed4c65927c0709e&appType=2D';
 }
 // state.mapUrl = `${global.mapBaseUrl}?${decodeURIComponent(searchParams.toString())}`;
 // console.log(`${global.mapBaseUrl}?${searchParams.toString()}`, 77768)

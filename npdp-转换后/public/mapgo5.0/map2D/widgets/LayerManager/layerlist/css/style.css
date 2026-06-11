@@ -1,0 +1,32 @@
+.widgets-LayerManager-panel {
+  background-color: #0a152f;
+  border-radius: 5px;
+  width: 370px !important;
+  height: 600px !important;
+}
+
+.widgets-LayerManager-panel .border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  display: block;
+  background: url(../images/border.png) no-repeat;
+  background-size: cover;
+}
+
+.widgets-LayerManager-panel .title {
+  padding: 5px 0 0 10px;
+  font-size: 16px;
+}
+
+.widgets-LayerManager-panel .widget-panel-header {
+  background-color: transparent;
+}
+
+/* 使iframe能沾满整个图层列表内容区域 */
+.widgets-LayerManager-panel iframe {
+  height: 565px;
+  padding-top: 10px;
+}

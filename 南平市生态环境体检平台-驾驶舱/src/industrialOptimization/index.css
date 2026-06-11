@@ -1,0 +1,125 @@
+.t-l-c-industrialOptimization {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 557px;
+height: 136px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-industrialOptimization .industrialOptimization-t-rect-0-0 {
+position: absolute !important;
+top: 46px;
+left: 0px;
+width: 557px;
+height: 90px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-text-common-0-1 {
+position: absolute !important;
+top: 52px;
+left: 20px;
+width: 160px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-high-light-text-0-2 {
+position: absolute !important;
+top: 97px;
+left: 20px;
+width: 160px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-rect-0-3 {
+position: absolute !important;
+top: 65px;
+left: 193px;
+width: 2px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-text-common-0-4 {
+position: absolute !important;
+top: 52px;
+left: 214px;
+width: 120px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-high-light-text-0-5 {
+position: absolute !important;
+top: 97px;
+left: 214px;
+width: 120px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-rect-0-6 {
+position: absolute !important;
+top: 7px;
+left: 0px;
+width: 557px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-rect-0-7 {
+position: absolute !important;
+top: 65px;
+left: 348px;
+width: 2px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-text-common-0-8 {
+position: absolute !important;
+top: 52px;
+left: 367px;
+width: 180px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-high-light-text-0-9 {
+position: absolute !important;
+top: 97px;
+left: 367px;
+width: 180px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-text-common-0-10 {
+position: absolute !important;
+top: 4px;
+left: 28px;
+width: 200px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-industrialOptimization .industrialOptimization-t-text-common-0-11 {
+position: absolute !important;
+top: 16px;
+left: 400px;
+width: 150px;
+height: 19px;
+pointer-events: auto;
+}

@@ -1,0 +1,181 @@
+.t-l-c-questionlistPetition {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 980px;
+height: 186px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-questionlistPetition .questionlistPetition-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-table-0-3 {
+position: absolute !important;
+top: 60px;
+left: 0px;
+width: 100%;
+height: calc(100% - 60px);
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-row-0-4 {
+position: absolute !important;
+top: 16px;
+left: 0px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 60px;
+padding-right: 10px;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-col-0-4-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-text-common-0-4-0-0 {
+position: unset;
+top: 18px;
+left: 36px;
+width: 128px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-col-0-4-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-input-0-4-1-0 {
+position: unset;
+top: 19px;
+left: 173px;
+width: 160px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-button-0-4-1-1 {
+position: unset;
+top: 19px;
+left: 359px;
+width: 49px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-col-0-4-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-select-0-4-2-0 {
+position: unset;
+top: 19px;
+left: 436px;
+width: 147px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-col-0-4-3 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-tabs-base-0-4-3-0 {
+position: unset;
+top: 21px;
+left: 610px;
+width: 155px;
+height: 25px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-tabs-base-0-4-3-1 {
+position: unset;
+top: 21px;
+left: 610px;
+width: 216px;
+height: 25px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-col-0-4-4 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-rect-0-4-4-0 {
+position: unset;
+top: -205px;
+left: 422px;
+width: 28px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-questionlistPetition .questionlistPetition-t-rect-0-4-4-1 {
+position: unset;
+top: -149px;
+left: 709px;
+width: 28px;
+height: 28px;
+pointer-events: auto;
+}

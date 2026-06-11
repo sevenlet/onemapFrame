@@ -1,0 +1,71 @@
+.t-l-c-airOverviewPressureContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-rect-0-0 {
+position: absolute !important;
+top: 184px;
+left: 460px;
+width: 1000px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-rect-0-1 {
+position: absolute !important;
+top: 184px;
+left: 460px;
+width: 1000px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-text-0-2 {
+position: absolute !important;
+top: 198px;
+left: 479px;
+width: 143px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-rect-0-3 {
+position: absolute !important;
+top: 195px;
+left: 1412px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-tabs-base-0-4 {
+position: absolute !important;
+top: 245px;
+left: 480px;
+width: 300px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureContent .airOverviewPressureContent-t-component-0-5 {
+position: absolute !important;
+top: 293px;
+left: 480px;
+width: 960px;
+height: 585px;
+pointer-events: auto;
+}

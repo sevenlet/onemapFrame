@@ -1,0 +1,53 @@
+.t-l-c-allTool {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 333px;
+width: 270px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-allTool .allTool-t-component-0-0 {
+position: absolute !important;
+top: -1px;
+left: 0px;
+width: 270px;
+height: 333px;
+pointer-events: auto;
+}
+
+.t-l-c-allTool .allTool-t-rect-0-1 {
+position: absolute !important;
+top: 291px;
+left: 188px;
+width: 82px;
+height: 42px;
+pointer-events: auto;
+}
+
+.t-l-c-allTool .allTool-t-text-0-2 {
+position: absolute !important;
+top: 304px;
+left: 201px;
+width: 32px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-allTool .allTool-t-image-base-0-3 {
+position: absolute !important;
+top: 302px;
+left: 236px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}

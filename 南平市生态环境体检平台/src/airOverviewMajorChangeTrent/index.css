@@ -1,0 +1,141 @@
+.t-l-c-airOverviewMajorChangeTrent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-radio-0-1 {
+position: absolute !important;
+top: 59px;
+left: 32px;
+width: 954px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-chart-design-0-2 {
+position: absolute !important;
+top: 88px;
+left: 18px;
+width: calc(100% - 40px);
+height: calc(100% - 100px);
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-row-0-3 {
+position: absolute !important;
+top: 10px;
+left: 0px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-col-0-3-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 32px;
+gap: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-select-0-3-0-0 {
+position: unset;
+top: 12.5px;
+left: 32px;
+width: 150px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-tree-0-3-0-1 {
+position: unset;
+top: 65px;
+left: 622px;
+width: 200px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-col-0-3-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-tabs-0-3-1-0 {
+position: unset;
+top: 19px;
+left: 496px;
+width: 125px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-col-0-3-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+padding-right: 32px;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-date-picker-0-3-2-0 {
+position: unset;
+top: 12.5px;
+left: 648px;
+width: 390px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewMajorChangeTrent .airOverviewMajorChangeTrent-t-date-picker-0-3-2-1 {
+position: unset;
+top: 12.5px;
+left: 648px;
+width: 330px;
+height: 32px;
+pointer-events: auto;
+}

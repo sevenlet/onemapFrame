@@ -1,0 +1,25 @@
+{
+  "theme": "default",
+  "default": {
+    "--color": "#00fcff",
+    "--text-color": "#FFF",
+    "--border-color": "#374364",
+    "--bg-color": "#0a152f",
+    "--first-bg-color": "#141f3c",
+    "--first-icon-color": "#42527a",
+    "--second-bg-color": "#222D4D",
+    "--third-bg-color": "#2d3959",
+    "--select-bg-color": "#1b2540"
+  },
+  "blue": {
+    "--color": "#00fcff",
+    "--text-color": "#FFF",
+    "--border-color": "#51a4e1",
+    "--bg-color": "rgba(7,113,192,0.75)",
+    "--first-bg-color": "rgba(7,113,192,0.75)",
+    "--first-icon-color": "#55a5e1",
+    "--second-bg-color": "rgba(7,113,192,0)",
+    "--third-bg-color": "rgba(7,113,192,0.75)",
+    "--select-bg-color": "rgba(7,113,192,0.75)"
+  }
+}

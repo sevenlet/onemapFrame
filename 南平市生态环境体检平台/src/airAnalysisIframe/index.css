@@ -1,0 +1,26 @@
+.t-l-c-airAnalysisIframe {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airAnalysisIframe .airAnalysisIframe-t-iframe-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+pointer-events: auto;
+}

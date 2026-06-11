@@ -1,0 +1,59 @@
+
+.custom-status-table.el-table {
+  background-color: transparent;
+  font-size:14px;
+}
+.custom-status-table.el-table thead th .cell,
+.custom-status-table.el-table tbody td .cell {
+  padding:0;
+}
+.custom-status-table.el-table th,
+.custom-status-table.el-table tr,
+.custom-status-table.el-table td {
+  background-color: transparent !important;
+  border: none;
+  color: #fff;
+  /*font-size:14px;*/
+}
+.custom-status-table.el-table thead .cell {
+line-height: 14px;
+}
+/* 斑马纹颜色 */
+.custom-status-table.el-table tr.el-table__row.el-table__row--striped {
+  background-color: rgba(20, 112, 204, 0.15) !important;
+}
+/* 每一行的底部边框 */
+.custom-status-table.el-table td,
+.custom-status-table.el-table th.is-leaf {
+  border-bottom: none !important;
+}
+.el-table__empty-text {
+  color:var(--business-show-bg60) !important;
+  line-height: 180px !important;
+  font-size: 12px !important;
+}
+/* 隐藏表格底部白线 */
+.custom-status-table.el-table::before {
+  display: none;
+}
+/* 鼠标悬浮行样式 */
+/* .el-table--enable-row-hover */
+.custom-status-table  .el-table__body tr:hover > td {
+  background-color: var(--business-show-bg10) !important;
+}
+/* 隐藏底部滚动条 */
+.custom-status-table .el-table__body-wrapper {
+  scrollbar-width: none;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+/* 表头行背景 */
+.custom-status-table .el-table__header-wrapper thead {
+  background: var(--business-show-bg30,rgba(20, 112, 204, 0.3));
+}
+/* 表头字体颜色 */
+.custom-status-table .el-table__header-wrapper thead tr th {
+  color: var(--business-strong,#00ffff);
+  color: #fff;
+  font-weight: 400;
+}

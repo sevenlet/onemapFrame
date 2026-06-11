@@ -1,0 +1,245 @@
+.t-l-c-smartRecommendations {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 728px;
+overflow: hidden;
+width: 410px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-smartRecommendations .smartRecommendations-t-image-base-0-0 {
+position: absolute !important;
+top: -19px;
+left: -856px;
+width: 773px;
+height: 870px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-component-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-unit-0-2 {
+position: absolute !important;
+top: 6px;
+left: 33px;
+width: 261px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-tabs-base-0-3 {
+position: absolute !important;
+top: 43px;
+left: 4px;
+width: 399px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-row-0-4 {
+position: absolute !important;
+top: 83px;
+left: 4px;
+width: 400px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+flex-direction: row;
+border-direction: all;
+border-left: 1px Solid var(--scrollbar-thumb-color);
+border-top: 1px Solid var(--scrollbar-thumb-color);
+border-right: 1px Solid var(--scrollbar-thumb-color);
+border-bottom: 1px Solid var(--scrollbar-thumb-color);
+border: auto !important;
+padding-top: 0px;
+padding-bottom: 10px;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-col-0-4-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+padding-bottom: 10px;
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+background: var(--scrollbar-track-color);
+fill-type: color;
+margin-bottom: 10px;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-list-card-0-4-0-0 {
+position: unset;
+top: 74px;
+left: 9px;
+width: 388px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-col-0-4-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: start;
+align-items: center;
+padding-top: 10px;
+flex-direction: column;
+padding-left: 8px;
+padding-right: 8px;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-col-0-4-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: start;
+align-items: start;
+background: rgba(229, 217, 112, 0.14);
+fill-type: color;
+padding-top: 10px;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 10px;
+flex-direction: column;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-0 {
+position: unset;
+top: 85px;
+left: -342px;
+width: 100%;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-1 {
+position: unset;
+top: 146px;
+left: -285px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-2 {
+position: unset;
+top: 146px;
+left: -285px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-3 {
+position: unset;
+top: 136px;
+left: -295px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-4 {
+position: unset;
+top: 146px;
+left: -285px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-1-0-5 {
+position: unset;
+top: 146px;
+left: -285px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-rolling-number-0-4-1-0-6 {
+position: unset;
+top: 261px;
+left: 93px;
+width: 344px;
+height: 39px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-table-0-4-1-1 {
+position: unset;
+top: 811px;
+left: 86px;
+width: 383px;
+height: 250px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-col-0-4-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 0px;
+gap: auto;
+flex-direction: column;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-pagination-base-0-4-2-0 {
+position: unset;
+top: 700px;
+left: -1px;
+width: 410px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-smartRecommendations .smartRecommendations-t-text-common-0-4-2-1 {
+position: unset;
+top: 775px;
+left: 14px;
+width: 96%;
+height: 88px;
+pointer-events: auto;
+}

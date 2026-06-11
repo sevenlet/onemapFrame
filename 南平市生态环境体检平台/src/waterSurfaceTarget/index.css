@@ -1,0 +1,683 @@
+.t-l-c-waterSurfaceTarget {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(13, 13, 13, 0);
+width: 450px;
+height: 900px;
+}
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-component-0-0 {
+position: absolute !important;
+top: 87.79410207598858px;
+left: 19.855751871093787px;
+width: 411.2141911433293px;
+height: 31.113086155482705px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-1 {
+position: absolute !important;
+top: 87.79410207598858px;
+left: 226px;
+width: 204px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-2 {
+position: absolute !important;
+top: 2px;
+left: 1px;
+width: 449px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-select-0-3 {
+position: absolute !important;
+top: 18px;
+left: 159px;
+width: 136px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-date-picker-0-4 {
+position: absolute !important;
+top: 18px;
+left: 302px;
+width: 146px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-tabs-base-0-5 {
+position: absolute !important;
+top: 18px;
+left: 15px;
+width: 135px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-7 {
+position: absolute !important;
+top: 92.78104304809887px;
+left: 55.69654894660252px;
+width: 200px;
+height: 19.068629264831543px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9 {
+position: absolute !important;
+top: 133px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+padding-left: 16px;
+padding-right: 16px;
+padding-bottom: 0px;
+padding-top: 6px;
+gap: 0px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-end;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-list-card-0-9-0-0 {
+position: unset;
+top: 133px;
+left: 16px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-1-0 {
+position: unset;
+top: 540px;
+left: -746px;
+width: 98%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-between;
+align-items: center;
+gap: 6px;
+display: flex;
+padding: 4px 0;
+animation-name: ;
+background: var(--business-show-bg15);
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-1-0-0-0 {
+position: unset;
+top: 1072px;
+left: -1588px;
+width: 2px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-common-0-9-1-0-0-1 {
+position: unset;
+top: 1077px;
+left: -1565px;
+width: 96px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-1-0-0-2 {
+position: unset;
+top: 1074px;
+left: -1473px;
+width: 85px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-1-0-0-2-0 {
+position: unset;
+top: 1913.1927628296885px;
+left: -372.92566239206417px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-1-0-0-2-1 {
+position: unset;
+top: 2545.646307262253px;
+left: -54.36238282306522px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-1-0-0-2-2 {
+position: unset;
+top: 1905.1927628296885px;
+left: -433.92566239206417px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+border-left: 0px solid var(--business-theme);
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-1-0-1-0 {
+position: unset;
+top: 1076px;
+left: -1370px;
+width: 1px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-common-0-9-1-0-1-1 {
+position: unset;
+top: 1077px;
+left: -1350px;
+width: 66px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-1-0-1-2 {
+position: unset;
+top: 1074px;
+left: -1281px;
+width: 83px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+margin-left: 6px;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-1-0-1-2-0 {
+position: unset;
+top: 2079.0131956048494px;
+left: 100.29858179779922px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-1-0-1-2-1 {
+position: unset;
+top: 2535.646307262253px;
+left: -64.36238282306522px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-2 {
+position: unset;
+top: -292px;
+left: 1016px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: flex-start;
+justify-content: center;
+align-items: center;
+gap: 6px;
+display: flex;
+padding-top: 4px;
+animation-name: ;
+background-color: var(--business-show-bg10);
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-2-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-2-0-0 {
+position: unset;
+top: 278px;
+left: 36px;
+width: 105px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-2-0-1 {
+position: unset;
+top: 278px;
+left: 144px;
+width: 6px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-2-0-2 {
+position: unset;
+top: 278px;
+left: 45px;
+width: 105px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-2-0-3 {
+position: unset;
+top: 278px;
+left: 36px;
+width: 6px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-2-0-4 {
+position: unset;
+top: 278px;
+left: 36px;
+width: 114px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-3 {
+position: unset;
+top: -282px;
+left: 1026px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-evenly;
+align-items: center;
+gap: 6px;
+display: flex;
+padding-top: 4px;
+animation-name: ;
+background-color: var(--business-show-bg10);
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-3-0 {
+position: relative;
+top: null;
+left: null;
+width: 147px;
+height: 165px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+flex: 0 0 147px;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-3-0-0 {
+position: unset;
+top: 304px;
+left: 68px;
+width: 138px;
+height: 155px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-chart-liquidfill-0-9-3-0-1 {
+position: unset;
+top: 326px;
+left: 92px;
+width: 93px;
+height: 105px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-3-0-2 {
+position: unset;
+top: 301px;
+left: 63px;
+width: 147px;
+height: 165px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-3-0-3 {
+position: unset;
+top: 362px;
+left: 99px;
+width: 79px;
+height: 30px;
+pointer-events: auto;
+animation-name: ;
+z-index: 1;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-0-3-0 {
+position: unset;
+top: 455.47231351412256px;
+left: 2452.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-0-3-1 {
+position: unset;
+top: 452.47231351412256px;
+left: 2447.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-3-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-3-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: flex-start;
+flex-direction: column;
+gap: 0px !important;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-3-1-0-0 {
+position: unset;
+top: 389px;
+left: 239px;
+width: 42px;
+height: 42px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-3-1-0-1 {
+position: unset;
+top: 376px;
+left: 294px;
+width: calc(100% - 40px);
+height: auto;
+pointer-events: auto;
+animation-name: ;
+text-align: left;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: flex-end;
+margin-left: 50px;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-0-1-0 {
+position: unset;
+top: 475.47231351412256px;
+left: 2472.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-0-1-1 {
+position: unset;
+top: 472.47231351412256px;
+left: 2467.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-0-2 {
+position: unset;
+top: 413px;
+left: 296px;
+width: 44px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-3-1-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: flex-start;
+flex-direction: column;
+gap: 0px !important;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-rect-0-9-3-1-1-0 {
+position: unset;
+top: 325px;
+left: 239px;
+width: 42px;
+height: 42px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-row-0-9-3-1-1-1 {
+position: unset;
+top: 313px;
+left: 294px;
+width: calc(100% - 40px);
+height: auto;
+pointer-events: auto;
+animation-name: ;
+text-align: left;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: flex-end;
+margin-left: 50px;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-1-1-0 {
+position: unset;
+top: 465.47231351412256px;
+left: 2462.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-1-1-1 {
+position: unset;
+top: 462.47231351412256px;
+left: 2457.472712590144px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-3-1-1-2 {
+position: unset;
+top: 350px;
+left: 296px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+margin-top: 10px;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-4-0 {
+position: unset;
+top: 479px;
+left: 55px;
+width: auto;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-text-0-9-4-1 {
+position: unset;
+top: 479px;
+left: 55px;
+width: auto;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-component-0-9-4-2 {
+position: unset;
+top: 473px;
+left: 21px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-col-0-9-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-table-0-9-5-0 {
+position: unset;
+top: 518px;
+left: 21px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceTarget .waterSurfaceTarget-t-table-0-9-5-1 {
+position: unset;
+top: 518px;
+left: 21px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}

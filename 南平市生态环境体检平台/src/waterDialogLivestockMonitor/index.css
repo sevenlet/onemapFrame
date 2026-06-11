@@ -1,0 +1,143 @@
+.t-l-c-waterDialogLivestockMonitor {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(26, 27, 31, 0);
+width: 844px;
+height: 580px;
+}
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-chart-design-0-0 {
+position: absolute !important;
+top: 65px;
+left: 16px;
+width: 824px;
+height: 530px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-select-0-1 {
+position: absolute !important;
+top: 9px;
+left: 705px;
+width: 118px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-0-2 {
+position: absolute !important;
+top: 65px;
+left: 726px;
+width: 49px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-0-3 {
+position: absolute !important;
+top: 18px;
+left: 641px;
+width: 56px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-0-4 {
+position: absolute !important;
+top: 69px;
+left: 127px;
+width: 67px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-0-5 {
+position: absolute !important;
+top: 18px;
+left: 16px;
+width: 56px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-0-6 {
+position: absolute !important;
+top: 69px;
+left: 420px;
+width: 71px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-select-0-7 {
+position: absolute !important;
+top: 60px;
+left: 202px;
+width: 200px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-select-0-8 {
+position: absolute !important;
+top: 60px;
+left: 504px;
+width: 200px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-switch-0-9 {
+position: absolute !important;
+top: 65px;
+left: 791px;
+width: 32px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-date-picker-0-10 {
+position: absolute !important;
+top: 9px;
+left: 80px;
+width: 290px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-date-picker-0-11 {
+position: absolute !important;
+top: 9px;
+left: 80px;
+width: 290px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-date-picker-0-12 {
+position: absolute !important;
+top: 9px;
+left: 80px;
+width: 290px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogLivestockMonitor .waterDialogLivestockMonitor-t-text-common-0-13 {
+position: absolute !important;
+top: 66px;
+left: 15px;
+width: 113px;
+height: 20px;
+pointer-events: auto;
+}

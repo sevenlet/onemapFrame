@@ -1,0 +1,44 @@
+.t-l-c-shjysGyfsc {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+background-color: rgba(255, 0, 0, 0);
+width: 410px;
+height: 247px;
+}
+.t-l-c-shjysGyfsc .shjysGyfsc-t-search-0-0 {
+position: absolute !important;
+top: 0px;
+left: 8px;
+width: 341px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-shjysGyfsc .shjysGyfsc-t-button-0-1 {
+position: absolute !important;
+top: 0px;
+left: 353px;
+width: 49px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-shjysGyfsc .shjysGyfsc-t-table-0-2 {
+position: absolute !important;
+top: 40px;
+left: 8px;
+width: 394px;
+height: 207px;
+pointer-events: auto;
+}

@@ -1,0 +1,100 @@
+.t-l-c-lawEnforcerDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 210px;
+width: auto;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-text-unit-0-0 {
+position: absolute !important;
+top: 19px;
+left: 32px;
+width: 386px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-text-unit-0-1 {
+position: absolute !important;
+top: 64px;
+left: 32px;
+width: 256px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-text-unit-0-2 {
+position: absolute !important;
+top: 64px;
+left: 289px;
+width: 212px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-text-unit-0-3 {
+position: absolute !important;
+top: 101px;
+left: 30px;
+width: 494px;
+height: 45px;
+pointer-events: auto;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-row-0-4 {
+position: absolute !important;
+top: 154px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+background-color: var(--business-show-bg30);
+fill-type: color;
+gap: 20px;
+padding-right: 20px;
+padding-top: 0;
+padding-bottom: 0;
+bottom: 0px;
+animation-name: ;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-col-0-4-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+gap: 20px;
+animation-name: ;
+}
+
+.t-l-c-lawEnforcerDialog .lawEnforcerDialog-t-rect-0-4-0-0 {
+position: unset;
+top: 280px;
+left: 497px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}

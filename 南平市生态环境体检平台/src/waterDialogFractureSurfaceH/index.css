@@ -1,0 +1,157 @@
+.t-l-c-waterDialogFractureSurfaceH {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 100%;
+height: 48px;
+background-color: rgba(255, 255, 255, 0);
+}
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-rect-0-0 {
+position: absolute !important;
+top: 39px;
+left: 209px;
+width: 297px;
+height: 10px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-row-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 48px;
+pointer-events: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-col-0-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 48px;
+pointer-events: none;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-row-0-1-0-0 {
+position: unset;
+top: 0px;
+left: -27px;
+width: 100%;
+height: 47px;
+pointer-events: none;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-text-0-1-0-0-0 {
+position: unset;
+top: 13px;
+left: 16px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-text-0-1-0-0-1 {
+position: unset;
+top: 13px;
+left: 138px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-text-0-1-0-0-2 {
+position: unset;
+top: 36.399993896484375px;
+left: 243px;
+width: auto;
+height: auto;
+pointer-events: none;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-list-card-common-0-1-0-0-3 {
+position: unset;
+top: 15px;
+left: 219px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-list-card-common-0-1-0-0-4 {
+position: unset;
+top: 14px;
+left: 310px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-rect-0-1-0-0-5 {
+position: unset;
+top: 14px;
+left: 399px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-col-0-1-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 48px;
+pointer-events: none;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-row-0-1-1-0 {
+position: unset;
+top: 0px;
+left: 350px;
+width: 265px;
+height: 48px;
+pointer-events: none;
+display: flex;
+justify-content: right;
+align-items: center;
+padding-right: 20px;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-text-common-0-1-1-0-0 {
+position: unset;
+top: -173px;
+left: 326px;
+width: auto;
+height: 20px;
+pointer-events: none;
+}
+
+.t-l-c-waterDialogFractureSurfaceH .waterDialogFractureSurfaceH-t-text-common-0-1-1-0-1 {
+position: unset;
+top: -181px;
+left: 545px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}

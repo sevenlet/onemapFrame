@@ -1,0 +1,187 @@
+{
+  "tilteName": "缓存查询专题图",
+  "layers": [
+    {
+      "name": "世界城市",
+      "defaultSelect":true,
+      "url": "http://sampleserver5.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer/0",
+      "definitionexpression": "",
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": true,
+      "titlefield": "CITY_NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "CITY_NAME",
+            "alias": "CITY_NAME"
+          },
+          {
+            "name": "POP_RANK",
+            "alias": "POP_RANK"
+          },
+          {
+            "name": "POP_CLASS",
+            "alias": "POP_CLASS"
+          }
+        ]
+      },
+      "links": {
+        "link": [
+          {
+            "alias": "详情",
+            "disablelinksifnull": true,
+            "disableinpopup": false,
+            "popuptype": "text",
+            "content": "http://www.baidu.com/s?wd={CITY_NAME}",
+            "icon": ""
+          }
+        ]
+      },
+      "popup":{
+        "description":"{CITY_NAME}",
+        "title": "{CITY_NAME}",
+        "width":100,
+        "height":100
+    },
+      "layersymbolfrom": "server"
+    },
+    {
+      "name": "国控点",
+      "defaultSelect":true,
+      "layerName": "国控点",
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": false,
+      "titlefield": "Address",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "Name",
+            "alias": "点名"
+          },
+          {
+            "name": "Address",
+            "alias": "编号"
+          }
+        ]
+      },
+      "links": {
+        "link": [
+          {
+            "alias": "详情",
+            "disablelinksifnull": true,
+            "disableinpopup": false,
+            "popuptype": "text",
+            "content": "http://www.baidu.com/s?wd={NAME}",
+            "icon": ""
+          }
+        ]
+      },
+      "popup":{
+        "description":"{Address}",
+        "title": "{Address}",
+        "width":100,
+        "height":100
+      },
+      "layersymbolfrom": "server"
+    }
+  ],
+  "initialView": "graphical",
+  "multipartgraphicsearchchecked": false,
+  "addpointtolerancechecked": false,
+  "keepgraphicalsearchenabled": true,
+  "autozoomtoresults": true,
+  "toleranceforpointgraphicalselection": 6,
+  "bufferDefaults": {
+      "bufferUnits": {
+        "bufferUnit": [
+          {
+            "label": "千米",
+            "name": "kilometers"
+          },
+          {
+            "label": "米",
+            "name": "meters",
+            "selected":true
+          }
+        ]
+    },
+    "bufferDefaultValue": 5,
+    "bufferWKID": 102003,
+    "simplefillsymbol": {
+      "color": [
+        1,
+        185,
+        253,
+        128
+      ],
+      "outline": {
+        "color": [
+          1,
+          185,
+          253,
+          204
+        ],
+        "width": 0.75,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "graphicalsearchoptions": {
+    "enablepointselect": true,
+    "enablefreehandlineselect": true,
+    "enableextentselect": true,
+    "enablepolyselect": true,
+    "enablefreehandpolyselect": true
+  },
+  "symbols": {
+    "simplemarkersymbol": null,
+    "picturemarkersymbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "http://zhengqj:33440/widgets/eSearch/images/i_search.png",
+      "width": 20.00025,
+      "height": 20.00025
+    },
+    "simplelinesymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        204
+      ],
+      "width": 2.25,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "simplefillsymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          204
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  }
+}

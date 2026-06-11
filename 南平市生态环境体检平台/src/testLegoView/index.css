@@ -1,0 +1,44 @@
+.t-l-c-testLegoView {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 300px;
+height: 43px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-testLegoView .testLegoView-t-iframe-0-0 {
+position: absolute !important;
+top: 115px;
+left: -9px;
+width: 1092px;
+height: 549px;
+pointer-events: auto;
+}
+
+.t-l-c-testLegoView .testLegoView-t-gradient-text-0-1 {
+position: absolute !important;
+top: 23px;
+left: 467px;
+width: 215px;
+height: 67px;
+pointer-events: auto;
+}
+
+.t-l-c-testLegoView .testLegoView-t-card-icon-base-0-2 {
+position: absolute !important;
+top: -39px;
+left: -6px;
+width: 438px;
+height: 132px;
+pointer-events: auto;
+}

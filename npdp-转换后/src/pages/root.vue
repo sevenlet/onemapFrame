@@ -1,14 +1,57 @@
 <template>
-  <div id="t-l-c-root" ref="tBodyx0x0Ref" class="t-l-c-root"><t-button v-if="true && componentState.tButtonx0x0Visible"
-      id="t-button-84e0.2da414f7a" ref="tButtonx0x0Ref" class="root-t-button-0-0" :label="tButtonx0x0ComputedData.label"
-      :round="tButtonx0x0ComputedData.round" :plain="tButtonx0x0ComputedData.plain"
-      :disabled="tButtonx0x0ComputedData.disabled" :type="tButtonx0x0ComputedData.type"
-      :size="tButtonx0x0ComputedData.size" :native-type="tButtonx0x0ComputedData.native - type"
-      :c-style="tButtonx0x0ComputedData.cStyle" @click="onclick1776673119545"></t-button><t-component
-      v-if="state.isShowMain === true && componentState.tComponentx0x1Visible" id="t-component-5c0a.650199354"
-      ref="tComponentx0x1Ref" class="root-t-component-0-1" :name="tComponentx0x1ComputedData.name"
-      :c-style="tComponentx0x1ComputedData.cStyle" :src="tComponentx0x1ComputedData.src"
-      :component-name="tComponentx0x1ComputedData.componentName"></t-component></div>
+  <div id="t-l-c-root" ref="tBodyx0x0Ref" class="t-l-c-root">
+    <micro-app
+      name="child-demo"
+      iframe
+      :data="dataToChild"
+      url="http://localhost:5175"
+      default-page="/#/about"
+      router-mode="pure"
+      @datachange="handleChildData"
+      style="width: 50%; height: auto;position: absolute; left: 400px; top: 220px;z-index: 999;pointer-events: auto;">
+    </micro-app>
+    <t-button id="t-button-84e0.2da414f7a" ref="tButtonx0x0Ref"
+      class="root-t-button-0-0" :label="tButtonx0x0ComputedData.label" :round="tButtonx0x0ComputedData.round"
+      :plain="tButtonx0x0ComputedData.plain" :disabled="tButtonx0x0ComputedData.disabled"
+      :type="tButtonx0x0ComputedData.type" :size="tButtonx0x0ComputedData.size"
+      :native-type="tButtonx0x0ComputedData.native - type" :c-style="tButtonx0x0ComputedData.cStyle"
+      @click="onclick1776673119545"></t-button>
+
+    <t-component v-if="state.isShowMain === true && componentState.tComponentx0x1Visible"
+      id="t-component-5c0a.650199354" ref="tComponentx0x1Ref" class="root-t-component-0-1"
+      :name="tComponentx0x1ComputedData.name" :c-style="tComponentx0x1ComputedData.cStyle"
+      :src="tComponentx0x1ComputedData.src" :component-name="tComponentx0x1ComputedData.componentName"></t-component>
+
+    <!-- ===== 基座弹窗（供子应用通过 RPC callBase('showDialog', ...) 触发）===== -->
+    <!--
+      关键点：
+      1. 用项目里现成的 t-dialog（已在 main.js 全局注册）
+      2. 弹窗内容通过 :is 动态组件渲染 —— 子应用传组件名，这里查全局组件表
+      3. 弹窗渲染在 #t-l-c-root 容器内，本身又是 fixed 全屏定位，能覆盖整个浏览器
+      4. 弹窗内组件 emit('close', data) 即可关弹窗 + 把 data 回传给子应用
+    -->
+    <t-dialog
+      v-if="dialog.visible"
+      :dialog-visible="dialog.visible"
+      :title="dialog.title"
+      :dialog-maximized="true"
+      :hidden-scale-button="true"
+      :max-position="dialog.maxPosition"
+      :min-position="dialog.minPosition"
+      :c-style="dialogCStyle"
+      mount-to="#t-l-c-root"
+      @cancel="closeDialog(null)"
+      @close="closeDialog(null)"
+    >
+      <!-- t-dialog 的内容区：渲染子应用指定的组件 -->
+      <component
+        v-if="dialog.componentName"
+        :is="dialog.componentName"
+        v-bind="dialog.props"
+        @close="closeDialog"
+      />
+    </t-dialog>
+  </div>
 </template>
 
 <script>
@@ -30,6 +73,7 @@ import { ComponentLoader, watchComponentVisible, generateCacheKey, requestApi, R
 import { themes } from '@/theme.js';
 import * as echarts from 'echarts';
 import { TButton, TComponent } from '@ths/design';
+import { useChildBridge } from '@/bridge.js';
 
 export default {
   components: {
@@ -43,6 +87,204 @@ export default {
     const global = reactive({
       ...toRefs(rootData)
     });
+
+    // ============================================================
+    //  子应用 → 基座：通信桥（封装在 @/bridge.js）
+    //  - dataToChild：传给 <micro-app :data="dataToChild">，基座→子应用
+    //  - handleChildData：挂到 <micro-app @datachange>，处理子应用 dispatch
+    //  - 自动支持 RPC（type: '__CALL_BASE__'），fallback 到 window[method]
+    //  - 需要给子应用注册基座方法时：registerMethod('xxx', fn)
+    //  - 需要监听子应用普通消息时：registerHandler('form-submit', payload => {...})
+    // ============================================================
+    const { dataToChild, handleChildData, setData: setChildData, registerMethod, registerHandler } = useChildBridge('child-demo');
+
+    // ===== 通道②：监听子应用 sendToBase 发来的普通消息 =====
+    registerHandler('form-submit', (payload) => {
+      console.log('[基座] 收到子应用 form-submit:', payload);
+      alert('[基座] 收到表单：' + JSON.stringify(payload));
+    });
+    registerHandler('log', (payload) => {
+      console.log('[基座] 子应用日志:', ...(Array.isArray(payload) ? payload : [payload]));
+    });
+
+    // ===== 通道②：RPC 方法 =====
+    registerMethod('getUrlQueryString', (msg) => {
+      console.log('[基座] 子应用调用 getUrlQueryString:', msg);
+      // 演示返回当前页面 URL 的查询字符串
+      return window.location.search;
+    });
+    registerMethod('navigate', (path) => {
+      console.log('[基座] 子应用请求导航:', path);
+      // 这里换成你的真实路由跳转逻辑，例如 router.push(path)
+      alert('[基座] 子应用想跳转到：' + path);
+    });
+    
+    const pageFuncTest = (param) => {
+      console.log('demo1页面方法测试', 'demo1');
+      return 'demo1页面方法测试成功';
+    };
+
+    registerMethod('pageFuncTest', pageFuncTest);
+    
+
+    // ===== 弹窗 RPC：子应用 await callBase('showDialog', {...}) =====
+    const dialog = reactive({
+      visible: false,
+      componentName: null,  // 要渲染的全局组件名
+      title: '',
+      props: {},            // 透传给组件的 props
+      resolver: null,       // 关弹窗时 resolve 这个 Promise，回传给子应用
+      maxPosition: {
+        width: '600px', height: '400px',
+        left: 'calc(50% - 300px)', top: 'calc(50% - 200px)',
+      },
+      minPosition: {
+        width: '400px', height: '300px',
+        left: 'calc(50% - 200px)', top: 'calc(50% - 150px)',
+      },
+    });
+
+    const dialogCStyle = {
+      wrapper: {
+        default: {
+          backgroundColor: 'var(--business-dialog-bg, #fff)',
+          borderTopLeftRadius: '16px', borderTopRightRadius: '16px',
+          borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px',
+          overflow: 'hidden', zIndex: 9999,
+        },
+      },
+    };
+
+    registerMethod('showDialog', (config) => {
+      // config: { componentName, title?, props?, width?, height? }
+      dialog.componentName = config?.componentName;
+      dialog.title = config?.title || '';
+      dialog.props = config?.props || {};
+      if (config?.width || config?.height) {
+        const w = config.width || '600px';
+        const h = config.height || '400px';
+        const wNum = Number(w.replace('px', '')) || 600;
+        const hNum = Number(h.replace('px', '')) || 400;
+        dialog.maxPosition = {
+          width: w, height: h,
+          left: `calc(50% - ${wNum / 2}px)`,
+          top: `calc(50% - ${hNum / 2}px)`,
+        };
+      }
+      dialog.visible = true;
+
+      // 返回 Promise —— 子应用 await 拿到关闭时的结果
+      return new Promise((resolve) => {
+        dialog.resolver = resolve;
+      });
+    });
+
+    /**
+     * 子应用调用地图 TMap API 的桥梁
+     *
+     * 子应用侧 ths-map.js 用 Proxy 把所有 TMap.xxx() 转发到这里，
+     * 基座通过 postMessage 发给地图 iframe 执行真实 TMap。
+     *
+     * 子应用写法：
+     *   TMap.goTo({ center: { x: 114, y: 26 } })
+     *   → 基座 postMessage → iframe地图 → 执行 realTMap.goTo(...)
+     *   → iframe postMessage 回传结果 → 基座 resolve
+     *
+     * ⚠️ 前提：地图 iframe 页面需要加入 postMessage 监听器，
+     *    见 waitForTMapInIframe() 函数下方的注释说明。
+     */
+    registerMethod('tmapCall', ({ method, params }) => {
+      console.log(111, '收到子应用的 TMap 调用请求', method, params);
+      const tIframeEl = document.getElementById('t-iframe-893f.c77f5f17d');
+      if (!tIframeEl) return Promise.reject('未找到地图容器 t-iframe-893f.c77f5f17d');
+
+      const iframeEl = tIframeEl.querySelector('iframe');
+      if (!iframeEl) return Promise.reject('t-iframe 内未找到 iframe');
+
+      return new Promise((resolve, reject) => {
+        const requestId = `tmap_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+        // 监听 iframe 返回的结果
+        const handler = (event) => {
+          // 限制来源（换成实际的 iframe 地图来源）
+          // if (event.origin !== 'http://localhost:4000') return;
+
+          const data = event.data;
+          if (data?.type === 'tmapResponse' && data.requestId === requestId) {
+            window.removeEventListener('message', handler);
+            const timeout = setTimeout(() => {}, 0);
+            clearTimeout(timeout);
+            if (data.error) {
+              reject(data.error);
+            } else {
+              resolve(data.result);
+            }
+          }
+        };
+        window.addEventListener('message', handler);
+
+        // 超时保护
+        setTimeout(() => {
+          window.removeEventListener('message', handler);
+          reject(`TMap.${method} 调用超时（iframe 未回复）`);
+        }, 10000);
+
+        // 通过 postMessage 发给地图 iframe
+        try {
+          
+          iframeEl.contentWindow.TMap[method](params[0])
+          // iframeEl.contentWindow.postMessage(
+          //   { type: 'tmapCall', requestId, method, params },
+          //   '*',  // 可改为具体 origin 如 'http://localhost:4000'
+          // );
+        } catch (e) {
+          window.removeEventListener('message', handler);
+          reject('postMessage 发送失败: ' + e.message);
+        }
+      });
+    });
+
+    // 收到子应用的 tmapCall 后 → postMessage 转发给地图 iframe
+    // 地图 iframe 那边需要有这段监听代码：
+
+    // ══════════════════════════════════════════════════════════
+    // 以下代码需要放到地图 html 页面中（地图 iframe 加载的页面）：
+    //
+    // window.addEventListener('message', async (event) => {
+    //   const data = event.data;
+    //   if (!data || data.type !== 'tmapCall' || !data.requestId) return;
+    //
+    //   try {
+    //     const TMap = window.TMap;   // 或 yourMapInstance.TMap
+    //     if (typeof TMap?.[data.method] !== 'function') {
+    //       throw new Error(`TMap.${data.method} 不是函数`);
+    //     }
+    //     const result = await TMap[data.method](...(data.params || []));
+    //     event.source.postMessage(
+    //       { type: 'tmapResponse', requestId: data.requestId, result },
+    //       event.origin,
+    //     );
+    //   } catch (err) {
+    //     event.source.postMessage(
+    //       { type: 'tmapResponse', requestId: data.requestId, error: err.message },
+    //       event.origin,
+    //     );
+    //   }
+    // });
+    //
+    // ══════════════════════════════════════════════════════════
+
+    // 关弹窗：如果有 result 就回传（子应用 emit('close', data) 触发）
+    function closeDialog(result) {
+      if (dialog.resolver) {
+        dialog.resolver(result ?? null);
+        dialog.resolver = null;
+      }
+      dialog.visible = false;
+      dialog.componentName = null;
+      dialog.props = {};
+    }
+
     // 路由
     const route = useRoute();
     // 创建 DOM 引用
@@ -53,8 +295,10 @@ export default {
     // 当前页面使用的变量
     const state = reactive({
       screenSize: "",
-      isShowMain: false,
+      isShowMain: true,
     });
+    // 把 state 同步给 bridge 的 data，方便传给子应用
+    watch(state, (val) => { setChildData(val); }, { immediate: true, deep: true });
     // 选中的图表主题
     const activeChartTheme = computed(() => {
       let activeTheme = _.cloneDeep(themes.find((item) => item.name === global.activeTheme));
@@ -94,7 +338,7 @@ export default {
           type: "primary",
           size: "medium",
           'native-type': "button",
-          cStyle: { "wrapper": { "default": { "width": "70px", "height": "36px", "background": "var(--t-brand8)", "border": "auto !important", "borderTop": "1px Solid var(--t-brand8)", "borderLeft": "1px Solid var(--t-brand8)", "borderBottom": "1px Solid var(--t-brand8)", "borderRight": "1px Solid var(--t-brand8)", "display": "none", "borderTopLeftRadius": "4px", "borderTopRightRadius": "4px", "borderBottomRightRadius": "4px", "borderBottomLeftRadius": "4px", "position": "unset", "left": "1843px", "top": "4px" }, "hover": { "background": "var(--t-brand8)", "border": "auto !important", "borderTop": "1px Solid var(--t-brand8)", "borderLeft": "1px Solid var(--t-brand8)", "borderBottom": "1px Solid var(--t-brand8)", "borderRight": "1px Solid var(--t-brand8)" }, "active": { "background": "rgb(0,52,181)", "border": "auto !important", "borderTop": "1px Solid rgb(0,52,181)", "borderLeft": "1px Solid rgb(0,52,181)", "borderBottom": "1px Solid rgb(0,52,181)", "borderRight": "1px Solid rgb(0,52,181)" }, "disabled": { "background": "#699EF5", "border": "unset !important", "borderTop": "1px Solid rgb(0,52,181)", "borderLeft": "1px Solid rgb(0,52,181)", "borderBottom": "1px Solid rgb(0,52,181)", "borderRight": "1px Solid rgb(0,52,181)" } }, "text": { "default": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 1)", "background": "unset", "backgroundClip": "unset", "display": "block !important", "width": "100%", "height": "auto", "whiteSpace": "nowrap", "textOverflow": "ellipsis", "overflow": "hidden" }, "active": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 0.9)", "background": "unset", "backgroundClip": "unset" }, "hover": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 0.9)", "background": "unset", "backgroundClip": "unset" }, "disabled": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 1)", "background": "unset", "backgroundClip": "unset" } } },
+          cStyle: { "wrapper": { "default": { "width": "70px", "height": "36px", "background": "var(--t-brand8)", "border": "auto !important", "borderTop": "1px Solid var(--t-brand8)", "borderLeft": "1px Solid var(--t-brand8)", "borderBottom": "1px Solid var(--t-brand8)", "borderRight": "1px Solid var(--t-brand8)", "borderTopLeftRadius": "4px", "borderTopRightRadius": "4px", "borderBottomRightRadius": "4px", "borderBottomLeftRadius": "4px", "position": "unset", "left": "1843px", "top": "4px" }, "hover": { "background": "var(--t-brand8)", "border": "auto !important", "borderTop": "1px Solid var(--t-brand8)", "borderLeft": "1px Solid var(--t-brand8)", "borderBottom": "1px Solid var(--t-brand8)", "borderRight": "1px Solid var(--t-brand8)" }, "active": { "background": "rgb(0,52,181)", "border": "auto !important", "borderTop": "1px Solid rgb(0,52,181)", "borderLeft": "1px Solid rgb(0,52,181)", "borderBottom": "1px Solid rgb(0,52,181)", "borderRight": "1px Solid rgb(0,52,181)" }, "disabled": { "background": "#699EF5", "border": "unset !important", "borderTop": "1px Solid rgb(0,52,181)", "borderLeft": "1px Solid rgb(0,52,181)", "borderBottom": "1px Solid rgb(0,52,181)", "borderRight": "1px Solid rgb(0,52,181)" } }, "text": { "default": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 1)", "background": "unset", "backgroundClip": "unset", "display": "block !important", "width": "100%", "height": "auto", "whiteSpace": "nowrap", "textOverflow": "ellipsis", "overflow": "hidden" }, "active": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 0.9)", "background": "unset", "backgroundClip": "unset" }, "hover": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 0.9)", "background": "unset", "backgroundClip": "unset" }, "disabled": { "textAlign": "center", "fontFamily": "思源", "fontWeight": "400", "fontSize": "12px", "letterSpacing": "0px", "lineHeight": "12px", "color": "rgba(255, 252, 255, 1)", "background": "unset", "backgroundClip": "unset" } } },
         },
       },
       tButtonx0x0Visible: computed(() => ["root", "root"].reduce((x, y) => route.path.includes(y) || x, false) ? true : false),
@@ -132,6 +376,16 @@ export default {
 
       // 修改全局变量-主题
       if (pageThemeMapping[skin]) {
+        // rootData.rootEmit(
+        //   // 固定的消息名称，不能修改
+        //   'rootData:change',
+        //   { 
+        //     // 全局变量的键名
+        //     key:'activeTheme',
+        //     // 将要修改的全局变量的键值
+        //     value: pageThemeMapping[skin],
+        //   },
+        // );
         global.activeTheme = pageThemeMapping[skin];
       }
 
@@ -417,8 +671,9 @@ export default {
       });
     };
     const onclick1776673119545 = () => {
+      state.isShowMain = !state.isShowMain;
       // 执行自定义方法
-      tempTestSokcet();
+      // tempTestSokcet();
     }; let apiRegistry = {};
 
     // 添加接口数据管理
@@ -587,6 +842,8 @@ export default {
       filterData,
       componentPropBindingMap,
       global,
+      dataToChild,
+      handleChildData,
       state,
       componentState,
       tButtonx0x0ComputedData,
@@ -595,6 +852,9 @@ export default {
       tButtonx0x0Ref,
       tComponentx0x1Ref,
       onclick1776673119545,
+      dialog,
+      dialogCStyle,
+      closeDialog,
     };
   },
 }
@@ -627,6 +887,7 @@ export default {
   width: 70px;
   height: 36px;
   pointer-events: auto;
+  z-index: 1001;
 }
 
 .t-l-c-root .root-t-component-0-1 {

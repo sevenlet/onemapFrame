@@ -1,0 +1,9 @@
+{
+  "serviceURL": "http://121.46.19.2:20724/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+  "defaultTitle": "print map",
+  "defaultAuthor": "ths",
+  "defaultCopyright": "",
+  "defaultFormat": "PNG32",
+  "defaultLayout": "A4 Landscape",
+  "copyrightEditable": true
+}

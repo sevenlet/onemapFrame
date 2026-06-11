@@ -1,0 +1,59 @@
+{
+	"layers": [{
+		"type": "api",
+		"layerID": "工业污染源",
+		"displayName": "工业污染源5",
+		"visible": true,
+		"opacity": 1,
+		"showLabels": false,
+		"geometryType": "point",
+		"panelDisplay": true,
+		"pointTypeActive": "default",
+		"multiFieldsRenderer": {
+			"type": "radio",
+			"active": "PM25",
+			"data": [{
+				"value": "AQI",
+				"label": "AQI"
+			}, {
+				"value": "PM25",
+				"label": "PM₂.₅"
+			}, {
+				"value": "PM10",
+				"label": "PM₁₀"
+			}, {
+				"value": "SO2",
+				"label": "SO₂"
+			}, {
+				"value": "NO2",
+				"label": "NO₂"
+			}, {
+				"value": "CO",
+				"label": "CO"
+			}, {
+				"value": "O3",
+				"label": "O₃"
+			}]
+		}
+	}, {
+		"type": "dynamic",
+		"layerID": "工业污染源",
+		"displayName": "工业污染源6",
+		"visible": true,
+		"opacity": 1,
+		"showLabels": false,
+		"geometryType": "polygon",
+		"linkInfo": {
+			"isLocation": true,
+			"isRefresh": true
+		}
+	}, {
+		"type": "feature",
+		"layerID": "工业污染源",
+		"displayName": "工业污染源7",
+		"visible": true,
+		"opacity": 1,
+		"showLabels": false,
+		"geometryType": "polyline"
+	}]
+}

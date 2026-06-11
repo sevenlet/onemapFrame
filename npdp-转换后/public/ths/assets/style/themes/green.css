@@ -1,0 +1,146 @@
+/*
+ * @Description: 微件主题-绿
+ * @Author: suyp
+ * @Date: 2024-12-09 14:37:16
+ * @LastEditors: suyp
+ * @LastEditTime: 2025-04-09 16:16:10
+ */
+
+/* 放大、缩小按钮的样式 */
+.ths-global-theme-green .jimu-widget-zoomslider div{
+  padding-top: 1px;
+  color: #fff;
+  text-shadow: 0px 0px 5px #79DBA4;
+  background: url('../../images/themes/green/zoomslidr-add-bg.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-zoomslider div:hover {
+  text-shadow: 0px 0px 5px #FFEFC9;
+  background: url('../../images/themes/blue/zoomslidr-add-bg-hover.png') center / 100% 100% no-repeat;
+}
+
+/* 图层切换按钮样式 */
+.ths-global-theme-green .jimu-widget-mapswicher{
+  background: url('../../images/themes/green/map-switcher-button-bg.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-mapswicher:hover {
+  background: url('../../images/themes/blue/zoomslidr-add-bg-hover.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-mapswicher.jimu-widget .place-holder {
+  background: url('../../images/themes/blue/map-switch-under.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-mapswicher.jimu-widget .place-holder:hover {
+  background: url('../../images/themes/blue/map-switch-under-hover.png') center / 100% 100% no-repeat;
+}
+
+/* 默认范围（home）按钮样式 */
+.ths-global-theme-green .jimu-widget-homebutton{
+  background: url('../../images/themes/green/home-button-bg.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-homebutton:hover {
+  background: url('../../images/themes/blue/zoomslidr-add-bg-hover.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-homebutton.jimu-widget .HomeButton .home {
+  background-color: transparent;
+  background: url('../../images/themes/blue/home.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-homebutton.jimu-widget .HomeButton .home:hover {
+  background-color: transparent;
+  background: url('../../images/themes/blue/home-hover.png') center / 100% 100% no-repeat;
+}
+.ths-global-theme-green .jimu-widget-homebutton .HomeButton .home::before {
+  content: '';
+}
+
+/* 图例样式 */
+.ths-global-theme-green .legend {
+  border: 1px solid #158647 !important;
+  border-radius: 12px !important;
+  background: rgba(6, 18, 8, 0.5) !important;
+}
+.ths-global-theme-green .legend .legend-title {
+  height: 42px;
+  box-sizing: border-box;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-image: linear-gradient(270deg, rgba(21,134,71,0.00) 0%, #158647 51%, rgba(21,134,71,0.00) 100%) 0 0 1 0;
+}
+
+.ths-global-theme-green .legend .legend-title span {
+  line-height: 43px;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 6px rgba(17, 214, 104, 0.62);
+}
+
+.ths-global-theme-green .legend .legend-toggle {
+  margin-top: 12px;
+  background: url('../../images/themes/blue/e-legend-toggle.png') no-repeat center center;
+}
+
+.ths-global-theme-green .legend .legend-main {
+  padding: 0px 15px 6px 15px;
+}
+
+.ths-global-theme-green .legend .legend-main .title {
+  font-size: 14px;
+  color: #56FBA0;
+}
+.ths-global-theme-blue [data-widget-name="eSearch"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="layerManager"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="eBuffer"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="Measurement"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="Bookmark"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="Print"].jimu-widget-onscreen-icon,
+.ths-global-theme-blue [data-widget-name="Draw"].jimu-widget-onscreen-icon,
+.ths-global-theme-green .esriOverviewMap .ovwButton
+{
+  background-color: unset !important;
+  background-image: url('../../images/themes/green/zoomslidr-add-bg.png') !important;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.ths-global-theme-blue [data-widget-name="eSearch"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="layerManager"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="eBuffer"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="Measurement"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="Bookmark"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="Print"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-blue [data-widget-name="Draw"].jimu-widget-onscreen-icon:hover,
+.ths-global-theme-green .esriOverviewMap .ovwButton:hover
+{
+  background-color: unset !important;
+  background-image: url('../../images/themes/blue/zoomslidr-add-bg-hover.png') !important;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* 时间轴 */
+.ths-global-theme-green .time-line .time-data {
+  border-color: #56FBA0;
+}
+.ths-global-theme-green .time-line .time-data .time-data-long-item::before {
+  background: #56FBA0;
+}
+
+.ths-global-theme-green .time-line .time-data .tooltip {
+  background: #56FBA0;
+}
+.ths-global-theme-green .time-line .time-data .tooltip::after {
+  border-top-color: #56FBA0;
+}
+.ths-global-theme-green .time-line .scroll-bar {
+  background: #56FBA0;
+}
+/* 播放和暂停按钮图片需要更换不对 */
+/* 实测和预测的图片需要更换 */
+/* 当前时间的原点图片也需要更换 */
+
+/* 底图切换-图片版 */
+.ths-global-theme-green .map-switcher-images.expand .switcher-maps {
+  background-color: rgba(86, 251, 160, 0.8);
+}

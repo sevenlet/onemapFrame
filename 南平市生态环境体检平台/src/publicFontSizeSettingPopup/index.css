@@ -1,0 +1,80 @@
+.t-l-c-publicFontSizeSettingPopup {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+filter: ;
+z-index: 1;
+background-color: rgba(26, 27, 31, 0);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+position: Relative;
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+pointer-events: auto;
+width: 194px;
+height: 88px;
+}
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 194px;
+height: 88px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-rect-0-1 {
+position: absolute !important;
+top: 10px;
+left: 150px;
+width: 32px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-rect-0-2 {
+position: absolute !important;
+top: 10px;
+left: 12px;
+width: 32px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-rect-0-3 {
+position: absolute !important;
+top: 10px;
+left: 46px;
+width: 102px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-slider-0-4 {
+position: absolute !important;
+top: 144px;
+left: 86px;
+width: 82px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-tabs-base-0-5 {
+position: absolute !important;
+top: 51px;
+left: 12px;
+width: 170px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-publicFontSizeSettingPopup .publicFontSizeSettingPopup-t-slider-0-6 {
+position: absolute !important;
+top: 11px;
+left: 57px;
+width: 82px;
+height: 30px;
+pointer-events: auto;
+}

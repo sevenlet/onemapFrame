@@ -1,0 +1,80 @@
+.t-l-c-dispatchTask {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-dispatchTask .dispatchTask-t-rect-0-0 {
+position: absolute !important;
+top: 177px;
+left: 264px;
+width: 1100px;
+height: 814px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-rect-0-1 {
+position: absolute !important;
+top: 177px;
+left: 264px;
+width: 1102px;
+height: 812px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-rect-0-2 {
+position: absolute !important;
+top: 177px;
+left: 264px;
+width: 1100px;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-image-base-0-3 {
+position: absolute !important;
+top: 188px;
+left: 276px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-rect-0-4 {
+position: absolute !important;
+top: 188px;
+left: 1327px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-text-0-5 {
+position: absolute !important;
+top: 189px;
+left: 308px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-dispatchTask .dispatchTask-t-iframe-0-6 {
+position: absolute !important;
+top: 232px;
+left: 280px;
+width: 1071px;
+height: 737px;
+pointer-events: auto;
+}

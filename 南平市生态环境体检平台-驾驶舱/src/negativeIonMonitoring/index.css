@@ -1,0 +1,98 @@
+.t-l-c-negativeIonMonitoring {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 980px;
+height: 186px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 980px;
+height: 186px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-rect-0-1 {
+position: absolute !important;
+top: 1px;
+left: 48px;
+width: 120px;
+height: 4px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-rect-0-2 {
+position: absolute !important;
+top: 1px;
+left: -1px;
+width: 980px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-text-common-0-3 {
+position: absolute !important;
+top: 18px;
+left: 61px;
+width: 213px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-table-0-4 {
+position: absolute !important;
+top: 62px;
+left: 0px;
+width: 980px;
+height: 120px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-button-0-5 {
+position: absolute !important;
+top: 21px;
+left: 446px;
+width: 49px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-input-0-6 {
+position: absolute !important;
+top: 21px;
+left: 260px;
+width: 181px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-switch-0-7 {
+position: absolute !important;
+top: 24px;
+left: 935px;
+width: 32px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-negativeIonMonitoring .negativeIonMonitoring-t-text-common-0-8 {
+position: absolute !important;
+top: 25px;
+left: 864px;
+width: 64px;
+height: 20px;
+pointer-events: auto;
+}

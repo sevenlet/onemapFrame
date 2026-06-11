@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Cache-Control" content="public" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <title>Web Application</title>
+  <link rel="shortcut icon" href="images/shortcut.ico" />
+  <!-- 预加载 CSS，不阻塞渲染 -->
+  <link href="../arcgis_js_api/dijit/themes/claro/claro.css" rel="preload" as="style">
+  <link href="../arcgis_js_api/esri/css/esri.css" rel="preload" as="style">
+  <link href="../arcgis_js_api/init.js" rel="preload" as="script">
+  <link href="./libs-min.js" rel="preload" as="script">
+  <link href="ths/dist/main.min.js" rel="preload" as="script">
+  <link href="jimu.js/main.js" rel="preload" as="script">
+  <link href="index.js" rel="preload" as="script">
+  </script>
+
+  <link href="../arcgis_js_api/dijit/themes/claro/claro.css" rel="stylesheet">
+  <link href="../arcgis_js_api/esri/css/esri.css" rel="stylesheet">
+  <link href="jimu.js/css/jimu-theme.css" rel="stylesheet">
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #main-loading {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #main-page {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    #jimu-layout-manager {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    #main-loading.loading-fadeOut {
+      opacity: 0 !important;
+    }
+
+    #main-loading {
+      background-color: #508dca;
+      position: relative;
+    }
+
+    #main-loading #app-loading {
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #main-loading #loading-gif {
+      position: absolute;
+      background-image: url("images/loading/predefined_loading_1.gif");
+      background-repeat: no-repeat;
+      width: 58px;
+      height: 29px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #map_root.esriMapContainer {
+      z-index: 0 !important;
+    }
+
+    #map_layers {
+      z-index: unset !important;
+    }
+
+    #ths_heatmap_layer,
+    #ths_heatmap_layer img {
+      transform: unset !important;
+    }
+  </style>
+  <script>
+    (function() {function getPath() {var t,e; if("/"===(t=window.location.pathname)||"/"===t.substr(t.length-1)) e=t; else {var s=t.split("/"),n=s.pop(); if(!(/\.html$/.test(n)||/\.aspx$/.test(n)||/\.jsp$/.test(n)||/\.php$/.test(n))) return !1; e=s.join("/")+"/"} return e} const path=getPath(); window.dojoConfig={parseOnLoad: false,async: true,tlmSiblingOfDojo: false,has: {"extend-esri": 1,"esri-featurelayer-webgl": 1},locale: "zh-cn",baseUrl: "../arcgis_js_api/dojo",packages: [{name: "widgets",location: path+"widgets"},{name: "jimu",location: path+"jimu.js"},{name: "themes",location: path+"themes"},{name: "libs",location: path+"libs"},{name: "dynamic-modules",location: path+"dynamic-modules"},{name: "configs",location: path+"configs"},{name: "ths",location: path+"ths"},],}; window.jimuConfig={loadingId: "main-loading",loadingImageId: "app-loading",loadingGifId: "loading-gif",layoutId: "jimu-layout-manager",mapId: "map",mainPageId: "main-page",timeout: 5000,breakPoints: [600,1280],lazyLoadCss: [],};})()
+  </script>
+</head>
+
+<body class="claro jimu-main-font">
+  <svg id="svgfilters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden"
+    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="x-rays" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox"
+        primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+.33 .33 .33 0 0
+.33 .33 .33 0 0
+0 0 0 1 0" in="SourceGraphic" result="colormatrix" />
+        <feComponentTransfer in="colormatrix" result="componentTransfer">
+          <feFuncR type="table" tableValues="0.98 0.3 0.25" />
+          <feFuncG type="table" tableValues="1 0.44 0.24" />
+          <feFuncB type="table" tableValues="0.91 0.62 0.39" />
+          <feFuncA type="table" tableValues="0 1" />
+        </feComponentTransfer>
+        <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="main-loading" style="display: none">
+    <!-- This is section you can modify to customize the loading page -->
+    <div id="app-loading"></div>
+    <div id="loading-gif"></div>
+  </div>
+  <div id="main-page" role="application">
+    <div class="trapLinkNode" tabindex="0"></div>
+    <div id="jimu-layout-manager"></div>
+    <div id="skipContainer"></div>
+    <div class="trapLinkNode lastTrapLinkNode" tabindex="0"></div>
+  </div>
+  <script type="text/javascript" src="../arcgis_js_api/init.js" defer></script>
+  <script type="text/javascript" src="./libs-min.js" defer></script>
+  <script type="text/javascript" src="ths/dist/main.min.js" defer></script>
+  <script type="text/javascript" src="../apps/fca27343fbea48b2b5a75d05dc3d2639/interactions.js" defer></script>
+  <script type="text/javascript" src="jimu.js/main.js" defer></script>
+  <script type="text/javascript" src="index.js" defer></script>
+</body>
+
+</html>

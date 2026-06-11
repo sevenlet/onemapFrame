@@ -1,0 +1,293 @@
+{
+  "tilteName": "搜索专题图",
+  "layers": [
+    {
+      "name": "空气质量测点",
+      "url": "http://192.168.0.183:6080/arcgis/rest/services/bj1/MapServer/0",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "POINTNAME",
+            "textsearchlabel": "POINTNAME",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "POINTNAME",
+                    "label": "POINTNAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "POINTNAME contains",
+                  "textsearchhint": "POINTNAME",
+                  "sqltext": "Upper(POINTNAME) LIKE Upper('%[value]%')",
+                  "operation": "stringOperatorContains",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "POINTNAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "POINTNAME",
+            "alias": "POINTNAME"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "showattachments": false,
+      "layersymbolfrom": "server"
+    },
+    {
+      "name": "建设项目",
+      "url": "http://192.168.0.183:6080/arcgis/rest/services/bj1/MapServer/1",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "ENTERNAME",
+            "textsearchlabel": "ENTERNAME",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "ENTERNAME",
+                    "label": "ENTERNAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "ENTERNAME contains",
+                  "textsearchhint": "ENTERNAME",
+                  "sqltext": "Upper(ENTERNAME) LIKE Upper('%[value]%')",
+                  "operation": "stringOperatorContains",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "ENTERNAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "ENTERNAME",
+            "alias": "企业名称"
+          },
+          {
+            "name": "ENTERADDRE",
+            "alias": "企业地址"
+          },
+          {
+            "name": "APPNAME",
+            "visible": false
+          }
+        ]
+      },
+      "links": {
+        "link": [
+          {
+            "alias": "详情",
+            "disablelinksifnull": true,
+            "disableinpopup": false,
+            "popuptype": "text",
+            "content": "http://www.baidu.com/?q={APPNAME}",
+            "icon": ""
+          }
+        ]
+      },
+      "showattachments": false,
+      "layersymbolfrom": "server"
+    },
+    {
+      "name": "污染源",
+      "url": "http://192.168.0.183:6080/arcgis/rest/services/bj1/MapServer/2",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "ENTERNAME",
+            "textsearchlabel": "ENTERNAME",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "ENTERNAME",
+                    "label": "ENTERNAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "ENTERNAME contains",
+                  "textsearchhint": "ENTERNAME",
+                  "sqltext": "Upper(ENTERNAME) LIKE Upper('%[value]%')",
+                  "operation": "stringOperatorContains",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "ENTERNAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "ENTERNAME",
+            "alias": "企业名称"
+          },
+          {
+            "name": "ENTERADDRE",
+            "alias": "企业地址"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "showattachments": false,
+      "layersymbolfrom": "server"
+    }
+  ],
+  "initialView": "graphical",
+  "multipartgraphicsearchchecked": false,
+  "addpointtolerancechecked": false,
+  "keepgraphicalsearchenabled": true,
+  "autozoomtoresults": true,
+  "toleranceforpointgraphicalselection": 6,
+  "bufferDefaults": {
+    "bufferUnits": {
+      "bufferUnit": [
+        {
+          "label": "千米",
+          "name": "UNIT_KILOMETER"
+        },
+        {
+          "label": "米",
+          "name": "UNIT_METER"
+        }
+      ]
+    },
+    "bufferDefaultValue": 5,
+    "bufferWKID": 102003,
+    "simplefillsymbol": {
+      "color": [
+        1,
+        185,
+        253,
+        128
+      ],
+      "outline": {
+        "color": [
+          1,
+          185,
+          253,
+          204
+        ],
+        "width": 0.75,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "spatialrelationships": {
+    "spatialrelationship": [
+      {
+        "name": "esriSpatialRelContains",
+        "label": "entirely contained in"
+      },
+      {
+        "name": "esriSpatialRelIntersects",
+        "label": "intersected by"
+      },
+      {
+        "name": "esriSpatialRelEnvelopeIntersects",
+        "label": "intersected by envelope of"
+      }
+    ]
+  },
+  "graphicalsearchoptions": {
+    "enablepointselect": true,
+    "enablelineselect": true,
+    "enablefreehandlineselect": true,
+    "enableextentselect": true,
+    "enablepolyselect": true,
+    "enablefreehandpolyselect": true
+  },
+  "symbols": {
+    "simplemarkersymbol": null,
+    "picturemarkersymbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "http://zhengqj:33440/widgets/eSearch/images/i_search.png",
+      "width": 20.00025,
+      "height": 20.00025
+    },
+    "simplelinesymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        204
+      ],
+      "width": 2.25,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "simplefillsymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          204
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  }
+}

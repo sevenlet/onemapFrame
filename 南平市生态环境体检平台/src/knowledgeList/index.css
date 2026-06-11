@@ -1,0 +1,112 @@
+
+.table-wrapper {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: var(--business-white);
+  font-size: var(--text-size-14);
+}
+.pagination-wrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.operation-buttons {
+  display: inline-flex;
+  align-items: center;
+}
+.operation-buttons-item {
+  margin-right: 8px;
+  color: var(--business-theme);
+  cursor: pointer;
+}
+.operation-buttons-item:last-child {
+  margin-right: 0;
+}
+.knowledge-table .el-table {
+  background-color: transparent;
+  color: var(--business-white);
+  font-size: var(--text-size-14);
+}
+.el-table__header,
+.el-table__body,
+.el-table__footer {
+  background-color: transparent;
+}
+.el-table__body tr:nth-child(odd) > td.el-table__cell {
+  background-color: transparent;
+}
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid var(--targer-btn-border);
+}
+.knowledge-table .el-table__header-wrapper th.el-table__cell {
+  background-color: var(--table-head-backgroundColor-opaque) !important;
+  color: var(--business-white);
+  font-weight: normal;
+}
+.el-table::before {
+  display: none;
+}
+.knowledge-table .el-table .el-table__body tr:nth-child(even) > td.el-table__cell,
+.knowledge-table .hover-row .el-table__cell,
+.knowledge-table .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+  background-color: var(--table-interval-backgroundColor-opaque) !important;
+}
+.el-pagination {
+  color: var(--business-white);
+  font-size: var(--text-size-14);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  text-align: right;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+.el-pagination__total,
+.el-pagination__jump {
+  color: rgba(255, 255, 255, 0.8);
+}
+.el-pagination__editor.el-input .el-input__inner {
+  height: var(--el-pagination-button-height);
+  background: transparent;
+  border: 1px solid rgba(20, 112, 204, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background: linear-gradient(180deg, #55B5FF 0%, #0073CB 100%);
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  background: linear-gradient(180deg, #55B5FF 0%, #0073CB 100%);
+  color: #fff;
+}
+.el-table-column--selection .el-checkbox__inner {
+  background-color: var(--business-show-bg30);
+  border-color: var(--targer-btn-border);
+}
+.el-table-column--selection .el-checkbox__inner::after {
+  border-color: var(--business-white);
+}
+.el-checkbox.is-checked .el-checkbox__inner {
+  background-color: var(--business-show-bg30);
+  border-color: var(--targer-btn-border);
+}
+.el-table, .el-table--border, .el-table__inner-wrapper, .el-table__header-wrapper, .el-table__body-wrapper {
+  border: 0;
+}
+.el-table tr {
+  background: transparent;
+}
+.el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf {
+  border: 0;
+}
+.knowledge-table .el-table__empty-text {
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+}

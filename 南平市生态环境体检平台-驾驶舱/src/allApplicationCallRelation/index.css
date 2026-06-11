@@ -1,0 +1,134 @@
+.t-l-c-allApplicationCallRelation {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-0 {
+position: absolute !important;
+top: 77px;
+left: 92px;
+width: 1712px;
+height: 924px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-1 {
+position: absolute !important;
+top: 177px;
+left: 122px;
+width: 1653px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-2 {
+position: absolute !important;
+top: 330px;
+left: 120px;
+width: 1653px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-3 {
+position: absolute !important;
+top: 77px;
+left: 1740px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-4 {
+position: absolute !important;
+top: 77px;
+left: 1740px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-text-0-5 {
+position: absolute !important;
+top: 108px;
+left: 198px;
+width: 280px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-text-0-6 {
+position: absolute !important;
+top: 223px;
+left: 124px;
+width: 1646px;
+height: 88px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-text-0-7 {
+position: absolute !important;
+top: 108px;
+left: 1594px;
+width: 132px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-iframe-0-8 {
+position: absolute !important;
+top: 396px;
+left: 125px;
+width: 1645px;
+height: 582px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-9 {
+position: absolute !important;
+top: 77px;
+left: 1740px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-rect-0-10 {
+position: absolute !important;
+top: 77px;
+left: 1740px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-text-0-11 {
+position: absolute !important;
+top: 108px;
+left: 1554px;
+width: 37px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationCallRelation .allApplicationCallRelation-t-text-common-0-12 {
+position: absolute !important;
+top: 171px;
+left: 160px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}

@@ -1,0 +1,133 @@
+/* 图例 */
+.legend {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  width: fit-content;
+  height: fit-content;
+  max-width: 270px;
+  max-height: 550px;
+  box-sizing: border-box;
+  border: 1px solid rgba(1, 230, 255, 1);
+  background: rgba(1, 2, 98, 0.5);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 9999;
+  transition: all 0.3s ease 0s;
+}
+
+.legend-title {
+  padding: 0 15px;
+  height: 48px;
+  margin-top: -2px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.8);
+}
+
+.legend-title span {
+  font-size: 18px;
+  color: rgba(0, 240, 255, 1);
+  line-height: 45px;
+}
+
+.legend-toggle {
+  float: right;
+  margin-top: 14px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url(../images/arrow.png) no-repeat center center;
+  outline: none;
+  cursor: pointer;
+}
+
+.legend-toggle-rotate {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.legend-main {
+  padding: 10px 15px 6px 15px;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.legend-main::-webkit-scrollbar {
+  width: 0px;
+}
+
+.legend-main .title {
+  /* 下面两条是在三维中加的 */
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #00fcff;
+}
+
+.legend-main ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Microsoft yahei,Helvetica, Arial, Verdana, Tahoma";
+  font-size: 14px;
+}
+
+.legend-list {
+position: relative;
+}
+
+.legend-list div {
+  min-width: 100px;
+  margin-top: 6px;
+  margin-right: 6px;
+  /* 下面一条是在三维中加的 */
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+}
+
+.legend-list.lump div {
+  display: block;
+}
+
+.legend-list div span {
+  display: inline-block;
+  margin: 0 13px 0 0px;
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  background: rgba(238, 192, 102, 1);
+  border-radius: 2px;
+  vertical-align: -1px;
+}
+
+.legend-list xmp {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft yahei";
+}
+
+.legend-list div img {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.legend-list div img.w26 {
+  margin: 0 7px 0 3px;
+  width: 24px;
+  height: 24px;
+}
+
+.legend-list div img.w22 {
+  margin: 0 10px 0 5px;
+  width: 20px;
+  height: 20px;
+}

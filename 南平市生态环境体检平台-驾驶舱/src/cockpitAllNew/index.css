@@ -1,0 +1,80 @@
+.t-l-c-cockpitAllNew {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0,0,0,0);
+width: 1920px;
+height: 1080px;
+}
+.t-l-c-cockpitAllNew .cockpitAllNew-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-rect-0-1 {
+position: absolute !important;
+top: 5px;
+left: 0px;
+width: 457px;
+height: 1069px;
+pointer-events: none;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-rect-0-2 {
+position: absolute !important;
+top: 5px;
+left: 1460px;
+width: 457px;
+height: 1069px;
+pointer-events: none;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-component-0-3 {
+position: absolute !important;
+top: 100px;
+left: 52px;
+width: 590px;
+height: 912px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-component-0-4 {
+position: absolute !important;
+top: 100px;
+left: 665px;
+width: 590px;
+height: 890px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-component-0-5 {
+position: absolute !important;
+top: 100px;
+left: 1279px;
+width: 590px;
+height: 912px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitAllNew .cockpitAllNew-t-component-0-6 {
+position: absolute !important;
+top: 891px;
+left: 0px;
+width: 1920px;
+height: 191px;
+pointer-events: none;
+}

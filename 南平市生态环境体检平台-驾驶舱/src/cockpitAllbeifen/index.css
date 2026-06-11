@@ -1,0 +1,62 @@
+.t-l-c-cockpitAllbeifen {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0,0,0,0);
+width: 1920px;
+height: 1080px;
+}
+.t-l-c-cockpitAllbeifen .cockpitAll-t-iframe-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitAllbeifen .cockpitAll-t-component-0-5 {
+position: absolute !important;
+top: 891px;
+left: 0px;
+width: 1920px;
+height: 191px;
+pointer-events: none;
+}
+
+@keyframes custom67486a6d3719f {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+100% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(10deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}
+@keyframes customa5a44d5e6e9dc {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-5deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-10deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}

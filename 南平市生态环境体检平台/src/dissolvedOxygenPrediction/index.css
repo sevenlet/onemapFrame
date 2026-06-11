@@ -1,0 +1,205 @@
+.t-l-c-dissolvedOxygenPrediction {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 824px;
+height: 580px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-row-0-0 {
+position: absolute !important;
+top: 2px;
+left: -1px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 28px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(150, 30, 30, 0);
+fill-type: color;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-0-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 20px;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-chart-design-0-0-2-0 {
+position: unset;
+top: 79px;
+left: 0px;
+width: 100%;
+height: 500px;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-0-3 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 47%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-table-0-0-3-0 {
+position: unset;
+top: 298px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-row-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-component-0-2 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-text-0-3 {
+position: absolute !important;
+top: 0px;
+left: 41px;
+width: 150px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-row-0-4 {
+position: absolute !important;
+top: 46px;
+left: 1px;
+width: 100%;
+height: 30px;
+pointer-events: none;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+flex-direction: row-reverse;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-4-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-text-0-4-0-0 {
+position: unset;
+top: 337px;
+left: 736px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-switch-0-4-0-1 {
+position: unset;
+top: 338px;
+left: 801px;
+width: 32px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-4-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-col-0-4-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-dissolvedOxygenPrediction .dissolvedOxygenPrediction-t-select-0-4-2-0 {
+position: unset;
+top: 79px;
+left: 42px;
+width: 205px;
+height: 33px;
+pointer-events: auto;
+}

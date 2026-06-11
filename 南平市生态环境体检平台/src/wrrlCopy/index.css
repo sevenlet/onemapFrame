@@ -1,0 +1,134 @@
+.t-l-c-wrrlCopy {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 1080px;
+width: 1920px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-wrrlCopy .wrrlCopy-t-rect-0-0 {
+position: absolute !important;
+top: 186px;
+left: 52px;
+width: 1820px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-rect-0-1 {
+position: absolute !important;
+top: 186px;
+left: 52px;
+width: 1820px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-text-0-2 {
+position: absolute !important;
+top: 200px;
+left: 67px;
+width: 143px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-tabs-base-0-3 {
+position: absolute !important;
+top: 246px;
+left: 406px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-rect-0-4 {
+position: absolute !important;
+top: 197px;
+left: 1833px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-select-0-5 {
+position: absolute !important;
+top: 245px;
+left: 1451px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-select-0-6 {
+position: absolute !important;
+top: 246px;
+left: 1658px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-tabs-base-0-7 {
+position: absolute !important;
+top: 245px;
+left: 67px;
+width: 300px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-date-picker-0-9 {
+position: absolute !important;
+top: 245px;
+left: 1658px;
+width: 195px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-date-picker-0-10 {
+position: absolute !important;
+top: 245px;
+left: 1658px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-table-0-11 {
+position: absolute !important;
+top: 293px;
+left: 65px;
+width: 1646px;
+height: 580px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-chart-design-0-12 {
+position: absolute !important;
+top: 284px;
+left: 64px;
+width: 1800px;
+height: 605px;
+pointer-events: auto;
+}
+
+.t-l-c-wrrlCopy .wrrlCopy-t-date-picker-0-13 {
+position: absolute !important;
+top: 245px;
+left: 1246px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}

@@ -1,0 +1,616 @@
+.t-l-c-waterSurfaceEvaluate {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 850px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-component-0-0 {
+position: absolute !important;
+top: 130px;
+left: 19px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-1 {
+position: absolute !important;
+top: 130px;
+left: 253px;
+width: 177px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-rect-0-2 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 106px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-select-0-3 {
+position: absolute !important;
+top: 57px;
+left: 159px;
+width: 136px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-select-0-4 {
+position: absolute !important;
+top: 57px;
+left: 15px;
+width: 136px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-date-picker-0-5 {
+position: absolute !important;
+top: 57px;
+left: 302px;
+width: 146px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-tabs-base-0-6 {
+position: absolute !important;
+top: 16px;
+left: 15px;
+width: 423px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-9 {
+position: absolute !important;
+top: 135px;
+left: 59px;
+width: auto;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-row-0-11 {
+position: absolute !important;
+top: 174px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+padding-left: 16px;
+padding-right: 16px;
+padding-bottom: 0px;
+padding-top: 6px;
+gap: 0px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-list-card-0-11-0-0 {
+position: unset;
+top: 174px;
+left: 15px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-row-0-11-1-0 {
+position: unset;
+top: -269px;
+left: 862px;
+width: 98%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: flex-start;
+justify-content: space-between;
+align-items: center;
+gap: 6px;
+display: flex;
+padding: 4px 0;
+animation-name: ;
+background-color: var(--business-show-bg15);
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-rect-0-11-1-0-0-0 {
+position: unset;
+top: 263px;
+left: 20px;
+width: 2px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-common-0-11-1-0-0-1 {
+position: unset;
+top: 268px;
+left: 43px;
+width: 96px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-row-0-11-1-0-0-2 {
+position: unset;
+top: 265px;
+left: 135px;
+width: 85px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-1-0-0-2-0 {
+position: unset;
+top: 1104.1927628296885px;
+left: 1235.0743376079358px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-1-0-0-2-1 {
+position: unset;
+top: 1736.6463072622528px;
+left: 1553.6376171769348px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-1-0-0-2-2 {
+position: unset;
+top: 1096.1927628296885px;
+left: 1174.0743376079358px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+border-left: 0px solid var(--business-theme);
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-rect-0-11-1-0-1-0 {
+position: unset;
+top: 267px;
+left: 238px;
+width: 1px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-common-0-11-1-0-1-1 {
+position: unset;
+top: 268px;
+left: 258px;
+width: 66px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-row-0-11-1-0-1-2 {
+position: unset;
+top: 265px;
+left: 327px;
+width: 83px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+margin-left: 6px;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-1-0-1-2-0 {
+position: unset;
+top: 1270.0131956048494px;
+left: 1708.2985817977992px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-1-0-1-2-1 {
+position: unset;
+top: 1726.6463072622528px;
+left: 1543.6376171769348px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-component-0-11-2-0 {
+position: unset;
+top: 326px;
+left: 19px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-2-1 {
+position: unset;
+top: 331px;
+left: 59px;
+width: auto;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-2-2 {
+position: unset;
+top: 333px;
+left: 149px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-2-3 {
+position: unset;
+top: 353px;
+left: 78px;
+width: 161px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-list-card-0-11-3-0 {
+position: unset;
+top: 370px;
+left: 18px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-tabs-base-0-11-4-0 {
+position: unset;
+top: 426px;
+left: 19px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-start;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-chart-design-0-11-5-0 {
+position: unset;
+top: 466px;
+left: 21px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-chart-design-0-11-5-1 {
+position: unset;
+top: 466px;
+left: 20px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-6 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-start;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-component-0-11-6-0 {
+position: unset;
+top: 600px;
+left: 15px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-6-1 {
+position: unset;
+top: 606px;
+left: 53px;
+width: auto;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-6-2 {
+position: unset;
+top: 609px;
+left: 183px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-6-3 {
+position: unset;
+top: 628px;
+left: 118px;
+width: 161px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-text-0-11-6-4 {
+position: unset;
+top: 636px;
+left: 125px;
+width: 17px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-7 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-checkbox-0-11-7-0 {
+position: unset;
+top: 650px;
+left: 19px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-8 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-row-0-11-8-0 {
+position: unset;
+top: -259px;
+left: 872px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-between;
+align-items: center;
+gap: 6px;
+display: flex;
+padding-top: 4px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-8-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-search-0-11-8-0-0-0 {
+position: unset;
+top: 692px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-8-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-button-0-11-8-0-1-0 {
+position: unset;
+top: 692px;
+left: 380px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-col-0-11-9 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterSurfaceEvaluate .waterSurfaceEvaluate-t-table-0-11-9-0 {
+position: unset;
+top: 731px;
+left: 18px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}

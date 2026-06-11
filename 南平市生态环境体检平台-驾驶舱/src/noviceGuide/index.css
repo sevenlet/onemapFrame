@@ -1,0 +1,98 @@
+.t-l-c-noviceGuide {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0, 0, 0, 0.3);
+width: 1920px;
+height: 1080px;
+}
+.t-l-c-noviceGuide .noviceGuide-t-image-base-0-0 {
+position: absolute !important;
+top: 452px;
+left: 1326px;
+width: 565px;
+height: 617px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-rect-0-1 {
+position: absolute !important;
+top: 474px;
+left: 1586px;
+width: 66px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-checkbox-0-2 {
+position: absolute !important;
+top: 476px;
+left: 1474px;
+width: 73px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-image-base-0-3 {
+position: absolute !important;
+top: 801px;
+left: 1185px;
+width: 706px;
+height: 268px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-rect-0-4 {
+position: absolute !important;
+top: 824px;
+left: 1446px;
+width: 66px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-image-base-0-5 {
+position: absolute !important;
+top: 699px;
+left: 1185px;
+width: 706px;
+height: 370px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-rect-0-6 {
+position: absolute !important;
+top: 721px;
+left: 1444px;
+width: 66px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-image-base-0-7 {
+position: absolute !important;
+top: 736px;
+left: 1478px;
+width: 402px;
+height: 318px;
+pointer-events: auto;
+}
+
+.t-l-c-noviceGuide .noviceGuide-t-rect-0-8 {
+position: absolute !important;
+top: 758px;
+left: 1737px;
+width: 66px;
+height: 26px;
+pointer-events: auto;
+}

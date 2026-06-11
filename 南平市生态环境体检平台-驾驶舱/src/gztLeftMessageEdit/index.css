@@ -1,0 +1,71 @@
+
+.message-container {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+.message-container .el-form-item__label {
+  font-size: 18px;
+  color: #b7e3ff;
+}
+.message-container .el-textarea .el-textarea__inner,
+.message-container .el-textarea .el-textarea__inner:hover,
+.message-container .el-textarea .el-textarea__inner:focus,
+.message-container .el-input .el-input__inner,
+.message-container .el-input .el-input__inner:hover,
+.message-container .el-input .el-input__inner:focus {
+  border: 1px solid var(--business-select-border);
+  background-color: var(--t-select-fill-bg);
+  color: #fff;
+}
+.message-container .el-textarea .el-textarea__inner:hover,
+.message-container .el-textarea .el-textarea__inner:focus,
+.message-container .el-input .el-input__inner:hover,
+.message-container .el-input .el-input__inner:focus {
+  box-shadow: var(--business-select-shadow) 0px 0px 0px 2px;
+  background-color: var(--t-select-fill-bg-hover);
+}
+.message-container .el-textarea .el-input__count {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.26);
+}
+.message-container .el-select {
+  width: 100%;
+}
+.message-container .el-select .el-select__popper {
+  width: 100%;
+  left: 0 !important;
+  background-color: var(--business-select-drop-bg);
+  border: 1px solid var(--business-select-border);
+  border-radius: 6px;
+}
+.message-container .el-select__popper .el-select-dropdown__item {
+  color: var(--t-text);
+}
+.message-container .el-select__popper .el-select-dropdown__item:hover {
+  color: var(--t-text);
+  background-color: var(--business-select-item-bg);
+}
+.message-container .el-select__popper .el-select-dropdown__item.selected {
+  color: var(--business-theme);
+  background-color: var(--business-select-item-bg);
+}
+.message-container .el-popper__arrow {
+  display: none;
+}
+.message-container .operation {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 17px;
+}
+.message-container .operation .btn {
+  width: 90px;
+  height: 34px;
+  border-radius: 89px;
+  background: rgba(20, 112, 204, 0.3);
+  font-size: 18px;
+  color: #00ffff;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}

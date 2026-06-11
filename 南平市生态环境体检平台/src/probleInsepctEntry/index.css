@@ -1,0 +1,44 @@
+.t-l-c-probleInsepctEntry {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 775px;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-probleInsepctEntry .probleInsepctEntry-t-component-0-1 {
+position: absolute !important;
+top: 22px;
+left: 25px;
+width: 401px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-probleInsepctEntry .probleInsepctEntry-t-text-unit-0-2 {
+position: absolute !important;
+top: 28px;
+left: 59px;
+width: 282px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-probleInsepctEntry .probleInsepctEntry-t-component-0-3 {
+position: absolute !important;
+top: 73px;
+left: 26px;
+width: 403px;
+height: 696px;
+pointer-events: auto;
+}

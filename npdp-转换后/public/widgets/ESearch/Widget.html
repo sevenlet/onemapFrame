@@ -1,0 +1,76 @@
+<div style="overflow:hidden">
+
+  <div>
+    <div>
+      <label style="display: none">${nls.searchLayer}</label>
+      <br>
+      <select class="esearch-select layer-choose" data-dojo-attach-point="selectLayerGraphical"
+        data-dojo-type="dijit/form/Select"></select>
+      <div class="search-toolbar" data-dojo-attach-point="keySearchBar">
+        <input class="key-word-text" type="text" data-dojo-attach-point="keyWordText" placeholder="请输入关键字"
+          required="true">
+        <!--data-dojo-attach-event="keyup:_doSaerchLayersByKeyUp"-->
+        <div class="do-search" data-dojo-attach-point="doSearch"></div>
+        <!--data-dojo-attach-event="onClick:_doSaerchLayers"-->
+      </div>
+      <div data-dojo-type="jimu/dijit/CheckBox" class="search-checkbox" data-dojo-attach-point="resultByExtent"
+        data-dojo-attach-event="click: _onCbxMultiGraphicClicked"></div>
+      <span class="search-valign-ele">${nls.resultByExtent}</span>
+    </div>
+
+    <!--结果显示-->
+    <div class="results-div" data-dojo-attach-point="resultDiv">
+      <div data-dojo-attach-point="progressbar" class="progress-bar"></div>
+      <div class="option-div" data-dojo-attach-point="divOptions">
+        <a href="#" data-dojo-attach-point="btnClear">${nls.clear}</a>
+        <a href="#" data-dojo-attach-point="btnZoomAll">${nls.zoomall}</a>
+        <a href="#" data-dojo-attach-point="btnClearBuffer">${nls.clearBuffer}</a>
+        <a href="#" data-dojo-attach-point="btnExport">${nls.exporturl}</a>
+      </div>
+
+      <div class="result-layer">
+        <div data-dojo-attach-point="divResultMessage" class="result-message">${nls.noResults}</div>
+        <div class="layer-open-close" data-dojo-attach-point="resultLayersDiv"
+          data-dojo-attach-event="onclick:_showHideResultLayer"></div>
+      </div>
+
+      <div class="esearch-list" style="    height: 245px;  width: 100%;">
+        <div data-dojo-type="widgets/ESearch/List" data-dojo-attach-point="list"
+          data-dojo-attach-event="click:_selectResultItem"></div>
+      </div>
+    </div>
+  </div>
+
+  <div data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-attach-point="shelter" data-dojo-props="hidden:true"></div>
+  <!--功能选择  开始-->
+  <label style="display: none">${nls.selectFeaturesBy}</label>
+  <br>
+  <div data-dojo-attach-point="drawBox" style=" display: none" data-dojo-type="widgets/ESearch/DrawBox"
+    data-dojo-props="types:['point','line','polyline','freehand_polyline','triangle','extent','circle','ellipse','polygon','freehand_polygon'],showClear:false">
+  </div>
+  <!--<a class="button-clear-graphical" href="#" data-dojo-attach-point="btnClear2">${nls.clear}</a>-->
+  <!--功能选择  结束-->
+  <!--隐藏多要素查询选项-->
+  <div style="height:47px; display: none">
+    <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="cbxMultiGraphic"
+      data-dojo-attach-event="click: _onCbxMultiGraphicClicked"></div>
+    <span class="search-valign-ele">${nls.useMultiGraphics}</span>&nbsp;
+    <div data-dojo-attach-point="btnGraSearch" data-dojo-attach-event="onclick: _onBtnGraSearchClicked"
+      class="search-btn btn-grasearch">${nls.search}</div>
+  </div>
+  <!--隐藏容差查询选项-->
+  <div style="padding-bottom:8px; display: none">
+    <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="cbxAddTolerance"></div>
+    <span>${nls.addTolerance}</span>
+  </div>
+  <!--功能选择 缓冲距离-->
+  <div style="line-height:28px; display: none">
+    <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="cbxBufferGraphic"></div>
+    <span style="padding-right:5px;">${nls.bufferGraphic}</span>
+    <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtBufferValue"
+      data-dojo-props="required:true,intermediateChanges:true" style="width:80px;padding-right:5px;" />
+    <select style="width:120px;padding-right:5px;" data-dojo-attach-point="bufferUnits"
+      data-dojo-type="dijit/form/Select"></select>
+    <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnClearBuffer2">${nls.clearBuffer}</a>
+  </div>
+</div>

@@ -1,0 +1,244 @@
+.t-l-c-pointPop {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 214px;
+height: 168px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-pointPop .pointPop-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 214px;
+height: 168px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-1 {
+position: absolute !important;
+top: 12px;
+left: 128px;
+width: 65px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-2 {
+position: absolute !important;
+top: 12px;
+left: 128px;
+width: 65px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-3 {
+position: absolute !important;
+top: 15px;
+left: 139px;
+width: 42px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-4 {
+position: absolute !important;
+top: 46px;
+left: 18px;
+width: 183px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-5 {
+position: absolute !important;
+top: 119px;
+left: 129px;
+width: 56px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-6 {
+position: absolute !important;
+top: 119px;
+left: 29px;
+width: 56px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-7 {
+position: absolute !important;
+top: 137px;
+left: 33px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-8 {
+position: absolute !important;
+top: 137px;
+left: 130px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-9 {
+position: absolute !important;
+top: 137px;
+left: 130px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-10 {
+position: absolute !important;
+top: 137px;
+left: 130px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-11 {
+position: absolute !important;
+top: 15px;
+left: 139px;
+width: 42px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-0-12 {
+position: absolute !important;
+top: 14px;
+left: 18px;
+width: 95px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-13 {
+position: absolute !important;
+top: 42px;
+left: 106px;
+width: 1px;
+height: 138px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-14 {
+position: absolute !important;
+top: 119px;
+left: 107px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-row-0-15 {
+position: absolute !important;
+top: 71px;
+left: 18px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-pointPop .pointPop-t-rolling-number-0-15-0 {
+position: unset;
+top: 117.79998779296875px;
+left: 668px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-15-1 {
+position: unset;
+top: 61.79998779296875px;
+left: 836px;
+width: 6px;
+height: 4px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-15-2 {
+position: unset;
+top: 61.79998779296875px;
+left: 836px;
+width: 6px;
+height: 4px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-15-3 {
+position: unset;
+top: -103.20001220703125px;
+left: 970px;
+width: auto;
+height: 29px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-row-0-16 {
+position: absolute !important;
+top: 71px;
+left: 18px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-pointPop .pointPop-t-rolling-number-0-16-0 {
+position: unset;
+top: -106.00003051757812px;
+left: 523.9999389648438px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-16-1 {
+position: unset;
+top: -162.00003051757812px;
+left: 691.9999389648438px;
+width: 6px;
+height: 4px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-rect-0-16-2 {
+position: unset;
+top: -162.00003051757812px;
+left: 691.9999389648438px;
+width: 6px;
+height: 4px;
+pointer-events: auto;
+}
+
+.t-l-c-pointPop .pointPop-t-text-unit-0-16-3 {
+position: unset;
+top: -327.0000305175781px;
+left: 825.9999389648438px;
+width: auto;
+height: 29px;
+pointer-events: auto;
+}

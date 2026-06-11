@@ -1,0 +1,525 @@
+.t-l-c-checkRecord {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 12, 12, 0);
+}
+.t-l-c-checkRecord .checkRecord-t-image-base-0-1 {
+position: absolute !important;
+top: -29px;
+left: -873px;
+width: 800px;
+height: 500px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-row-0-2 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 14px;
+padding-bottom: 0px;
+flex-direction: row;
+}
+
+.t-l-c-checkRecord .checkRecord-t-row-0-2-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+min-height: 400px;
+gap: 0px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-0-0 {
+position: unset;
+top: -98px;
+left: 81px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-0-1 {
+position: unset;
+top: -88px;
+left: 91px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 36px;
+padding-right: 10px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-input-0-2-0-1-0 {
+position: unset;
+top: -158px;
+left: 229px;
+width: 100% !important;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-right: 10px;
+border-right: 4px solid var(--business-dialog-bg);
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-2-0 {
+position: unset;
+top: -88px;
+left: 91px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-2-1 {
+position: unset;
+top: -160px;
+left: 54px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-width: 0px;
+min-height: 36px;
+padding-right: 10px;
+border-right: 4px solid var(--business-dialog-bg);
+}
+
+.t-l-c-checkRecord .checkRecord-t-input-0-2-0-3-0 {
+position: unset;
+top: -163px;
+left: 522px;
+width: 100% !important;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-right: 10px;
+border-left: 0px solid ;
+border-top: 0px solid ;
+border-right: 4px solid var(--business-dialog-bg);
+border-bottom: 0px solid ;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-4-0 {
+position: unset;
+top: -78px;
+left: 101px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-4-1 {
+position: unset;
+top: -129px;
+left: 71px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-date-picker-0-2-0-5-0 {
+position: unset;
+top: -94px;
+left: 241px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-6 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+min-height: 130px;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-6-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-6-1 {
+position: unset;
+top: -225px;
+left: 126px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-7 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 130px;
+padding-right: 10px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-input-0-2-0-7-0 {
+position: unset;
+top: -80px;
+left: 603px;
+width: 100% !important;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-8 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-8-0 {
+position: unset;
+top: -58px;
+left: 121px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-8-1 {
+position: unset;
+top: -185px;
+left: 55px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-9 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-right: 0px;
+padding-left: 10px;
+min-height: 36px;
+border-right: 4px solid var(--business-dialog-bg);
+}
+
+.t-l-c-checkRecord .checkRecord-t-radio-0-2-0-9-0 {
+position: unset;
+top: 151px;
+left: 838px;
+width: 100%;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-10 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-10-0 {
+position: unset;
+top: -48px;
+left: 131px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-10-1 {
+position: unset;
+top: -210px;
+left: 30px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-11 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+min-height: 36px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-select-0-2-0-11-0 {
+position: unset;
+top: 119px;
+left: 959px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-12 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 120px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-12-0 {
+position: unset;
+top: -38px;
+left: 141px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-text-common-0-2-0-12-1 {
+position: unset;
+top: -140px;
+left: -25px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-col-0-2-0-13 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 120px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+padding-right: 10px;
+overflow: auto;
+flex-direction: column;
+}
+
+.t-l-c-checkRecord .checkRecord-t-component-0-2-0-13-0 {
+position: unset;
+top: -294px;
+left: 255px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-upload-button-0-2-0-13-1 {
+position: unset;
+top: -161px;
+left: 368px;
+width: 70px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-row-0-2-1 {
+position: unset;
+top: 486px;
+left: 0px;
+width: 100%;
+height: 52px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-checkRecord .checkRecord-t-rect-0-2-1-0 {
+position: unset;
+top: -104px;
+left: 444px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-checkRecord .checkRecord-t-rect-0-2-1-1 {
+position: unset;
+top: -102px;
+left: 571px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}

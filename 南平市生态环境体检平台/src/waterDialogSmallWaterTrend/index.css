@@ -1,0 +1,89 @@
+.t-l-c-waterDialogSmallWaterTrend {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(26, 27, 31, 0);
+width: 844px;
+height: 429px;
+}
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-select-0-0 {
+position: absolute !important;
+top: 2px;
+left: 665px;
+width: 157px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-text-0-1 {
+position: absolute !important;
+top: 42px;
+left: 709px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-switch-0-2 {
+position: absolute !important;
+top: 42px;
+left: 791px;
+width: 32px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-date-picker-0-3 {
+position: absolute !important;
+top: 2px;
+left: 365px;
+width: 290px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-text-0-4 {
+position: absolute !important;
+top: 10px;
+left: 300px;
+width: 56px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-text-common-0-5 {
+position: absolute !important;
+top: 7px;
+left: 2px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-text-common-0-6 {
+position: absolute !important;
+top: 42px;
+left: 2px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWaterTrend .waterDialogSmallWaterTrend-t-chart-design-0-7 {
+position: absolute !important;
+top: 29px;
+left: -35px;
+width: 864px;
+height: 391px;
+pointer-events: auto;
+}

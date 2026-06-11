@@ -1,0 +1,76 @@
+{
+  "layers": [
+    {
+      "name": "风场",
+      "layerName": "wind",
+      "isPlay": true,
+      "url": "http://114.253.8.150:6067/gfsdata/",
+      "filePath": "http://114.253.8.150:6067/gfsdata/20190828/2019-08-28-14-0p50/",
+      "fileName": [
+        "U-component_of_wind.jpg",
+        "V-component_of_wind.jpg"
+      ],
+      "type": "Wind",
+      "index": 12,
+      "style": {
+        "lineAmount": 0.002,
+        "speed": 0.017,
+        "lineLength": 0.87,
+        "lineAge": 50,
+        "transparency": 0.8,
+        "lineWidth": 2.5,
+        "lineColor": "rgba(0,0,0,0.8)"
+      },
+      "indexes": {
+        "type": "radio",
+        "data": [
+          {
+            "name": "气温",
+            "selected": true,
+            "code": "codeWaterQualityLevel"
+          },
+          {
+            "name": "湿度",
+            "selected": false,
+            "code": "isStandardsStr",
+            "renderer": {
+              "rendererType": "uniqueValue",
+              "rendererInfo": {
+                "type": "uniqueValue",
+                "field1": "isStandardsStr",
+                "fieldDelimiter": ", ",
+                "defaultSymbol": {
+                  "type": "esriPMS",
+                  "url": "widgets/LayerManager/LayerList/data/350400/img/gray.gif",
+                  "contentType": "image/png",
+                  "width": 27,
+                  "height": 31
+                },
+                "infoTemplate": {
+                  "value": "{0}",
+                  "symbol": {
+                    "type": "esriPMS",
+                    "url": "widgets/LayerManager/LayerList/data/350400/img/{1}.gif",
+                    "contentType": "image/png",
+                    "width": 27,
+                    "height": 31
+                  }
+                },
+                "infoValues": [
+                  [
+                    "达标",
+                    "green"
+                  ],
+                  [
+                    "不达标",
+                    "red"
+                  ]
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

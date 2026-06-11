@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>鹿小图</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/style/font-awesome.min.css">
+    <script src="./resources/qs.js"></script>
+    <!-- vue 这里最终应该下载一个稳定版本 -->
+    <script src="./resources/vue.min.js"></script>
+
+    <!-- vue-router 这里最终应该下载一个稳定版本 -->
+    <script src="./resources/vue-router.min.js"></script>
+    <!-- 语言 -->
+    <script src="./resources/lang.js"></script>
+    <script src="./resources/vue-i18n.global.js"></script>
+    <script src="./resources/i18n.js"></script>
+
+    <!-- socket插件 -->
+    <script src="./resources/socket.io.js"></script>
+
+    <!-- lodash插件 -->
+	<script src="./resources/lodash.min.js"></script>
+
+    <!-- echarts 相关插件 -->
+    <script src="./resources/echarts.min.js"></script>
+    <script src="./resources/echarts-wordcloud.min.js"></script>
+    <script src="./resources/echarts-liquidfill.min.js"></script>
+    <script src="./resources/highcharts.js"></script>
+
+    <!-- 视频插件 -->
+    <script src="./resources/video.min.js"></script>
+
+    <!-- 视频监控插件 -->
+    <script src="./resources/video-monitor/h5player.min.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.0&&type=webgl&ak=GZjmaHvXH4LVtWNW9fwWY8jTv8i1Tz7x"></script>
+
+    <!-- 引入样式 -->
+    <link
+      rel="stylesheet"
+      href="./resources/element-plus/element-plus.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./resources/video-js.css"
+    />
+    <!-- 引入组件库 -->
+    <script src="./resources/element-plus/element-plus.min.js"></script>
+    <script src="./resources/element-plus/zhCn.js"></script>
+
+    <!-- 组件库 这里最终应该下载一个稳定版本 待修改 -->
+    <script src="./resources/ths-design/index.js"></script>
+    <!-- 组件库样式 待修改 -->
+    <link rel="stylesheet" href="./resources/ths-design/index.css" />
+
+    <!-- 通信插件mitt https://www.npmjs.com/package/mitt -->
+    <script src="./resources/mitt.min.js"></script>
+
+    <!-- HTTP库 -->
+    <script src="./resources/axios.min.js"></script>
+
+    <!-- 全局使用变量 方法 包括Vue  VueRouter等框架中的变量及方法 -->
+    <script src="src/http.js"></script>
+    <script src="src/global.js"></script>
+    <script src="src/global-function.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/theme.js"></script>
+    <script src="src/websocket.js"></script>
+
+    <!-- 所有页面 新建页面着这里添加引入 -->
+    <!-- insertPageStart -->
+    <!--headerCenter link-->  <script src="src/headerCenter/index.js"></script>
+    <!--headerCenter link-->  <link rel="stylesheet" href="src/headerCenter/index.css"/>
+    <!--areaSelect link-->  <script src="src/areaSelect/index.js"></script>
+    <!--areaSelect link-->  <link rel="stylesheet" href="src/areaSelect/index.css"/>
+    <!--leftMenu link-->  <script src="src/leftMenu/index.js"></script>
+    <!--leftMenu link-->  <link rel="stylesheet" href="src/leftMenu/index.css"/>
+    <!--target link-->  <script src="src/target/index.js"></script>
+    <!--target link-->  <link rel="stylesheet" href="src/target/index.css"/>
+    <!--rightContainer link-->  <script src="src/rightContainer/index.js"></script>
+    <!--rightContainer link-->  <link rel="stylesheet" href="src/rightContainer/index.css"/>
+    <!--integratedQuery link-->  <script src="src/integratedQuery/index.js"></script>
+    <!--integratedQuery link-->  <link rel="stylesheet" href="src/integratedQuery/index.css"/>
+    <!--mainContainer link-->  <script src="src/mainContainer/index.js"></script>
+    <!--mainContainer link-->  <link rel="stylesheet" href="src/mainContainer/index.css"/>
+    <!--mapContainer link-->  <script src="src/mapContainer/index.js"></script>
+    <!--mapContainer link-->  <link rel="stylesheet" href="src/mapContainer/index.css"/>
+    <!--testLegoView link-->  <script src="src/testLegoView/index.js"></script>
+    <!--testLegoView link-->  <link rel="stylesheet" href="src/testLegoView/index.css"/>
+    <!--oldScreenGlobalVariable link-->  <script src="src/oldScreenGlobalVariable/index.js"></script>
+    <!--oldScreenGlobalVariable link-->  <link rel="stylesheet" href="src/oldScreenGlobalVariable/index.css"/>
+    <!--header link-->  <script src="src/header/index.js"></script>
+    <!--header link-->  <link rel="stylesheet" href="src/header/index.css"/>
+    <!--saveCustomDraw link-->  <script src="src/saveCustomDraw/index.js"></script>
+    <!--saveCustomDraw link-->  <link rel="stylesheet" href="src/saveCustomDraw/index.css"/>
+    <!--noviceGuide link-->  <script src="src/noviceGuide/index.js"></script>
+    <!--noviceGuide link-->  <link rel="stylesheet" href="src/noviceGuide/index.css"/>
+    <!--znxlEntry link-->  <script src="src/znxlEntry/index.js"></script>
+    <!--znxlEntry link-->  <link rel="stylesheet" href="src/znxlEntry/index.css"/>
+    <!--znxl link-->  <script src="src/znxl/index.js"></script>
+    <!--znxl link-->  <link rel="stylesheet" href="src/znxl/index.css"/>
+    <!--  insertPageEnd -->
+
+    <!-- 路由配置 -->
+    <script src="src/route.js"></script>
+
+    <!-- 根组件 -->
+    <script src="src/root/index.js"></script>
+    <link rel="stylesheet" href="src/root/index.css" />
+
+    <!-- 入口文件 -->
+    <script src="src/main.js"></script>
+
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!--组件库主题样式 -->
+    <link rel="stylesheet" href="assets/style/themes.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <znxl-inset
+      id="znxl-inset"
+      container-type="pc"
+      is-fullscreen="0"
+      xl-auth-props=""
+      xl-params="{}"
+      iframe-src="http://192.168.0.202:7777/znxl-app"
+    ></znxl-inset>
+
+    <script>
+      let qs = Qs;
+      const app = createApp(MainComponent);
+      /* 下面的操作是去掉控制台Vue输出的警告信息  如果想开启警告信息可以把这个空函数注释掉 */
+      app.config.warnHandler = function (msg, vm, trace) {
+        // 空函数，不做任何处理
+      };
+      app.use(i18n)
+        .use(router)
+        .use(ElementPlus, {
+          size: 'small',
+          locale: ElementPlusLocaleZhCn,
+          i18n: (key, value) => i18n.global.t(key, value),
+        })
+        .use(ThsDesign)
+        .component('headerCenterComponent', headerCenterComponent)
+        .component('areaSelectComponent', areaSelectComponent)
+        .component('leftMenuComponent', leftMenuComponent)
+        .component('targetComponent', targetComponent)
+        .component('rightContainerComponent', rightContainerComponent)
+        .component('integratedQueryComponent', integratedQueryComponent)
+        .component('mainContainerComponent', mainContainerComponent)
+        .component('mapContainerComponent', mapContainerComponent)
+        .component('testLegoViewComponent', testLegoViewComponent)
+        .component('oldScreenGlobalVariableComponent', oldScreenGlobalVariableComponent)
+        .component('headerComponent', headerComponent)
+        .component('saveCustomDrawComponent', saveCustomDrawComponent)
+        .component('noviceGuideComponent', noviceGuideComponent)
+        .component('znxlEntryComponent', znxlEntryComponent)
+        .component('znxlComponent', znxlComponent)
+        .mount("#app");
+    </script>
+
+    <script type="module">
+      import { register } from './src/znxl-inset.js';
+      register('znxl-inset');
+    </script>
+    <script>
+      function getUrlSearchParam(name) {
+        const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        const r = window.location.search.split('?')[1]?.match(reg) || null;
+        if (r !== null) {
+          return r[2];
+        }
+        return null;
+      }
+      const xlAuthProps = {
+        // 登录名
+        // xlUser: getUrlSearchParam('LOGIN_NAME'),
+        xlUser: localStorage.getItem('lastLoginName'),
+        // token
+        // xlToken: getUrlSearchParam('userToken'),
+        xlToken: localStorage.getItem('token'),
+      };
+      // console.log(xlAuthProps, '小鹿参数');
+      // console.log(document.getElementById('znxl-inset'), '小鹿元素');
+      document.getElementById('znxl-inset').setAttribute('xl-auth-props', JSON.stringify(xlAuthProps));
+      // console.log(document.getElementById('znxl-inset').getAttribute('xl-auth-props'),'小鹿参数');
+    </script>
+  </body>
+</html>

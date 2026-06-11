@@ -1,0 +1,62 @@
+.t-l-c-level2DialogTitle {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 469px;
+height: 31px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-level2DialogTitle .level2DialogTitle-t-rect-0-0 {
+position: absolute !important;
+top: 4px;
+left: 3px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-level2DialogTitle .level2DialogTitle-t-rect-0-1 {
+position: absolute !important;
+top: 1px;
+left: 1px;
+width: 100%;
+height: 30px;
+pointer-events: auto;
+}
+
+@keyframes custom6123448937c6e {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+100% {
+transform: perspective(900px) translateX(10px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}
+@keyframes custom653e5cee1dd05 {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+100% {
+transform: perspective(900px) translateX(6px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}

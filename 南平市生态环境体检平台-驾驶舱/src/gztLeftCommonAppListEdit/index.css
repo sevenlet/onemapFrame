@@ -1,0 +1,168 @@
+
+.container {
+    padding: 10px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.custom-rectangle {
+    position: static;
+    left: 24px;
+    top: 24px;
+    width: 1632px;
+    height: 96px;
+    border-radius: 12px 12px 0px 0px;
+    background-image: var(--gzt-search-bgc); 
+    background-size: cover;
+    background-position: center;
+    /* 添加flex布局使内容居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* 输入框和按钮之间的间距 */
+}
+.custom-input {
+    width: 584.86px;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.custom-input .el-input__inner::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: PingFang SC;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+}
+.custom-button {
+    width: 82px;
+    height: 42px;
+    border-radius: 4px;
+    background: var(--yybj-search-button);
+    font-family: PingFang SC;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: none;
+}
+.custom-button:hover, .custom-button:focus {
+    background: var(--t-button-bg);
+    color: #FFFFFF;
+}
+.el-input__icon {
+    line-height: 42px !important;
+}
+.el-input--small .el-input__inner {
+    height: 42px;
+    line-height: 42px;
+}
+
+
+   /* 卡片容器样式 */
+.card-container {
+    width: 1632px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 32px;
+}
+
+  /* 卡片样式 */
+.card-item {
+    flex:1;
+    min-width: 115.38px;
+    height: 40px;
+    border-radius: 4px;
+    background: var(--yybj-title-default);
+    border: 1px solid var(--yybj-title-border-default);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* 激活卡片样式 */
+.card-item.active {
+    background: var(--yybj-title-active);
+    border: 1px solid var(--yybj-title-border-active);
+    font-weight: bold;
+}
+
+  /* 动态内容区域样式 */
+.dynamic-section {
+    margin-top: 30px;
+    position: relative;
+}
+
+  /* 标题背景样式 */
+.title-background {
+    width: 1632px;
+    height: 26.84px;
+    background-image: var(--t-data-allapplication-title-bg);
+    background-repeat: round;
+}
+
+  /* 标题文字样式 (叠加在背景上) */
+.section-title {
+    position: absolute;
+    top: -4px;
+    left: 30px;
+    font-family: "方正综艺简体";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: var(--skin-font-color);
+}
+
+  /* 动态卡片容器 */
+.dynamic-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    width: 1632px;
+    cursor: pointer;
+}
+
+  /* 动态卡片样式 */
+.dynamic-card {
+    height: 70px;
+    border-radius: 12px;
+    background: var(--yybj-card-bgc);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+    min-width: 100px;
+    justify-content: space-between;
+}
+
+  /* 卡片图片样式 */
+.card-image {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+}
+
+  /* 卡片文字样式 */
+.card-text {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    color: var(--skin-font-color-90);
+}
+.status-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

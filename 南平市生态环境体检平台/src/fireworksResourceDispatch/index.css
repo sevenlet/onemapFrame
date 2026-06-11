@@ -1,0 +1,92 @@
+.t-l-c-fireworksResourceDispatch {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+overflow: visible;
+background-color: rgba(0, 0, 0, 0);
+height: 200px;
+transform: unset !important;
+width: 410px;
+}
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-row-0-0 {
+position: absolute !important;
+top: 0px;
+left: 15px;
+width: 410px;
+height: 363px;
+pointer-events: auto;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-component-0-0-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-row-0-0-1 {
+position: unset;
+top: 43px;
+left: 0px;
+width: 410px;
+height: auto;
+pointer-events: auto;
+overflow: visible;
+display: block;
+margin-top: 12px;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-list-card-multiple-choice-0-0-1-0 {
+position: unset;
+top: 43px;
+left: 0px;
+width: 410px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-row-0-0-1-1 {
+position: unset;
+top: 115px;
+left: -345px;
+width: 410px;
+height: auto;
+pointer-events: auto;
+border-left: 1px solid var(--business-show-bg60);
+border-top: 1px solid var(--business-show-bg60);
+border-right: 1px solid var(--business-show-bg60);
+border-bottom: 1px solid var(--business-show-bg60);
+margin-top: 12px;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-scrollable-cards-0-0-1-1-0 {
+position: unset;
+top: 194px;
+left: 10px;
+width: 394px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-fireworksResourceDispatch .fireworksResourceDispatch-t-component-0-0-1-1-1 {
+position: unset;
+top: -4px;
+left: 480px;
+width: 410px;
+height: 535px;
+pointer-events: auto;
+}

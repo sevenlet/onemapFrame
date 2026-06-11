@@ -1,0 +1,134 @@
+.t-l-c-samplePlotOverview {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 891px;
+width: 450px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-samplePlotOverview .samplePlotOverview-t-table-0-0 {
+position: absolute !important;
+top: 287px;
+left: 20px;
+width: 410px;
+height: 435px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-rect-0-1 {
+position: absolute !important;
+top: 108px;
+left: 20px;
+width: 410px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-text-unit-0-2 {
+position: absolute !important;
+top: 121px;
+left: 240px;
+width: 100px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-text-common-0-3 {
+position: absolute !important;
+top: 121px;
+left: 50px;
+width: 74px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-component-0-4 {
+position: absolute !important;
+top: 20px;
+left: 20px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-list-card-multiple-choice-0-5 {
+position: absolute !important;
+top: 169px;
+left: 19px;
+width: 417px;
+height: 58px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-text-unit-0-6 {
+position: absolute !important;
+top: 26px;
+left: 54px;
+width: 261px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-pagination-base-0-7 {
+position: absolute !important;
+top: 776px;
+left: 23.5px;
+width: 403px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-search-0-8 {
+position: absolute !important;
+top: 238px;
+left: 20px;
+width: 348px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-button-0-9 {
+position: absolute !important;
+top: 238px;
+left: 381px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-select-0-10 {
+position: absolute !important;
+top: 61px;
+left: 231px;
+width: 199px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-date-picker-0-11 {
+position: absolute !important;
+top: 61px;
+left: 20px;
+width: 200px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-samplePlotOverview .samplePlotOverview-t-image-base-0-12 {
+position: absolute !important;
+top: 123px;
+left: 34px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}

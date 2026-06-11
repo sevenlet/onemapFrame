@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.35/esri/copyright.txt for details.
+//>>built
+define("esri/arcade/lib/esprima","require exports ./comment-handler ./parser ./tokenizer ./syntax".split(" "),function(u,d,p,q,r,t){function h(b,a,e){var c=null,f=function(k,l){e&&e(k,l);c&&c.visit(k,l)},m="function"===typeof e?f:null,g=!1;if(a){g="boolean"===typeof a.comment&&a.comment;var n="boolean"===typeof a.attachComment&&a.attachComment;if(g||n)c=new p.CommentHandler,c.attach=n,a.comment=!0,m=f}b=new q.Parser(b,a,m);a=b.parseScript();g&&c&&(a.comments=c.comments);b.config.tokens&&(a.tokens=
+b.tokens);b.config.tolerant&&(a.errors=b.errorHandler.errors);return a}Object.defineProperty(d,"__esModule",{value:!0});d.version=d.tokenize=d.parseScript=d.parse=void 0;d.parse=h;d.parseScript=function(b,a,e){a=a||{};a.sourceType="script";return h(b,a,e)};d.tokenize=function(b,a,e){b=new r.Tokenizer(b,a);a=[];try{for(;;){var c=b.getNextToken();if(!c)break;e&&(c=e(c));a.push(c)}}catch(f){b.errorHandler.tolerate(f)}b.errorHandler.tolerant&&(a.errors=b.errors());return a};Object.defineProperty(d,"Syntax",
+{enumerable:!0,get:function(){return t.Syntax}});d.version="4.0.0-dev"});

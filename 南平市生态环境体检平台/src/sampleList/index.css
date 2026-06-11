@@ -1,0 +1,127 @@
+.t-l-c-sampleList {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1000px;
+height: 700px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-sampleList .sampleList-t-row-0-0 {
+position: absolute !important;
+top: 35px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-sampleList .sampleList-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: auto;
+height: 56px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg30);
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 30px;
+}
+
+.t-l-c-sampleList .sampleList-t-text-common-0-0-0-0 {
+position: unset;
+top: 132px;
+left: 41px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-select-0-0-0-1 {
+position: unset;
+top: -39px;
+left: 278px;
+width: 250px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-date-picker-0-0-0-2 {
+position: unset;
+top: 154px;
+left: 928px;
+width: 270px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: block;
+}
+
+.t-l-c-sampleList .sampleList-t-table-0-0-1-0 {
+position: unset;
+top: 297px;
+left: 30px;
+width: 100%;
+height: 435px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-pagination-base-0-0-1-1 {
+position: unset;
+top: 786px;
+left: 33.5px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-component-0-1 {
+position: absolute !important;
+top: 0px;
+left: 1px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-text-0-2 {
+position: absolute !important;
+top: 5px;
+left: 41px;
+width: 130px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-sampleList .sampleList-t-text-0-3 {
+position: absolute !important;
+top: 8px;
+left: 646px;
+width: 164px;
+height: 19px;
+pointer-events: auto;
+}

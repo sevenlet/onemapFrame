@@ -1,0 +1,13 @@
+export declare function getAirQgRankJson(params?: any): Promise<any>;
+export declare function getMonthQueryJson(params?: any): Promise<any>;
+export declare function getYearQueryJson(params?: any): Promise<any>;
+export declare function getAirOverviewJson(params?: any): Promise<any>;
+export declare function getWaterQualityJson(params?: any): Promise<any>;
+export declare function getWaterTimeJson(params?: any): Promise<any>;
+export declare function getSoilMonitorJson(params?: any): Promise<any>;
+export declare function getPolluteQueryJson(params?: any): Promise<any>;
+export declare function getPolluteTimeJson(params?: any): Promise<any>;
+export declare function getGdyTotalJson(params?: any): Promise<any>;
+export declare function getGdyDetailJson(params?: any): Promise<any>;
+export declare function getGdyTimeJson(params?: any): Promise<any>;
+export declare function getEaiInfoJson(params?: any): Promise<any>;

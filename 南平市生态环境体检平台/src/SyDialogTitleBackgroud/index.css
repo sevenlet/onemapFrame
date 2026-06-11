@@ -1,0 +1,278 @@
+.t-l-c-SyDialogTitleBackgroud {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(255, 0, 0, 0);
+height: 28px;
+width: 960px;
+}
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 24px;
+width: 936px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-1 {
+position: absolute !important;
+top: -1px;
+left: 774px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-2 {
+position: absolute !important;
+top: -1px;
+left: 796px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-3 {
+position: absolute !important;
+top: -1px;
+left: 819px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-4 {
+position: absolute !important;
+top: -1px;
+left: 841px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-5 {
+position: absolute !important;
+top: -1px;
+left: 864px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-6 {
+position: absolute !important;
+top: -1px;
+left: 886px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-7 {
+position: absolute !important;
+top: -1px;
+left: 909px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-8 {
+position: absolute !important;
+top: -1px;
+left: 931px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-SyDialogTitleBackgroud .SyDialogTitleBackgroud-t-rect-0-9 {
+position: absolute !important;
+top: 0px;
+left: -21px;
+width: 50px;
+height: 26px;
+pointer-events: auto;
+}
+
+@keyframes custom4f535b3e2b5f4 {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custom4c3c1b39109cc {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custom69c9662b286de {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes customac792bbf9af19 {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes customcdd3f7e7beaa6 {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes customfa732ecba515e {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custombc1e59c456704 {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custome263d94835a89 {
+
+0% {
+
+opacity: 
+100%;
+}
+50% {
+
+opacity: 
+10%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custom457e0c4d7ae9a {
+
+0% {
+
+opacity: 
+100%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}
+@keyframes custom22a312988078d {
+
+0% {
+
+opacity: 
+100%;
+}
+100% {
+
+opacity: 
+100%;
+}
+}

@@ -1,0 +1,14 @@
+{
+  "overviewMap": {
+    "visible": false,
+    "baseLayer": {
+      "url": "",
+      "type": "baseMap",
+      "veLayerInfo": {
+        "isKeyInPortal": true
+      }
+    },
+    "attachTo": "bottom-right",
+    "maximizeButton": true
+  }
+}

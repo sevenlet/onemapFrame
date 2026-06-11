@@ -1,0 +1,143 @@
+.t-l-c-airOverviewPolluteCalendar {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 1080px;
+width: 1920px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-rect-0-0 {
+position: absolute !important;
+top: 186px;
+left: 34.5px;
+width: 1851px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-rect-0-1 {
+position: absolute !important;
+top: 186px;
+left: 34px;
+width: 1851px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-text-0-2 {
+position: absolute !important;
+top: 186px;
+left: 49px;
+width: 143px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-rect-0-3 {
+position: absolute !important;
+top: 197px;
+left: 1845px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-tabs-base-0-4 {
+position: absolute !important;
+top: 242px;
+left: 359px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-select-0-5 {
+position: absolute !important;
+top: 242px;
+left: 1466px;
+width: 195px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-select-0-6 {
+position: absolute !important;
+top: 242px;
+left: 1674px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-tabs-base-0-7 {
+position: absolute !important;
+top: 242px;
+left: 49px;
+width: 300px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-date-picker-0-9 {
+position: absolute !important;
+top: 243px;
+left: 1674px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-date-picker-0-10 {
+position: absolute !important;
+top: 242px;
+left: 1675px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-chart-design-0-11 {
+position: absolute !important;
+top: 284px;
+left: 60px;
+width: 1800px;
+height: 605px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-date-picker-0-12 {
+position: absolute !important;
+top: 242px;
+left: 1261px;
+width: 195px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-table-0-13 {
+position: absolute !important;
+top: 293px;
+left: 51.5px;
+width: 1817px;
+height: 580px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPolluteCalendar .airOverviewPolluteCalendar-t-table-0-14 {
+position: absolute !important;
+top: 293px;
+left: 50px;
+width: 1817px;
+height: 580px;
+pointer-events: auto;
+}

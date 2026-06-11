@@ -1,0 +1,80 @@
+.t-l-c-recentlyVideoWarningReal {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 370px;
+width: 410px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-component-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-text-unit-0-1 {
+position: absolute !important;
+top: 0px;
+left: 36px;
+width: 230px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-select-0-2 {
+position: absolute !important;
+top: 46px;
+left: 113px;
+width: 295px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-text-common-0-3 {
+position: absolute !important;
+top: 46px;
+left: 6px;
+width: 89px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-table-0-4 {
+position: absolute !important;
+top: 97px;
+left: 0px;
+width: 409px;
+height: 270px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-component-0-5 {
+position: absolute !important;
+top: -1px;
+left: 510px;
+width: 400px;
+height: 350px;
+pointer-events: auto;
+}
+
+.t-l-c-recentlyVideoWarningReal .recentlyVideoWarningReal-t-text-common-0-6 {
+position: absolute !important;
+top: 0px;
+left: 308px;
+width: 88px;
+height: 32px;
+pointer-events: auto;
+}

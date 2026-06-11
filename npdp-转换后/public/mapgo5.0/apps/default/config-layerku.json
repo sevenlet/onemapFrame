@@ -1,0 +1,274 @@
+{
+  "theme": {
+    "name": "LaunchpadTheme",
+    "styles": [
+      "default",
+      "style2",
+      "style3"
+    ],
+    "version": "2.19",
+    "sharedTheme": {
+      "isPortalSupport": false,
+      "useHeader": false,
+      "useLogo": false
+    }
+  },
+  "authorizedCrossOriginDomains": [],
+  "title": "地理信息开发平台",
+  "subtitle": "北京思路创新科技有限公司",
+  "keepAppState": true,
+  "logo": "images/app-logo.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "terrain": {
+    "url": "https://www.supermapol.com/realspace/services/3D-stk_terrain/rest/realspace/datas/info/data/path",
+    "requestWaterMask": true,
+    "requestVertexNormals": true,
+    "isSct": false
+  },
+  "widgetOnScreen": {
+    "widgets": [
+      {
+        "uri": "themes/LaunchpadTheme/widgets/AnchorBarController/Widget",
+        "position": {
+          "bottom": 10,
+          "height": 40,
+          "relativeTo": "map",
+          "zIndex": 0
+        },
+        "version": "2.19",
+        "id": "themes_LaunchpadTheme_widgets_AnchorBarController",
+        "name": "AnchorBarController"
+      },
+      {
+        "uri": "widgets/ZoomSlider/Widget",
+        "position": {
+          "left": 25,
+          "top": 95,
+          "relativeTo": "map"
+        },
+        "version": "2.19",
+        "id": "widgets_ZoomSlider",
+        "name": "ZoomSlider"
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "left": 25,
+          "top": 175,
+          "relativeTo": "map"
+        },
+        "id": "widgets_HomeButton",
+        "name": "HomeButton",
+        "version": "2.19"
+      },
+      {
+        "uri": "widgets/Coordinate/Widget",
+        "position": {
+          "left": 20,
+          "bottom": 60,
+          "relativeTo": "map"
+        },
+        "id": "widgets_Coordinate",
+        "name": "Coordinate",
+        "config": "../apps/default/Coordinate/config.json",
+        "version": "2.19"
+      },
+      {
+        "uri": "widgets/Scalebar/Widget",
+        "position": {
+          "left": 27,
+          "bottom": 25,
+          "relativeTo": "map"
+        },
+        "version": "2.19",
+        "id": "widgets_Scalebar",
+        "config": "../apps/default/Scalebar/config.json",
+        "name": "Scalebar"
+      },
+      {
+        "id": "widgets_LayerManager_Widget",
+        "uri": "widgets/LayerManager/Widget",
+        "config": "../apps/default/LayerManager/config.json",
+        "position": {
+          "top": 20,
+          "right": 400,
+          "relativeTo": "map"
+        },
+        "label": "图层列表",
+        "name": "图层列表",
+        "openAtStart": true,
+        "showAtStart": false
+      }
+    ],
+    "customWidgets": [
+      {
+        "id": "widgets_ELegend_Widget",
+        "type": "legend",
+        "label": "图例",
+        "config": "../apps/default/ELegend/config.json",
+        "position": {
+          "bottom": 30,
+          "right": 400
+        },
+        "uri": "widgets/ELegend/Widget"
+      }
+    ]
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "basemaps": [
+      {
+        "visible": true,
+        "label": "普通地图",
+        "id": "普通地图",
+        "type": "tianditumercator",
+        "style": "dark"
+      }
+    ],
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "mapOptions": {
+      "extent": {
+        "xmin": 3033456.1241164994,
+        "ymin": -230481.49092399087,
+        "xmax": 19411892.804529734,
+        "ymax": 8182548.583631845,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      },
+      "showLabels": true,
+      "slider": false,
+      "logo": false
+    },
+    "id": "map"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+      "position": {
+        "relativeTo": "map"
+      }
+    },
+    "widgets": [],
+    "groups": []
+  },
+  "mobileLayout": {
+    "widgetOnScreen": {
+      "widgets": [
+        {
+          "uri": "themes/LaunchpadTheme/widgets/AnchorBarController/Widget",
+          "position": {
+            "bottom": 0,
+            "height": 40,
+            "width": "100%",
+            "zIndex": 0,
+            "relativeTo": "map"
+          },
+          "version": "2.19"
+        },
+        {
+          "uri": "widgets/ZoomSlider/Widget",
+          "position": {
+            "right": 10,
+            "bottom": 160,
+            "relativeTo": "map"
+          },
+          "version": "2.19"
+        },
+        {
+          "uri": "widgets/HomeButton/Widget",
+          "position": {
+            "right": 10,
+            "bottom": 75,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "uri": "widgets/Coordinate/Widget",
+          "position": {
+            "left": 20,
+            "bottom": 60
+          }
+        },
+        {
+          "uri": "widgets/Scalebar/Widget",
+          "position": {
+            "left": 50,
+            "bottom": 70,
+            "relativeTo": "map"
+          },
+          "version": "2.19"
+        },
+        {
+          "uri": "widgets/ExtentNavigate/Widget",
+          "visible": false,
+          "position": {
+            "right": 10,
+            "bottom": 238,
+            "relativeTo": "map"
+          },
+          "version": "2.19"
+        },
+        {
+          "uri": "widgets/FullScreen/Widget",
+          "visible": false,
+          "position": {
+            "right": 70,
+            "top": 20
+          },
+          "version": "2.19"
+        }
+      ]
+    },
+    "map": {
+      "position": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "widgetPool": {
+      "panel": {
+        "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel"
+      }
+    }
+  },
+  "loadingPage": {
+    "backgroundColor": "#508dca",
+    "backgroundImage": {
+      "visible": false
+    },
+    "loadingGif": {
+      "visible": true,
+      "uri": "configs/loading/images/predefined_loading_1.gif",
+      "width": 58,
+      "height": 29
+    }
+  },
+  "wabVersion": "2.19",
+  "isTemplateApp": false,
+  "isWebTier": false,
+  "httpProxy": {
+    "alwaysUseProxy": false,
+    "rules": [
+      {
+        "urlPrefix": "http://192.168.0.183:7080/",
+        "proxyUrl": "/src/proxy/proxy.jsp"
+      }
+    ],
+    "useProxy": true,
+    "url": "./proxy/proxy.jsp"
+  },
+  "dataSource": {
+    "dataSources": {},
+    "settings": {}
+  }
+}

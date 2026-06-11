@@ -1,0 +1,286 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "qushuikou.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.24151927,
+          22.90097243
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 7,
+        "protection": "南州水厂",
+        "name": "南州水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.1872033,
+          22.89079186
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 7,
+        "protection": "北滘-羊额",
+        "name": "羊额水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.18027227,
+          22.89387259
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 6,
+        "protection": "北滘-羊额",
+        "name": "北滘水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.08721341,
+          22.97841221
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 5,
+        "name": "乐从水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.14606097,
+          22.72972181
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 28,
+        "protection": "均安饮用水",
+        "name": "均安饮用水"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.8004874,
+          23.13457951
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 9,
+        "protection": "西江水厂",
+        "name": "佛山西江供水有限公司西江水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.85119981,
+          23.16120763
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 0,
+        "protection": "石塘水厂",
+        "name": "石塘水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.90010309,
+          23.36929052
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 0,
+        "protection": "北江水厂",
+        "name": "北江水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.50156842,
+          22.79998076
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 17,
+        "protection": "合水水厂",
+        "name": "高明供水总公司合水水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.77440365,
+          22.77073678
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 15,
+        "protection": "杨梅水厂",
+        "name": "高明供水总公司杨梅水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.88153467,
+          22.91438282
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 8,
+        "protection": "高明水厂",
+        "name": "高明供水总公司高明水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.05252469,
+          22.92226659
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 0,
+        "protection": "藤溪水厂",
+        "name": "藤溪水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.01020849,
+          22.81415783
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 14,
+        "protection": "九江水厂",
+        "name": "九江自来水公司九江水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.94218348,
+          23.12020932
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 2,
+        "protection": "南海第二水厂",
+        "name": "瀚蓝环境第二水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.99388559,
+          23.02827556
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 0,
+        "protection": "紫洞沙口水厂",
+        "name": "禅城供水有限公司紫洞水厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "qushuikou.16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.02906585,
+          23.02405956
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "Id": 0,
+        "protection": "紫洞沙口水厂",
+        "name": "禅城供水有限公司沙口水厂"
+      }
+    }
+  ],
+  "totalFeatures": 16,
+  "numberMatched": 16,
+  "numberReturned": 16,
+  "timeStamp": "2024-03-07T07:26:18.384Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4490"
+    }
+  }
+}

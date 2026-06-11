@@ -1,0 +1,35 @@
+.t-l-c-ssssssss {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-ssssssss .ssssssss-t-component-0-0 {
+position: absolute !important;
+top: 48px;
+left: 73px;
+width: 1133px;
+height: 660px;
+pointer-events: auto;
+}
+
+.t-l-c-ssssssss .ssssssss-t-chart-wind-direction-0-1 {
+position: absolute !important;
+top: 150px;
+left: 531px;
+width: 600px;
+height: 338px;
+pointer-events: auto;
+}

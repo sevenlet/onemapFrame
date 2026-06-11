@@ -1,0 +1,47 @@
+
+.check-record-file-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: var(--text-size-14);
+}
+.check-record-file-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+}
+.check-record-file-name {
+  color: #44ecff;
+  cursor: pointer;
+}
+.check-record-file-delete-btn {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: #ff4d4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.check-record-file-delete-icon {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+}
+.check-record-file-image {
+  max-width: 160px;
+  max-height: 120px;
+  border-radius: 4px;
+}
+.el-table thead {
+  background: var(--business-show-bg30);
+}

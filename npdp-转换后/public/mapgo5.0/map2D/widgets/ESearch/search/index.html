@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+	<!-- 360 使用Google Chrome Frame -->
+	<meta name="renderer" content="webkit">
+	<title>搜索</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 清除默认样式 -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://api.tianditu.gov.cn/api?v=4.0&tk=50fe7fa0bb2ccc70315fd349526ce6ec" type="text/javascript"></script>
+</head>
+
+<body onload="load()">
+	<div id="mapDiv" style="width: 500px;height: 500px;display: none;"></div>
+	<div class="panel-search">
+		<input type="text" id="search-input" class="search-input" autocomplete="off" placeholder="请输入搜索条件">
+		<button class="btn search-btn">搜索</button>
+		<button class="btn search-empty-btn search-disabled">清空</button>
+	</div>
+	<div class="panel-search-list">
+		<ul>
+			<!-- <li>基础行政基础行政区数据基础行政区数据区数据基础行政基础行政区数据基础行政区数据区数据</li>
+			<li>基础基础行政区数据基础行政基础据区数据行政区数据</li>
+			<li>基础基础行政区数据基据</li> -->
+		</ul>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

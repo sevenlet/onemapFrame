@@ -1,0 +1,392 @@
+.t-l-c-hydropowerStationBaseInfo {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+z-index: 2;
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+pointer-events: auto;
+filter: ;
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+width: 96%;
+margin: 20px auto;
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+position: Relative;
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+height: 950px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-chart-design-0-1 {
+position: absolute !important;
+top: 380px;
+left: 2px;
+width: 100%;
+height: 560px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-2 {
+position: absolute !important;
+top: 350px;
+left: 0px;
+width: 100%;
+height: 252px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-row-0-7 {
+position: absolute !important;
+top: 156px;
+left: 2px;
+width: 100%;
+height: 96px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-7-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-7-0-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 25%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-7-0-1 {
+position: unset;
+top: 16px;
+left: 377px;
+width: 25%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-7-0-2 {
+position: unset;
+top: 26px;
+left: 387px;
+width: 25%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-7-0-3 {
+position: unset;
+top: 36px;
+left: 397px;
+width: 25%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-7-0-4 {
+position: unset;
+top: 46px;
+left: 407px;
+width: 25%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-rect-0-8 {
+position: absolute !important;
+top: 271px;
+left: 21px;
+width: 775px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-9 {
+position: absolute !important;
+top: 270px;
+left: 50px;
+width: 144px;
+height: 26px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-row-0-10 {
+position: absolute !important;
+top: 0px;
+left: -1px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+align-items: center;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+display: flex;
+justify-content: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-10-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+align-items: center;
+flex-direction: row;
+display: flex;
+gap: auto;
+justify-content: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-10-0-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-10-0-1 {
+position: unset;
+top: 3px;
+left: 0px;
+width: 96px;
+height: 18px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-row-0-11 {
+position: absolute !important;
+top: 33px;
+left: 0px;
+width: 100%;
+height: 59px;
+pointer-events: auto;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-11-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+align-items: center;
+background: rgba(124, 27, 27, 0);
+fill-type: color;
+flex-direction: row-reverse;
+display: flex;
+justify-content: left;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-rect-0-11-0-0 {
+position: unset;
+top: 59px;
+left: 143px;
+width: 130px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-11-0-1 {
+position: unset;
+top: 61px;
+left: 25px;
+width: 116px;
+height: 32px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-11-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-11-1-0 {
+position: unset;
+top: 58px;
+left: 279px;
+width: 116px;
+height: 32px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-rect-0-11-1-1 {
+position: unset;
+top: 58px;
+left: 399px;
+width: 130px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-11-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-11-2-0 {
+position: unset;
+top: 58px;
+left: 533px;
+width: 116px;
+height: 32px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-rect-0-11-2-1 {
+position: unset;
+top: 58px;
+left: 653px;
+width: 130px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-row-0-12 {
+position: absolute !important;
+top: 105px;
+left: 0px;
+width: 100%;
+height: 41px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-12-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-component-0-12-0-0 {
+position: unset;
+top: 10px;
+left: 10px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-12-0-1 {
+position: unset;
+top: 13px;
+left: 10px;
+width: 96px;
+height: 18px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-row-0-13 {
+position: absolute !important;
+top: 298px;
+left: 0px;
+width: 100%;
+height: 74px;
+pointer-events: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-13-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+padding-left: 10px;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-13-0-0 {
+position: unset;
+top: 301px;
+left: 26px;
+width: auto;
+height: 32px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-date-picker-0-13-0-1 {
+position: unset;
+top: 300px;
+left: 71px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-col-0-13-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+padding-right: 10px;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-text-0-13-1-0 {
+position: unset;
+top: 301px;
+left: 549px;
+width: auto;
+height: 32px;
+pointer-events: none;
+}
+
+.t-l-c-hydropowerStationBaseInfo .hydropowerStationBaseInfo-t-select-0-13-1-1 {
+position: unset;
+top: 302px;
+left: 622px;
+width: 152px;
+height: 32px;
+pointer-events: auto;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>下载EsriJSON</title>
+    <style>
+        pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+        .string { color: green; }
+        .number { color: darkorange; }
+        .boolean { color: blue; }
+        .null { color: magenta; }
+        .key { color: red; }
+</style>
+</head>
+<body>
+<pre id="geoJsonTxt">
+	</pre>
+<script>
+    showGeoJsonTxt();
+    function showGeoJsonTxt(){
+        var geoJsonTxt = document.getElementById('geoJsonTxt');
+        geoJsonTxt.innerHTML = JsonFormat();
+    }
+
+    function JsonFormat() {
+        if(window.location.href.indexOf('jsonStr')>-1){
+            var str = window.location.href;
+            var strs = str.split("?")[1].substring(8);
+            var jsonStr = decodeURI(strs);
+            var json = JSON.parse(jsonStr);
+        }
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+
+</script>
+</body>
+</html>
+

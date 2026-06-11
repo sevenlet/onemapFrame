@@ -1,0 +1,48 @@
+.esriPopupWrapper {
+  top: -200px !important;
+}
+
+.sizer {
+  height: 0px;
+}
+
+.actionsPane {
+  display: none !important;
+}
+
+.outerPointer {
+  border: 0.2px solid;
+  z-index: 0 !important;
+  left: 10px !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border-color: transparent transparent rgba(0, 255, 255, 0.5) rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 22, 155, 1) !important;
+}
+
+.titlePane {
+  background-color: rgb(0, 2, 129) !important;
+  height: 35px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.contentPane {
+  max-height: 450px !important;
+  overflow: visible !important;
+  padding: 0px !important;
+  background-color: rgb(0, 2, 124) !important
+}
+
+.esriPopup {
+  padding: 0px !important;
+  background-color: rgb(0, 2, 124) !important
+}
+
+.actionsPane {
+  background-color: transparent !important
+}
+
+.esriPopup .maximize {
+  display: none !important
+}

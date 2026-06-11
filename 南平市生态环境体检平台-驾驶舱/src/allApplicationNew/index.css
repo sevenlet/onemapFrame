@@ -1,0 +1,62 @@
+.t-l-c-allApplicationNew {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-allApplicationNew .allApplicationNew-t-rect-0-0 {
+position: absolute !important;
+top: 83px;
+left: 120px;
+width: 1680px;
+height: 915px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationNew .allApplicationNew-t-rect-0-1 {
+position: absolute !important;
+top: 83px;
+left: 1737px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationNew .allApplicationNew-t-rect-0-2 {
+position: absolute !important;
+top: 83px;
+left: 1737px;
+width: 63px;
+height: 61px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationNew .allApplicationNew-t-text-0-3 {
+position: absolute !important;
+top: 108px;
+left: 198px;
+width: 280px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-allApplicationNew .allApplicationNew-t-iframe-0-4 {
+position: absolute !important;
+top: 169px;
+left: 140px;
+width: 1648px;
+height: 802px;
+pointer-events: auto;
+}

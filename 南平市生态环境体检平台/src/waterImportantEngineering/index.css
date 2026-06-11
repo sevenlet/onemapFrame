@@ -1,0 +1,93 @@
+.t-l-c-waterImportantEngineering {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 272px;
+background-color: rgba(168, 158, 158, 0);
+left: calc(50% - 100px);
+top: 48%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-rect-0-0 {
+position: absolute !important;
+top: -0.000005856841994500428px;
+left: 0.000022860156605020165px;
+width: 450px;
+height: 268.00002744533873px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-rect-0-1 {
+position: absolute !important;
+top: -0.000005856841994500428px;
+left: 0.000022860156605020165px;
+width: 450px;
+height: 33.86536264099531px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-text-0-2 {
+position: absolute !important;
+top: 9.780205570003034px;
+left: 24.000011430078303px;
+width: 360px;
+height: 17.986577181208055px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-rect-0-3 {
+position: absolute !important;
+top: 7.5225177005150385px;
+left: 401.9999809125002px;
+width: 24px;
+height: 17.302713099742096px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-text-0-4 {
+position: absolute !important;
+top: 230.34999456040782px;
+left: 0.000022860156605020165px;
+width: 450px;
+height: 37.63129194630872px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-list-card-0-5 {
+position: absolute !important;
+top: 59px;
+left: 20px;
+width: 410px;
+height: 157px;
+pointer-events: auto;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-row-0-6 {
+position: absolute !important;
+top: 235px;
+left: 9px;
+width: 430px;
+height: 28px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-waterImportantEngineering .waterImportantEngineering-t-text-0-6-0 {
+position: unset;
+top: 471.3999938964844px;
+left: 446px;
+width: 90px;
+height: 28px;
+pointer-events: auto;
+}

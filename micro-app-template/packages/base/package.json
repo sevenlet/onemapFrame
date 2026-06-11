@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ths/design": "^1.1.19",
     "@micro-zoe/micro-app": "1.0.0-rc.30",
     "@microsoft/fetch-event-source": "^2.0.1",
     "axios": "^1.6.0",

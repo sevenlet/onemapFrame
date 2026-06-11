@@ -1,0 +1,99 @@
+
+.container {
+    padding: 8px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 列表项间距 */
+}
+.list-container-item {
+    width: 635px;
+    min-height: 72px; /* 保持最小高度 */
+    border: 1px solid var(--gzt-app-card-border);
+    background-color: var(--gzt-app-card-bgc);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start; /* 改为顶部对齐 */
+    padding: 0px;
+    position: relative; /* 添加相对定位 */
+}
+.list-container-item-header {
+    width: 32px;
+    min-height: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 0px;
+    border: 0px none rgb(23,62,228);
+    background-color: var(--gzt-app-cat-bgc);
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "优设标题黑";
+    font-size: 16px;
+    color: var(--gzt-app-cat);
+    padding: 8px;
+    box-sizing: border-box
+}
+.list-container-item {
+    width: 635px;
+    min-height: 72px;
+    border: 1px solid var(--gzt-app-card-border);
+    background-color: var(--gzt-app-card-bgc);
+    border-radius: 8px;
+    display: flex;
+    padding: 0px;
+    position: relative;
+    align-items: stretch; /* 改为拉伸对齐 */
+}
+
+  /* 修改子元素容器样式 */
+.children-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex: 1; /* 占据剩余空间 */
+    padding: 8px 0;
+}
+.child-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 170px;
+    cursor: pointer;
+}
+.child-image {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.child-text-container {
+    max-width: 120px;
+}
+.child-text-line {
+    color: var(--skin-font-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 显示两行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; /* 调整行高 */
+    max-height: 2.4em; /* 两行高度 */
+    white-space: normal; /* 改为normal允许换行 */
+}
+.no-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 120px;
+    color: var(--skin-font-color);
+    font-size: 16px;
+}

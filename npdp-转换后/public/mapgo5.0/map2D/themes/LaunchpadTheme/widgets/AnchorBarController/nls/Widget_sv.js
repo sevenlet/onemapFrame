@@ -1,0 +1,2 @@
+//>>built
+define({"themes/LaunchpadTheme/widgets/AnchorBarController/nls/strings":{_widgetLabel:"Anchor Bar Controller",_layout_default:"Default layout",_layout_layout1:"Layout 0",more:"More widgtes",_localized:{}}});

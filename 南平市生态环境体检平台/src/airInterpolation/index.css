@@ -1,0 +1,35 @@
+.t-l-c-airInterpolation {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+width: 154px;
+height: 42px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airInterpolation .airInterpolation-t-switch-0-0 {
+position: absolute !important;
+top: 11px;
+left: 117px;
+width: 28px;
+height: 20px !important;
+pointer-events: auto;
+}
+
+.t-l-c-airInterpolation .airInterpolation-t-text-0-1 {
+position: absolute !important;
+top: 12px;
+left: 39px;
+width: 68px;
+height: 20px;
+pointer-events: auto;
+}

@@ -1,0 +1,179 @@
+.t-l-c-zrstSpeciesDetailsPopUp {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+filter: ;
+z-index: 1;
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+width: 1600px;
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+position: Static;
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+pointer-events: auto;
+height: 900px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-rect-0-0 {
+position: absolute !important;
+top: 11px;
+left: 21px;
+width: 1559px;
+height: 301px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-1 {
+position: absolute !important;
+top: 25.5px;
+left: 36px;
+width: 93px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-2 {
+position: absolute !important;
+top: 25.5px;
+left: 696px;
+width: 30px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-3 {
+position: absolute !important;
+top: 25.5px;
+left: 1254px;
+width: 30px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-4 {
+position: absolute !important;
+top: 63px;
+left: 36px;
+width: 75px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-5 {
+position: absolute !important;
+top: 63px;
+left: 696px;
+width: 30px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-6 {
+position: absolute !important;
+top: 63px;
+left: 1254px;
+width: 30px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-7 {
+position: absolute !important;
+top: 101px;
+left: 36px;
+width: 80px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-8 {
+position: absolute !important;
+top: 134px;
+left: 36px;
+width: 66px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-9 {
+position: absolute !important;
+top: 25.5px;
+left: 125px;
+width: 300px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-10 {
+position: absolute !important;
+top: 25.5px;
+left: 740px;
+width: 300px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-11 {
+position: absolute !important;
+top: 25.5px;
+left: 1298px;
+width: 262px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-13 {
+position: absolute !important;
+top: 63px;
+left: 125px;
+width: 300px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-14 {
+position: absolute !important;
+top: 63px;
+left: 740px;
+width: 300px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-15 {
+position: absolute !important;
+top: 63px;
+left: 1298px;
+width: 263px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-16 {
+position: absolute !important;
+top: 101px;
+left: 125px;
+width: 1436px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-text-0-17 {
+position: absolute !important;
+top: 168px;
+left: 37px;
+width: 1524px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-zrstSpeciesDetailsPopUp .zrstSpeciesDetailsPopUp-t-swiper-base-0-18 {
+position: absolute !important;
+top: 359px;
+left: 26px;
+width: 1548px;
+height: 509px;
+pointer-events: auto;
+}

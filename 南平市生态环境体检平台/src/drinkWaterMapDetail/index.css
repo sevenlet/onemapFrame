@@ -1,0 +1,65 @@
+.t-l-c-drinkWaterMapDetail {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--scrollbar-track-color: transparent;
+--scrollbar-thumb-color: transparent;
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 900px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-drinkWaterMapDetail .drinkWaterMapDetail-t-row-0-0 {
+position: absolute !important;
+top: 9px;
+left: 20px;
+width: 410px;
+height: 47px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-drinkWaterMapDetail .drinkWaterMapDetail-t-text-0-0-0 {
+position: unset;
+top: -195px;
+left: 125px;
+width: 43px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-drinkWaterMapDetail .drinkWaterMapDetail-t-text-0-0-1 {
+position: unset;
+top: -7.873399522569571px;
+left: 582.8092289677372px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-drinkWaterMapDetail .drinkWaterMapDetail-t-rect-0-1 {
+position: absolute !important;
+top: 55px;
+left: 0px;
+width: 450px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-drinkWaterMapDetail .drinkWaterMapDetail-t-component-0-2 {
+position: absolute !important;
+top: 68px;
+left: 0px;
+width: 450px;
+height: 812px;
+pointer-events: auto;
+}

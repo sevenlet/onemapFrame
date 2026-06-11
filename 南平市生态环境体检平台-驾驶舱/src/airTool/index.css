@@ -1,0 +1,260 @@
+.t-l-c-airTool {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 333px;
+width: 270px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airTool .airTool-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 270px;
+height: 333px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-rect-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 270px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-2 {
+position: absolute !important;
+top: 10px;
+left: 236px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-3 {
+position: absolute !important;
+top: 12px;
+left: 16px;
+width: 32px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-4 {
+position: absolute !important;
+top: 78px;
+left: 49px;
+width: 32px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-5 {
+position: absolute !important;
+top: 78px;
+left: 148px;
+width: 64px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-6 {
+position: absolute !important;
+top: 142px;
+left: 50px;
+width: 32px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-7 {
+position: absolute !important;
+top: 142px;
+left: 148px;
+width: 64px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-8 {
+position: absolute !important;
+top: 110px;
+left: 49px;
+width: 32px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-9 {
+position: absolute !important;
+top: 109px;
+left: 148px;
+width: 64px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-10 {
+position: absolute !important;
+top: 174px;
+left: 49px;
+width: 62px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-11 {
+position: absolute !important;
+top: 174px;
+left: 148px;
+width: 64px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-12 {
+position: absolute !important;
+top: 239px;
+left: 50px;
+width: 62px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-13 {
+position: absolute !important;
+top: 207px;
+left: 49px;
+width: 62px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-14 {
+position: absolute !important;
+top: 206px;
+left: 148px;
+width: 64px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-text-0-15 {
+position: absolute !important;
+top: 50px;
+left: 18px;
+width: 238px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-16 {
+position: absolute !important;
+top: 72px;
+left: 18px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-17 {
+position: absolute !important;
+top: 72px;
+left: 116px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-18 {
+position: absolute !important;
+top: 136px;
+left: 19px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-19 {
+position: absolute !important;
+top: 104px;
+left: 18px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-20 {
+position: absolute !important;
+top: 103px;
+left: 116px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-21 {
+position: absolute !important;
+top: 136px;
+left: 116px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-22 {
+position: absolute !important;
+top: 168px;
+left: 18px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-23 {
+position: absolute !important;
+top: 168px;
+left: 116px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-24 {
+position: absolute !important;
+top: 233px;
+left: 19px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-25 {
+position: absolute !important;
+top: 201px;
+left: 18px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}
+
+.t-l-c-airTool .airTool-t-image-base-0-26 {
+position: absolute !important;
+top: 200px;
+left: 116px;
+width: 26px;
+height: 26px;
+pointer-events: auto;
+}

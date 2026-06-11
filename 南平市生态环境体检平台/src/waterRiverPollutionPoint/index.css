@@ -1,0 +1,93 @@
+.t-l-c-waterRiverPollutionPoint {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 370px;
+background-color: rgba(168, 158, 158, 0);
+left: calc(50% - 100px);
+top: 48%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 368px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-rect-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 46.51685393258427px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-text-0-2 {
+position: absolute !important;
+top: 13.438202247191011px;
+left: 24px;
+width: 360px;
+height: 20.674157303370787px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-rect-0-3 {
+position: absolute !important;
+top: 10.337078651685394px;
+left: 402px;
+width: 24px;
+height: 23.775280898876407px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-text-0-4 {
+position: absolute !important;
+top: 316.314606741573px;
+left: 0px;
+width: 450px;
+height: 51.68539325842697px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-list-card-0-5 {
+position: absolute !important;
+top: 64px;
+left: 20px;
+width: 410px;
+height: 238px;
+pointer-events: auto;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-row-0-6 {
+position: absolute !important;
+top: 328px;
+left: 0px;
+width: 430px;
+height: 28px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-waterRiverPollutionPoint .waterRiverPollutionPoint-t-text-0-6-0 {
+position: unset;
+top: 471.3999938964844px;
+left: 446px;
+width: 90px;
+height: 28px;
+pointer-events: auto;
+}

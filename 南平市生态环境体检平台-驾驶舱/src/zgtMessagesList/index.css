@@ -1,0 +1,112 @@
+
+.bulletin-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  overflow: hidden auto;
+}
+.bulletin-card {
+  border-radius: 16px;
+  background: rgba(31, 111, 198, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  gap: 10px;
+  cursor: pointer;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  min-width: 0;
+}
+.level-tag {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+.level-important {
+  background: #ea5050;
+}
+.level-normal {
+  background: #1677ff;
+}
+.card-title {
+  height: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card-date {
+  height: 30px;
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+}
+.card-content {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: #fff;
+  white-space: pre-wrap;
+  /* 最多显示两行 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #00deff;
+  cursor: pointer;
+}
+.action-btn .icon {
+  width: 21px;
+  height: 21px;
+  background: var(--icon) center center no-repeat;
+}
+.action-btn:active {
+  transform: translateY(1px);
+}
+.bulletin-page .empty-data {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+}

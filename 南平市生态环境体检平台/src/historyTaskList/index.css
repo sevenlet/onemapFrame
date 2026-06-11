@@ -1,0 +1,163 @@
+
+.table-wrapper {
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+  padding-top: 20px;
+}
+.pagination-wrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.operation-buttons {
+  display: inline-flex;
+  align-items: center;
+}
+.operation-buttons-item {
+  margin-right: 8px;
+  color: var(--business-theme);
+  cursor: pointer;
+}
+.operation-buttons-item:last-child {
+  margin-right: 0;
+}
+.el-table {
+  background-color: transparent;
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+}
+.el-table__header,
+.el-table__body,
+.el-table__footer {
+  background-color: transparent;
+}
+.el-table__body tr:nth-child(odd) > td.el-table__cell {
+  background-color: transparent;
+}
+.el-table,
+.el-table--border,
+.el-table__inner-wrapper,
+.el-table__header-wrapper,
+.el-table__body-wrapper {
+  border: 1px solid var(--targer-btn-border);
+}
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid var(--targer-btn-border);
+}
+.history-table .el-table .el-table__header-wrapper th.el-table__cell {
+  background-color: var(--table-head-backgroundColor-opaque) !important;
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+  font-weight: normal;
+}
+.el-table__body tr:hover > td.el-table__cell {
+  background-color: transparent;
+}
+.history-table .el-table__empty-text {
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+}
+.el-pagination {
+  color: var(--business-white);
+  font-size: var(--business-text-size-14);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.el-pagination button,
+.el-pagination .el-pager li {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--business-white);
+  border-radius: 2px;
+}
+.history-table .el-pagination.is-background .el-pager li:not(.disabled).active {
+  color: var(--business-white);
+}
+.el-pagination .el-pager li.is-active {
+  background-color: var(--business-table-header-bg);
+  border-radius: 4px;
+}
+.el-pagination button.is-disabled {
+  opacity: 0.4;
+}
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
+  border: 1px solid var(--targer-btn-border);
+}
+.el-table::before {
+  display: none;
+}
+.history-table .el-table .el-table__body tr:nth-child(even) > td.el-table__cell,
+.history-table .el-table .hover-row .el-table__cell,
+.history-table .el-table.el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+  background-color: var(--table-interval-backgroundColor-opaque) !important;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  background: transparent;
+  border: 1px solid var(--skin-font-color-40);
+  color: var(--skin-font-color-80);
+}
+.el-pagination__total,
+.el-pagination__jump {
+  color: var(--skin-font-color-80);
+}
+.el-pagination__editor.el-input .el-input__inner {
+  height: var(--el-pagination-button-height);
+  background: transparent;
+  border: 1px solid var(--business-show-bg30);
+  color: var(--skin-font-color-80);
+}
+.el-pager li,
+.el-pagination button, .el-pagination span:not([class*=suffix]) {
+  font-size: var(--business-text-size-14);
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background: var(--business-btn-active);
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  background: var(--business-btn-active);
+  color: #fff;
+}
+.el-table th.el-table__cell {
+  background: transparent !important;
+}
+.el-table-column--selection .el-checkbox__inner {
+  background-color: var(--business-show-bg30);
+  border-color: var(--targer-btn-border);
+}
+.el-table-column--selection .el-checkbox__inner::after {
+  color: var(--business-white);
+  border: 1px solid var(--business-white);
+  border-left: 0;
+  border-top: 0;
+}
+.el-checkbox.is-checked .el-checkbox__inner {
+  background-color: var(--business-show-bg30);
+  border-color: var(--targer-btn-border);
+}
+.el-checkbox.is-checked .el-checkbox__inner::after {
+  color: var(--business-white);
+  border: 1px solid var(--business-white);
+  border-left: 0;
+  border-top: 0;
+}
+.el-table,
+.el-table--border,
+.el-table__inner-wrapper,
+.el-table__header-wrapper,
+.el-table__body-wrapper {
+  border: 0;
+}
+.el-table tr {
+  background: transparent;
+}
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
+  border: 0;
+}

@@ -86,29 +86,57 @@
         </div>
       </div>
     </footer>
+
+    <!-- ===== 弹窗（基座渲染，可以覆盖整个浏览器）===== -->
+    <!--
+      关键点：
+      1. <el-dialog> 默认 append-to-body=true，会把弹窗挂到 document.body，
+         不受 .main-area / micro-app iframe 的范围限制，能盖住整个浏览器
+      2. 子应用通过 callBase('showDialog', {...}) 触发，本质是基座自己在渲染
+      3. 子应用要弹哪个组件，就在 dialogComponents 注册表里加一个
+    -->
+    <el-dialog
+      v-model="dialog.visible"
+      :title="dialog.title"
+      :width="dialog.width || '600px'"
+      :modal="true"
+      :append-to-body="true"
+      @close="onDialogClose"
+    >
+      <!-- 按"组件名"渲染：dialogComponents[dialog.componentName] 是基座自己定义的组件 -->
+      <component
+        v-if="dialog.componentName && dialogComponents[dialog.componentName]"
+        :is="dialogComponents[dialog.componentName]"
+        v-bind="dialog.props"
+        @close="closeDialog"
+      />
+      <!-- 没注册的组件名，给个友好提示 -->
+      <div v-else-if="dialog.componentName" style="color: #f56c6c;">
+        ⚠️ 未注册的弹窗组件名：<code>{{ dialog.componentName }}</code><br>
+        请在 base/src/App.vue 的 <code>dialogComponents</code> 里注册。
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive, computed, nextTick } from 'vue';
-import { ElButton } from 'element-plus';
+import { ref, reactive, computed, nextTick, markRaw } from 'vue';
+import { ElButton, ElDialog } from 'element-plus';
 import { useChildBridge, useGlobalData } from './bridge.js';
 
+// 弹窗里要显示的两个示例组件（基座自己定义，子应用按名字调）
+import DemoDialogContent from './dialogs/DemoDialogContent.vue';
+import RegionPickerDialog from './dialogs/RegionPickerDialog.vue';
+
 // ===== 通道 1+2：定向数据 / dispatch =====
-// data：reactive（业务直接写：data.userName = '李四'）
-// dataToChild：computed，每次字段变化返回新对象引用，给 <micro-app :data="dataToChild">
-const { data, dataToChild, handleChildData, registerHandler, registerMethod, setChildName } = useChildBridge();
+// useChildBridge(name) 按 <micro-app name="child"> 拿独立实例。
+// 模板里两端 name 都是 'child'，所以这里也传 'child'。
+const { data, dataToChild, handleChildData, registerHandler, registerMethod } = useChildBridge('child');
 
-// 告诉 bridge 当前嵌入的子应用 name（必须与 <micro-app name="..."> 一致）
-// 用于 RPC 返回值通道（microApp.setData(name, data)）
-setChildName('child');
-
-// 初始数据下发
 data.userName = '张三';
 data.theme = 'light';
 data.token = 'Bearer dev-token-abc123';
 
-// 收件箱
 const inbox = reactive([]);
 const inboxRef = ref(null);
 
@@ -127,7 +155,6 @@ registerHandler('log', (payload) => {
   pushToInbox('log', payload);
 });
 
-// RPC 方法（供子应用 callHost 调用）
 registerMethod('showToast', (msg) => {
   pushToInbox('showToast', { msg });
   alert(`[基座弹窗] ${msg}`);
@@ -136,14 +163,121 @@ registerMethod('navigate', (path) => {
   pushToInbox('navigate', { path });
   console.log('[基座] 子应用请求导航到:', path);
 });
-
-// 演示带返回值的 RPC：子应用 await callHost('getToken') 拿到 token
 registerMethod('getToken', () => {
   pushToInbox('getToken (return)', { token: data.token });
   return data.token;
 });
 
-// 演示按钮 —— 切换 data 的字段，dataToChild 会自动返回新引用，micro-app 自动同步给子应用
+/**
+ * 子应用调用地图 TMap API 的桥梁
+ *
+ * 子应用侧 ths-map.js 通过 callBase('tmapCall', { method, params })
+ * 触发此方法，由基座操作真实的 iframe 地图。
+ */
+registerMethod('tmapCall', ({ method, params }) => {
+  // 特判：__ready__ 表示等待地图就绪
+  if (method === '__ready__') {
+    return waitForTMapReady();
+  }
+
+  // 获取基座中地图的 iframe
+  const tIframeEl = document.getElementById('t-iframe-893f.c77f5f17d');
+  if (!tIframeEl) return Promise.reject('未找到地图容器 t-iframe-893f.c77f5f17d');
+
+  const iframeEl = tIframeEl.querySelector('iframe');
+  if (!iframeEl) return Promise.reject('t-iframe 内未找到 iframe');
+
+  const TMap = iframeEl.contentWindow?.TMap;
+  if (!TMap) return Promise.reject('TMap 尚未就绪');
+  if (typeof TMap[method] !== 'function') return Promise.reject(`TMap.${method} 不是函数`);
+
+  return TMap[method](...(params || []));
+});
+
+/**
+ * 等待地图 iframe 加载 + TMap 就绪
+ */
+function waitForTMapReady(timeout = 15000) {
+  return new Promise((resolve, reject) => {
+    const tIframeEl = document.getElementById('t-iframe-893f.c77f5f17d');
+    if (!tIframeEl) return reject('未找到地图容器');
+    const iframeEl = tIframeEl.querySelector('iframe');
+    if (!iframeEl) return reject('未找到 iframe');
+
+    const timer = setTimeout(() => reject('等待 TMap 就绪超时'), timeout);
+
+    function checkTMap() {
+      if (iframeEl.contentWindow?.TMap) {
+        clearTimeout(timer);
+        resolve('ok');
+      }
+    }
+
+    if (iframeEl.contentWindow?.TMap) {
+      clearTimeout(timer);
+      resolve('ok');
+      return;
+    }
+
+    iframeEl.addEventListener('load', () => {
+      // iframe 加载后再轮询 TMap
+      const poll = setInterval(() => {
+        if (iframeEl.contentWindow?.TMap) {
+          clearTimeout(timer);
+          clearInterval(poll);
+          resolve('ok');
+        }
+      }, 300);
+      setTimeout(() => clearInterval(poll), timeout);
+    });
+  });
+}
+
+// ===== 弹窗 RPC：子应用 await callBase('showDialog', {...}) =====
+// 注册表：组件名 → 组件对象。子应用只能弹"已注册"的组件，避免任意执行风险
+const dialogComponents = {
+  DemoDialogContent: markRaw(DemoDialogContent),
+  RegionPickerDialog: markRaw(RegionPickerDialog),
+};
+
+const dialog = reactive({
+  visible: false,
+  componentName: null,  // 要渲染的组件名
+  title: '',
+  width: '600px',
+  props: {},            // 透传给组件的 props
+  resolver: null,       // 关弹窗时把这个 Promise resolve 掉，回传给子应用
+});
+
+registerMethod('showDialog', (config) => {
+  // config: { componentName, title?, width?, props? }
+  pushToInbox('showDialog', config);
+  dialog.componentName = config?.componentName;
+  dialog.title = config?.title || '';
+  dialog.width = config?.width || '600px';
+  dialog.props = config?.props || {};
+  dialog.visible = true;
+
+  // 返回 Promise —— 子应用可以 await 拿到关闭时的结果
+  // 弹窗内部组件 emit('close', resultData) 触发 resolve
+  return new Promise((resolve) => {
+    dialog.resolver = resolve;
+  });
+});
+
+function closeDialog(result) {
+  if (dialog.resolver) {
+    dialog.resolver(result ?? null);
+    dialog.resolver = null;
+  }
+  dialog.visible = false;
+  dialog.componentName = null;
+  dialog.props = {};
+}
+function onDialogClose() {
+  closeDialog(null);
+}
+
 function changeUser() {
   data.userName = data.userName === '张三' ? '李四' : '张三';
 }
@@ -153,8 +287,6 @@ function toggleTheme() {
 
 // ===== 通道 3：globalData 全局共享 =====
 const { globalData } = useGlobalData();
-
-// 监视器展示字段（响应式计算属性，子应用 setGlobalData 后会自动更新）
 const regionName = computed(() => globalData.value?.regionaQuery?.regionName);
 const regionCode = computed(() => globalData.value?.regionaQuery?.regionCode);
 const activeTheme = computed(() => globalData.value?.activeTheme);

@@ -1,0 +1,80 @@
+<div style="overflow:hidden">
+  <div>
+    <div class="tool-task">
+
+      <div class="label-title">${nls.selectFeaturesBy}</div>
+      <div data-dojo-attach-point="drawBox" class="draw-tool-box" data-dojo-type="widgets/EBuffer/DrawBox"
+        data-dojo-props="types:['point','line','polyline','freehand_polyline','triangle','extent','circle','ellipse','polygon','freehand_polygon','choose_graphic'],showClear:false">
+      </div>
+      <div class="label-info">
+        <div class="label-select-title">${nls.searchLayer}</div>
+
+        <div class="label-select" data-dojo-attach-point="selectAll" data-dojo-attach-event="onclick:_selectLayerItem">
+          ${nls.selectAll}
+        </div>
+        <div class="label-select" data-dojo-attach-point="selectReverse"
+          data-dojo-attach-event="onclick:_selectLayerReverseItem">${nls.reserveSelect}
+        </div>
+      </div>
+      <div class="layer-info">
+        <div class="layers-list" data-dojo-attach-point="ODivLayers" id="ODivLayers"></div>
+        <div class="layer-open-close" data-dojo-attach-point="layerOpenClose"
+          data-dojo-attach-event="onclick:_showHideLayerItems"></div>
+      </div>
+      <!--缓冲区查询-->
+      <div class="label-title">${nls.bufferArea}</div>
+      <div class="buffer-div">
+        <div style="display:none;vertical-align: middle; margin-bottom: -2px;overflow: hidden"
+          data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="cbxBufferGraphic"
+          data-dojo-attach-event="click:_bufferEnable" checked></div>
+        <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtBufferValue"
+          data-dojo-props="required:true,intermediateChanges:true" value="5"
+          style="width:70px;padding-right:5px; height: 30px;" />
+        <select style="width:70px; height:30px; padding-right:5px;" data-dojo-attach-point="bufferUnits"
+          data-dojo-type="dijit/form/Select"></select>
+        <a style="margin-top: 5px;float:right; background: #4a97dd;padding: 4px 9px;text-decoration: none;color: #ffffff;font-family: Microsoft Yahei;border-radius: 2px;"
+          href="#" data-dojo-attach-point="btnSearch">${nls.btnSearch}</a>
+      </div>
+
+    </div>
+
+    <div class="progerss-bar" data-dojo-attach-point="progressbar"></div>
+    <div class="option-div" data-dojo-attach-point="divOptions">
+      <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnClear">${nls.clear}</a>
+      <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnZoomAll">${nls.zoomall}</a>
+      <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnClearBuffer">${nls.clearBuffer}</a>
+      <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnExport">${nls.exporturl}</a>
+    </div>
+    <div class="result-layer">
+      <div data-dojo-attach-point="divResultMessage" class="result-message">${nls.noResults}</div>
+      <div class="layer-open-close" data-dojo-attach-point="resultLayersDiv"
+        data-dojo-attach-event="onclick:_showHideResultLayer"></div>
+    </div>
+    <div class="esearch-list" style="height: 200px;overflow-y: auto;">
+      <div data-dojo-type="widgets/EBuffer/List" data-dojo-attach-point="list"
+        data-dojo-attach-event="click:_selectResultItem"></div>
+    </div>
+    <div class="jimu-detail">
+      <a style="position: absolute;display: block; background: #4a97dd; color: white;padding: 4px 9px;" href="#"
+        data-dojo-attach-point="btnDetail">${nls.btnDetail}</a>
+    </div>
+  </div>
+  <div data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-attach-point="shelter" data-dojo-props="hidden:true"></div>
+
+  <!--隐藏多要素查询选项-->
+  <div style="height:47px; display: none">
+
+    <span class="search-valign-ele">${nls.useMultiGraphics}</span>&nbsp;
+    <div data-dojo-attach-point="btnGraSearch" data-dojo-attach-event="onclick: _onBtnGraSearchClicked"
+      class="search-btn btn-grasearch">${nls.search}
+    </div>
+  </div>
+  <!--隐藏容差查询选项-->
+
+  <div style="line-height:28px; display: none;">
+
+    <span style="padding-right:5px;">${nls.bufferGraphic}</span>
+    <a style="float:right; margin-right:10px" href="#" data-dojo-attach-point="btnClearBuffer2">${nls.clearBuffer}</a>
+  </div>
+
+</div>

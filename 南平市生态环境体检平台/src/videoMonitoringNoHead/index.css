@@ -1,0 +1,35 @@
+.t-l-c-videoMonitoringNoHead {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+z-index: 3;
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+pointer-events: auto;
+filter: ;
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+width: 936px;
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+position: Relative;
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+height: 668px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-videoMonitoringNoHead .videoMonitoringNoHead-t-iframe-0-0 {
+position: absolute !important;
+top: 31px;
+left: 17px;
+width: 906px;
+height: 620px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringNoHead .videoMonitoringNoHead-t-text-0-1 {
+position: absolute !important;
+top: 31px;
+left: 17px;
+width: 906px;
+height: 620px;
+pointer-events: none;
+}

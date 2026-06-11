@@ -1,0 +1,98 @@
+.t-l-c-performanceTrackingSimple {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0,0,0,0);
+width: 400px;
+height: 416px;
+}
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-component-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 400px;
+height: 50px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-text-0-1 {
+position: absolute !important;
+top: 22px;
+left: 277px;
+width: 113px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-text-0-2 {
+position: absolute !important;
+top: 22px;
+left: 242px;
+width: 28px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-text-0-3 {
+position: absolute !important;
+top: 20px;
+left: 49px;
+width: 118px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-rect-0-4 {
+position: absolute !important;
+top: 15px;
+left: 127px;
+width: 25px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-rect-0-5 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 400px;
+height: 48px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-component-0-6 {
+position: absolute !important;
+top: 290px;
+left: 1px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-component-0-7 {
+position: absolute !important;
+top: 58px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-performanceTrackingSimple .performanceTrackingSimple-t-component-0-8 {
+position: absolute !important;
+top: 174px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}

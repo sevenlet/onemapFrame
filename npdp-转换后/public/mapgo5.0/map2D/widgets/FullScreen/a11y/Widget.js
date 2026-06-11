@@ -1,0 +1,2 @@
+//>>built
+define(["dojo/_base/lang","dojo/on","dojo/_base/html","dijit/a11yclick"],function(b,c,d,e){return{a11y_updateLabel:function(a){a&&d.setAttr(this.domNode,"aria-label",a)},a11y_initEvents:function(){this.own(c(this.domNode,e,b.hitch(this,this._onFullScreenClick)))}}});

@@ -1,0 +1,1173 @@
+{
+  "layers": [
+    {
+      "name": "空气质量监测",
+      "visible": true,
+      "children": [
+        {
+          "name": "城市浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27&pointType=3",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 100,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "区县浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27&pointType=1",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 16,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "国控站点浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27&pointType=0",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 101,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "省控站点浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27&pointType=1",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 15,
+          "visible": false,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "市控站点浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27&pointType=3",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 14,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "微站浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=E741100D1E6744879D77609449668AEC&token=thscityee_sanming&code=350400&monitortime=2019-05-27",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 13,
+          "visible": false,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "name": "空气质量预测",
+      "visible": true,
+      "children": [
+        {
+          "name": "城市预测浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=3A3E5335C1CF41B1BD55BD1600565C2E&token=thscityee_sanming&pointcode=350400&monitortime=2019-07-20%252020:00:00",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 10,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${POINTNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "站点预测浓度",
+          "type": "api",
+          "url": "http://192.168.0.140:7070/service/serviceinterface/search/run.action?interfaceId=3A3E5335C1CF41B1BD55BD1600565C2E&token=thscityee_sanming&pointcode=350400&monitortime=2019-07-20%252020:00:00",
+          "path": "data",
+          "lonCol": "LONGITUDE",
+          "latCol": "LATITUDE",
+          "index": 11,
+          "visible": true,
+          "geometryType": "POINT",
+          "layerDefinition": {
+            "geometryType": "esriGeometryPoint",
+            "objectIdField": "pointCode",
+            "drawingInfo": {},
+            "fields": [
+              {
+                "name": "pointCode",
+                "alias": "pointCode",
+                "type": "esriFieldTypeOID"
+              }
+            ]
+          },
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{BOTTOMELEV1}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "renderer": {
+            "rendererType": "html",
+            "rendererInfo": {
+              "type": "uniqueValue",
+              "field1": "AQILEVEL",
+              "fieldDelimiter": ", ",
+              "xoffset": -60,
+              "yoffset": -35,
+              "defaultSymbol": {
+                "htmlTemplate": "<div style='text-align: center;'> <span style='padding:1px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #9b9b9b;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#9b9b9b transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                "templateParams": [
+                  "{AQI}",
+                  "{POINTNAME}"
+                ]
+              },
+              "uniqueValueInfos": [
+                {
+                  "value": "一级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #25e82c;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#25e82c transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "二级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fdfc01;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fdfc01 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "三级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #ff6e02;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#ff6e02 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "四级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #fe0000;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#fe0000 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "五级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #7030a0;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#7030a0 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                },
+                {
+                  "value": "六级",
+                  "symbol": {
+                    "htmlTemplate": "<div style='text-align: center;'> <span style='padding:8px 8px;font-family:DINCond-Black;letter-spacing:1px;text-shadow:0 0 4px #000;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #fff;font-size:24px;position: relative;background: #920002;'>{0}<i style='position: absolute;bottom:-15px;left:50%;margin-left:-8px;float: left;width: 0;height: 0;border-width:8px;border-style: solid;border-color:#920002 transparent transparent transparent;'></i></span> <div style='background: #304270;color: #fff;font-size: 16px;height:28px;line-height:28px;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;padding:0 15px;font-family:Microsoft YaHei; margin-top: 8px;'>{1}</div> </div>",
+                    "templateParams": [
+                      "{AQI}",
+                      "{POINTNAME}"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "浓度预报图片",
+          "type": "image",
+          "url": "http://114.253.8.150:6067/liaoning/CMAQDAY/2019/08/01/d3/aqi/srf-001.gif",
+          "path": "data",
+          "index": 12,
+          "visible": false,
+          "extent": {
+            "xmin": 114.72643,
+            "ymin": 25.27519,
+            "ymax": 27.35536,
+            "xmax": 120.65904
+          },
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "name": "行政区边界",
+      "visible": true,
+      "children": [
+        {
+          "name": "市州",
+          "type": "geojson",
+          "url": "../../../widgets/LayerManager/LayerList/data/350400/json/allCityBoundary.json",
+          "visible": false,
+          "index": 8,
+          "geometryType": "LINE",
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{LANDUSE_NAME}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${CAPNAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "simple",
+            "rendererInfo": {
+              "type": "simple",
+              "label": "",
+              "description": "",
+              "symbol": {
+                "color": [
+                  0,
+                  255,
+                  255,
+                  255
+                ],
+                "width": 1.5,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              }
+            }
+          },
+          "associatedData": {
+            "Url": "",
+            "matchField": {
+              "layer": "DISTCODE",
+              "data": "regioncode"
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "区县",
+          "type": "geojson",
+          "url": "../../../widgets/LayerManager/LayerList/data/350400/json/quxian.json",
+          "visible": false,
+          "index": 7,
+          "geometryType": "LINE",
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{LANDUSE_NAME}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "renderer": {
+            "rendererType": "simple",
+            "rendererInfo": {
+              "type": "simple",
+              "label": "",
+              "description": "",
+              "symbol": {
+                "color": [
+                  5,
+                  139,
+                  162,
+                  255
+                ],
+                "width": 1,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              }
+            }
+          },
+          "associatedData": {
+            "Url": "",
+            "matchField": {
+              "layer": "DISTCODE",
+              "data": "regioncode"
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        },
+        {
+          "name": "乡镇",
+          "type": "geojson",
+          "url": "../../../widgets/LayerManager/LayerList/data/350400/json/townBoundaryLine.json",
+          "visible": false,
+          "index": 6,
+          "geometryType": "LINE",
+          "opacity": 1,
+          "minScale": 0,
+          "maxScale": 0,
+          "popup": {
+            "title": "{LANDUSE_NAME}",
+            "width": 480,
+            "content": "<iframe name='infoFrame' src='../html/pop-up/poll.html?sourceType=INDUSTRY?sourceId={STANDENTER}' style='height: 477px;border:0;width: 480px'></iframe>"
+          },
+          "tooltip": {
+            "content": "${NAME}",
+            "offsetX": 0,
+            "offsetY": 0,
+            "style": {
+              "width": "120px",
+              "backcolor": "rgba(0,0,0,0.5)",
+              "color": "#fff"
+            }
+          },
+          "renderer": {
+            "rendererType": "simple",
+            "rendererInfo": {
+              "type": "simple",
+              "label": "",
+              "description": "",
+              "symbol": {
+                "color": [
+                  8,
+                  140,
+                  149,
+                  255
+                ],
+                "width": 0.4,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              }
+            }
+          },
+          "associatedData": {
+            "Url": "",
+            "matchField": {
+              "layer": "DISTCODE",
+              "data": "regioncode"
+            }
+          },
+          "relatedLayers": [
+            "",
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}

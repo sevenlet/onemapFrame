@@ -1,17 +1,21 @@
 /**
- * 微应用侧通信桥（三通道）
+ * 子应用侧通信桥（三通道）
  *
  * 与基座的 packages/base/src/bridge.js 对称封装：
  *
  *   1. data + datachange ─ 通过 window.microApp.getData / addDataListener
- *      → useHostBridge()
+ *      → useBaseBridge()
  *   2. dispatch          ─ 通过 window.microApp.dispatch
- *      → useHostBridge() 中的 sendToHost / callHost
+ *      → useBaseBridge() 中的 sendToBase / callBase
  *   3. setGlobalData + addGlobalDataListener
  *      → useGlobalData() / useGlobalDataKey('regionaQuery.regionCode')
  *
- * 三个函数都做了独立运行降级：当 window.microApp 不存在（直接访问 5175）时，
+ * 三个函数都做了独立运行降级：当 window.microApp 不存在（直接访问 5175）时,
  * 钩子返回安全的空值/no-op，不会报错。
+ *
+ * 术语说明：
+ *   • 基座（base）— 嵌入子应用的那个主应用，对应 micro-app 官方术语 "base application"
+ *   • 子应用（child / micro app）— 被嵌入的应用，本文件所在的项目
  */
 import { ref, watch, onUnmounted, getCurrentInstance } from 'vue';
 
@@ -21,17 +25,17 @@ function getMicroApp() {
 }
 
 // ===================================================================
-// 通道 1+2: hostData + dispatch
+// 通道 1+2: baseData + dispatch
 // ===================================================================
 
 /**
- * 微应用 → 基座：发送普通消息（基座需提前 registerHandler）
+ * 子应用 → 基座：发送普通消息（基座需提前 registerHandler）
  *
  * ⚠️ micro-app 的 dispatch() 内部会自动包装为 { data: payload }，
  *    基座 @datachange 收到的 e.detail.data 就是 payload 本体。
  *    所以这里直接传 payload，不要额外包 { data: payload }。
  */
-export function sendToHost(payload) {
+export function sendToBase(payload) {
   const ma = getMicroApp();
   if (ma && typeof ma.dispatch === 'function') {
     ma.dispatch(payload);
@@ -41,25 +45,25 @@ export function sendToHost(payload) {
 }
 
 /**
- * 微应用 → 基座：调用基座的方法（RPC，支持返回值 / await）
+ * 子应用 → 基座：调用基座的方法（RPC，支持返回值 / await）
  *
  * 基座侧 bridge.js 会：
  *   1. 优先匹配 registerMethod 注册的方法
  *   2. 找不到则 fallback 到 window[method]（即生产基座 globals/functions 下注册的全局函数）
  *
- * 返回 Promise —— 基座通过 setData 回传 __RPC_RESPONSE__ 后 resolve。
+ * 返回 Promise —— 基座通过 setData 回传 __CALL_RESPONSE__ 后 resolve。
  *
  * 用法：
- *   const token = await callHost('getToken')
- *   await callHost('showToast', '你好')   // 无返回值时也可 await
+ *   const token = await callBase('getToken')
+ *   await callBase('showToast', '你好')   // 无返回值时也可 await
  */
 let rpcSeq = 0;
 const pendingRpc = new Map(); // requestId → { resolve, reject, timer }
 
-export function callHost(method, ...params) {
+export function callBase(method, ...params) {
   const ma = getMicroApp();
   if (!ma || typeof ma.dispatch !== 'function') {
-    console.log('[bridge] 独立运行下 callHost（仅调试可见）:', method, params);
+    console.log('[bridge] 独立运行下 callBase（仅调试可见）:', method, params);
     return Promise.resolve(undefined);
   }
 
@@ -67,13 +71,13 @@ export function callHost(method, ...params) {
   const promise = new Promise((resolve, reject) => {
     const timer = setTimeout(() => {
       pendingRpc.delete(requestId);
-      reject(new Error(`[callHost] RPC timeout: ${method}`));
+      reject(new Error(`[callBase] RPC timeout: ${method}`));
     }, 10_000);
     pendingRpc.set(requestId, { resolve, reject, timer });
   });
 
   ma.dispatch({
-    type: '__CALL_HOST__',
+    type: '__CALL_BASE__',
     method,
     params,
     requestId,
@@ -82,7 +86,7 @@ export function callHost(method, ...params) {
   return promise;
 }
 
-// 接收基座通过 setData 回传的 __RPC_RESPONSE__
+// 接收基座通过 setData 回传的 __CALL_RESPONSE__
 function handleRpcResponse(rpc) {
   if (!rpc || !rpc.requestId) return;
   const pending = pendingRpc.get(rpc.requestId);
@@ -96,39 +100,39 @@ function handleRpcResponse(rpc) {
   }
 }
 
-let hostDataRef = null;
-let hostDataListenerAttached = false;
+let baseDataRef = null;
+let baseDataListenerAttached = false;
 
 /**
  * 订阅基座通过 :data 下发的数据
- * 独立运行时 hostData 为空对象，安全降级
+ * 独立运行时 baseData 为空对象，安全降级
  *
- * 同时在内部拦截 __RPC_RESPONSE__ 字段，用于 callHost() 的返回值通道
+ * 同时在内部拦截 __CALL_RESPONSE__ 字段，用于 callBase() 的返回值通道
  */
-export function useHostBridge() {
-  if (!hostDataRef) {
-    hostDataRef = ref({});
+export function useBaseBridge() {
+  if (!baseDataRef) {
+    baseDataRef = ref({});
   }
-  if (!hostDataListenerAttached) {
+  if (!baseDataListenerAttached) {
     const ma = getMicroApp();
     if (ma && typeof ma.addDataListener === 'function') {
       const handler = (data) => {
         if (!data) return;
         // 拦截 RPC 响应（不暴露给业务层）
-        if (data.__RPC_RESPONSE__) {
-          handleRpcResponse(data.__RPC_RESPONSE__);
+        if (data.__CALL_RESPONSE__) {
+          handleRpcResponse(data.__CALL_RESPONSE__);
         }
-        hostDataRef.value = { ...data };
+        baseDataRef.value = { ...data };
       };
       // 第二个参数 true：立即用当前 data 触发一次（拿到初始值）
       ma.addDataListener(handler, true);
-      hostDataListenerAttached = true;
+      baseDataListenerAttached = true;
     }
   }
   return {
-    hostData: hostDataRef,
-    sendToHost,
-    callHost,
+    baseData: baseDataRef,
+    sendToBase,
+    callBase,
   };
 }
 

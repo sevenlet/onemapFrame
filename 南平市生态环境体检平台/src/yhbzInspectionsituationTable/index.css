@@ -1,0 +1,192 @@
+
+.custom-status-table.el-table {
+  background-color: transparent;
+  color: var(--business-white);
+  font-size: var(--business-text-size-20);
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+.custom-status-table.el-table .location-icon{
+    display:inline-block;
+    background-image: var(--business-position);
+    width: 14px;
+    height: 16px;
+    cursor:pointer;
+}
+.custom-status-table.el-table .CWQI-icon{
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+}
+.custom-status-table .el-table__row {
+  height: 70px !important;
+}
+.custom-status-table.el-table thead th .cell,
+.custom-status-table.el-table tbody td .cell {
+  padding:0;
+}
+.custom-status-table.el-table th,
+.custom-status-table.el-table tr,
+.custom-status-table.el-table td {
+  background-color: transparent !important;
+  border: none;
+  color: #fff;
+  /*font-size:14px;*/
+}
+.custom-status-table.el-table thead .cell {
+line-height: 20px;
+}
+/* 斑马纹颜色 */
+.custom-status-table.el-table tr.el-table__row.el-table__row--striped {
+  background-color: var(--table-interval-backgroundColor-opaque) !important;
+}
+/* 每一行的底部边框 */
+.custom-status-table.el-table td,
+.custom-status-table.el-table th.is-leaf {
+  border-bottom: none !important;
+}
+.el-table__empty-text {
+  color: var(--business-white) !important;
+  line-height: 180px !important;
+  font-size: var(--business-text-size-14) !important;
+}
+/* 隐藏表格底部白线 */
+.custom-status-table.el-table::before {
+  display: none;
+}
+/* 鼠标悬浮行样式 */
+/* .el-table--enable-row-hover */
+.custom-status-table  .el-table__body tr:hover > td {
+  background-color: var(--table-interval-backgroundColor-opaque) !important;
+}
+/* 隐藏底部滚动条 */
+.custom-status-table .el-table__body-wrapper {
+  scrollbar-width: none;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+/* 表头行背景 */
+.custom-status-table .el-table__header-wrapper thead {
+  background: var(--table-head-backgroundColor-opaque);
+}
+/* 表头字体颜色 */
+.custom-status-table .el-table__header-wrapper thead tr th {
+  color: var(--business-white);
+  font-weight: 400;
+}
+/* 特殊字体 */
+.custom-status-table .custom-text {
+  /* font-family: DIN-bold;
+  font-weight: 700;
+  font-size: 16px; */
+}
+
+ /* 表格图片相关 */
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+}
+.file-item {
+  flex: 0 0 auto;
+}
+.record-image {
+  width: auto;
+  height: 80px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* 弹窗相关 */
+.el-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0px !important;
+}
+.el-dialog__title {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+}
+.el-dialog__header {
+  background: #074799;
+}
+.el-dialog__header .el-dialog__headerbtn .el-dialog__close {
+  color: #ffffff;
+  font-size: 20px;
+}
+.el-dialog__body {
+  background: #074799;
+  padding: 20px;
+  overflow: hidden;
+}
+.dialog-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.yhbz-preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.yhbz-preview-video {
+  width: 100%;
+  height: 100%;
+}
+.preview-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+.preview-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background 0.3s;
+  z-index: 10;
+}
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.nav-left {
+  left: 20px;
+}
+.nav-right {
+  right: 20px;
+}
+

@@ -1,0 +1,71 @@
+.t-l-c-lsAirQualityAnalysis1 {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 850px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-component-0-0 {
+position: absolute !important;
+top: 405px;
+left: 23px;
+width: 411px;
+height: 154px;
+pointer-events: auto;
+}
+
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-component-0-1 {
+position: absolute !important;
+top: 353px;
+left: 23px;
+width: 411px;
+height: 37px;
+pointer-events: auto;
+}
+
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-component-0-2 {
+position: absolute !important;
+top: 63px;
+left: 23px;
+width: 411px;
+height: 266px;
+pointer-events: auto;
+}
+
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-component-0-3 {
+position: absolute !important;
+top: 12px;
+left: 23px;
+width: 411px;
+height: 37px;
+pointer-events: auto;
+}
+
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-component-0-4 {
+position: absolute !important;
+top: 596px;
+left: 25px;
+width: 411px;
+height: 37px;
+pointer-events: auto;
+}
+
+.t-l-c-lsAirQualityAnalysis1 .lsAirQualityAnalysis-t-text-unit-0-5 {
+position: absolute !important;
+top: 603px;
+left: 54px;
+width: 282px;
+height: 20px;
+pointer-events: auto;
+}

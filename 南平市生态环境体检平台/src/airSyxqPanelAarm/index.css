@@ -1,0 +1,224 @@
+.t-l-c-airSyxqPanelAarm {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 1044px;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-list-card-0-0 {
+position: absolute !important;
+top: 530px;
+left: 20px;
+width: 410px;
+height: 82px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-image-base-0-1 {
+position: absolute !important;
+top: 330px;
+left: 20px;
+width: 410px;
+height: 188px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-table-0-2 {
+position: absolute !important;
+top: 670px;
+left: 20px;
+width: 410px;
+height: 350px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-rect-0-3 {
+position: absolute !important;
+top: 518px;
+left: 20px;
+width: 410px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-table-0-4 {
+position: absolute !important;
+top: 670px;
+left: 20px;
+width: 410px;
+height: 350px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-list-card-0-5 {
+position: absolute !important;
+top: 46px;
+left: 13px;
+width: 414px;
+height: 204px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-component-0-6 {
+position: absolute !important;
+top: 3px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-component-0-7 {
+position: absolute !important;
+top: 282px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-8 {
+position: absolute !important;
+top: 8px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-9 {
+position: absolute !important;
+top: 287px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-10 {
+position: absolute !important;
+top: 225px;
+left: 179px;
+width: 164px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-rect-0-11 {
+position: absolute !important;
+top: 624px;
+left: 362px;
+width: 72px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-rect-0-12 {
+position: absolute !important;
+top: 624px;
+left: 362px;
+width: 72px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-13 {
+position: absolute !important;
+top: 393px;
+left: 36px;
+width: 70px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-14 {
+position: absolute !important;
+top: 447px;
+left: 36px;
+width: 70px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-15 {
+position: absolute !important;
+top: 420px;
+left: 36px;
+width: 70px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-16 {
+position: absolute !important;
+top: 355px;
+left: 36px;
+width: 70px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-radio-0-17 {
+position: absolute !important;
+top: 390px;
+left: 109px;
+width: 256px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-radio-0-18 {
+position: absolute !important;
+top: 444px;
+left: 109px;
+width: 256px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-checkbox-0-19 {
+position: absolute !important;
+top: 417px;
+left: 107px;
+width: 232px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-rect-0-20 {
+position: absolute !important;
+top: 474px;
+left: 329px;
+width: 85px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-search-0-21 {
+position: absolute !important;
+top: 347px;
+left: 108px;
+width: 260px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airSyxqPanelAarm .airSyxqPanelAarm-t-text-0-22 {
+position: absolute !important;
+top: 357px;
+left: 381px;
+width: 28px;
+height: 14px;
+pointer-events: auto;
+}

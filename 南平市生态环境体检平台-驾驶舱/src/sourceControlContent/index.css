@@ -1,0 +1,863 @@
+.t-l-c-sourceControlContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1636px;
+height: 794px;
+background-color: var(--t-body-background);
+}
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-0 {
+position: absolute !important;
+top: 3px;
+left: 835px;
+width: 798px;
+height: 788px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-1 {
+position: absolute !important;
+top: 441px;
+left: 853px;
+width: 18px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-2 {
+position: absolute !important;
+top: 441px;
+left: 883px;
+width: 333px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-3 {
+position: absolute !important;
+top: 214px;
+left: 2px;
+width: 798px;
+height: 576px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-4 {
+position: absolute !important;
+top: 27px;
+left: 856px;
+width: 760px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-5 {
+position: absolute !important;
+top: 20px;
+left: 886px;
+width: 400px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-6 {
+position: absolute !important;
+top: 406px;
+left: 22px;
+width: 18px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-7 {
+position: absolute !important;
+top: 406px;
+left: 50px;
+width: 333px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-8 {
+position: absolute !important;
+top: 3px;
+left: 2px;
+width: 798px;
+height: 186px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-9 {
+position: absolute !important;
+top: 27px;
+left: 16px;
+width: 760px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-10 {
+position: absolute !important;
+top: 20px;
+left: 46px;
+width: 400px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-11 {
+position: absolute !important;
+top: 235px;
+left: 16px;
+width: 760px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-12 {
+position: absolute !important;
+top: 228px;
+left: 46px;
+width: 400px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-13 {
+position: absolute !important;
+top: 264px;
+left: 16px;
+width: 150px;
+height: 120px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-14 {
+position: absolute !important;
+top: 56px;
+left: 16px;
+width: 150px;
+height: 120px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-15 {
+position: absolute !important;
+top: 291px;
+left: 485px;
+width: 290px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-16 {
+position: absolute !important;
+top: 291px;
+left: 178px;
+width: 290px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-17 {
+position: absolute !important;
+top: 123px;
+left: 179px;
+width: 596px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-18 {
+position: absolute !important;
+top: 65px;
+left: 178px;
+width: 190px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-19 {
+position: absolute !important;
+top: 65px;
+left: 382px;
+width: 190px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-20 {
+position: absolute !important;
+top: 65px;
+left: 585px;
+width: 190px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-table-0-21 {
+position: absolute !important;
+top: 446px;
+left: 22px;
+width: 760px;
+height: 290px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-22 {
+position: absolute !important;
+top: 138px;
+left: 189px;
+width: 100px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-23 {
+position: absolute !important;
+top: 140px;
+left: 595px;
+width: 120px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-24 {
+position: absolute !important;
+top: 140px;
+left: 393px;
+width: 120px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-25 {
+position: absolute !important;
+top: 357px;
+left: 857px;
+width: 760px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-26 {
+position: absolute !important;
+top: 108px;
+left: 1117px;
+width: 500px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-27 {
+position: absolute !important;
+top: 80px;
+left: 188px;
+width: 90px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-28 {
+position: absolute !important;
+top: 80px;
+left: 392px;
+width: 90px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-29 {
+position: absolute !important;
+top: 234px;
+left: 1372px;
+width: 244px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-30 {
+position: absolute !important;
+top: 234px;
+left: 1115px;
+width: 244px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-31 {
+position: absolute !important;
+top: 80px;
+left: 595px;
+width: 90px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-32 {
+position: absolute !important;
+top: 310px;
+left: 499px;
+width: 264px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-33 {
+position: absolute !important;
+top: 310px;
+left: 192px;
+width: 264px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-34 {
+position: absolute !important;
+top: 133px;
+left: 679px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-35 {
+position: absolute !important;
+top: 133px;
+left: 477px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-36 {
+position: absolute !important;
+top: 131px;
+left: 273px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-37 {
+position: absolute !important;
+top: 73px;
+left: 679px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-38 {
+position: absolute !important;
+top: 73px;
+left: 476px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-39 {
+position: absolute !important;
+top: 73px;
+left: 272px;
+width: 90px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-40 {
+position: absolute !important;
+top: 135px;
+left: 373px;
+width: 1px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-41 {
+position: absolute !important;
+top: 135px;
+left: 578px;
+width: 1px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-pagination-base-0-42 {
+position: absolute !important;
+top: 744px;
+left: 22px;
+width: 760px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-43 {
+position: absolute !important;
+top: 234px;
+left: 857px;
+width: 244px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-44 {
+position: absolute !important;
+top: 108px;
+left: 857px;
+width: 244px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-45 {
+position: absolute !important;
+top: 317px;
+left: 857px;
+width: 760px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-46 {
+position: absolute !important;
+top: 68px;
+left: 1117px;
+width: 500px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-47 {
+position: absolute !important;
+top: 194px;
+left: 1372px;
+width: 244px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-48 {
+position: absolute !important;
+top: 194px;
+left: 1115px;
+width: 244px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-49 {
+position: absolute !important;
+top: 194px;
+left: 857px;
+width: 244px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-50 {
+position: absolute !important;
+top: 68px;
+left: 857px;
+width: 244px;
+height: 40px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-51 {
+position: absolute !important;
+top: 270px;
+left: 1492px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-52 {
+position: absolute !important;
+top: 270px;
+left: 1372px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-53 {
+position: absolute !important;
+top: 270px;
+left: 1235px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-54 {
+position: absolute !important;
+top: 270px;
+left: 1115px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-55 {
+position: absolute !important;
+top: 270px;
+left: 977px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-56 {
+position: absolute !important;
+top: 270px;
+left: 857px;
+width: 122px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-57 {
+position: absolute !important;
+top: 144px;
+left: 880px;
+width: 200px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-58 {
+position: absolute !important;
+top: 393px;
+left: 1427px;
+width: 190px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-59 {
+position: absolute !important;
+top: 393px;
+left: 1237px;
+width: 190px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-60 {
+position: absolute !important;
+top: 393px;
+left: 1047px;
+width: 190px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-61 {
+position: absolute !important;
+top: 393px;
+left: 857px;
+width: 190px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-62 {
+position: absolute !important;
+top: 144px;
+left: 1492px;
+width: 125px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-63 {
+position: absolute !important;
+top: 144px;
+left: 1367px;
+width: 125px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-64 {
+position: absolute !important;
+top: 144px;
+left: 1242px;
+width: 125px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-high-light-text-0-65 {
+position: absolute !important;
+top: 144px;
+left: 1117px;
+width: 125px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-66 {
+position: absolute !important;
+top: 244px;
+left: 1492px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-67 {
+position: absolute !important;
+top: 244px;
+left: 1372px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-68 {
+position: absolute !important;
+top: 244px;
+left: 1235px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-69 {
+position: absolute !important;
+top: 244px;
+left: 1115px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-70 {
+position: absolute !important;
+top: 244px;
+left: 977px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-71 {
+position: absolute !important;
+top: 244px;
+left: 857px;
+width: 122px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-72 {
+position: absolute !important;
+top: 118px;
+left: 930px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-73 {
+position: absolute !important;
+top: 367px;
+left: 1427px;
+width: 190px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-74 {
+position: absolute !important;
+top: 367px;
+left: 1237px;
+width: 190px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-75 {
+position: absolute !important;
+top: 367px;
+left: 1047px;
+width: 190px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-76 {
+position: absolute !important;
+top: 367px;
+left: 857px;
+width: 190px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-77 {
+position: absolute !important;
+top: 118px;
+left: 1492px;
+width: 125px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-78 {
+position: absolute !important;
+top: 118px;
+left: 1367px;
+width: 125px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-79 {
+position: absolute !important;
+top: 118px;
+left: 1242px;
+width: 125px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-80 {
+position: absolute !important;
+top: 118px;
+left: 1117px;
+width: 125px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-81 {
+position: absolute !important;
+top: 204px;
+left: 1472px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-82 {
+position: absolute !important;
+top: 204px;
+left: 1215px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-83 {
+position: absolute !important;
+top: 204px;
+left: 957px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-84 {
+position: absolute !important;
+top: 78px;
+left: 957px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-85 {
+position: absolute !important;
+top: 327px;
+left: 1234px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-text-common-0-86 {
+position: absolute !important;
+top: 78px;
+left: 1351px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-87 {
+position: absolute !important;
+top: 205px;
+left: 1446px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-88 {
+position: absolute !important;
+top: 205px;
+left: 1189px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-89 {
+position: absolute !important;
+top: 205px;
+left: 931px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-90 {
+position: absolute !important;
+top: 79px;
+left: 931px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-91 {
+position: absolute !important;
+top: 328px;
+left: 1208px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-rect-0-92 {
+position: absolute !important;
+top: 79px;
+left: 1325px;
+width: 20px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-sourceControlContent .sourceControlContent-t-chart-design-0-93 {
+position: absolute !important;
+top: 471px;
+left: 857px;
+width: 760px;
+height: 318px;
+pointer-events: auto;
+}

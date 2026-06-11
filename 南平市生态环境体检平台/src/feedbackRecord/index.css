@@ -1,0 +1,474 @@
+.t-l-c-feedbackRecord {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 12, 12, 0);
+}
+.t-l-c-feedbackRecord .feedbackRecord-t-row-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 14px;
+padding-bottom: 0px;
+flex-direction: row;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 56px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-component-0-1-0-0 {
+position: unset;
+top: -177px;
+left: 121px;
+width: 100%;
+height: 56px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-row-0-1-1 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+min-height: 400px;
+gap: 0px;
+margin-top: 0px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-0-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-0-1 {
+position: unset;
+top: -98px;
+left: 81px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 36px;
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-input-0-1-1-1-0 {
+position: unset;
+top: -158px;
+left: 229px;
+width: 100% !important;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-6 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+min-height: 130px;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-6-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-6-1 {
+position: unset;
+top: -225px;
+left: 126px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-7 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 130px;
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-input-0-1-1-7-0 {
+position: unset;
+top: -80px;
+left: 603px;
+width: 100% !important;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-8 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+min-height: 130px;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-8-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-8-1 {
+position: unset;
+top: -215px;
+left: 136px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-9 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+min-height: 130px;
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-input-0-1-1-9-0 {
+position: unset;
+top: -70px;
+left: 613px;
+width: 100% !important;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-10 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-10-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-10-1 {
+position: unset;
+top: -185px;
+left: 55px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-11 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-right: 0px;
+padding-left: 10px;
+min-height: 36px;
+border-right: 4px solid var(--business-dialog-bg);
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-radio-0-1-1-11-0 {
+position: unset;
+top: 161px;
+left: 848px;
+width: 100%;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-12 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+min-height: 36px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-12-0 {
+position: unset;
+top: -58px;
+left: 121px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-12-1 {
+position: unset;
+top: -175px;
+left: 65px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-13 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+min-height: 36px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-select-0-1-1-13-0 {
+position: unset;
+top: 129px;
+left: 969px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-14 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 120px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: var(--business-show-bg10);
+animation-name: ;
+border-right: 4px solid var(--business-dialog-bg);
+padding-right: 10px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-14-0 {
+position: unset;
+top: -68px;
+left: 111px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-1-14-1 {
+position: unset;
+top: -140px;
+left: -25px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-col-0-1-1-15 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 120px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+background-color: var(--business-show-bg10);
+animation-name: ;
+padding-left: 10px;
+padding-right: 10px;
+overflow: auto;
+flex-direction: column;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-component-0-1-1-15-0 {
+position: unset;
+top: -294px;
+left: 255px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-upload-button-0-1-1-15-1 {
+position: unset;
+top: -161px;
+left: 368px;
+width: 70px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-row-0-1-2 {
+position: unset;
+top: 486px;
+left: 0px;
+width: 100%;
+height: 56px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+margin-top: 0px;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-rect-0-1-2-0 {
+position: unset;
+top: -82px;
+left: 591px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-feedbackRecord .feedbackRecord-t-text-common-0-1-3 {
+position: unset;
+top: 281px;
+left: 418px;
+width: 100%;
+height: 20px;
+pointer-events: auto;
+}

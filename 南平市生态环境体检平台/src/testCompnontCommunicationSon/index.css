@@ -1,0 +1,53 @@
+.t-l-c-testCompnontCommunicationSon {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(239, 31, 31, 1);
+width: 200px;
+height: 200px;
+}
+.t-l-c-testCompnontCommunicationSon .testCompnontCommunicationSon-t-gradient-text-0-0 {
+position: absolute !important;
+top: 42px;
+left: 14px;
+width: 64px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-testCompnontCommunicationSon .testCompnontCommunicationSon-t-button-0-1 {
+position: absolute !important;
+top: 34px;
+left: 103px;
+width: 70px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-testCompnontCommunicationSon .testCompnontCommunicationSon-t-component-0-2 {
+position: absolute !important;
+top: 100px;
+left: 2px;
+width: 200px;
+height: 100px;
+pointer-events: auto;
+}
+
+.t-l-c-testCompnontCommunicationSon .testCompnontCommunicationSon-t-text-common-0-3 {
+position: absolute !important;
+top: 77px;
+left: 85px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}

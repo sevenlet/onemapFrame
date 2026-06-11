@@ -1,0 +1,71 @@
+.t-l-c-videoMonitoringRightList {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+z-index: 1;
+filter: ;
+width: 410px;
+height: 860px;
+background-color: rgba(0, 0, 0, 0);
+position: Absolute;
+}
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-search-0-0 {
+position: absolute !important;
+top: 50px;
+left: 0px;
+width: 346px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-component-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-text-unit-0-2 {
+position: absolute !important;
+top: 6px;
+left: 35px;
+width: 261px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-select-0-3 {
+position: absolute !important;
+top: 93px;
+left: 0px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-table-0-4 {
+position: absolute !important;
+top: 136px;
+left: 0px;
+width: 410px;
+height: 720px;
+pointer-events: auto;
+}
+
+.t-l-c-videoMonitoringRightList .videoMonitoringRightList-t-button-0-5 {
+position: absolute !important;
+top: 50px;
+left: 359px;
+width: 51px;
+height: 32px;
+pointer-events: auto;
+}

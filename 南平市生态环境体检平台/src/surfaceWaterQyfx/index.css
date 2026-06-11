@@ -1,0 +1,250 @@
+.t-l-c-surfaceWaterQyfx {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 850px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-component-0-0 {
+position: absolute !important;
+top: 24px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-1 {
+position: absolute !important;
+top: 29px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-swiper-base-0-2 {
+position: absolute !important;
+top: 67px;
+left: 20px;
+width: 410px;
+height: 159px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3 {
+position: absolute !important;
+top: 234px;
+left: 20px;
+width: 450px;
+height: auto;
+pointer-events: auto;
+text-align: left;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0 {
+position: unset;
+top: 234px;
+left: 0px;
+width: 410px;
+height: auto;
+pointer-events: auto;
+min-height: 60px;
+animation-name: ;
+margin-left: 0px;
+margin-bottom: 32px;
+padding-left: 0px;
+background-image: var(--card-mark-right-bottom),var(--card-mark-left-bottom),var(--card-mark-right-top),var(--card-mark-left-top);
+-webkit-mask-image: ;
+background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+-webkit-mask-repeat: ;
+background-size: auto,auto,auto,auto;
+-webkit-mask-size: ;
+background-position: 100% 100%,0% 100%,100% 0%,0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0 {
+position: unset;
+top: 66.66668701171875px;
+left: -212px;
+width: auto;
+height: auto;
+pointer-events: auto;
+padding-left: 4px;
+padding-top: 4px;
+padding-right: 4px;
+margin-bottom: 0px;
+padding-bottom: 4px;
+animation-name: ;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-col-0-3-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: auto;
+height: auto;
+pointer-events: auto;
+padding-top: 10px;
+padding-left: 12px;
+padding-right: 12px;
+background-color: var(--business-show-bg30);
+animation-name: ;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+padding-bottom: 10px;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-gradient-text-0-3-0-0-0-0 {
+position: unset;
+top: 380px;
+left: 440px;
+width: 378px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-rect-0-3-0-0-0-1 {
+position: unset;
+top: 521px;
+left: 517px;
+width: 378px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0-0-2 {
+position: unset;
+top: 632px;
+left: 165px;
+width: 378px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0-0-2-0 {
+position: unset;
+top: 331px;
+left: 432px;
+width: 179px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-0-0 {
+position: unset;
+top: 445px;
+left: 491px;
+width: 70px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0-0-2-0-1 {
+position: unset;
+top: 972.0568566700769px;
+left: 1110.5654742528523px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+overflow: hidden;
+animation-name: ;
+max-width: 109px;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-0-1-0 {
+position: unset;
+top: 1551.5071446490915px;
+left: 1614.1921493783084px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-0-1-1 {
+position: unset;
+top: 1485.4717816814818px;
+left: 1608.207278968865px;
+width: 14px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0-0-2-1 {
+position: unset;
+top: 814.4149250114051px;
+left: 958.6418047160128px;
+width: 179px;
+height: 22px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-1-0 {
+position: unset;
+top: 928.4149250114051px;
+left: 1017.6418047160128px;
+width: 70px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-row-0-3-0-0-0-2-1-1 {
+position: unset;
+top: 482px;
+left: 518px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+overflow: hidden;
+max-width: 109px;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-1-1-0 {
+position: unset;
+top: 1061.4502879790145px;
+left: 1021.6266751254561px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-text-0-3-0-0-0-2-1-1-1 {
+position: unset;
+top: 995.4149250114051px;
+left: 1015.6418047160128px;
+width: 28px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-component-0-3-1 {
+position: unset;
+top: 403px;
+left: 12px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-surfaceWaterQyfx .surfaceWaterQyfx-t-list-card-0-3-2 {
+position: unset;
+top: 616px;
+left: 19px;
+width: 423px;
+height: auto;
+pointer-events: auto;
+}

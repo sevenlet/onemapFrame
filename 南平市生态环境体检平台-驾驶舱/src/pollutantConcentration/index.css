@@ -1,0 +1,725 @@
+.t-l-c-pollutantConcentration {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 202px;
+width: 400px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-1 {
+position: absolute !important;
+top: 0px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-2 {
+position: absolute !important;
+top: 70px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-3 {
+position: absolute !important;
+top: 8px;
+left: 12px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-4 {
+position: absolute !important;
+top: 8px;
+left: 216px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-5 {
+position: absolute !important;
+top: 78px;
+left: 12px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-6 {
+position: absolute !important;
+top: 30px;
+left: 11px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-7 {
+position: absolute !important;
+top: 30px;
+left: 215px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-8 {
+position: absolute !important;
+top: 100px;
+left: 11px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-9 {
+position: absolute !important;
+top: 30px;
+left: 109px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-0 {
+position: unset;
+top: 473.66978602255546px;
+left: 414.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-1 {
+position: unset;
+top: 483.66978602255546px;
+left: 424.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-2 {
+position: unset;
+top: 503.66978602255546px;
+left: 434.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-3 {
+position: unset;
+top: 503.66978602255546px;
+left: 434.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-4 {
+position: unset;
+top: 493.66978602255546px;
+left: 424.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-9-5 {
+position: unset;
+top: 493.66978602255546px;
+left: 434.4390687019594px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-10 {
+position: absolute !important;
+top: 30px;
+left: 313px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-0 {
+position: unset;
+top: 481.7063191916161px;
+left: 698.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-1 {
+position: unset;
+top: 491.7063191916161px;
+left: 708.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-2 {
+position: unset;
+top: 521.706319191616px;
+left: 728.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-3 {
+position: unset;
+top: 511.7063191916161px;
+left: 718.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-4 {
+position: unset;
+top: 501.7063191916161px;
+left: 708.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-10-5 {
+position: unset;
+top: 501.7063191916161px;
+left: 718.0640992195375px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-11 {
+position: absolute !important;
+top: 100px;
+left: 109px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-0 {
+position: unset;
+top: 563.8157861215161px;
+left: 517.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-1 {
+position: unset;
+top: 573.8157861215161px;
+left: 527.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-2 {
+position: unset;
+top: 603.8157861215161px;
+left: 547.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-3 {
+position: unset;
+top: 593.8157861215161px;
+left: 537.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-4 {
+position: unset;
+top: 583.8157861215161px;
+left: 527.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-11-5 {
+position: unset;
+top: 583.8157861215161px;
+left: 537.034191458962px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-12 {
+position: absolute !important;
+top: 6px;
+left: 32px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-13 {
+position: absolute !important;
+top: 6px;
+left: 236px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-14 {
+position: absolute !important;
+top: 76px;
+left: 32px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-15 {
+position: absolute !important;
+top: 70px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-16 {
+position: absolute !important;
+top: 139px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-17 {
+position: absolute !important;
+top: 139px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-18 {
+position: absolute !important;
+top: 78px;
+left: 216px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-19 {
+position: absolute !important;
+top: 147px;
+left: 12px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-20 {
+position: absolute !important;
+top: 147px;
+left: 216px;
+width: 16px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-21 {
+position: absolute !important;
+top: 100px;
+left: 215px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-22 {
+position: absolute !important;
+top: 169px;
+left: 11px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-unit-0-23 {
+position: absolute !important;
+top: 169px;
+left: 215px;
+width: 96px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-24 {
+position: absolute !important;
+top: 100px;
+left: 313px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-0 {
+position: unset;
+top: 569.4236215375217px;
+left: 722.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-1 {
+position: unset;
+top: 579.4236215375217px;
+left: 732.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-2 {
+position: unset;
+top: 609.4236215375217px;
+left: 752.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-3 {
+position: unset;
+top: 599.4236215375217px;
+left: 742.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-4 {
+position: unset;
+top: 589.4236215375217px;
+left: 732.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-24-5 {
+position: unset;
+top: 589.4236215375217px;
+left: 742.8269017879917px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-25 {
+position: absolute !important;
+top: 169px;
+left: 109px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-0 {
+position: unset;
+top: 672.9155125810485px;
+left: 544.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-1 {
+position: unset;
+top: 682.9155125810485px;
+left: 554.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-2 {
+position: unset;
+top: 712.9155125810485px;
+left: 574.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-3 {
+position: unset;
+top: 702.9155125810485px;
+left: 564.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-4 {
+position: unset;
+top: 692.9155125810485px;
+left: 554.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-25-5 {
+position: unset;
+top: 692.9155125810485px;
+left: 564.2240139531702px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-row-0-26 {
+position: absolute !important;
+top: 169px;
+left: 313px;
+width: 86px;
+height: 24px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+-webkit-mask-image: ;
+background-repeat: repeat;
+-webkit-mask-repeat: ;
+background-size: auto;
+-webkit-mask-size: ;
+background-position: 0% 0%;
+-webkit-mask-position: ;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-0 {
+position: unset;
+top: 690.8949361039977px;
+left: 824.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-1 {
+position: unset;
+top: 700.8949361039977px;
+left: 834.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-2 {
+position: unset;
+top: 730.8949361039977px;
+left: 854.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-3 {
+position: unset;
+top: 720.8949361039977px;
+left: 844.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-4 {
+position: unset;
+top: 710.8949361039977px;
+left: 834.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-26-5 {
+position: unset;
+top: 710.8949361039977px;
+left: 844.3011318730921px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-27 {
+position: absolute !important;
+top: 76px;
+left: 238px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-28 {
+position: absolute !important;
+top: 145px;
+left: 32px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-text-0-29 {
+position: absolute !important;
+top: 145px;
+left: 236px;
+width: 70px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-30 {
+position: absolute !important;
+top: 139px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-31 {
+position: absolute !important;
+top: 70px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-32 {
+position: absolute !important;
+top: 139px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-33 {
+position: absolute !important;
+top: 70px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-34 {
+position: absolute !important;
+top: 0px;
+left: 204px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}
+
+.t-l-c-pollutantConcentration .pollutantConcentration-t-rect-0-35 {
+position: absolute !important;
+top: 0px;
+left: 5px;
+width: 191px;
+height: 62px;
+pointer-events: none;
+}

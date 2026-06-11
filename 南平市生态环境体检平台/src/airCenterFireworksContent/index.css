@@ -1,0 +1,71 @@
+.t-l-c-airCenterFireworksContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+width: 400px;
+height: 208px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-button-0-0 {
+position: absolute !important;
+top: 2px;
+left: 331px;
+width: 68px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-button-0-1 {
+position: absolute !important;
+top: 46px;
+left: 331px;
+width: 68px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-button-0-2 {
+position: absolute !important;
+top: 89px;
+left: 331px;
+width: 68px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-button-0-3 {
+position: absolute !important;
+top: 132px;
+left: 331px;
+width: 68px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-image-base-0-4 {
+position: absolute !important;
+top: 174px;
+left: 354px;
+width: 25px;
+height: 25px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterFireworksContent .airCenterFireworksContent-t-circle-0-5 {
+position: absolute !important;
+top: 78px;
+left: 317px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}

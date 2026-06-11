@@ -1,0 +1,154 @@
+.t-l-c-rightCockpitIndex {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0, 0, 0, 0);
+width: 400px;
+height: 912px;
+}
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-row-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 420px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+max-height: 1000px;
+overflow-y: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+padding-top: 10px;
+flex-direction: column;
+animation-name: ;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-component-0-0-0-0 {
+position: unset;
+top: 638px;
+left: 10px;
+width: 400px;
+height: 289px;
+pointer-events: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-component-0-0-1-0 {
+position: unset;
+top: 10px;
+left: 10px;
+width: 400px;
+height: 540px;
+pointer-events: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-row-0-1 {
+position: absolute !important;
+top: 0px;
+left: 2px;
+width: 420px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+max-height: 870px;
+overflow-y: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-col-0-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-component-0-1-0-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 400px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-col-0-1-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 0px;
+flex-direction: column;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-component-0-1-1-0 {
+position: unset;
+top: 628px;
+left: 0px;
+width: 400px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-rect-0-2 {
+position: absolute !important;
+top: 885px;
+left: -1px;
+width: 400px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-rightCockpitIndex .rightCockpitIndex-t-rect-0-3 {
+position: absolute !important;
+top: 885px;
+left: -1px;
+width: 400px;
+height: 27px;
+pointer-events: auto;
+}

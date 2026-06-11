@@ -1,0 +1,194 @@
+.IFrameWidget h3 {
+  font-size: 1.2em;
+}
+.IFrameWidget h3, p {
+  margin-top: 10px;
+}
+/* add additional custom styles */
+/*css for widget of layer-manager*/
+#LayerManager_panel,
+#widgets_LayerManager_Widget_panel{
+
+  background-color:#0a152f;
+  border-radius: 5px;
+  width: 375px !important;
+  /*height: 565px*/
+}
+#LayerManager_panel .jimu-widget-frame,
+#widgets_LayerManager_Widget_panel .jimu-widget-frame{
+  overflow: hidden;
+}
+#LayerManager_panel .jimu-panel-title,
+#widgets_LayerManager_Widget_panel .jimu-panel-title{
+  background-color:#0a152f;
+  height:35px;
+  border-radius: 5px;
+  color: #fff;
+}
+#LayerManager_panel .jimu-panel-title div,
+#widgets_LayerManager_Widget_panel .jimu-panel-title div{
+  height: 40px;
+  line-height: 45px;
+
+  /*display: none;*/
+  /*height: 0;*/
+}
+#LayerManager_panel .jimu-panel-title .close-btn,
+#widgets_LayerManager_Widget_panel .jimu-panel-title .close-btn{
+  margin-right: 5px !important;
+  margin-top: 5px !important;
+}
+#LayerManager_panel .jimu-panel-title .title-label,
+#widgets_LayerManager_Widget_panel .jimu-panel-title .title-label{
+  /*line-height: 45px;*/
+  margin: 5px 0 0 10px;
+}
+#LayerManager_panel .jimu-panel-title .border,
+#widgets_LayerManager_Widget_panel .jimu-panel-title .border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  display: block;
+  background: url('../images/border.png') no-repeat;
+  background-size: cover;
+}
+#LayerManager_panel .jimu-panel-content,
+#widgets_LayerManager_Widget_panel .jimu-panel-content{
+  top:45px;
+}
+#LayerManager_panel .jimu-panel-content .jimu-container,
+#widgets_LayerManager_Widget_panel .jimu-panel-content .jimu-container{
+  padding: 5px 0;
+  width:375px;
+  height:565px !important;
+  backgroundColor:#0a152f
+}
+#LayerManager_panel .jimu-panel-content .jimu-container iframe,
+#widgets_LayerManager_Widget_panel .jimu-panel-content .jimu-container iframe{
+  width: 375px;
+  /*height: 550px;;*/
+}
+
+#LayerManager_panel,
+#widgets_PublicLayerManager_Widget_panel{
+
+  background-color:#0a152f;
+  border-radius: 5px;
+  width: 375px !important;
+  /*height: 565px*/
+}
+#LayerManager_panel  .jimu-widget-frame,
+#widgets_PublicLayerManager_Widget_panel .jimu-widget-frame{
+  overflow: hidden;
+}
+#LayerManager_panel  .jimu-panel-title,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-title{
+  background-color:#0a152f;
+  height:35px;
+  border-radius: 5px;
+  color: #fff;
+}
+#LayerManager_panel  .jimu-panel-title div,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-title div{
+  height: 40px;
+  line-height: 45px;
+
+  /*display: none;*/
+  /*height: 0;*/
+}
+#LayerManager_panel .jimu-panel-title .close-btn,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-title .close-btn{
+  margin-right: 5px !important;
+  margin-top: 5px !important;
+}
+#LayerManager_panel .jimu-panel-title .title-label,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-title .title-label{
+  /*line-height: 45px;*/
+  margin: 5px 0 0 10px;
+}
+#LayerManager_panel .jimu-panel-title .border,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-title .border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  display: block;
+  background: url('../images/border.png') no-repeat;
+  background-size: cover;
+}
+#LayerManager_panel .jimu-panel-content,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-content{
+  top:45px;
+}
+#LayerManager_panel .jimu-panel-content .jimu-container,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-content .jimu-container{
+  padding: 5px 0;
+  width:375px;
+  height:565px !important;
+  backgroundColor:#0a152f
+}
+#LayerManager_panel .jimu-panel-content .jimu-container iframe,
+#widgets_PublicLayerManager_Widget_panel .jimu-panel-content .jimu-container iframe{
+  width: 375px;
+  /*height: 550px;;*/
+}
+
+
+/*css for widget of layer-manager*/
+#widgets_eSearch_Widget_panel{
+
+  background-color:#0a152f;
+  border-radius: 5px;
+  width: 375px !important;
+  /*height: 565px*/
+}
+#widgets_eSearch_Widget_panel .jimu-widget-frame{
+  overflow: hidden;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-title{
+  background-color:#0a152f;
+  height:35px;
+  border-radius: 5px;
+  color: #fff;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-title div{
+  height: 40px;
+  line-height: 45px;
+
+  /*display: none;*/
+  /*height: 0;*/
+}
+#widgets_eSearch_Widget_panel .jimu-panel-title .close-btn{
+  margin-right: 5px !important;
+  margin-top: 5px !important;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-title .title-label{
+  /*line-height: 45px;*/
+  margin: 5px 0 0 10px;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-title .border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  display: block;
+  background: url('../images/border.png') no-repeat;
+  background-size: cover;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-content{
+  top:45px;
+}
+#widgets_eSearch_Widget_panel .jimu-panel-content .jimu-container{
+  padding: 5px 0;
+  width:375px;
+  height:565px !important;
+  backgroundColor:#0a152f
+}
+#widgets_eSearch_Widget_panel .jimu-panel-content .jimu-container iframe{
+  width: 375px;
+  /*height: 550px;;*/
+}

@@ -1,0 +1,228 @@
+.t-l-c-watershedDetailsEnterNew {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 900px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-rect-0-1 {
+position: absolute !important;
+top: 56px;
+left: 0px;
+width: 450px;
+height: 60px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-text-0-2 {
+position: absolute !important;
+top: 19px;
+left: 12px;
+width: 43px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-rect-0-3 {
+position: absolute !important;
+top: 55px;
+left: 0px;
+width: 450px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-text-0-5 {
+position: absolute !important;
+top: 16px;
+left: 75px;
+width: 268px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-row-0-7 {
+position: absolute !important;
+top: 133px;
+left: 0px;
+width: 451px;
+height: 750px;
+pointer-events: auto;
+overflow-x: hidden;
+overflow-y: auto;
+display: block;
+min-height: auto;
+padding-bottom: 0px;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-col-0-7-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-height: 150px;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-component-0-7-0-0 {
+position: unset;
+top: -25px;
+left: 15px;
+width: 418px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-row-0-7-0-1 {
+position: unset;
+top: 38.33331298828125px;
+left: 550px;
+width: 410px;
+height: auto;
+pointer-events: auto;
+min-height: 60px;
+animation-name: ;
+margin-left: 20px;
+margin-bottom: 10px;
+background-image: url(http://192.168.0.202:7777/lego-generated-apps/lego_file/app/src/18547eef59454bff840ff42ee0d03b78_6/assets/images/2025-02-05/70d6c72beb214026a731ecc227758155.png),url(http://192.168.0.202:7777/lego-generated-apps/lego_file/app/src/18547eef59454bff840ff42ee0d03b78_6/assets/images/2025-02-05/206b6c8381114b5dbe5696df535c9f2e.png),url(http://192.168.0.202:7777/lego-generated-apps/lego_file/app/src/18547eef59454bff840ff42ee0d03b78_6/assets/images/2025-02-05/9857a0b0068c48c981908d6627e2b7a4.png),url(http://192.168.0.202:7777/lego-generated-apps/lego_file/app/src/18547eef59454bff840ff42ee0d03b78_6/assets/images/2025-02-05/b5f17116503c4fbeac675a3a6baa5713.png);
+-webkit-mask-image: ;
+background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+-webkit-mask-repeat: ;
+background-size: auto,auto,auto,auto;
+-webkit-mask-size: ;
+background-position: 0% 100%,100% 100%,100% 0%,0% 0%;
+-webkit-mask-position: ;
+padding-left: 0px;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-row-0-7-0-1-0 {
+position: unset;
+top: -244px;
+left: -39px;
+width: auto;
+height: auto;
+pointer-events: auto;
+padding-left: 4px;
+padding-top: 4px;
+padding-right: 4px;
+margin-bottom: 0px;
+padding-bottom: 4px;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-col-0-7-0-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: auto;
+height: 54px;
+pointer-events: auto;
+padding-top: 8px;
+padding-left: 12px;
+padding-right: 12px;
+background-color: var(--business-show-bg30);
+animation-name: ;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-gradient-text-0-7-0-1-0-0-2 {
+position: unset;
+top: 69.33331298828125px;
+left: 613px;
+width: 378px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-col-0-7-0-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+margin-top: 0px;
+padding-left: 12px;
+padding-right: 12px;
+padding-bottom: 10px;
+background-color: var(--business-show-bg30);
+padding-top: 8px;
+animation-name: ;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-text-0-7-0-1-0-1-0 {
+position: unset;
+top: 6.33331298828125px;
+left: 64px;
+width: 96px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-col-0-7-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-height: 150px;
+overflow: visible;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-component-0-7-1-0 {
+position: unset;
+top: 38px;
+left: 22px;
+width: 418px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-col-0-7-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-height: 150px;
+padding-left: 20px;
+padding-right: 20px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+overflow: visible;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-select-0-8 {
+position: absolute !important;
+top: 68px;
+left: 16px;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsEnterNew .watershedDetailsEnterNew-t-date-picker-0-9 {
+position: absolute !important;
+top: 68px;
+left: 116px;
+width: 320px;
+height: 32px;
+pointer-events: auto;
+}

@@ -1,0 +1,177 @@
+{
+  "tilteName": "搜索专题图",
+  "layers": [
+    {
+      "name": "全国省市",
+      "url": "http://121.46.19.2:20724/arcgis/rest/services/全国/全国省市/MapServer/1",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "zoomScale": 10000,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "NAME",
+            "textsearchlabel": "NAME",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "NAME",
+                    "label": "NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": "NAME"
+                  },
+                  "prompt": "NAME contains",
+                  "textsearchhint": "NAME",
+                  "sqltext": "Upper(NAME) LIKE Upper('%[value]%')",
+                  "operation": "stringOperatorContains",
+                  "operator": "OR"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "NAME",
+            "alias": "NAME"
+          }
+        ]
+      },
+      "links": {
+        "link": [
+          {
+            "alias": "详情",
+            "disablelinksifnull": true,
+            "disableinpopup": false,
+            "popuptype": "text",
+            "content": "https://wap.baidu.com/s?wd={NAME}",
+            "icon": ""
+          }
+        ]
+      },
+      "showattachments": false,
+      "layersymbolfrom": "server"
+    }
+  ],
+  "initialView": "graphical",
+  "multipartgraphicsearchchecked": false,
+  "addpointtolerancechecked": false,
+  "keepgraphicalsearchenabled": true,
+  "autozoomtoresults": true,
+  "toleranceforpointgraphicalselection": 6,
+  "bufferDefaults": {
+    "bufferUnits": {
+      "bufferUnit": [
+        {
+          "label": "千米",
+          "name": "UNIT_KILOMETER"
+        },
+        {
+          "label": "米",
+          "name": "UNIT_METER"
+        }
+      ]
+    },
+    "bufferDefaultValue": 5,
+    "bufferWKID": 102003,
+    "simplefillsymbol": {
+      "color": [
+        1,
+        185,
+        253,
+        128
+      ],
+      "outline": {
+        "color": [
+          1,
+          185,
+          253,
+          204
+        ],
+        "width": 0.75,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "spatialrelationships": {
+    "spatialrelationship": [
+      {
+        "name": "esriSpatialRelContains",
+        "label": "entirely contained in"
+      },
+      {
+        "name": "esriSpatialRelIntersects",
+        "label": "intersected by"
+      },
+      {
+        "name": "esriSpatialRelEnvelopeIntersects",
+        "label": "intersected by envelope of"
+      }
+    ]
+  },
+  "graphicalsearchoptions": {
+    "enablepointselect": true,
+    "enablelineselect": true,
+    "enablefreehandlineselect": true,
+    "enableextentselect": true,
+    "enablepolyselect": true,
+    "enablefreehandpolyselect": true
+  },
+  "symbols": {
+    "simplemarkersymbol": null,
+    "picturemarkersymbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": "http://zhengqj:33440/widgets/eSearch/images/i_search.png",
+      "width": 20.00025,
+      "height": 20.00025
+    },
+    "simplelinesymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        204
+      ],
+      "width": 2.25,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "simplefillsymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          204
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  }
+}

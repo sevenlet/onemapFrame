@@ -1,0 +1,244 @@
+.t-l-c-waterSourceReportRight {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 466px;
+height: 386px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-row-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 466px;
+height: auto;
+pointer-events: auto;
+display: block;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+background-color: var(--business-show-bg15);
+padding-left: 12px;
+padding-bottom: 4px;
+padding-top: 12px;
+padding-right: 12px;
+margin-bottom: 8px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-row-0-0-0-0 {
+position: unset;
+top: -376px;
+left: 16px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-0-0-0 {
+position: unset;
+top: 0px;
+left: 0px;
+width: 120px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-circle-0-0-0-0-1 {
+position: unset;
+top: 8px;
+left: 229px;
+width: 8px;
+height: 8px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-0-0-2 {
+position: unset;
+top: 5px;
+left: 191px;
+width: 84px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-list-card-common-0-0-0-1 {
+position: unset;
+top: 53px;
+left: 5px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+background-color: var(--business-show-bg15);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+padding-left: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-right: 12px;
+margin-top: 0px;
+margin-bottom: 8px;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-1-0 {
+position: unset;
+top: 754.415971175484px;
+left: 92.1352096778759px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-table-0-0-1-1 {
+position: unset;
+top: 499px;
+left: -17px;
+width: 442px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-col-0-0-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 48px;
+pointer-events: auto;
+background-color: var(--business-show-bg15);
+padding-left: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-right: 12px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+margin-top: 0px;
+margin-bottom: 8px;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-row-0-0-3-0 {
+position: unset;
+top: 500.72426079674585px;
+left: 807.6398433987185px;
+width: auto;
+height: auto;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-3-0-0 {
+position: unset;
+top: 560.7242607967459px;
+left: 527.6398433987185px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-3-0-1 {
+position: unset;
+top: 338px;
+left: 151px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-3-0-2 {
+position: unset;
+top: 567.7242607967459px;
+left: 690.6398433987185px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-col-0-0-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 48px;
+pointer-events: auto;
+background-color: var(--business-show-bg15);
+padding-left: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-right: 12px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+margin-top: 0px;
+margin-bottom: 8px;
+animation-name: ;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-row-0-0-4-0 {
+position: unset;
+top: 510.72426079674585px;
+left: 817.6398433987185px;
+width: auto;
+height: auto;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-4-0-0 {
+position: unset;
+top: 570.7242607967459px;
+left: 537.6398433987185px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-4-0-1 {
+position: unset;
+top: 348px;
+left: 161px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSourceReportRight .waterSourceReportRight-t-text-0-0-4-0-2 {
+position: unset;
+top: 577.7242607967459px;
+left: 700.6398433987185px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}

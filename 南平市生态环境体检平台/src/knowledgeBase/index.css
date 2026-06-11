@@ -1,0 +1,167 @@
+.t-l-c-knowledgeBase {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0);
+}
+.t-l-c-knowledgeBase .knowledgeBase-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-row-0-3 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-col-0-3-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-row-0-3-0-0 {
+position: unset;
+top: -64px;
+left: 0px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-col-0-3-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-search-0-3-0-0-0-0 {
+position: unset;
+top: -1px;
+left: 0px;
+width: 797px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-button-0-3-0-0-0-1 {
+position: unset;
+top: 0px;
+left: 808px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-col-0-3-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-upload-button-0-3-0-0-1-0 {
+position: unset;
+top: 0px;
+left: 868px;
+width: 80px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-button-0-3-0-0-1-1 {
+position: unset;
+top: 0px;
+left: 959px;
+width: 60px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-col-0-3-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: calc(100% - 106px);
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-component-0-3-1-0 {
+position: unset;
+top: 34px;
+left: 0px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-col-0-3-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.t-l-c-knowledgeBase .knowledgeBase-t-pagination-base-0-3-2-0 {
+position: unset;
+top: 616px;
+left: -2px;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+}

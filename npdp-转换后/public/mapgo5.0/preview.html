@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapGo应用预览</title>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+</body>
+<script>
+  
+  const origin=window.location.origin;
+  const pathname=window.location.pathname;
+  const prefixPathname=pathname.substring(0,pathname.lastIndexOf('\/')+1);
+  const mapUrls={
+    '2D': `${origin}${prefixPathname}map2D/index.html`,
+    //宝安项目临时使用
+    '3D-sf': `${origin}${prefixPathname}map3D/index-sf.html`,
+    '3D': `${origin}${prefixPathname}map3D/index.html`,
+  };
+  const urlParams=getURLParams(window.location.href);
+  let appType=urlParams['appType']||'2D';
+  let appID=urlParams['appID'];
+  let appName=urlParams['appName'];
+  // 修改页面的标题
+  if(appName) {
+    document.title=decodeURI(appName);
+  }
+  // 把预览地址其他参数拼装为字符串，方便后面初始地图地址时使用
+  const urlParamsStr=Object.keys(urlParams).reduce((prev,cur) => {
+    return `${prev}&${cur}=${urlParams[cur]}`;
+  },'');
+  let getAppConfigsPromise;
+  if(appID&&mapUrls[appType]) {
+    // 监听消息
+    window.addEventListener('message',handleMapMessage);
+    // 动态添加地图的 iframe
+    addMapIframe(`${mapUrls[appType]}?autoLayerInit=false${urlParamsStr}`,urlParams);
+    // 修改地图地址参数
+    getAppConfigsPromise=getAppConfigs(`${origin}${prefixPathname}/apps/${appID}`);
+  }
+
+  /**
+   * 动态添加地图 iframe
+   */
+  function addMapIframe(url,urlParams) {
+    const mapIframe=document.createElement('iframe');
+    mapIframe.name='childFrame';
+    mapIframe.id='childFrame';
+    mapIframe.frameborder='0';
+    mapIframe.src=url;
+    const isScaleStr=urlParams['isScale']||'false';
+    const isScale=JSON.parse(isScaleStr);
+    if(isScale) {
+      const iframeWidth=1536||parseInt(urlParams['iframeWidth']);
+      const height=window.innerHeight;
+      const width=window.innerWidth;
+      const scale=width/iframeWidth;
+      const iframeHeight=height/scale;
+      mapIframe.style.width=iframeWidth+'px';
+      mapIframe.style.height=iframeHeight+'px';
+      mapIframe.style.transform='scale('+scale+')';
+      mapIframe.style['transform-origin']='left top';
+    }
+    document.body.appendChild(mapIframe);
+  }
+
+  /**
+   * 获取应用配置数据
+   * @param {string} baseURL 地图地址
+   * @param {Function} callback 成功的回调
+   * @param {Function} errorCallback 失败的回调
+   */
+  function getAppConfigs(baseURL,callback,errorCallback) {
+    const interactionsURL=`${baseURL}/interactions.js`;
+    const interactionsConfigPromise=getURLData(interactionsURL);
+    return Promise.all([interactionsConfigPromise])
+      .then((results) => {
+        return {
+          interactions: results[0],
+        };
+      });
+  }
+
+  /**
+   * 处理地图消息
+   * @param {Object} message 消息
+   */
+  function handleMapMessage(message) {
+    const {
+      data
+    }=message;
+    if(data) {
+      const {
+        module,
+        type,
+      }=data;
+      // 监听首次图层列表图层加载完成
+      if(module==='layerManager'&&type==='layer-manager-initialization-completed') {
+        getAppConfigsPromise.then((configs) => {
+          const {
+            interactions,
+          }=configs;
+          // 加载开发者代码
+          childFrame.postMessage({
+            module: 'common',
+            type: 'evalScript',
+            params: interactions
+          },'*');
+        });
+      }
+    }
+  }
+
+  /**
+   * 获取 URL 中的参数
+   * @param {string} url 请求地址
+   * @returns {Object} 返回key-value对象
+   * @description 该方法仅适用于参数拼在地址的 ``?`` 后面的情况
+   */
+  function getURLParams(url) {
+    const params={};
+    try {
+      if(typeof url==='string') {
+        if(url.indexOf('?')<0) {
+          return params;
+        }
+        const urlParamsStr=url.substring(url.indexOf('?')+1);
+        if(urlParamsStr) {
+          const urlParams=urlParamsStr.split('&');
+          if(urlParams.length>0) {
+            urlParams.forEach((param) => {
+              const [key,value]=param.split('=');
+              if(value) {
+                params[key]=value;
+              }
+            });
+          }
+        }
+      }
+    } catch(e) {
+      console.error(e);
+    }
+    return params;
+  }
+
+  /**
+   * 获取数据
+   * @param {string} url 数据地址
+   * @param {*} data 请求时携带的数据
+   * @param {string} type 请求类型
+   * @param {string} dataType 请求的数据类型
+   * @returns {Promise}
+   */
+  function getURLData(url,data,type,dataType) {
+    return new Promise((resolve,reject) => {
+      const xhr=new XMLHttpRequest();
+      xhr.timeout=0; // 设置超时时间,0表示永不超时
+      xhr.open(type||'GET',url,true);
+      xhr.responseType=dataType;
+      xhr.onreadystatechange=() => {
+        const {
+          readyState,
+          status,
+          response,
+          statusText,
+        }=xhr;
+        if(readyState!==4) {
+          return;
+        }
+        if(status===200) {
+          resolve(response);
+        } else if(error) {
+          reject(new Error(statusText));
+        }
+      };
+      xhr.send(data);
+    });
+  }
+</script>
+
+</html>

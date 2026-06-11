@@ -1,0 +1,71 @@
+.t-l-c-airCenterOtherIndex {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Static;
+z-index: 1;
+filter: ;
+width: 526px;
+height: 58px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: -1px;
+width: 528px;
+height: 54px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-tabs-0-2 {
+position: absolute !important;
+top: 10px;
+left: 3px;
+width: 357px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-rect-0-3 {
+position: absolute !important;
+top: 10px;
+left: 477px;
+width: 39px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-text-0-4 {
+position: absolute !important;
+top: 10px;
+left: 477px;
+width: 39px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-switch-0-5 {
+position: absolute !important;
+top: 17px;
+left: 440px;
+width: 28px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airCenterOtherIndex .airCenterOtherIndex-t-text-0-6 {
+position: absolute !important;
+top: 18px;
+left: 372px;
+width: 58px;
+height: 20px;
+pointer-events: auto;
+}

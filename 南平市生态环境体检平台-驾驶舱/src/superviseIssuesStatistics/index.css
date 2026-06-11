@@ -1,0 +1,80 @@
+.t-l-c-superviseIssuesStatistics {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1000px;
+height: 760px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1000px;
+height: 760px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-rect-0-1 {
+position: absolute !important;
+top: -1px;
+left: 0px;
+width: 1000px;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-text-0-2 {
+position: absolute !important;
+top: 12px;
+left: 29px;
+width: 589px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-component-0-3 {
+position: absolute !important;
+top: 60px;
+left: 17px;
+width: 969px;
+height: 72px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-component-0-4 {
+position: absolute !important;
+top: 142px;
+left: 0px;
+width: 1000px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-text-common-0-5 {
+position: absolute !important;
+top: 150px;
+left: 56px;
+width: 151px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesStatistics .superviseIssuesStatistics-t-chart-design-0-6 {
+position: absolute !important;
+top: 184px;
+left: 4px;
+width: 993px;
+height: 571px;
+pointer-events: auto;
+}

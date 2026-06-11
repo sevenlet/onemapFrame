@@ -1,0 +1,1125 @@
+window.difangshidifushoudaoComponent = {
+template: 
+`<div id="t-l-c-difangshidifushoudao" class="t-l-c-difangshidifushoudao" >` +
+`<t-chart-design v-if="state.chartShow === true" id="t-chart-design-23a5.31f214274" class="DwfxZbdwglfx-t-chart-design-0-0"  :empty-img="replaceCssVariables(filterData(state.noDataImg, componentPropBindingMap?.['t-chart-design-23a5.31f214274']['emptyImg'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :c-style="tChartDesignx0x0ComputedData.cStyle" :options="replaceCssVariables(filterData(state.chartOption, componentPropBindingMap?.['t-chart-design-23a5.31f214274']['options'].filters || []), global?.theme || global?.activeTheme || '默认主题')">` +
+`</t-chart-design>` +
+`<t-text id="t-text-2464.16854dcf3" class="DwfxZbdwglfx-t-text-0-1"  :label="tTextx0x1ComputedData.label" :editable="tTextx0x1ComputedData.editable" :c-style="tTextx0x1ComputedData.cStyle">` +
+`</t-text>` +
+`<t-text v-if="state.dialogType !== '3'" id="t-text-b435.b7f4779d" class="DwfxZbdwglfx-t-text-0-2"  :label="tTextx0x2ComputedData.label" :editable="tTextx0x2ComputedData.editable" :c-style="tTextx0x2ComputedData.cStyle">` +
+`</t-text>` +
+`<t-date-picker v-if="state.dialogType === '2'" id="t-date-picker-2500.d3f6be87d" class="DwfxZbdwglfx-t-date-picker-0-3"  :placeholder="tDatePickerx0x3ComputedData.placeholder" :start-placeholder="tDatePickerx0x3ComputedData.startPlaceholder" :end-placeholder="tDatePickerx0x3ComputedData.endPlaceholder" :type="tDatePickerx0x3ComputedData.type" :clearable="tDatePickerx0x3ComputedData.clearable" :range-separator="tDatePickerx0x3ComputedData.rangeSeparator" :default-date="replaceCssVariables(filterData(state.params.time.range, componentPropBindingMap?.['t-date-picker-2500.d3f6be87d']['default-date'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :separator="tDatePickerx0x3ComputedData.separator" :readonly="tDatePickerx0x3ComputedData.readonly" :editable="tDatePickerx0x3ComputedData.editable" :c-style="tDatePickerx0x3ComputedData.cStyle" @date-change="ondateChange1734256418144">` +
+`</t-date-picker>` +
+`<t-date-picker v-if="state.dialogType === '3'" id="t-date-picker-f695.ed3e029f5" class="DwfxZbdwglfx-t-date-picker-0-4"  :placeholder="tDatePickerx0x4ComputedData.placeholder" :start-placeholder="tDatePickerx0x4ComputedData.startPlaceholder" :end-placeholder="tDatePickerx0x4ComputedData.endPlaceholder" :type="tDatePickerx0x4ComputedData.type" :clearable="tDatePickerx0x4ComputedData.clearable" :range-separator="tDatePickerx0x4ComputedData.rangeSeparator" :default-date="replaceCssVariables(filterData(state.params.time.range, componentPropBindingMap?.['t-date-picker-f695.ed3e029f5']['default-date'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :separator="tDatePickerx0x4ComputedData.separator" :readonly="tDatePickerx0x4ComputedData.readonly" :editable="tDatePickerx0x4ComputedData.editable" :c-style="tDatePickerx0x4ComputedData.cStyle" @date-change="ondateChange1735351876336_0_0">` +
+`</t-date-picker>` +
+`<t-date-picker v-if="state.dialogType === '1'" id="t-date-picker-0382.37c8bd71f" class="DwfxZbdwglfx-t-date-picker-0-5"  :placeholder="tDatePickerx0x5ComputedData.placeholder" :start-placeholder="tDatePickerx0x5ComputedData.startPlaceholder" :end-placeholder="tDatePickerx0x5ComputedData.endPlaceholder" :type="tDatePickerx0x5ComputedData.type" :clearable="tDatePickerx0x5ComputedData.clearable" :range-separator="tDatePickerx0x5ComputedData.rangeSeparator" :default-date="replaceCssVariables(filterData(state.params.time.range, componentPropBindingMap?.['t-date-picker-0382.37c8bd71f']['default-date'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :separator="tDatePickerx0x5ComputedData.separator" :readonly="tDatePickerx0x5ComputedData.readonly" :editable="tDatePickerx0x5ComputedData.editable" :c-style="tDatePickerx0x5ComputedData.cStyle" @date-change="ondateChange1735351877507_0_0">` +
+`</t-date-picker>` +
+`<t-select v-if="state.dialogType !== '3'" id="t-select-273e.e0ea8cd5a" class="DwfxZbdwglfx-t-select-0-6"  :active-value="replaceCssVariables(filterData(state.params.compare, componentPropBindingMap?.['t-select-273e.e0ea8cd5a']['activeValue'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :options="replaceCssVariables(filterData(state.options.compare, componentPropBindingMap?.['t-select-273e.e0ea8cd5a']['options'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :alias="tSelectx0x6ComputedData.alias" :multiple="tSelectx0x6ComputedData.multiple" :placeholder="tSelectx0x6ComputedData.placeholder" :clearable="tSelectx0x6ComputedData.clearable" :disabled="tSelectx0x6ComputedData.disabled" :collapse-tags="tSelectx0x6ComputedData.collapseTags" :name="tSelectx0x6ComputedData.name" :autocomplete="tSelectx0x6ComputedData.autocomplete" :filterable="tSelectx0x6ComputedData.filterable" :no-match-text="tSelectx0x6ComputedData.no-match-text" :no-data-text="tSelectx0x6ComputedData.no-data-text" :c-style="tSelectx0x6ComputedData.cStyle" :multiple-limit="tSelectx0x6ComputedData.multipleLimit" @change="onchange1740099820123_0_0">` +
+`</t-select>` +
+`<t-select id="t-select-4a2d.853a7c2fe" class="DwfxZbdwglfx-t-select-0-7"  :active-value="replaceCssVariables(filterData(state.params.monitor, componentPropBindingMap?.['t-select-4a2d.853a7c2fe']['activeValue'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :options="replaceCssVariables(filterData(state.options.monitor, componentPropBindingMap?.['t-select-4a2d.853a7c2fe']['options'].filters || []), global?.theme || global?.activeTheme || '默认主题')" :alias="tSelectx0x7ComputedData.alias" :multiple="tSelectx0x7ComputedData.multiple" :placeholder="tSelectx0x7ComputedData.placeholder" :clearable="tSelectx0x7ComputedData.clearable" :disabled="tSelectx0x7ComputedData.disabled" :collapse-tags="tSelectx0x7ComputedData.collapseTags" :name="tSelectx0x7ComputedData.name" :autocomplete="tSelectx0x7ComputedData.autocomplete" :filterable="tSelectx0x7ComputedData.filterable" :no-match-text="tSelectx0x7ComputedData.no-match-text" :no-data-text="tSelectx0x7ComputedData.no-data-text" :c-style="tSelectx0x7ComputedData.cStyle" :multiple-limit="tSelectx0x7ComputedData.multipleLimit" @change="onchange1740045317584">` +
+`</t-select>` +
+`</div>` +
+'',
+setup() {
+const componentPropBindingMap = {"body":{"attributeName":"tBodyx0x0"},"t-chart-design-23a5.31f214274":{"attributeName":"tChartDesignx0x0","emptyImg":{"filters":[]},"cStyle":{"filters":[]},"options":{"filters":[]}},"t-text-2464.16854dcf3":{"attributeName":"tTextx0x1","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-text-b435.b7f4779d":{"attributeName":"tTextx0x2","label":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-date-picker-2500.d3f6be87d":{"attributeName":"tDatePickerx0x3","placeholder":{"filters":[]},"startPlaceholder":{"filters":[]},"endPlaceholder":{"filters":[]},"type":{"filters":[]},"clearable":{"filters":[]},"rangeSeparator":{"filters":[]},"default-date":{"filters":[]},"separator":{"filters":[]},"readonly":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-date-picker-f695.ed3e029f5":{"attributeName":"tDatePickerx0x4","placeholder":{"filters":[]},"startPlaceholder":{"filters":[]},"endPlaceholder":{"filters":[]},"type":{"filters":[]},"clearable":{"filters":[]},"rangeSeparator":{"filters":[]},"default-date":{"filters":[]},"separator":{"filters":[]},"readonly":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-date-picker-0382.37c8bd71f":{"attributeName":"tDatePickerx0x5","placeholder":{"filters":[]},"startPlaceholder":{"filters":[]},"endPlaceholder":{"filters":[]},"type":{"filters":[]},"clearable":{"filters":[]},"rangeSeparator":{"filters":[]},"default-date":{"filters":[]},"separator":{"filters":[]},"readonly":{"filters":[]},"editable":{"filters":[]},"cStyle":{"filters":[]}},"t-select-273e.e0ea8cd5a":{"attributeName":"tSelectx0x6","activeValue":{"filters":[]},"options":{"filters":[]},"alias":{"filters":[]},"multiple":{"filters":[]},"placeholder":{"filters":[]},"clearable":{"filters":[]},"disabled":{"filters":[]},"collapseTags":{"filters":[]},"name":{"filters":[]},"autocomplete":{"filters":[]},"filterable":{"filters":[]},"no-match-text":{"filters":[]},"no-data-text":{"filters":[]},"cStyle":{"filters":[]},"multipleLimit":{"filters":[]}},"t-select-4a2d.853a7c2fe":{"attributeName":"tSelectx0x7","activeValue":{"filters":[]},"options":{"filters":[]},"alias":{"filters":[]},"multiple":{"filters":[]},"placeholder":{"filters":[]},"clearable":{"filters":[]},"disabled":{"filters":[]},"collapseTags":{"filters":[]},"name":{"filters":[]},"autocomplete":{"filters":[]},"filterable":{"filters":[]},"no-match-text":{"filters":[]},"no-data-text":{"filters":[]},"cStyle":{"filters":[]},"multipleLimit":{"filters":[]}}};
+// 页面内注入全局变量和事件
+const rootData = inject('root');
+const global = reactive({
+...toRefs(rootData)
+});
+// 路由
+const route = useRoute();
+// 创建 DOM 引用
+
+// 当前页面使用的变量
+const state = Vue.reactive({
+   screenSize: "",
+   chartShow: true,
+   color: {"monitor":["rgba(46,199,201,1)","rgba(182,162,222,1)","rgba(90,177,239,1)","rgba(255,185,128,1)","rgba(216,122,128,1)","rgba(141,152,179,1)","rgba(229,207,13,1)","rgba(151,181,82,1)","rgba(149,112,109,1)","rgba(220,105,170,1)"],"compare":["rgba(7,162,164,1)","rgba(154,127,209,1)","rgba(88,141,213,1)","rgba(245,153,78,1)","rgba(192,80,80,1)","rgba(89,103,140,1)","rgba(201,171,0,1)","rgba(126,176,10,1)","rgba(111,85,83,1)","rgba(193,64,137,1)"]},
+   dialogType: "",
+   noDataImg: "",
+   params: {"time":{"start":"","end":"","range":[]},"compare":[],"monitor":[],"interfaceId":"","pointcode":""},
+   options: {"monitor":[],"compare":[]},
+   chartResData: [],
+   chartOption: {},
+   weatherIndexSelectArr: [],
+   weatherIndexList: [{"label":"风场","name":"风场"},{"label":"温度","name":"温度"},{"label":"风速","name":"风速"},{"label":"气压","name":"气压"}],
+});
+// 选中的图表主题
+const activeChartTheme = computed(() => {
+const activeTheme = _.cloneDeep(themes.find((item) => item.name === global.activeTheme));
+return activeTheme.chartVariables;
+});
+// 选中的图表主题的options
+const activeChartThemeOptions = computed(() => {
+if (activeChartTheme.value) {
+// 公用的主题配置
+const themeConfig = {
+backgroundColor: activeChartTheme.value.backgroundColor, // 背景色
+color: activeChartTheme.value.color, // 系列颜色
+title: activeChartTheme.value.title, // 标题
+legend: activeChartTheme.value.legend, // 图例
+tooltip: activeChartTheme.value.tooltip, // 提示框
+xAxis: activeChartTheme.value.categoryAxis, // x轴
+yAxis: activeChartTheme.value.valueAxis, // y轴
+};
+return themeConfig;
+} else {
+return {};
+}
+});
+// 当前页面中组件的属性
+const componentState = Vue.reactive({
+tChartDesignx0x0: {
+defaultStyle: {
+            default: {"height":"calc(100% - 80px)","width":"100%","position":"unset","left":"0px","top":"65px"},
+            
+            },
+ default: { 
+ 
+emptyImg:"",
+cStyle:{"wrapper":{"default":{"height":"calc(100% - 80px)","width":"100%","position":"unset","left":"0px","top":"65px"}},"emptyText":{"default":{"fontSize":"14px","color":"var(--business-show-bg60)"}}},
+options: computed(() => _.merge({}, activeChartThemeOptions.value, {})), 
+ },
+},
+tTextx0x1: {
+defaultStyle: {
+            default: {"width":"56px","height":"14px","color":"var(--business-text-avianize)","position":"unset","left":"16px","top":"18px","fontSize":"var(--t-text-size-normal)","lineHeight":"14px","animationName":"","textAlign":"right"},
+            
+            },
+ default: { 
+ 
+label:"监测时间",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"56px","height":"14px","color":"var(--business-text-avianize)","position":"unset","left":"16px","top":"18px","fontSize":"var(--t-text-size-normal)","lineHeight":"14px","animationName":"","textAlign":"right"}}}, 
+ },
+},
+tTextx0x2: {
+defaultStyle: {
+            default: {"width":"24px","height":"32px","color":"var(--business-text-avianize)","position":"unset","left":"620px","top":"9px","fontSize":"var(--t-text-size-normal)","lineHeight":"32px","animationName":"","textAlign":"center"},
+            
+            },
+ default: { 
+ 
+label:"VS",
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"24px","height":"32px","color":"var(--business-text-avianize)","position":"unset","left":"620px","top":"9px","fontSize":"var(--t-text-size-normal)","lineHeight":"32px","animationName":"","textAlign":"center"}}}, 
+ },
+},
+tDatePickerx0x3: {
+defaultStyle: {
+            default: {"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},
+            
+            },
+ default: { 
+ 
+placeholder:"请选择日期",
+startPlaceholder:"开始日期",
+endPlaceholder:"结束日期",
+type:"datetimerangehour",
+clearable:false,
+rangeSeparator:"-",
+'default-date':[],
+separator:"-",
+readonly:false,
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"inputWrapper":{"default":{"backgroundColor":"var(--business-show-bg30)","borderLeft":"1px none var(--business-show-bg50)","borderTop":"1px none var(--business-show-bg50)","borderRight":"1px none var(--business-show-bg50)","borderBottom":"1px none var(--business-show-bg50)","color":"#fff","fontSize":"14px","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","height":"100%"}},"inputDateIcons":{"default":{"color":"var(--business-text-avianize)"}},"dateWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"prevAndNextMonthDate":{"default":{"color":"rgba(255, 255, 255, 0.4)"}},"todayWrapper":{"default":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"currentDateWrapper":{"default":{"color":"rgba(255, 255, 255, 0.8)"},"hover":{"color":"var(--business-theme)"},"active":{"color":"rgba(255, 255, 255, 1)","backgroundColor":"var(--business-btn-default)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"selCurrentDateWrapper":{"default":{"backgroundColor":"var(--business-btn-default)","color":"rgba(255, 255, 255, 1)"}},"operatorArrow":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"dateHeaderWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"weekWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"}},"textBtnWrapper":{"default":{"borderLeft":"1px none rgba(253,9,1,0)","borderTop":"1px none rgba(253,9,1,0)","borderRight":"1px none rgba(253,9,1,0)","borderBottom":"1px none rgba(253,9,1,0)","color":"var(--business-btn-default)"},"hover":{"color":"var(--business-theme)"}},"okWrapper":{"default":{"color":"rgba(255, 255, 255, 1)","borderLeft":"1px solid rgba(255,255,255,1)","borderTop":"1px solid rgba(255,255,255,1)","borderRight":"1px solid rgba(255,255,255,1)","borderBottom":"1px solid rgba(255,255,255,1)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"timePanelWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"rgba(239, 0, 0, 1)"}},"timePanelNumWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"currentWeekWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"rgba(255, 255, 255, 1)"}},"rangeInputWrapper":{"default":{"backgroundColor":"rgba(255, 255, 255, 0)","fontSize":"var(--text-size-14)","height":"100%"}},"rangeTimeWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"}}}, 
+ },
+},
+tDatePickerx0x4: {
+defaultStyle: {
+            default: {"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},
+            
+            },
+ default: { 
+ 
+placeholder:"请选择日期",
+startPlaceholder:"开始日期",
+endPlaceholder:"结束日期",
+type:"monthrange",
+clearable:false,
+rangeSeparator:"-",
+'default-date':[],
+separator:"-",
+readonly:false,
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"inputWrapper":{"default":{"backgroundColor":"var(--business-show-bg30)","borderLeft":"1px none var(--business-show-bg50)","borderTop":"1px none var(--business-show-bg50)","borderRight":"1px none var(--business-show-bg50)","borderBottom":"1px none var(--business-show-bg50)","color":"#fff","fontSize":"14px","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","height":"100%"}},"inputDateIcons":{"default":{"color":"var(--business-text-avianize)"}},"dateWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"prevAndNextMonthDate":{"default":{"color":"rgba(255, 255, 255, 0.4)"}},"todayWrapper":{"default":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"currentDateWrapper":{"default":{"color":"rgba(255, 255, 255, 0.8)"},"hover":{"color":"var(--business-theme)"},"active":{"color":"rgba(255, 255, 255, 1)","backgroundColor":"var(--business-btn-default)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"selCurrentDateWrapper":{"default":{"backgroundColor":"var(--business-btn-default)","color":"rgba(255, 255, 255, 1)"}},"operatorArrow":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"dateHeaderWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"weekWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"}},"textBtnWrapper":{"default":{"borderLeft":"1px none rgba(253,9,1,0)","borderTop":"1px none rgba(253,9,1,0)","borderRight":"1px none rgba(253,9,1,0)","borderBottom":"1px none rgba(253,9,1,0)","color":"var(--business-btn-default)"},"hover":{"color":"var(--business-theme)"}},"okWrapper":{"default":{"color":"rgba(255, 255, 255, 1)","borderLeft":"1px solid rgba(255,255,255,1)","borderTop":"1px solid rgba(255,255,255,1)","borderRight":"1px solid rgba(255,255,255,1)","borderBottom":"1px solid rgba(255,255,255,1)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"timePanelWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"rgba(239, 0, 0, 1)"}},"timePanelNumWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"currentWeekWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"rgba(255, 255, 255, 1)"}},"rangeInputWrapper":{"default":{"backgroundColor":"rgba(255, 255, 255, 0)","fontSize":"var(--text-size-14)","height":"100%"}},"rangeTimeWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"}}}, 
+ },
+},
+tDatePickerx0x5: {
+defaultStyle: {
+            default: {"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},
+            
+            },
+ default: { 
+ 
+placeholder:"请选择日期",
+startPlaceholder:"开始日期",
+endPlaceholder:"结束日期",
+type:"daterange",
+clearable:false,
+rangeSeparator:"-",
+'default-date':[],
+separator:"-",
+readonly:false,
+editable:false,
+cStyle:{"wrapper":{"default":{"width":"330px","height":"32px","position":"unset","left":"80px","top":"9px","--t-date-picker-input-placeholder-color":"var(--business-text-avianize) !important","--t-date-picker-splitline-color":"var(--business-show-bg50) !important","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","overflow":"hidden","animationName":""},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"}},"inputWrapper":{"default":{"backgroundColor":"var(--business-show-bg30)","borderLeft":"1px none var(--business-show-bg50)","borderTop":"1px none var(--business-show-bg50)","borderRight":"1px none var(--business-show-bg50)","borderBottom":"1px none var(--business-show-bg50)","color":"#fff","fontSize":"14px","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","height":"100%"}},"inputDateIcons":{"default":{"color":"var(--business-text-avianize)"}},"dateWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)"}},"prevAndNextMonthDate":{"default":{"color":"rgba(255, 255, 255, 0.4)"}},"todayWrapper":{"default":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"currentDateWrapper":{"default":{"color":"rgba(255, 255, 255, 0.8)"},"hover":{"color":"var(--business-theme)"},"active":{"color":"rgba(255, 255, 255, 1)","backgroundColor":"var(--business-btn-default)","borderTopLeftRadius":"18px","borderTopRightRadius":"18px","borderBottomLeftRadius":"18px","borderBottomRightRadius":"18px"}},"selCurrentDateWrapper":{"default":{"backgroundColor":"var(--business-btn-default)","color":"rgba(255, 255, 255, 1)"}},"operatorArrow":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"dateHeaderWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)"}},"weekWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"}},"textBtnWrapper":{"default":{"borderLeft":"1px none rgba(253,9,1,0)","borderTop":"1px none rgba(253,9,1,0)","borderRight":"1px none rgba(253,9,1,0)","borderBottom":"1px none rgba(253,9,1,0)","color":"var(--business-btn-default)"},"hover":{"color":"var(--business-theme)"}},"okWrapper":{"default":{"color":"rgba(255, 255, 255, 1)","borderLeft":"1px solid rgba(255,255,255,1)","borderTop":"1px solid rgba(255,255,255,1)","borderRight":"1px solid rgba(255,255,255,1)","borderBottom":"1px solid rgba(255,255,255,1)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"timePanelWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"rgba(239, 0, 0, 1)"}},"timePanelNumWrapper":{"default":{"color":"rgba(255, 255, 255, 1)"},"hover":{"color":"var(--business-theme)","backgroundColor":"rgba(255, 255, 255, 0)"}},"currentWeekWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"rgba(255, 255, 255, 1)"}},"rangeInputWrapper":{"default":{"backgroundColor":"rgba(255, 255, 255, 0)","fontSize":"var(--text-size-14)","height":"100%"}},"rangeTimeWrapper":{"default":{"backgroundColor":"var(--business-show-bg15)"}}}, 
+ },
+},
+tSelectx0x6: {
+defaultStyle: {
+            default: {"width":"186px","height":"32px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--t-white)","fontSize":"14","animationName":"","pointerEvents":"auto","paddingLeft":"12px","paddingRight":"30px","position":"unset","left":"654px","top":"9px"},
+            
+            },
+ default: { 
+ 
+activeValue:[],
+options:[],
+alias:{"label":"label","value":"value","disabled":"disabled"},
+multiple:true,
+placeholder:"请选择",
+clearable:true,
+disabled:false,
+collapseTags:true,
+name:"",
+autocomplete:"off",
+filterable:false,
+'no-match-text':"无匹配数据",
+'no-data-text':"无数据",
+cStyle:{"wrapper":{"default":{"width":"186px","height":"32px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--t-white)","fontSize":"14","animationName":"","pointerEvents":"auto","paddingLeft":"12px","paddingRight":"30px","position":"unset","left":"654px","top":"9px"},"focus":{"borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px"}},"placeholder":{"default":{"color":"var(--business-text-avianize)","fontSize":"var(--text-size-14)","backgroundColor":""}},"tag":{"default":{"backgroundColor":"var(--business-btn-default)","color":"#fff","height":"22px","lineHeight":"20px"}},"dropdownWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","width":"186px","left":"0 !important","right":"0 !important","top":"42px !important"}},"arrow":{"default":{"backgroundImage":"var(--select-arrow-up-bg)","-webkit-mask-image":"","backgroundRepeat":"no-repeat","-webkit-mask-repeat":"","backgroundSize":"6px 4px","-webkit-mask-size":"","backgroundPosition":"50% 50%","-webkit-mask-position":"","fontSize":"14px","color":"var(--business-unit-icon)"}},"dropdownArrow":{"default":{"backgroundColor":"rgba(69, 87, 163, 0)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","borderLeft":"1px none rgb(23,62,228)","borderTop":"1px none rgb(23,62,228)","borderRight":"1px none rgb(23,62,228)","borderBottom":"1px none rgb(23,62,228)"}},"dropdownItem":{"default":{"fontSize":"14px","color":"var(--t-white)","width":"186px"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-theme)","fontSize":"18","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px"},"active":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","fontSize":"14px","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px"}},"dropdownItemText":{"default":{"fontSize":"var(--text-size-14)"},"active":{"fontSize":"var(--text-size-14)"}},"tagText":{"default":{"fontSize":"var(--text-size-14)"}}},
+multipleLimit:4, 
+ },
+},
+tSelectx0x7: {
+defaultStyle: {
+            default: {"width":"186px","height":"32px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--t-white)","fontSize":"14","animationName":"","pointerEvents":"auto","paddingLeft":"12px","paddingRight":"30px","position":"unset","left":"426px","top":"9px"},
+            
+            },
+ default: { 
+ 
+activeValue:[],
+options:[],
+alias:{"label":"label","value":"value","disabled":"disabled"},
+multiple:true,
+placeholder:"请选择",
+clearable:true,
+disabled:false,
+collapseTags:true,
+name:"",
+autocomplete:"off",
+filterable:false,
+'no-match-text':"无匹配数据",
+'no-data-text':"无数据",
+cStyle:{"wrapper":{"default":{"width":"186px","height":"32px","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","backgroundColor":"var(--business-show-bg30)","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","color":"var(--t-white)","fontSize":"14","animationName":"","pointerEvents":"auto","paddingLeft":"12px","paddingRight":"30px","position":"unset","left":"426px","top":"9px"},"focus":{"borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)"},"hover":{"borderLeft":"1px solid var(--business-theme)","borderTop":"1px solid var(--business-theme)","borderRight":"1px solid var(--business-theme)","borderBottom":"1px solid var(--business-theme)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px"}},"placeholder":{"default":{"color":"var(--business-text-avianize)","fontSize":"var(--text-size-14)","backgroundColor":""}},"tag":{"default":{"backgroundColor":"var(--business-btn-default)","color":"#fff","height":"22px","lineHeight":"20px"}},"dropdownWrapper":{"default":{"backgroundColor":"var(--business-dialog-bg)","borderTopLeftRadius":"4px","borderTopRightRadius":"4px","borderBottomLeftRadius":"4px","borderBottomRightRadius":"4px","borderLeft":"1px solid var(--business-show-bg50)","borderTop":"1px solid var(--business-show-bg50)","borderRight":"1px solid var(--business-show-bg50)","borderBottom":"1px solid var(--business-show-bg50)","width":"186px","left":"0 !important","right":"0 !important","top":"42px !important"}},"arrow":{"default":{"backgroundImage":"var(--select-arrow-up-bg)","-webkit-mask-image":"","backgroundRepeat":"no-repeat","-webkit-mask-repeat":"","backgroundSize":"6px 4px","-webkit-mask-size":"","backgroundPosition":"50% 50%","-webkit-mask-position":"","fontSize":"14px","color":"var(--business-unit-icon)"}},"dropdownArrow":{"default":{"backgroundColor":"rgba(69, 87, 163, 0)","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px","borderLeft":"1px none rgb(23,62,228)","borderTop":"1px none rgb(23,62,228)","borderRight":"1px none rgb(23,62,228)","borderBottom":"1px none rgb(23,62,228)"}},"dropdownItem":{"default":{"fontSize":"14px","color":"var(--t-white)","width":"186px"},"hover":{"backgroundColor":"var(--business-show-bg15)","color":"var(--business-theme)","fontSize":"18","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px"},"active":{"color":"var(--business-theme)","backgroundColor":"var(--business-show-bg15)","fontSize":"14px","borderTopLeftRadius":"0px","borderTopRightRadius":"0px","borderBottomLeftRadius":"0px","borderBottomRightRadius":"0px"}},"dropdownItemText":{"default":{"fontSize":"var(--text-size-14)"},"active":{"fontSize":"var(--text-size-14)"}},"tagText":{"default":{"fontSize":"var(--text-size-14)"}}},
+multipleLimit:4, 
+ },
+},
+});
+const handleChartSeries = () => {
+/* ===========================初始化数据开始=========================== */
+// 对比指标数据
+const compareData = state.options.compare.reduce((acc, item) => {
+  acc[item.value
+    ] = [];
+  return acc;
+},
+{});
+// 对比指标数据-单位映射
+const unitMap = {};
+state.options.compare.forEach(item => {
+  unitMap[item.value
+    ] = item.unit;
+});
+// 边距数组，有几个y轴，边距设置多少，最多4个
+const padding = ['3%', '6%', '16%', '26%', '34%'
+]
+// x轴数据
+const xAxisData = [];
+// y轴基础配置
+const yAxisBaseOptions = {
+    "type": "value",
+    "axisLabel": {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "fontSize": 13
+    },
+    "axisLine": {
+        "lineStyle": {
+            "type": "solid",
+            "color": "rgba(255, 255, 255, 0.4)"
+        }
+    },
+    "nameTextStyle": {
+        "color": "rgba(255, 255, 255, 0.7)",
+        "align": "right",
+        "fontSize": 13
+    },
+    "splitLine": {
+        "lineStyle": {
+            "type": "dashed",
+            "color": "rgba(255, 255, 255, 0.2)"
+        }
+    }
+}
+// 清空系列、图例、y轴数据
+state.chartOption.series = [];
+state.chartOption.legend.data = [];
+state.chartOption.yAxis = []
+
+if (!state.chartResData.length) {
+  return;
+}
+/* ===========================初始化数据结束=========================== */
+/* ===========================处理数据开始=========================== */
+// 左右边距
+state.chartOption.grid.right = padding[state.params.compare.length
+]
+state.chartOption.grid.left = padding[state.params.monitor.length
+]
+// 处理x轴、对比指标数据
+state.chartResData.forEach((resItem) => {
+    // 对比指标数据
+  Object.keys(compareData).forEach(key => {
+    compareData[key
+        ].push({
+      value: resItem[key
+            ],
+      unit: unitMap[key
+            ],
+      tooltipXAxisLabel: resItem.MONITOR_TIME,
+        })
+    })
+
+  // x轴-时间
+  xAxisData.push(handleNoVal(resItem.MONITOR_TIME));
+});
+
+// x轴数据赋值
+state.chartOption.xAxis.data = xAxisData;
+
+// 处理监测指标系列、图例数据
+if (state.params.monitor.length) {
+    // 找到monitor里键对应的所有对象
+  state.options.monitor
+    .filter(item => state.params.monitor
+      .some(value => item.value === value))
+    .forEach((selectItem, index) => {
+        // y轴
+      state.chartOption.yAxis.push({
+        ...yAxisBaseOptions,
+            "position": 'left',
+            "name": `${selectItem.label
+            } ${selectItem.unit ? `\n（${selectItem.unit
+                }）` : ''
+            }`,
+            "offset": index * 80,
+            "nameTextStyle": {
+          padding: [
+                    0,
+                    -20,
+                    0,
+                    0
+                ],
+          ...yAxisBaseOptions.nameTextStyle
+            }
+        })
+
+      // 监测指标
+      state.chartOption.series.push({
+            "type": "line",
+            "barWidth": '20px',
+            "yAxisIndex": 0,
+            "smooth": true,
+            "symbolSize": 1,
+            "symbol": "circle",
+            "name": selectItem.label,
+            "yAxisIndex": index,
+            "color": selectItem.color,
+            "data": state.chartResData.map((resItem) => ({
+          value: resItem[selectItem.value
+                ],
+          unit: selectItem.unit,
+          tooltipXAxisLabel: resItem.MONITOR_TIME,
+            })),
+        });
+
+      // 图例
+      state.chartOption.legend.data.push({
+        name: selectItem.label,
+        });
+    });
+}
+// 瞬时总流量、水库水位、降雨量、气温
+if (state.params.compare.length) {
+    // 找到compare里键对应的所有对象
+  state.options.compare
+    .filter(item => state.params.compare
+      .some(value => item.value === value))
+    .forEach((item, index) => {
+        // 对比指标
+      state.chartOption.series.push({
+            "type": "line",
+            "barWidth": '20px',
+            "yAxisIndex": state.chartOption.yAxis.length,
+            "symbol": "none",
+            "itemStyle": {
+                "color": `rgba(${item.color
+                },
+                1)`
+            },
+            "lineStyle": {
+                "width": 0
+            },
+            "areaStyle": {
+                "color": {
+                    "type": "linear",
+                    "x": 0,
+                    "y": 0,
+                    "x2": 0,
+                    "y2": 1,
+                    "colorStops": [
+                        {
+                            "offset": 0,
+                            "color": `rgba(${item.color
+                            },
+                            1)`
+                        },
+                        {
+                            "offset": 1,
+                            "color": `rgba(${item.color
+                            },
+                            0)`
+                        }
+                    ],
+                    "global": false
+                }
+            },
+            "name": item.label,
+            "data": compareData[item.value
+            ] || [],
+        })
+
+      // y轴
+      state.chartOption.yAxis.push({
+        ...yAxisBaseOptions,
+            "name": `${item.label
+            }\n（${item.unit
+            }）`,
+            "position": 'right',
+            "offset": index * 80,
+            "nameTextStyle": {
+          padding: [
+                    0,
+                    0,
+                    0,
+                    -20
+                ],
+          ...yAxisBaseOptions.nameTextStyle
+            }
+        })
+
+      // 图例
+      state.chartOption.legend.data.push({
+        icon: 'roundRect',
+        name: item.label,
+        })
+    })
+}
+
+const obj = checkTimeRange(state.dialogType, state.params.time.range, xAxisData.length)
+
+// 处理x轴显示标签间隔、及重复值
+if (obj.flag) {
+  state.chartOption.xAxis.axisLabel.interval = 0;
+  state.chartOption.xAxis.axisLabel.formatter = (value, index) => {
+    let dayValue;
+    switch (state.dialogType) {
+      case '1':
+            // 自动天
+        dayValue = dateFormat(value.replace('日', ''), 'yyyy-MM');
+        break;
+      case '2':
+            // 自动小时
+        dayValue = dateFormat(`${value.replace('时', '')
+            }: 00`, 'MM-dd');
+        break;
+      case '3':
+            // 手工
+        dayValue = dateFormat(value, 'yyyy');
+        break;
+      default:
+        dayValue = value;
+        break;
+        }
+    return index % obj.num === 0 ? dayValue : '';
+    };
+  state.chartOption.xAxis.axisTick.interval = (index) => {
+    return index % obj.num === 0;
+    };
+} else {
+  state.chartOption.xAxis.axisLabel.interval = 'auto';
+  state.chartOption.xAxis.axisLabel.formatter = (value) => value;
+  state.chartOption.xAxis.axisTick.interval = 'auto';
+}
+/* ===========================处理数据结束=========================== */
+state.chartShow = false;
+nextTick(()=>state.chartShow = true)
+console.log('option',state.chartOption)
+};
+const handleTimeSelect = (times) => {
+if (times.length) {
+  state.params.time.range = times
+  state.params.time.start = times[0] || '';
+  state.params.time.end = times[1] || '';
+} else {
+  state.params.time.range = []
+  state.params.time.start = '';
+  state.params.time.end  = '';
+}
+
+getData();
+};
+const initPage = () => {
+// 处理参数
+state.params.pointcode = global.businessDialog.dialogParmas.pointCode;
+
+if (global.businessDialog.dialogParmas?.dialogType === 'autoDay') {
+  state.params.interfaceId = "88c6185c72e605d9dc2d1b9cbbe4f0fa";
+  state.dialogType = '1'
+} else if (global.businessDialog.dialogParmas?.dialogType === 'autoHour') {
+  state.params.interfaceId = "90a8e906b6f3d8c5218fd73cb91a5504";
+  state.dialogType = '2'
+} else {
+  state.params.interfaceId = "f210282aba7a8bc199e0a022c63af6d5";
+  state.dialogType = '3'
+}
+
+// echarts图配置
+setOptions();
+
+// 设置暂无数据图片
+setNoData();
+
+// 获取时间下拉数据（用结束时间向前推指定格式的时间）
+getTimeValue(global.businessDialog.dialogParmas.monitorTime, state.dialogType);
+
+const initData = async () => {
+  if(state.dialogType === '3'){
+    await apiRegistry.getMonitorOptionsHandmade.request();
+  }else{
+    await apiRegistry.getMonitorOptionsAuto.request();
+  }
+  // 手工不需要气象数据
+  if (state.dialogType !== '3') {
+    await apiRegistry.getCompareOptions.request();
+  }
+  apiRegistry.getData.request();
+}
+
+// 获取数据
+initData();
+};
+const setOptions = () => {
+// 初始化配置
+state.chartOption = {
+  toolbox: {
+    show: true,
+    top: 5,
+    right: 35,
+    iconStyle: {
+      color: '#fff'
+    },
+    feature: {
+      magicType: {
+        type: ["line", "bar"],
+        title: {
+          line: '转为折线图',
+          bar: '转为柱状图'
+        }
+      },
+    }
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "backgroundColor": "rgba(0, 0, 0, 0.8)",
+    "borderColor": "rgba(255, 255, 255, 0.5)",
+    "formatter": (value) => handleTooltipFormatter(value),
+    "textStyle": {
+      "color": "rgba(255, 255, 255, 1)"
+    }
+  },
+  "grid": {
+    "top": "14%",
+    "left": "3%",
+    "right": "3%",
+    "bottom": "14%"
+  },
+  // "dataZoom": [
+  //   {
+  //     "type": "slider",
+  //     "backgroundColor": getCssVariable('--business-show-bg30'),
+  //     "borderColor": getCssVariable('--business-show-bg30'),
+  //     "borderRadius": 0,
+  //     "showDetail": false,
+  //     "showDataShadow": false,
+  //     "zoomLock": true,
+  //     "height": 7,
+  //     "end": 50,
+  //     "brushSelect": false,
+  //     "bottom": "0%",
+  //     "brushStyle": {
+  //       "color": "#000"
+  //     },
+  //     "fillerColor": getCssVariable('--business-btn-default'),
+  //     "handleIcon": "none",
+  //     "handleStyle": {
+  //       "color": "#2D955A",
+  //       "borderColor": "#D1D5D9",
+  //       "borderCap": "round"
+  //     }
+  //   }
+  // ],
+  dataZoom: [
+    {
+
+      show: true,
+      realtime: true,
+      start: 50,
+      end: 100,
+      xAxisIndex: [0],
+      bottom: 10,
+    },
+    {
+      type: 'inside',
+      realtime: true,
+      start: 50,
+      end: 100,
+      xAxisIndex: [0],
+    },
+  ],
+  "legend": {
+    "show": true,
+    "itemWidth": 16,
+    "itemHeight": 16,
+    "textStyle": {
+      "color": "rgba(255, 255, 255, 0.8)",
+      "fontSize": 14,
+      "height": 10,
+      "rich": {
+        "a": {
+          "verticalAlign": "center"
+        }
+      }
+    },
+    "data": [],
+    "type": "scroll",
+    "pageTextStyle": {
+      "color": '#fff'
+    }
+  },
+  "xAxis": {
+    "axisLabel": {
+      "color": "rgba(255, 255, 255, 0.8)",
+      "fontSize": 13
+    },
+    "axisLine": {
+      "lineStyle": {
+        "type": "solid",
+        "color": "rgba(255, 255, 255, 0.4)"
+      }
+    },
+    "axisLine": {
+      "lineStyle": {
+        "type": "solid",
+        "color": "rgba(255, 255, 255, 0.4)"
+      }
+    },
+    "axisTick": {
+      "show": true,
+      "lineStyle": {
+        "color": "rgba(255, 255, 255, 0.4)"
+      }
+    },
+    "nameTextStyle": {
+      "color": "rgba(255, 255, 255, 0.7)",
+      "fontSize": 13
+    },
+    "data": []
+  },
+  "yAxis": [],
+  "color": ['red', 'green', 'yellow', 'purple', 'blue'],
+  "series": []
+};
+};
+const getTimeValue = (date,type) => {
+if (type === '2') {
+  // 小时数据格式不全，格式化错误，需要补上分秒
+  date = `${date}:00:00`
+}
+
+// 时间格式
+const typeObj = [
+  {
+    timeType: 'day',
+    formatType: 'yyyy-MM-dd'
+  },
+  {
+    timeType: 'hour',
+    formatType: 'yyyy-MM-dd HH'
+  },
+  {
+    timeType: 'month',
+    formatType: 'yyyy-MM'
+  }
+]
+
+// 结束时间
+const endTime = dateFormat(date, typeObj[Number(type) - 1].formatType);
+// 开始时间
+const startTime = dateFormat(getPrevTime(date, typeObj[Number(type) - 1].timeType), typeObj[Number(type) - 1].formatType);
+
+// 赋值参数
+state.params.time.range = [startTime || '', endTime || ''];
+state.params.time.start = startTime || '';
+state.params.time.end = endTime || '';
+
+};
+const handleMonitorSelect = (data) => {
+state.params.monitor = data ? data.split(',') : []
+// 过滤空数据
+filterMonitorData();
+handleChartSeries()
+};
+const handleCompareSelect = (data) => {
+state.params.compare = data ? data.split(',') : []
+
+handleChartSeries()
+};
+const setNoData = () => {
+// 设置暂无数据图标
+state.noDataImg = getCssVariable('--business-no-data-img');
+};
+const handleCharFormat = (optionString) => {
+/**
+  * @description: 替换一段字符串中所有污染物为正确格式
+  * @param optionString 要替换的字符串
+  * @return 替换完的字符串
+  */
+if (!optionString) return '';
+// 从公共方法里拿到下标特殊字符（后续需要的再补充）
+const zreoSub = convertCharacter('下标')[0].split(' ')[0] || '0';
+const oneSub = convertCharacter('下标')[0].split(' ')[1] || '1';
+const twoSub = convertCharacter('下标')[0].split(' ')[2] || '2';
+const threeSub = convertCharacter('下标')[0].split(' ')[3] || '3';
+const fiveSub = convertCharacter('下标')[0].split(' ')[5] || '5';
+// 污染物对应关系（缺少的继续补充）
+const POLLUTION_CHARTS_ALL = [
+  {
+    name: ['O3', 'o3'],
+    html: 'O' + threeSub,
+  },
+  {
+    name: ['PM10', 'pm10'],
+    html: 'PM' + oneSub + zreoSub,
+  },
+  {
+    name: ['PM25', 'PM2_5', 'PM2.5', 'pm25', 'pm2_5', 'pm25'],
+    html: 'PM' + twoSub + '.' + fiveSub,
+  },
+  {
+    name: ['SO2', 'so2'],
+    html: 'SO' + twoSub,
+  },
+  {
+    name: ['CO2', 'co2'],
+    html: 'CO' + twoSub,
+  },
+  {
+    name: ['CODMN', 'codmn'],
+    html: 'CODmn',
+  },
+  {
+    name: ['VOCS', 'vocs'],
+    html: 'VOCs',
+  },
+  {
+    name: ['NO', 'no'],
+    html: 'NO',
+  },
+  {
+    name: ['NO2', 'no2'],
+    html: 'NO' + twoSub,
+  },
+  {
+    name: ['NH3', 'nh3'],
+    html: 'NH' + threeSub,
+  },
+  {
+    name: ['NOX', 'nox'],
+    html: 'NOx',
+  },
+  {
+    name: ['PH', 'ph'],
+    html: 'pH',
+  },
+];
+let curString = optionString;
+POLLUTION_CHARTS_ALL.forEach((item) => {
+  item.name.forEach((name) => {
+    curString = curString.replace(name, item.html);
+  });
+});
+return curString;
+};
+const checkTimeRange = (dateType,timeRange,dataLength) => {
+const parseDate = (dateStr) => {
+  const date = new Date(dateStr);
+  if (isNaN(date)) {
+    throw new Error(`Invalid date format: ${dateStr}`);
+  }
+  return date;
+}
+
+const diffInHours = (d1, d2) => {
+  return Math.abs((d2 - d1) / (1000 * 60 * 60));
+}
+
+const diffInDays = (d1, d2) => {
+  return Math.abs((d2 - d1) / (1000 * 60 * 60 * 24));
+}
+
+const diffInMonths = (d1, d2) => {
+  const y1 = d1.getFullYear();
+  const m1 = d1.getMonth();
+  const y2 = d2.getFullYear();
+  const m2 = d2.getMonth();
+  return Math.abs((y2 * 12 + m2) - (y1 * 12 + m1));
+}
+
+const [startDateStr, endDateStr] = timeRange;
+let startDate, endDate;
+
+switch (dateType) {
+  case '1':
+    // 自动天，时间差大于两周，数据大于14条
+    startDate = parseDate(startDateStr);
+    endDate = parseDate(endDateStr);
+    return {
+      flag: diffInDays(startDate, endDate) > 14 && dataLength > 14,
+      num: 14
+    };
+  case '2':
+    // 自动小时，时间差大于两天，数据大于48条
+    startDate = parseDate(`${startDateStr}:00:00`);
+    endDate = parseDate(`${endDateStr}:00:00`);
+    return {
+      flag: diffInHours(startDate, endDate) > 48 && dataLength > 48,
+      num: 48
+    };
+  case '3':
+    // 手工，时间差大于两年，数据大于24条
+    startDate = parseDate(startDateStr);
+    endDate = new Date(endDateStr.slice(0, 4), endDateStr.slice(5, 7) - 1 + (endDateStr.slice(7) ? 1 : 0), 0);
+    endDate.setDate(endDate.getDate() - endDate.getDate() % endDate.getDate());
+    return {
+      flag: diffInMonths(startDate, endDate) > 23 && dataLength > 24,
+      num: 24
+    };
+  default:
+    return {
+      flag: false,
+      num: 0
+    };
+}
+};
+const filterMonitorData = () => {
+state?.params?.monitor?.forEach(item =>{
+  state.chartResData = state.chartResData.filter( i => i[item])
+})
+};
+const handleCheck = (data) => {
+
+// 获取两个数组的差集
+function diffArray(arr1, arr2) {
+  let set1 = new Set(arr1);
+  let set2 = new Set(arr2);
+  let diff = [...arr1.filter(x => !set2.has(x)), ...arr2.filter(x => !set1.has(x))];
+  return diff;
+}
+
+// 叠加或取消的气象指标
+const indexValue = diffArray(state.weatherIndexSelectArr, data)[0];
+// 发送socket消息: 地图删除专题
+rootData.rootSocket.emit('message', {
+  room: global.socketRoom, // 房间号
+  type: 'showWeather', // 消息名称
+  data: {
+    type: indexValue,
+    // 当前值大于上次选中值：显示选中的指标，反之隐藏
+    visible: state.weatherIndexSelectArr.length < data.length,
+  },
+});
+
+// 更新选中值数据
+state.weatherIndexSelectArr = data;
+
+
+
+};
+const ondateChange1734256418144 = (data) => {
+// 执行自定义方法
+handleTimeSelect(data);
+};
+const ondateChange1735351876336_0_0 = (data) => {
+// 执行自定义方法
+handleTimeSelect(data);
+};
+const ondateChange1735351877507_0_0 = (data) => {
+// 执行自定义方法
+handleTimeSelect(data);
+};
+const onchange1740045317584 = (value,selectValueArr,selectValueItem) => {
+// 执行自定义方法
+handleMonitorSelect(value);
+};
+const onchange1740099820123_0_0 = (value,selectValueArr,selectValueItem) => {
+// 执行自定义方法
+handleCompareSelect(value);
+};let apiRegistry = {}; 
+
+        // 添加接口数据管理
+        const apiDataMap = reactive({});
+        // 接口数据缓存
+        const apiDataCache = reactive({});
+        
+        // 接口注册表
+        apiRegistry = {
+// 接口函数
+ getCompareOptions: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"interfaceId":"511d0bb23d5fc939a85c2a1f9b83a17e"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"interfaceId":"511d0bb23d5fc939a85c2a1f9b83a17e"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"interfaceId":"511d0bb23d5fc939a85c2a1f9b83a17e"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getCompareOptions'] = res.data;
+                
+     state.options.compare = [];
+state.params.compare = [];
+if (res.data.head.statusCode === '200' && res.data?.data?.length) {
+  state.options.compare = res.data.data.map((i, index) => ({
+    "value": i.PCODE,
+    "label": handleCharFormat(i.PNAME),
+    "unit": i.PUNIT,
+    "color": state.color.compare[index % state.color.compare.length].replace(/rgba\((\d+),(\d+),(\d+),1\)/,"$1,$2,$3"), // 这里将rgba(7,162,164,1)的值7,162,164提出来，图表需要渐变
+    "disabled": false
+  }));
+  state.params.compare.push(state.options.compare[0].value);
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      state.options.compare = [];
+state.params.compare = [];
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getData: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"END_MONITORTIME":"state.params.time.end","START_MONITORTIME":"state.params.time.start","POINT_CODE":"state.params.pointcode","interfaceId":"state.params.interfaceId"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"END_MONITORTIME":state.params.time.end,"START_MONITORTIME":state.params.time.start,"POINT_CODE":state.params.pointcode,"interfaceId":state.params.interfaceId},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"END_MONITORTIME":state.params.time.end,"START_MONITORTIME":state.params.time.start,"POINT_CODE":state.params.pointcode,"interfaceId":state.params.interfaceId});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getData'] = res.data;
+                
+     state.chartResData = [];
+if (res.data.head.statusCode === '200' && res.data?.data?.length) {
+  state.chartResData = res.data.data;
+  // 过滤空数据
+  filterMonitorData();
+}
+handleChartSeries();
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      state.chartResData = [];
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getMonitorOptionsHandmade: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"TREE_CODE":"WATER_POLLUTE","interfaceId":"fe11357e6d785a36738f41729cfb4b9f"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"TREE_CODE":"WATER_POLLUTE","interfaceId":"fe11357e6d785a36738f41729cfb4b9f"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"TREE_CODE":"WATER_POLLUTE","interfaceId":"fe11357e6d785a36738f41729cfb4b9f"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getMonitorOptionsHandmade'] = res.data;
+                
+     state.options.monitor = [];
+state.params.monitor = [];
+if (res.data.head.statusCode === '200' && res.data?.data?.length) {
+  state.options.monitor = res.data.data.map((i, index) => ({
+    "value": i?.DICTIONARYCODE,
+    "label": i?.DICTIONARYNAME,
+     "unit": i?.DICTIONARYNAME === 'PH' ? '' : (i?.EXT1 || 'mg/L'),
+    "color": state.color.monitor[index % state.color.monitor.length], // 超过预设数组长度就循环使用
+    "disabled": false
+  }));
+  state.params.monitor.push(state.options.monitor[0].value);
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      state.options.monitor = [];
+state.params.monitor = [];
+      reject(error);
+    });
+  });
+},
+              },
+// 接口函数
+ getMonitorOptionsAuto: {
+              funcParamsOptions: '[]', // 参数选项 用于请求接口调用函数时使用
+              autoLoad: false, // 自动请求
+              bindComponents: [], // 依赖的组件ID列表，可能多个组件绑定一个接口的数据
+              config: {"url":"global.serviceBasePath","method":"get","baseURL":"global.foshanServiceBaseUrl","params":{"interfaceId":"acc8f8c17118848d1f644cef1c725851"}},
+              request: function ( componentId) {
+return new Promise((resolve, reject) => {
+  
+                http({"url":global.serviceBasePath,"method":"get","baseURL":global.foshanServiceBaseUrl,"params":{"interfaceId":"acc8f8c17118848d1f644cef1c725851"},}).then((res) => {
+ 
+                   // 成功的操作
+                   const cacheKey = generateCacheKey('global.foshanServiceBaseUrl-global.serviceBasePath',  {"interfaceId":"acc8f8c17118848d1f644cef1c725851"});
+                   
+                   apiDataMap[cacheKey] = res.data;
+                   apiDataMap['getMonitorOptionsAuto'] = res.data;
+                
+     state.options.monitor = [];
+state.params.monitor = [];
+if (res.data.head.statusCode === '200' && res.data?.data?.length) {
+  state.options.monitor = res.data.data.map((i, index) => ({
+    "value": i.PCODE,
+    "label": handleCharFormat(i.PNAME),
+    "unit": i.PUNIT,
+    "color": state.color.monitor[index % state.color.monitor.length], // 超过预设数组长度就循环使用
+    "disabled": false
+  }));
+  state.params.monitor.push(state.options.monitor[0].value);
+}
+      resolve(_.get(res, "data"));
+    }).catch((error) => {
+      // 失败的操作
+      state.options.monitor = [];
+state.params.monitor = [];
+      reject(error);
+    });
+  });
+},
+              },
+};
+ function handleWindowResize() {
+                            setPageScale('t-l-c-difangshidifushoudao', global.appScaleMode, 'normal');
+                           
+                            // 获取窗口的宽度和高度
+                            var windowWidth = window.innerWidth;
+
+}
+onMounted(() => {
+setPageScale('t-l-c-difangshidifushoudao', global.appScaleMode, 'normal');
+window.addEventListener('resize', handleWindowResize);
+handleWindowResize();
+// 执行自定义方法
+initPage();
+});
+// 页面离开时的操作
+onUnmounted(() => {
+// 移除监听事件
+window.removeEventListener('resize', handleWindowResize);
+});
+ const tChartDesignx0x0ComputedData = computed(() => replaceCssVariables(_.merge({}, componentState.tChartDesignx0x0.default, componentState.tChartDesignx0x0?.[state.screenSize]), global?.theme || global?.activeTheme || '默认主题'));
+
+ const tTextx0x1ComputedData = computed(() => _.merge({}, componentState.tTextx0x1.default, componentState.tTextx0x1?.[state.screenSize]));
+
+ const tTextx0x2ComputedData = computed(() => _.merge({}, componentState.tTextx0x2.default, componentState.tTextx0x2?.[state.screenSize]));
+
+ const tDatePickerx0x3ComputedData = computed(() => _.merge({}, componentState.tDatePickerx0x3.default, componentState.tDatePickerx0x3?.[state.screenSize]));
+
+ const tDatePickerx0x4ComputedData = computed(() => _.merge({}, componentState.tDatePickerx0x4.default, componentState.tDatePickerx0x4?.[state.screenSize]));
+
+ const tDatePickerx0x5ComputedData = computed(() => _.merge({}, componentState.tDatePickerx0x5.default, componentState.tDatePickerx0x5?.[state.screenSize]));
+
+ const tSelectx0x6ComputedData = computed(() => _.merge({}, componentState.tSelectx0x6.default, componentState.tSelectx0x6?.[state.screenSize]));
+
+ const tSelectx0x7ComputedData = computed(() => _.merge({}, componentState.tSelectx0x7.default, componentState.tSelectx0x7?.[state.screenSize]));
+
+      if (apiRegistry && Object.keys(apiRegistry).length) {
+        // 加载初始接口
+        loadInitialApis(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+
+        /* 监听组件可视变化，获取组件绑定的接口数据 */
+        watchComponentVisible(apiRegistry, apiDataCache, componentState, componentPropBindingMap, function(cacheKey, data, apiName) {
+            // 更新缓存
+            apiDataCache[cacheKey] = data;
+            apiDataMap[apiName] = data;
+        });
+      }
+       
+       /* 获取接口数据 */
+       const getApiData = (id, key) => {
+          return computed(() => getDataValue(apiDataMap, componentPropBindingMap[id][key]));
+       };
+      
+return {
+replaceCssVariables,
+getApiData,
+filterData,
+componentPropBindingMap,
+global,
+state,
+componentState,
+tChartDesignx0x0ComputedData,
+tTextx0x1ComputedData,
+tTextx0x2ComputedData,
+tDatePickerx0x3ComputedData,
+tDatePickerx0x4ComputedData,
+tDatePickerx0x5ComputedData,
+tSelectx0x6ComputedData,
+tSelectx0x7ComputedData,
+ondateChange1734256418144,
+ondateChange1735351876336_0_0,
+ondateChange1735351877507_0_0,
+onchange1740099820123_0_0,
+onchange1740045317584,
+};
+},
+};

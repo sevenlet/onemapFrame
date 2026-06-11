@@ -1,0 +1,134 @@
+.t-l-c-realTimeOverviewContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 800px;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-component-0-0 {
+position: absolute !important;
+top: 691px;
+left: 22px;
+width: 410px;
+height: 75px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-component-0-1 {
+position: absolute !important;
+top: 61px;
+left: 25px;
+width: 400px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-component-0-2 {
+position: absolute !important;
+top: 353px;
+left: 26px;
+width: 400px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-text-unit-0-3 {
+position: absolute !important;
+top: 62px;
+left: 56px;
+width: 282px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-text-unit-0-4 {
+position: absolute !important;
+top: 353px;
+left: 57px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-list-card-rate-0-5 {
+position: absolute !important;
+top: 98px;
+left: 13px;
+width: 429px;
+height: 242px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-table-0-6 {
+position: absolute !important;
+top: 400px;
+left: 22px;
+width: 410px;
+height: 230px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-date-picker-0-7 {
+position: absolute !important;
+top: 12px;
+left: 19px;
+width: 178px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-component-0-8 {
+position: absolute !important;
+top: 646px;
+left: 23px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-tabs-base-0-9 {
+position: absolute !important;
+top: 13px;
+left: 209px;
+width: 140px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-text-unit-0-10 {
+position: absolute !important;
+top: 19px;
+left: 388px;
+width: 50px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-image-base-0-11 {
+position: absolute !important;
+top: 19px;
+left: 360px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-realTimeOverviewContent .realTimeOverviewContent-t-text-common-0-12 {
+position: absolute !important;
+top: 353px;
+left: 281px;
+width: 135px;
+height: 32px;
+pointer-events: auto;
+}

@@ -1,0 +1,602 @@
+.t-l-c-remotePatform {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0,0,0,0);
+width: 400px;
+height: 540px;
+}
+.t-l-c-remotePatform .remotePatform-t-component-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 400px;
+height: 50px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-1 {
+position: absolute !important;
+top: 7px;
+left: 5px;
+width: 388px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-2 {
+position: absolute !important;
+top: 18px;
+left: 52px;
+width: 156px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-3 {
+position: absolute !important;
+top: 12px;
+left: 140px;
+width: 25px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-4 {
+position: absolute !important;
+top: 21px;
+left: 341px;
+width: 60px;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-5 {
+position: absolute !important;
+top: 184px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-6 {
+position: absolute !important;
+top: 184px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-7 {
+position: absolute !important;
+top: 238px;
+left: 1px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-8 {
+position: absolute !important;
+top: 238px;
+left: 306px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-9 {
+position: absolute !important;
+top: 238px;
+left: 88px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-10 {
+position: absolute !important;
+top: 238px;
+left: 191px;
+width: 94px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-11 {
+position: absolute !important;
+top: 260px;
+left: 95px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-12 {
+position: absolute !important;
+top: 260px;
+left: 8px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-13 {
+position: absolute !important;
+top: 260px;
+left: 208px;
+width: 60px;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-14 {
+position: absolute !important;
+top: 260px;
+left: 313px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-15 {
+position: absolute !important;
+top: 191px;
+left: 16px;
+width: 30px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-16 {
+position: absolute !important;
+top: 198px;
+left: 49px;
+width: 325px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-17 {
+position: absolute !important;
+top: 240px;
+left: 182px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-18 {
+position: absolute !important;
+top: 240px;
+left: 84px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-19 {
+position: absolute !important;
+top: 240px;
+left: 295px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-20 {
+position: absolute !important;
+top: 63px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-21 {
+position: absolute !important;
+top: 63px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-22 {
+position: absolute !important;
+top: 117px;
+left: 1px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-23 {
+position: absolute !important;
+top: 117px;
+left: 306px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-24 {
+position: absolute !important;
+top: 117px;
+left: 88px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-25 {
+position: absolute !important;
+top: 117px;
+left: 191px;
+width: 94px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-26 {
+position: absolute !important;
+top: 139px;
+left: 95px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-27 {
+position: absolute !important;
+top: 139px;
+left: 8px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-28 {
+position: absolute !important;
+top: 139px;
+left: 208px;
+width: 60px;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-29 {
+position: absolute !important;
+top: 139px;
+left: 313px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-30 {
+position: absolute !important;
+top: 70px;
+left: 16px;
+width: 30px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-31 {
+position: absolute !important;
+top: 77px;
+left: 49px;
+width: 325px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-32 {
+position: absolute !important;
+top: 119px;
+left: 182px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-33 {
+position: absolute !important;
+top: 119px;
+left: 84px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-34 {
+position: absolute !important;
+top: 119px;
+left: 295px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-35 {
+position: absolute !important;
+top: 306px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-36 {
+position: absolute !important;
+top: 306px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-37 {
+position: absolute !important;
+top: 360px;
+left: 1px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-38 {
+position: absolute !important;
+top: 360px;
+left: 306px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-39 {
+position: absolute !important;
+top: 360px;
+left: 88px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-40 {
+position: absolute !important;
+top: 360px;
+left: 191px;
+width: 94px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-41 {
+position: absolute !important;
+top: 382px;
+left: 95px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-42 {
+position: absolute !important;
+top: 382px;
+left: 8px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-43 {
+position: absolute !important;
+top: 382px;
+left: 208px;
+width: 60px;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-44 {
+position: absolute !important;
+top: 382px;
+left: 313px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-45 {
+position: absolute !important;
+top: 313px;
+left: 16px;
+width: 30px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-46 {
+position: absolute !important;
+top: 320px;
+left: 49px;
+width: 325px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-47 {
+position: absolute !important;
+top: 362px;
+left: 182px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-48 {
+position: absolute !important;
+top: 362px;
+left: 84px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-49 {
+position: absolute !important;
+top: 362px;
+left: 295px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-50 {
+position: absolute !important;
+top: 425px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-image-base-0-51 {
+position: absolute !important;
+top: 425px;
+left: 0px;
+width: 400px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-52 {
+position: absolute !important;
+top: 479px;
+left: 1px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-53 {
+position: absolute !important;
+top: 479px;
+left: 306px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-54 {
+position: absolute !important;
+top: 479px;
+left: 88px;
+width: 80px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-55 {
+position: absolute !important;
+top: 479px;
+left: 191px;
+width: 94px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-56 {
+position: absolute !important;
+top: 501px;
+left: 95px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-57 {
+position: absolute !important;
+top: 501px;
+left: 8px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-58 {
+position: absolute !important;
+top: 501px;
+left: 208px;
+width: 60px;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-unit-0-59 {
+position: absolute !important;
+top: 501px;
+left: 313px;
+width: 66px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-60 {
+position: absolute !important;
+top: 432px;
+left: 16px;
+width: 30px;
+height: 30px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-text-0-61 {
+position: absolute !important;
+top: 439px;
+left: 49px;
+width: 325px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-62 {
+position: absolute !important;
+top: 481px;
+left: 182px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-63 {
+position: absolute !important;
+top: 481px;
+left: 84px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-remotePatform .remotePatform-t-rect-0-64 {
+position: absolute !important;
+top: 481px;
+left: 295px;
+width: 1px;
+height: 38px;
+pointer-events: auto;
+}

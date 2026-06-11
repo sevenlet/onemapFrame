@@ -1,0 +1,279 @@
+.t-l-c-round2SDPetitionPopup {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+width: 100%;
+height: 100%;
+filter: ;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-rect-0-0 {
+position: absolute !important;
+top: 0.20285094192638553px;
+left: 0.599974862782858px;
+width: 100%;
+height: 760px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-row-0-1 {
+position: absolute !important;
+top: 102px;
+left: 12px;
+width: 98%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+gap: 10px;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-component-0-1-0-0 {
+position: unset;
+top: 66px;
+left: 24px;
+width: 98%;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-unit-0-1-0-1 {
+position: unset;
+top: 475px;
+left: 78px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-row-0-1-1-0 {
+position: unset;
+top: 274px;
+left: -378px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-chart-bar-simple-0-1-1-0-0-0 {
+position: unset;
+top: 108px;
+left: 57px;
+width: 100%;
+height: 333px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-chart-pie-doughnut-data-0-1-1-0-1-0 {
+position: unset;
+top: 155px;
+left: 752px;
+width: 100%;
+height: 322px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+animation-name: ;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-component-0-1-2-0 {
+position: unset;
+top: 76px;
+left: 34px;
+width: 98%;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-unit-0-1-2-1 {
+position: unset;
+top: 495px;
+left: 98px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+padding-left: 10px;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-common-0-1-3-0 {
+position: unset;
+top: 520px;
+left: 39px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-select-0-1-3-1 {
+position: unset;
+top: 514px;
+left: 179px;
+width: 268px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-common-0-1-3-2 {
+position: unset;
+top: 520px;
+left: 492px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-select-0-1-3-3 {
+position: unset;
+top: 514px;
+left: 632px;
+width: 268px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-col-0-1-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 10px;
+animation-name: ;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-table-0-1-4-0 {
+position: unset;
+top: 573px;
+left: 37px;
+width: 100%;
+height: 140px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-rect-0-2 {
+position: absolute !important;
+top: -1.7600040810974633px;
+left: 0.599974862782858px;
+width: 100%;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-common-0-3 {
+position: absolute !important;
+top: 70px;
+left: 22px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-date-picker-0-4 {
+position: absolute !important;
+top: 67px;
+left: 107px;
+width: 507px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-round2SDPetitionPopup .round2SDPetitionPopup-t-text-0-5 {
+position: absolute !important;
+top: 12px;
+left: 22px;
+width: 589.1863536005435px;
+height: 29.078477400062727px;
+pointer-events: auto;
+}

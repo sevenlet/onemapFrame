@@ -1,0 +1,134 @@
+.t-l-c-superviseIssuesProgress1 {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-rect-0-0 {
+position: absolute !important;
+top: 76px;
+left: 187px;
+width: 1534px;
+height: 941px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-table-0-1 {
+position: absolute !important;
+top: 685px;
+left: 229px;
+width: 1457px;
+height: 300px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-rect-0-2 {
+position: absolute !important;
+top: 75px;
+left: 187px;
+width: 1535px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-text-0-3 {
+position: absolute !important;
+top: 86px;
+left: 218px;
+width: 589px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-rect-0-4 {
+position: absolute !important;
+top: 86px;
+left: 1675px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-component-0-5 {
+position: absolute !important;
+top: 180px;
+left: 220px;
+width: 1475px;
+height: 70px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-component-0-6 {
+position: absolute !important;
+top: 131px;
+left: 203px;
+width: 1476px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-text-common-0-7 {
+position: absolute !important;
+top: 139px;
+left: 259px;
+width: 624px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-chart-design-0-8 {
+position: absolute !important;
+top: 187px;
+left: 220px;
+width: 521px;
+height: 257px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-component-0-9 {
+position: absolute !important;
+top: 645px;
+left: 221px;
+width: 1476px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-text-common-0-10 {
+position: absolute !important;
+top: 653px;
+left: 277px;
+width: 654px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-chart-pie-3d-0-11 {
+position: absolute !important;
+top: -815px;
+left: 106px;
+width: 967px;
+height: 807px;
+pointer-events: auto;
+}
+
+.t-l-c-superviseIssuesProgress1 .superviseIssuesProgress-t-chart-design-0-12 {
+position: absolute !important;
+top: 190px;
+left: 904px;
+width: 521px;
+height: 257px;
+pointer-events: auto;
+}

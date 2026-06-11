@@ -1,0 +1,62 @@
+.t-l-c-yhbzDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-yhbzDialog .yhbzDialog-t-rect-0-0 {
+position: absolute !important;
+top: 194px;
+left: 351px;
+width: 1000px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-yhbzDialog .yhbzDialog-t-rect-0-1 {
+position: absolute !important;
+top: 865px;
+left: 351px;
+width: 1000px;
+height: 52px;
+pointer-events: auto;
+}
+
+.t-l-c-yhbzDialog .yhbzDialog-t-rect-0-2 {
+position: absolute !important;
+top: 194px;
+left: 351px;
+width: 1000px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-yhbzDialog .yhbzDialog-t-rect-0-3 {
+position: absolute !important;
+top: 205px;
+left: 1303px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-yhbzDialog .yhbzDialog-t-component-0-4 {
+position: absolute !important;
+top: 244px;
+left: 350px;
+width: 1000px;
+height: 620px;
+pointer-events: auto;
+}

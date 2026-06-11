@@ -1,0 +1,116 @@
+
+.card-list-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.card-list-container .card-list-item {
+  flex: 1;
+  height: 68px;
+  border-radius: 4px;
+  background-color: var(--business-show-bg30);
+  display: flex;
+  align-items: center;
+}
+.card-list-container .card-list-item .card-icon {
+  margin-right: 20px;
+  width: 32px;
+  height: 32px;
+  background: var(--card-icon) no-repeat center/cover;
+}
+.card-list-container .card-list-item .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-title {
+font-size: 14px;
+font-weight: normal;
+line-height: 14px;
+letter-spacing: 0px;
+color: #B7E3FF;
+    margin-bottom: 8px;
+}
+.card-list-container .card-list-item .card-info .card-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.card-list-container .card-list-item .card-info .card-content .card-num,
+.card-list-container .card-list-item .card-info .card-content .card-total {
+font-family: D-DIN;
+font-size: 24px !important;
+font-weight: bold !important;
+line-height: 20px !important;
+letter-spacing: 0px;
+}
+.card-list-container .card-list-item .card-info .card-content .card-num {
+  color: var(--num-color, #fff);
+}
+.card-list-container .card-list-item .card-info .card-content .card-total {
+  color: #fff;
+}
+.card-list-container .card-list-item .card-info .card-content .card-unit {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--t-num-color-blue);
+}
+.card-list-item {
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    justify-content: center;
+}
+.sx {
+  width: 2px;
+  height: 30px;
+background-color: rgba(20, 112, 204, 0.5);
+  margin:0 58px;
+}
+.box1 {
+}
+.box2 {
+  margin-right: 48px;
+}
+.box3 {
+}
+.num1 {
+
+color: #00FFFF !important;
+}
+.num2 {
+  color: rgba(0, 255, 4, 0.8) !important;
+}
+.num3 {
+  color: rgba(0, 255, 4, 0.8) !important;
+}
+.unit {
+font-size: 12px;
+font-weight: normal;
+line-height: 12px;
+text-align: center;
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+/* 蓝色主题/文本弱化 */
+color: #B7E3FF;
+padding-left: 2px;
+}
+.img1 {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+.img2 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.jt1 {
+    width: 8px;
+  height: 14px;
+  margin-left: 8px;
+}

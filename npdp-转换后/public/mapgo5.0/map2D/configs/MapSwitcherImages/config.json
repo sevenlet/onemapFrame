@@ -1,0 +1,35 @@
+{
+  "maps": [{
+  	"name": "高德普通", 
+    "show": true,
+  	"layerID": "高德地图(普通地图)",
+  	"image": "/1.png",
+  	"labelEnable": false, 
+  	"labelShow": false, 
+  	"labelName": "显示收藏点",
+  	"labelLayerID": "普通地图标注",
+    "children": []
+	},{
+  	"name": "高德影像", 
+    "show": false,
+  	"layerID": "高德地图(影像地图)",
+  	"image": "/2.png",
+  	"labelEnable": true, 
+  	"labelShow": true, 
+  	"labelName": "开启路网",
+  	"labelLayerID": "高德地图标注(影像地图)",
+    "children": []
+	}, {
+  	"name": "全景", 
+    "show": false,
+  	"layerID": "影像地图",
+  	"image": "/3.png",
+  	"labelEnable": false, 
+  	"labelShow": false, 
+  	"labelName": "",
+  	"labelLayerID": "",
+    "children": []
+	}],
+  "expandDirection": "bottom",
+  "theme": "default"
+}

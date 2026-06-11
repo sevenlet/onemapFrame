@@ -1,0 +1,89 @@
+.t-l-c-threeInquirySuesTablePop {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1000px;
+height: 760px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 760px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-table-0-1 {
+position: absolute !important;
+top: 158px;
+left: -1px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-rect-0-2 {
+position: absolute !important;
+top: 1px;
+left: 0px;
+width: 100%;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-select-0-3 {
+position: absolute !important;
+top: 110px;
+left: 22px;
+width: 240px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-text-0-4 {
+position: absolute !important;
+top: 13px;
+left: 31px;
+width: 589px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-component-0-5 {
+position: absolute !important;
+top: 61px;
+left: 2px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-text-common-0-6 {
+position: absolute !important;
+top: 68px;
+left: 57px;
+width: 364px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-threeInquirySuesTablePop .threeInquirySuesTablePop-t-rect-0-7 {
+position: absolute !important;
+top: 10px;
+left: 956px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}

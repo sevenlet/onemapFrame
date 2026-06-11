@@ -1,0 +1,134 @@
+.t-l-c-saveCustomDraw {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-saveCustomDraw .saveCustomDraw-t-rect-0-0 {
+position: absolute !important;
+top: 424px;
+left: 752px;
+width: 417px;
+height: 232px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-rect-0-1 {
+position: absolute !important;
+top: 425px;
+left: 753px;
+width: 415px;
+height: 230px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-rect-0-2 {
+position: absolute !important;
+top: 426px;
+left: 753px;
+width: 415px;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-image-base-0-3 {
+position: absolute !important;
+top: 437px;
+left: 767px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-rect-0-4 {
+position: absolute !important;
+top: 436px;
+left: 1123.5px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-text-0-5 {
+position: absolute !important;
+top: 438px;
+left: 799px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-text-0-6 {
+position: absolute !important;
+top: 508px;
+left: 773px;
+width: 64px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-text-0-7 {
+position: absolute !important;
+top: 555px;
+left: 774px;
+width: 64px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-input-0-8 {
+position: absolute !important;
+top: 497px;
+left: 841px;
+width: 306px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-cascader-0-9 {
+position: absolute !important;
+top: 548px;
+left: 842px;
+width: 306px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-button-0-10 {
+position: absolute !important;
+top: 599px;
+left: 1098px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-button-0-11 {
+position: absolute !important;
+top: 599px;
+left: 1034px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-saveCustomDraw .saveCustomDraw-t-button-0-12 {
+position: absolute !important;
+top: 599px;
+left: 1098px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}

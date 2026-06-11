@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.35/esri/copyright.txt for details.
+//>>built
+define("esri/dijit/geoenrichment/ReportPlayer/dataProvider/supportClasses/PortalManager",["dojo/Deferred","dojo/on","esri/dijit/geoenrichment/when","esri/arcgis/Portal","../../../utils/CacheUtil"],function(g,h,k,e,l){return{getSignedInPortal:function(b){var c=l.get("PortalManager.portal");if(!c[b]){var a=new e.Portal(b),d=new g;h(a,"load",function(){if(a.user)return c[b]={user:new e.PortalUser({portal:a,credential:{userId:a.user.username,server:a.url,token:"",expires:9999999999999,creationTime:9999999999999,
+scope:"portal",resources:[a.portalUrl]}}),portal:a},d.resolve(c[b]);c[b]=k(a.signIn(),function(f){d.resolve({user:f,portal:a});return{user:f,portal:a}})});return d.promise}return c[b]}}});

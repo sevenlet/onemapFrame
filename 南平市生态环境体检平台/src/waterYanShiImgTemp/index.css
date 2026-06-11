@@ -1,0 +1,65 @@
+.t-l-c-waterYanShiImgTemp {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(255, 255, 255, 0);
+left: calc(50% - 100px);
+top: 48%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-waterYanShiImgTemp .waterYanShiImgTemp-t-rect-0-0 {
+position: absolute !important;
+top: 49px;
+left: 11px;
+width: 1900px;
+height: 975px;
+pointer-events: auto;
+}
+
+.t-l-c-waterYanShiImgTemp .waterYanShiImgTemp-t-rect-0-1 {
+position: absolute !important;
+top: 50px;
+left: 12px;
+width: 1900px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-waterYanShiImgTemp .waterYanShiImgTemp-t-text-0-2 {
+position: absolute !important;
+top: 62px;
+left: 36px;
+width: 314px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-waterYanShiImgTemp .waterYanShiImgTemp-t-rect-0-3 {
+position: absolute !important;
+top: 62px;
+left: 1874px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterYanShiImgTemp .waterYanShiImgTemp-t-image-base-0-4 {
+position: absolute !important;
+top: 109px;
+left: 23px;
+width: 1875px;
+height: 903px;
+pointer-events: auto;
+}

@@ -1,0 +1,216 @@
+.t-l-c-waterDialogHandBaseInfo {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 824px;
+height: 580px;
+background-color: rgba(255, 12, 12, 0);
+}
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-circle-0-0 {
+position: absolute !important;
+top: 168px;
+left: 0px;
+width: 9px;
+height: 9px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-text-0-1 {
+position: absolute !important;
+top: 160px;
+left: 13px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-chart-design-0-3 {
+position: absolute !important;
+top: 326px;
+left: 0px;
+width: 100%;
+height: calc(100% - 326px);
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-chart-design-0-4 {
+position: absolute !important;
+top: 326px;
+left: 0px;
+width: 824px;
+height: 0px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-list-card-0-6 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 95px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-component-0-7 {
+position: absolute !important;
+top: 120px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-text-0-8 {
+position: absolute !important;
+top: 124px;
+left: 40px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-scrollable-cards-0-9 {
+position: absolute !important;
+top: 196px;
+left: 0px;
+width: 100%;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-row-0-11 {
+position: absolute !important;
+top: 275px;
+left: 0px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-col-0-11-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-text-0-11-0-0 {
+position: unset;
+top: 289px;
+left: 0px;
+width: auto;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-col-0-11-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+gap: 10px;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-date-picker-0-11-1-0 {
+position: unset;
+top: 284px;
+left: 394px;
+width: 330px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-select-0-11-1-1 {
+position: unset;
+top: 284px;
+left: 704px;
+width: 190px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-row-0-12 {
+position: absolute !important;
+top: 328px;
+left: 0px;
+width: 100%;
+height: 30px;
+pointer-events: none;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-col-0-12-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 30px;
+pointer-events: none;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-text-0-12-0-0 {
+position: unset;
+top: 327px;
+left: 726px;
+width: auto;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-switch-0-12-0-1 {
+position: unset;
+top: 328px;
+left: 791px;
+width: 32px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-row-0-13 {
+position: absolute !important;
+top: 120px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-waterDialogHandBaseInfo .waterDialogHandBaseInfo-t-text-0-13-0 {
+position: unset;
+top: 124.5px;
+left: 645px;
+width: 164px;
+height: 19px;
+pointer-events: auto;
+}

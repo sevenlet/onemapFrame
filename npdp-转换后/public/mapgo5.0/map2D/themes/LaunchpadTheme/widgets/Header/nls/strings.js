@@ -1,0 +1,2 @@
+//>>built
+define({root:{_widgetLabel:"Header",signin:"Sign in",signout:"Sign out",about:"About",signInTo:"Sign in to",cantSignOutTip:"This function is N/A in preview mode."},"zh-cn":1,"zh-hk":1,"zh-tw":1});

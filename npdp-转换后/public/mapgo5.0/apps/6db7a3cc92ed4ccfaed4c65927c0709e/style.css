@@ -1,0 +1,585 @@
+/*
+ * @Description: 项目 css
+ * @Author: suyp
+ * @Date: 2024-12-09 14:37:16
+ * @LastEditors: suyp
+ * @LastEditTime: 2026-05-07 10:53:29
+ */
+
+/* 默认主题为翡翠绿 */
+:root {
+  --widget-color: #79dba4;
+  --widget-active-color: #fff5b1;
+  --widget-text-radius: 8px;
+  /* 微件默认背景图片 */
+  --widget-default-background-img: url('../../icons/552586ce8f3d4dbfa8b442893cae8ccf.png');
+  /* 微件鼠标滑过背景图片 */
+  --widget-hover-background-img: url('../../icons/8f48354cb095439b89069a5d3e5d2f81_鼠标滑过.png');
+  /* 微件选中背景图片 */
+  --widget-active-background-img: url('../../icons/701fd609837d4c099e4e838aaa699bb5_选中.png');
+
+  /* 底图切换微件背景图片 */
+  --widget-basemap-change-img: url('../../icons/cf30f2c01a3045b5ad22047ed7cd7e71_Frame-3.svg');
+  /* 底图切换微件选中背景图片 */
+  --widget-basemap-change-img-active: url('../../icons/c07df09efecd4586a3ea522c5d2eb463_底图切换-选中.svg');
+
+  /* 默认范围微件背景图片 */
+  --widget-home-extent-img: url('../../icons/28604f95f60c45aea041c27000454c76_Frame-2.svg');
+  /* 默认范围微件选中背景图片 */
+  --widget-home-extent-img-active: url('../../icons/059e0a851f63429eaa14b51e42d437bd_默认范围-选中.svg');
+
+  /* 图例的背景色 */
+  --widget-legend-background-color: rgba(0, 44, 42, 0.8);
+  /* 图例整体的边框颜色 */
+  --widget-legend-border-color: rgba(0, 128, 137, 0.6);
+  /* 图例收起时的背景色 */
+  --widget-legend-collapsed-background-color: rgba(1, 72, 69, 0.8);
+  /* 图例标题的边框颜色 */
+  --widget-legend-title-border-color: linear-gradient(
+      270deg,
+      rgba(30, 137, 146, 0) 0%,
+      rgba(0, 235, 255, 0.6) 51%,
+      rgba(32, 140, 149, 0) 100%
+    )
+    0 0 1 0;
+  /* 图例微件的收起展开三角图片 */
+  --widget-legend-toggle-img: url('../../icons/213a2e0445f14af29f2fcdc903439770_小三角.svg');
+  /* 图例单个图层的标题颜色 */
+  --widget-legend-title-color: #00ffff;
+  /* 图例单个图层的内容文字颜色 */
+  --widget-legend-content-color: #ffffff;
+
+  /* 测量微件背景颜色 */
+  --widget-measurement-background-color: rgba(0, 44, 42, 0.8);
+  /* 测量微件文字颜色 */
+  --widget-measurement-text-color: rgba(255, 255, 255, 0.9);
+  /* 测量微件文字鼠标悬浮颜色 */
+  --widget-measurement-text-color-hover: rgba(1, 187, 199, 1);
+  /* 测量微件背景图片 */
+  --widget-measurement-img: url('../../icons/da98adda9cd84543a42ddb3c17315efb_Frame.svg');
+  /* 测量微件选中背景图片 */
+  --widget-measurement-img-active: url('../../icons/b0d31f98e38c4d0fb854aeb2c4610745_测量.svg');
+  /* 测量微件标记的图片 */
+  --widget-measurement-img-mark: url('../../icons/b96a0b80633f459a9b90f45d2b2a921e_标记.svg');
+  /* 测量微件测距的图片 */
+  --widget-measurement-img-ranging: url('../../icons/47d92be409444cd8bbe833e277bc3aff_测距.svg');
+  /* 测量微件清除的图片 */
+  --widget-measurement-img-clear: url('../../icons/36b9ba72da9641fdbfd115e1dd005e43_清空.svg');
+  
+  /* 前端图层列表微件按钮背景图标 */
+  --widget-front-layer-list-img: url('../../icons/9d19cd4c533f4498abe18032e81568d6_路径-2.png');
+}
+
+/* 亮蓝主题 */
+body.ths-light-blue {
+  --widget-color: #1f5dad;
+  --widget-active-color: #ffffff;
+  /* 微件默认背景图片 */
+  --widget-default-background-img: url('../../icons/6409c8152a3a455fab456b457f9990c5_矩形 270@1x.png');
+  /* 微件鼠标滑过背景图片 */
+  --widget-hover-background-img: url('../../icons/a33b27a2054c46018e6b5a659aaf7bea_矩形 269@1x.png');
+  /* 微件选中背景图片 */
+  --widget-active-background-img: url('../../icons/07a69aaf6c2b46b6ab03d2388af50617_矩形 271@1x.png');
+
+  /* 底图切换微件背景图片 */
+  --widget-basemap-change-img: url('../../icons/d9653f89272f42a3a17bb2e9747947a8_路径@1x.png');
+  /* 底图切换微件选中背景图片 */
+  --widget-basemap-change-img-active: url('../../icons/55f157a53d5f4f729d114704ed966040_路径@1x-4.png');
+
+  /* 默认范围微件背景图片 */
+  --widget-home-extent-img: url('../../icons/ee2854087876465db20d3be230d7054c_Vector@1x.png');
+  /* 默认范围微件选中背景图片 */
+  --widget-home-extent-img-active: url('../../icons/26e188fe05d445a4b0942cf97bb481ed_Vector@1x-2.png');
+
+  /* 图例的背景色 */
+  --widget-legend-background-color: #fff;
+  /* 图例整体的边框颜色 */
+  --widget-legend-border-color: #bdd2ed;
+  /* 图例收起时的背景色 */
+  --widget-legend-collapsed-background-color: var(--widget-active-color);
+  /* 图例标题的边框颜色 */
+  --widget-legend-title-border-color: unset;
+/* 图例微件的收起展开三角图片 */
+  --widget-legend-toggle-img: url('../../icons/dbeea4b86caa4d04b0a53c9361918e1b_路径@1x.png');
+  /* 图例单个图层的标题颜色 */
+  --widget-legend-title-color: var(--widget-color);
+  /* 图例单个图层的内容文字颜色 */
+  --widget-legend-content-color: rgba(0, 0, 0, 1);
+
+  /* 测量微件背景颜色 */
+  --widget-measurement-background-color: #ffffff;
+  /* 测量微件文字颜色 */
+  --widget-measurement-text-color: rgba(0, 0, 0, 1);
+  /* 测量微件文字鼠标悬浮颜色 */
+  --widget-measurement-text-color-hover: #1f5dad;
+  /* 测量微件背景图片 */
+  --widget-measurement-img: url('../../icons/bfd0f14f8d87426db40f12d63669ce6d_路径@1x-2.png');
+  /* 测量微件选中背景图片 */
+  --widget-measurement-img-active: url('../../icons/5c50041a5c144127a21e363a47656bfc_路径@1x-3.png');
+  /* 测量微件标记的图片 */
+  --widget-measurement-img-mark: url('../../icons/b96a0b80633f459a9b90f45d2b2a921e_标记.svg');
+  /* 测量微件测距的图片 */
+  --widget-measurement-img-ranging: url('../../icons/47d92be409444cd8bbe833e277bc3aff_测距.svg');
+  /* 测量微件清除的图片 */
+  --widget-measurement-img-clear: url('../../icons/36b9ba72da9641fdbfd115e1dd005e43_清空.svg');
+
+  /* 前端图层列表微件按钮背景图标 */
+  --widget-front-layer-list-img: url('../../icons/e2caa86dcede402d9ff0b407686d0c18_路径.png');
+  --widget-front-layer-list-img-active: url('../../icons/9d19cd4c533f4498abe18032e81568d6_路径-2.png');
+}
+
+/* 蓝色主题 */
+body.ths-blue {
+  --widget-color: #1f5dad;
+  --widget-active-color: #ffffff;
+  /* 微件默认背景图片 */
+  --widget-default-background-img: url('/mapgo5.0/icons/195cc397966740dfbaa485927a97562e_button-bg-blue.png');
+  /* 微件鼠标滑过背景图片 */
+  --widget-hover-background-img: url('/mapgo5.0/icons/c0814cd7262943a3b57a7ca2db78d46f_1e4e6a191c2b46958ff2b0064b5d5d20_button-bg-hover.png');
+  /* 微件选中背景图片 */
+  --widget-active-background-img: url('../../icons/701fd609837d4c099e4e838aaa699bb5_选中.png');
+
+
+  /* 底图切换微件背景图片 */
+  --widget-basemap-change-img: url('../../icons/d9653f89272f42a3a17bb2e9747947a8_路径@1x.png');
+  /* 底图切换微件选中背景图片 */
+  --widget-basemap-change-img-active: url('../../icons/55f157a53d5f4f729d114704ed966040_路径@1x-4.png');
+
+  /* 默认范围微件背景图片 */
+  --widget-home-extent-img: url('../../icons/ee2854087876465db20d3be230d7054c_Vector@1x.png');
+  /* 默认范围微件选中背景图片 */
+  --widget-home-extent-img-active: url('../../icons/26e188fe05d445a4b0942cf97bb481ed_Vector@1x-2.png');
+
+  /* 图例的背景色 */
+  --widget-legend-background-color: rgba(4, 62, 135, 0.8);
+  /* 图例整体的边框颜色 */
+  --widget-legend-border-color: rgba(7, 105, 225, 0.6);
+  /* 图例收起时的背景色 */
+  --widget-legend-collapsed-background-color: rgba(5, 76, 162, 0.8);
+  /* 图例标题的边框颜色 */
+  --widget-legend-title-border-color: linear-gradient(
+      270deg,
+      rgba(7, 105, 225, 0) 0%,
+      rgba(100, 167, 250, 0.6) 51%,
+      rgba(7, 105, 225, 0) 100%
+    )
+    0 0 1 0;
+/* 图例微件的收起展开三角图片 */
+  --widget-legend-toggle-img: url('../../icons/213a2e0445f14af29f2fcdc903439770_小三角.svg');
+  /* 图例单个图层的标题颜色 */
+  --widget-legend-title-color: #00ffff;
+  /* 图例单个图层的内容文字颜色 */
+  --widget-legend-content-color: #ffffff;
+
+  /* 测量微件背景颜色 */
+  --widget-measurement-background-color: rgba(4, 62, 135, 0.9);
+  /* 测量微件文字颜色 */
+  --widget-measurement-text-color: rgba(255, 255, 255, 0.9);
+  /* 测量微件文字鼠标悬浮颜色 */
+  --widget-measurement-text-color-hover: #ffec9f;
+  /* 测量微件背景图片 */
+  --widget-measurement-img: url('../../icons/da98adda9cd84543a42ddb3c17315efb_Frame.svg');
+  /* 测量微件选中背景图片 */
+  --widget-measurement-img-active: url('../../icons/b0d31f98e38c4d0fb854aeb2c4610745_测量.svg');
+  /* 测量微件标记的图片 */
+  --widget-measurement-img-mark: url('../../icons/b96a0b80633f459a9b90f45d2b2a921e_标记.svg');
+  /* 测量微件测距的图片 */
+  --widget-measurement-img-ranging: url('../../icons/47d92be409444cd8bbe833e277bc3aff_测距.svg');
+  /* 测量微件清除的图片 */
+  --widget-measurement-img-clear: url('../../icons/36b9ba72da9641fdbfd115e1dd005e43_清空.svg');
+
+  /* 前端图层列表微件按钮背景图标 */
+  --widget-front-layer-list-img: url('../../icons/e2caa86dcede402d9ff0b407686d0c18_路径.png');
+  --widget-front-layer-list-img-active: url('../../icons/9d19cd4c533f4498abe18032e81568d6_路径-2.png');
+}
+
+/* 缩放微件 */
+/* body[class^="ths"] .jimu-widget-zoomslider div {
+  --color: var(--widget-color);
+  padding-top: 1px;
+  color: #fff !important;
+  background: var(--widget-default-background-img) center / 100% 100% no-repeat;
+  background-color: unset !important;
+}
+body[class^="ths"] .jimu-widget-zoomslider div:hover {
+  background: var(--widget-hover-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-zoomslider div:active {
+  --widget-color: var(--widget-active-color) !important;
+  background: var(--widget-active-background-img) center / 100% 100% no-repeat;
+} */
+
+/* 亮蓝主题下按钮微件添加阴影 */
+/* .ths-light-blue.jimu-widget-zoomslider div {
+  color: var(--widget-color) !important;
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3) !important;
+} */
+
+/* 默认范围微件 */
+/* body[class^="ths"] .jimu-widget-homebutton {
+  background: var(--widget-default-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-homebutton:hover {
+  background: var(--widget-hover-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-homebutton:active {
+  background: var(--widget-active-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-homebutton.jimu-widget .HomeButton .home {
+  background-color: transparent !important;
+  background-size: 16px !important;
+  background: var(--widget-home-extent-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-homebutton.jimu-widget .HomeButton .home:active {
+  background-color: transparent;
+}
+body[class^="ths"] .jimu-widget-homebutton .HomeButton .home::before {
+  content: '';
+  color: #fff;
+} */
+
+/* 亮蓝主题下按钮微件添加阴影 */
+/* .ths-light-blue.jimu-widget-homebutton {
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3);
+}
+.ths-light-blue.jimu-widget-homebutton.jimu-widget .HomeButton .home:active {
+  background: var(--widget-home-extent-img-active) center / 100% 100% no-repeat;
+}
+.ths-light-blue.jimu-widget-homebutton .HomeButton .home::before {
+  color: transparent;
+} */
+
+/* 图层切换按钮样式 */
+/* body[class^="ths"] .jimu-widget-mapswicher {
+  background: var(--widget-default-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-mapswicher:hover {
+  background: var(--widget-hover-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-mapswicher:active {
+  background-color: unset !important;
+  background: var(--widget-active-background-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-mapswicher.jimu-widget .place-holder {
+  background-size: 16px !important;
+  background: var(--widget-basemap-change-img) center / 100% 100% no-repeat;
+}
+body[class^="ths"] .jimu-widget-mapswicher.jimu-widget .place-holder:hover {
+  background-color: unset !important;
+} */
+
+/* 亮蓝主题下按钮微件添加阴影 */
+/* .ths-light-blue.jimu-widget-mapswicher {
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3);
+}
+.ths-light-blue.jimu-widget-mapswicher.jimu-widget .place-holder:active {
+  background: var(--widget-basemap-change-img-active) center / 100% 100%
+    no-repeat;
+} */
+
+/* 测量微件样式 */
+.measurement-widget-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--widget-default-background-img) center / 100% 100% no-repeat;
+}
+.measurement-widget-container:hover {
+  background: var(--widget-hover-background-img) center / 100% 100% no-repeat;
+}
+.measurement-widget-container:active {
+  background: var(--widget-active-background-img) center / 100% 100% no-repeat;
+}
+.measurement-widget-container .measurement-widget-img {
+  width: 100%;
+  height: 100%;
+  background-size: 16px !important;
+  background: var(--widget-measurement-img) center / 100% 100% no-repeat;
+}
+
+/* 亮蓝主题下按钮微件添加阴影 */
+.ths-light-blue .measurement-widget-container {
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3);
+}
+.ths-light-blue .measurement-widget-container:active .measurement-widget-img {
+  background: var(--widget-measurement-img-active) center / 100% 100% no-repeat;
+}
+
+/* 测量微件面板样式 */
+.measurement-widget-panel {
+  position: absolute;
+  top: -70px;
+  left: 42px;
+  width: 74px;
+  height: 110px;
+  border-radius: 8px;
+  padding: 4px 0px;
+  background: var(--widget-measurement-background-color);
+}
+.measurement-widget-panel-item {
+  display: flex;
+  width: 74px;
+  height: 34px;
+  padding: 6px 12px;
+  gap: 6px;
+  align-items: center;
+  color: var(--widget-measurement-text-color);
+  cursor: pointer;
+}
+.measurement-widget-panel-item:hover {
+  color: var(--widget-measurement-text-color-hover);
+}
+.measurement-widget-panel-item:hover .measurement-widget-panel-item-img {
+  background-color: var(--widget-measurement-text-color-hover);
+}
+.measurement-widget-panel-item-img {
+  width: 16px;
+  height: 16px;
+  background-color: var(--widget-measurement-text-color);
+}
+
+.measurement-widget-panel-item-content {
+  width: 28px;
+  height: 22px;
+  font-family: Microsoft YaHei UI;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+/* 标记的图标 */
+.mark-img {
+  mask-image: var(--widget-measurement-img-mark);
+}
+/* 测距的图标 */
+.ranging-img {
+  mask-image: var(--widget-measurement-img-ranging);
+}
+/* 清空的图标 */
+.clear-img {
+  mask-image: var(--widget-measurement-img-clear);
+}
+
+/* 前端图层列表按钮 */
+.front-layer-list-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--widget-default-background-img) center / 100% 100% no-repeat;
+}
+
+.front-layer-list-container:hover {
+  background: var(--widget-hover-background-img) center / 100% 100% no-repeat;
+}
+.front-layer-list-container:active,
+.front-layer-list-container.active
+{
+  background: var(--widget-active-background-img) center / 100% 100% no-repeat;
+}
+.front-layer-list-container .front-layer-list-img {
+  width: 100%;
+  height: 100%;
+  background-size: 16px !important;
+  background: var(--widget-front-layer-list-img) center / 100% 100% no-repeat;
+}
+
+/* 亮蓝主题下按钮微件添加阴影 */
+.ths-light-blue .front-layer-list-container {
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3);
+}
+.ths-light-blue .front-layer-list-container .front-layer-list-img:active,
+.ths-light-blue .front-layer-list-container.active .front-layer-list-img
+ {
+  background: var(--widget-front-layer-list-img-active) center / 100% 100% no-repeat;
+}
+
+/* 图例样式 */
+.legend {
+  border: 1px solid var(-widget-legend-border-color) !important;
+  border-radius: 12px !important;
+  background: var(--widget-legend-background-color) !important;
+  transform: scale(0.7);
+  transform-origin: bottom right;
+}
+.legend:has(.legend-toggle-rotate):hover {
+  border: 1px solid var(--widget-legend-border-color) !important;
+  background: var(--widget-legend-collapsed-background-color) !important;
+}
+.legend .legend-title {
+  height: 42px;
+  box-sizing: border-box;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-image: var(--widget-legend-title-border-color);
+}
+
+.legend .legend-title span {
+  line-height: 43px;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--widget-legend-content-color);
+}
+
+.legend .legend-toggle {
+  margin-top: 12px;
+  background: var(--widget-legend-toggle-img) no-repeat center center;
+}
+
+.legend .legend-main {
+  padding: 0px 15px 6px 15px;
+}
+
+.legend .legend-main .title {
+  font-size: 14px;
+  color: var(--widget-legend-title-color);
+}
+
+.ths-light-blue.legend {
+  border: 2px solid #bdd2ed !important;
+  background: #fff !important;
+  box-shadow: 0px 4px 10px 0px rgba(31, 93, 173, 0.3);
+}
+.ths-light-blue.legend:has(.legend-toggle-rotate):hover {
+  border: 2px solid var(--widget-color) !important;
+  background-color: var(--widget-active-color) !important;
+}
+.ths-light-blue.legend .legend-title {
+  border: unset !important;
+}
+.ths-light-blue.legend .legend-title span {
+  color: var(--widget-color);
+}
+.ths-light-blue.legend .legend-main {
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color: #bbc9db;
+}
+.ths-light-blue.legend .legend-main .title {
+  color: var(--widget-color);
+}
+
+.ths-light-blue.legend .legend-main div {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* 自定义测量的容器 */
+.custom-measure-container {
+  display: flex;
+  align-items: center;
+  font-family: DIN;
+}
+
+/* 标记图片样式 */
+.custom-measure-container .marker-point-img {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+}
+
+/* 测量标注的基本样式 */
+.measure-label {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  display: inline-flex;
+  margin-left: 4px;
+  height: 32px;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 8px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+/* 右侧内容的边框样式 */
+.measure-label-border {
+  border: 1px solid #ff2b2b;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* 工具类型的文字样式 */
+.tool-font {
+  font-family: Microsoft YaHei;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* 关键值的样式 */
+.key-font {
+  font-family: DIN;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: normal;
+  /* 辅助色/红色 */
+  color: #ff3131;
+}
+
+/* 删除按钮 */
+.delete-button {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.delete-button:hover {
+  opacity: 1;
+}
+
+/* 测距点位图片样式 */
+.custom-measure-container .ranging-point-img {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+}
+
+/* 测距标注样式 */
+.measure-ranging-label {
+  display: inline-flex;
+  gap: 4px;
+}
+
+/* 测距点位的标注特殊样式 */
+.ranging-point .measure-label {
+  top: -12px;
+  left: 12px;
+}
+
+/* 调整图例的最大高度 */
+#ELegend_ELegend {
+  max-height: 420px !important;
+}
+
+#ELegend_ELegend .legend-main {
+  max-height: 380px !important;
+}
+
+#emission_reserve_areasupply_Legend .legend-list.lump div span {
+  min-width: 16px !important;
+}
+
+#emission_reserve_areasupply_Legend .legend-list xmp {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
+
+#map_普通地图 {
+  filter: url('#x-rays') brightness(1) contrast(1.8) grayscale(0) hue-rotate(0) opacity(1) saturate(0.4) sepia(0) invert(0);
+}
+
+/* 解决有时微件会有一个字比较多的提示的问题 */
+div[aria-label]:hover:after {
+  display: none;
+}

@@ -1,0 +1,134 @@
+.t-l-c-airOverviewPressureStandardAna {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 960px;
+height: 585px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-text-0-0 {
+position: absolute !important;
+top: -37px;
+left: 862px;
+width: 14px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-rect-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 960px;
+height: 120px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-list-card-0-2 {
+position: absolute !important;
+top: 38px;
+left: 12px;
+width: 936px;
+height: 82px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-text-0-3 {
+position: absolute !important;
+top: 8px;
+left: 12px;
+width: 936px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-select-0-4 {
+position: absolute !important;
+top: -45px;
+left: 878px;
+width: 82px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-select-0-5 {
+position: absolute !important;
+top: -45px;
+left: 778px;
+width: 82px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-radio-0-6 {
+position: absolute !important;
+top: 132px;
+left: 0px;
+width: 159px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-table-0-7 {
+position: absolute !important;
+top: 168px;
+left: 0px;
+width: 960px;
+height: 385px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-table-0-8 {
+position: absolute !important;
+top: 168px;
+left: 0px;
+width: 960px;
+height: 385px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-chart-design-0-10 {
+position: absolute !important;
+top: 173px;
+left: 0px;
+width: 960px;
+height: 412px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-radio-0-11 {
+position: absolute !important;
+top: -39px;
+left: 500px;
+width: 158px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-date-picker-0-13 {
+position: absolute !important;
+top: -45px;
+left: 661px;
+width: 115px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPressureStandardAna .airOverviewPressureStandardAna-t-date-picker-0-14 {
+position: absolute !important;
+top: -45px;
+left: 661px;
+width: 300px;
+height: 33px;
+pointer-events: auto;
+}

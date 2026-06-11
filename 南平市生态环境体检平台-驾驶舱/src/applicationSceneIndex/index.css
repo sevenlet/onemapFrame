@@ -1,0 +1,80 @@
+.t-l-c-applicationSceneIndex {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0,0,0,1);
+width: 1920px;
+height: 1080px;
+}
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+pointer-events: auto;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-rect-0-1 {
+position: absolute !important;
+top: 13px;
+left: 11px;
+width: 457px;
+height: 1069px;
+pointer-events: none;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-rect-0-2 {
+position: absolute !important;
+top: 5px;
+left: 1460px;
+width: 457px;
+height: 1069px;
+pointer-events: none;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-component-0-3 {
+position: absolute !important;
+top: 127px;
+left: 0px;
+width: 1920px;
+height: 829px;
+pointer-events: auto;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-rect-0-4 {
+position: absolute !important;
+top: 78px;
+left: 1743px;
+width: 130px;
+height: 45px;
+pointer-events: auto;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-text-0-5 {
+position: absolute !important;
+top: 93px;
+left: 1781px;
+width: 65px;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-applicationSceneIndex .applicationSceneIndex-t-rect-0-6 {
+position: absolute !important;
+top: 92px;
+left: 1755px;
+width: 19px;
+height: 18px;
+pointer-events: auto;
+}

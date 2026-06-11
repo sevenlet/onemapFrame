@@ -1,0 +1,170 @@
+.t-l-c-airOverviewPop {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: var(--t-dia-bg);
+}
+.t-l-c-airOverviewPop .airOverviewPop-t-rect-0-0 {
+position: absolute !important;
+top: 53px;
+left: 187px;
+width: 1534px;
+height: 981px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-rect-0-2 {
+position: absolute !important;
+top: 54px;
+left: 187px;
+width: 1535px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-select-0-3 {
+position: absolute !important;
+top: 283px;
+left: 304px;
+width: 240px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-0-4 {
+position: absolute !important;
+top: 291px;
+left: 229px;
+width: 65px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-0-5 {
+position: absolute !important;
+top: 66px;
+left: 218px;
+width: 589px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-rect-0-6 {
+position: absolute !important;
+top: 65px;
+left: 1675px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-component-0-7 {
+position: absolute !important;
+top: 204px;
+left: 230px;
+width: 1456px;
+height: 73px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-chart-design-0-8 {
+position: absolute !important;
+top: 315px;
+left: 240px;
+width: 1444px;
+height: 266px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-component-0-9 {
+position: absolute !important;
+top: 114px;
+left: 222px;
+width: 1476px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-common-0-10 {
+position: absolute !important;
+top: 121px;
+left: 276px;
+width: 151px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-0-11 {
+position: absolute !important;
+top: 165px;
+left: 223px;
+width: 65px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-0-12 {
+position: absolute !important;
+top: 629px;
+left: 222px;
+width: 65px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-date-picker-0-13 {
+position: absolute !important;
+top: 159px;
+left: 276px;
+width: 296px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-date-picker-0-14 {
+position: absolute !important;
+top: 623px;
+left: 275px;
+width: 296px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-component-0-15 {
+position: absolute !important;
+top: 670px;
+left: 232px;
+width: 1457px;
+height: 347px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-component-0-16 {
+position: absolute !important;
+top: 578px;
+left: 222px;
+width: 1476px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewPop .airOverviewPop-t-text-common-0-17 {
+position: absolute !important;
+top: 584px;
+left: 276px;
+width: 428px;
+height: 20px;
+pointer-events: auto;
+}

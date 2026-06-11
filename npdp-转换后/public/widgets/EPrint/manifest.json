@@ -1,0 +1,15 @@
+{
+  "name": "PrintScreen",
+  "platform": "HTML",
+  "version": "1.4",
+  "wabVersion": "1.4",
+  "author": "朱庆春",
+  "description": "",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": false,
+    "hasUIFile": false,
+    "supportMultiInstance": false
+  }
+}

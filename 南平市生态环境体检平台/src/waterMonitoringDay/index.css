@@ -1,0 +1,550 @@
+.t-l-c-waterMonitoringDay {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 960px;
+width: 450px;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-row-0-0 {
+position: absolute !important;
+top: 132px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+padding-left: 16px;
+padding-right: 16px;
+padding-bottom: 0px;
+padding-top: 6px;
+gap: 0px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-list-card-0-0-0-0 {
+position: unset;
+top: 131px;
+left: 16px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-row-0-0-1-0 {
+position: unset;
+top: 222px;
+left: -991px;
+width: 98%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-between;
+align-items: center;
+gap: 6px;
+display: flex;
+padding: 4px 0;
+animation-name: ;
+background: var(--business-show-bg15);
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-rect-0-0-1-0-0-0 {
+position: unset;
+top: 754px;
+left: -1833px;
+width: 2px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-common-0-0-1-0-0-1 {
+position: unset;
+top: 759px;
+left: -1810px;
+width: 96px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-row-0-0-1-0-0-2 {
+position: unset;
+top: 756px;
+left: -1718px;
+width: 85px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-1-0-0-2-0 {
+position: unset;
+top: 1595.1927628296885px;
+left: -617.9256623920642px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-1-0-0-2-1 {
+position: unset;
+top: 2227.646307262253px;
+left: -299.3623828230652px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-1-0-0-2-2 {
+position: unset;
+top: 1587.1927628296885px;
+left: -678.9256623920642px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-rect-0-0-1-0-1-0 {
+position: unset;
+top: 758px;
+left: -1615px;
+width: 1px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-common-0-0-1-0-1-1 {
+position: unset;
+top: 759px;
+left: -1595px;
+width: 66px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-row-0-0-1-0-1-2 {
+position: unset;
+top: 756px;
+left: -1526px;
+width: 83px;
+height: auto;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+margin-left: 6px;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-1-0-1-2-0 {
+position: unset;
+top: 1761.0131956048494px;
+left: -144.70141820220078px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-1-0-1-2-1 {
+position: unset;
+top: 2217.646307262253px;
+left: -309.3623828230652px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-component-0-0-2-0 {
+position: unset;
+top: 625px;
+left: 30px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-2-1 {
+position: unset;
+top: 630px;
+left: 70px;
+width: auto;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-list-card-0-0-3-0 {
+position: unset;
+top: 326px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-tabs-base-0-0-4-0 {
+position: unset;
+top: 440px;
+left: 19px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-chart-design-0-0-5-0 {
+position: unset;
+top: 480px;
+left: 21px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-chart-design-0-0-5-1 {
+position: unset;
+top: 480px;
+left: 20px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-6 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-component-0-0-6-0 {
+position: unset;
+top: 615px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-0-6-1 {
+position: unset;
+top: 620px;
+left: 60px;
+width: 130px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-7 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-checkbox-0-0-7-0 {
+position: unset;
+top: 659px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-8 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-row-0-0-8-0 {
+position: unset;
+top: -278px;
+left: 990px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-between;
+align-items: center;
+gap: 6px;
+display: flex;
+padding-top: 4px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-8-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-search-0-0-8-0-0-0 {
+position: unset;
+top: 701px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-8-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-button-0-0-8-0-1-0 {
+position: unset;
+top: 701px;
+left: 380px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-col-0-0-9 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-end;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-table-0-0-9-0 {
+position: unset;
+top: 740px;
+left: 20px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-component-0-1 {
+position: absolute !important;
+top: 88px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-text-0-2 {
+position: absolute !important;
+top: 93px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-rect-0-3 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-select-0-4 {
+position: absolute !important;
+top: 16px;
+left: 16px;
+width: 97px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-date-picker-0-5 {
+position: absolute !important;
+top: 16px;
+left: 230px;
+width: 204px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringDay .waterMonitoringDay-t-select-0-6 {
+position: absolute !important;
+top: 16px;
+left: 123px;
+width: 97px;
+height: 33px;
+pointer-events: auto;
+}

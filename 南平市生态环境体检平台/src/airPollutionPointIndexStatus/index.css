@@ -1,0 +1,107 @@
+.t-l-c-airPollutionPointIndexStatus {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-rect-0-0 {
+position: absolute !important;
+top: 184px;
+left: 460px;
+width: 1000px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-rect-0-1 {
+position: absolute !important;
+top: 184px;
+left: 460px;
+width: 1000px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-text-0-2 {
+position: absolute !important;
+top: 198px;
+left: 479px;
+width: 284px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-rect-0-3 {
+position: absolute !important;
+top: 195px;
+left: 1418px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-table-0-4 {
+position: absolute !important;
+top: 510px;
+left: 480px;
+width: 960px;
+height: 372px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-chart-bar-stacked-0-5 {
+position: absolute !important;
+top: 305px;
+left: 480px;
+width: 960px;
+height: 192px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-radio-0-6 {
+position: absolute !important;
+top: 250px;
+left: 923px;
+width: 150px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-date-picker-0-7 {
+position: absolute !important;
+top: 246px;
+left: 1080px;
+width: 340px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-date-picker-0-8 {
+position: absolute !important;
+top: 246px;
+left: 1080px;
+width: 340px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionPointIndexStatus .airPollutionPointIndexStatus-t-tabs-base-0-9 {
+position: absolute !important;
+top: 246px;
+left: 480px;
+width: 400px;
+height: 32px;
+pointer-events: auto;
+}

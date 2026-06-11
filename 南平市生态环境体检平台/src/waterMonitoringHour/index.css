@@ -1,0 +1,472 @@
+.t-l-c-waterMonitoringHour {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 960px;
+width: 450px;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-select-0-1 {
+position: absolute !important;
+top: 16px;
+left: 15px;
+width: 97px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-select-0-2 {
+position: absolute !important;
+top: 16px;
+left: 123px;
+width: 97px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-date-picker-0-3 {
+position: absolute !important;
+top: 16px;
+left: 230px;
+width: 204px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-rect-0-4 {
+position: absolute !important;
+top: 207px;
+left: 25px;
+width: 400px;
+height: 44px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-list-card-0-5 {
+position: absolute !important;
+top: 131px;
+left: 16px;
+width: 418px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-component-0-6 {
+position: absolute !important;
+top: 262px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-component-0-7 {
+position: absolute !important;
+top: 88px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-8 {
+position: absolute !important;
+top: 267px;
+left: 61px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-9 {
+position: absolute !important;
+top: 93px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-rect-0-11 {
+position: absolute !important;
+top: 216px;
+left: 25px;
+width: 2px;
+height: 27px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-rect-0-13 {
+position: absolute !important;
+top: 220px;
+left: 243px;
+width: 1px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-row-0-14 {
+position: absolute !important;
+top: 218px;
+left: 332px;
+width: 83px;
+height: 21px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-14-0 {
+position: unset;
+top: 1058.9020811028963px;
+left: 1663.817075450143px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-14-1 {
+position: unset;
+top: 337px;
+left: 338px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-row-0-15 {
+position: absolute !important;
+top: 218px;
+left: 140px;
+width: 85px;
+height: 21px;
+pointer-events: auto;
+letter-spacing: 0px;
+animation-name: ;
+font-weight: 600;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-15-0 {
+position: unset;
+top: 893.0816483277354px;
+left: 1190.5928312602796px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-15-1 {
+position: unset;
+top: 1525.5351927602997px;
+left: 1509.1561108292785px;
+width: 12px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-15-2 {
+position: unset;
+top: 885.0816483277354px;
+left: 1129.5928312602796px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-row-0-16 {
+position: absolute !important;
+top: 305px;
+left: 0px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0);
+fill-type: color;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+padding-left: 16px;
+padding-right: 16px;
+padding-bottom: 0px;
+padding-top: 6px;
+gap: 0px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-list-card-0-16-0-0 {
+position: unset;
+top: 326px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-tabs-base-0-16-1-0 {
+position: unset;
+top: 496px;
+left: 19px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-chart-design-0-16-2-0 {
+position: unset;
+top: 536px;
+left: 21px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-chart-design-0-16-2-1 {
+position: unset;
+top: 536px;
+left: 20px;
+width: 410px;
+height: 124px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-component-0-16-3-0 {
+position: unset;
+top: 671px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-0-16-3-1 {
+position: unset;
+top: 676px;
+left: 60px;
+width: 130px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-end;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-checkbox-0-16-4-0 {
+position: unset;
+top: 710px;
+left: 20px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 10px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-row-0-16-5-0 {
+position: unset;
+top: -27px;
+left: 865px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+min-width: auto;
+column-gap: 10px;
+justify-content: space-between;
+justify-content: space-between;
+align-items: center;
+gap: 0px;
+display: flex;
+padding-top: 4px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-5-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-search-0-16-5-0-0-0 {
+position: unset;
+top: 752px;
+left: 20px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-5-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: row;
+gap: 0px;
+animation-name: ;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-button-0-16-5-0-1-0 {
+position: unset;
+top: 752px;
+left: 380px;
+width: 50px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-col-0-16-6 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+margin-bottom: 10px;
+animation-name: ;
+display: flex;
+column-gap: 10px;
+align-items: center;
+justify-content: flex-end;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-table-0-16-6-0 {
+position: unset;
+top: 791px;
+left: 20px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-common-0-17 {
+position: absolute !important;
+top: 220px;
+left: 31px;
+width: 105px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterMonitoringHour .waterMonitoringHour-t-text-common-0-18 {
+position: absolute !important;
+top: 220px;
+left: 249px;
+width: 76px;
+height: auto;
+pointer-events: auto;
+}

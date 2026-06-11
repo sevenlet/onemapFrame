@@ -1,0 +1,65 @@
+.t-l-c-waterQualityExceedingAlarm {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 620px;
+height: 355px;
+background-color: rgba(255, 255, 255, 0);
+left: calc(50% - 100px);
+top: 48%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-waterQualityExceedingAlarm .waterQualityExceedingAlarm-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 620px;
+height: 355px;
+pointer-events: auto;
+}
+
+.t-l-c-waterQualityExceedingAlarm .waterQualityExceedingAlarm-t-table-0-1 {
+position: absolute !important;
+top: 63px;
+left: 20px;
+width: 580px;
+height: 276px;
+pointer-events: auto;
+}
+
+.t-l-c-waterQualityExceedingAlarm .waterQualityExceedingAlarm-t-rect-0-2 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 619px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-waterQualityExceedingAlarm .waterQualityExceedingAlarm-t-text-0-3 {
+position: absolute !important;
+top: 13px;
+left: 24px;
+width: 314px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-waterQualityExceedingAlarm .waterQualityExceedingAlarm-t-rect-0-4 {
+position: absolute !important;
+top: 12px;
+left: 577px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}

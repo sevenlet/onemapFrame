@@ -1,0 +1,116 @@
+.t-l-c-airOverviewReachStandardsGood {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 410px;
+height: 88px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 410px;
+height: 88px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-text-unit-0-1 {
+position: absolute !important;
+top: 38px;
+left: 126px;
+width: 128px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-high-light-text-0-3 {
+position: absolute !important;
+top: 39px;
+left: 25px;
+width: 47px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-text-unit-0-4 {
+position: absolute !important;
+top: 38px;
+left: 266px;
+width: 128px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-rect-0-5 {
+position: absolute !important;
+top: 42px;
+left: 256px;
+width: 1px;
+height: 15px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-rank-single-0-6 {
+position: absolute !important;
+top: 27px;
+left: 19px;
+width: 373px;
+height: 58px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-rank-single-0-7 {
+position: absolute !important;
+top: 27px;
+left: 19px;
+width: 373px;
+height: 58px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-text-unit-0-8 {
+position: absolute !important;
+top: 11px;
+left: 24px;
+width: auto;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-text-0-9 {
+position: absolute !important;
+top: 10px;
+left: 309px;
+width: 110px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-high-light-text-0-10 {
+position: absolute !important;
+top: 33px;
+left: 16px;
+width: 390px;
+height: 58px;
+pointer-events: auto;
+}
+
+.t-l-c-airOverviewReachStandardsGood .airOverviewReachStandardsGood-t-text-0-11 {
+position: absolute !important;
+top: 10px;
+left: 309px;
+width: 110px;
+height: auto;
+pointer-events: auto;
+}

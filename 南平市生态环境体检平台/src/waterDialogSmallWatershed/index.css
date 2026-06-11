@@ -1,0 +1,182 @@
+.t-l-c-waterDialogSmallWatershed {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 1020px;
+height: 712px;
+background-color: rgba(255, 255, 255, 0);
+left: calc(50% - 100px);
+top: 50%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1020px;
+height: 712px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-component-0-1 {
+position: absolute !important;
+top: 63px;
+left: 176px;
+width: 824px;
+height: 582px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-2 {
+position: absolute !important;
+top: 660px;
+left: 0px;
+width: 1020px;
+height: 52px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-3 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 1020px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-4 {
+position: absolute !important;
+top: 63px;
+left: 20px;
+width: 140px;
+height: 580px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-tabs-0-5 {
+position: absolute !important;
+top: 66.00006761746545px;
+left: 24.340723651092617px;
+width: 130px;
+height: 122.97424117378567px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-row-0-7 {
+position: absolute !important;
+top: 0px;
+left: 18px;
+width: 500px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-text-0-7-0 {
+position: unset;
+top: 13px;
+left: 16px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-list-card-common-0-7-3 {
+position: unset;
+top: 15px;
+left: 219px;
+width: 50px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-list-card-common-0-7-4 {
+position: unset;
+top: 14px;
+left: 310px;
+width: 50px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-7-5 {
+position: unset;
+top: 14px;
+left: 399px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-8 {
+position: absolute !important;
+top: 39px;
+left: 254px;
+width: 297px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-rect-0-9 {
+position: absolute !important;
+top: 11px;
+left: 971px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-row-0-10 {
+position: absolute !important;
+top: 672px;
+left: 570px;
+width: 430px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-text-0-10-0 {
+position: unset;
+top: 670px;
+left: 669px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-text-0-10-1 {
+position: unset;
+top: 670px;
+left: 780px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-text-0-10-2 {
+position: unset;
+top: 670px;
+left: 870px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterDialogSmallWatershed .waterDialogSmallWatershed-t-component-0-11 {
+position: absolute !important;
+top: 257px;
+left: 175px;
+width: 824px;
+height: 387px;
+pointer-events: auto;
+}

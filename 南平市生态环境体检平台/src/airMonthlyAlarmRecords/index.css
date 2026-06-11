@@ -1,0 +1,126 @@
+.t-l-c-airMonthlyAlarmRecords {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(0, 0, 0, 0);
+width: 450px;
+height: 900px;
+}
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-rect-0-0 {
+position: absolute !important;
+top: 54px;
+left: -1px;
+width: 450px;
+height: 106px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-checkbox-0-1 {
+position: absolute !important;
+top: 112px;
+left: 15px;
+width: 418px;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-rect-0-2 {
+position: absolute !important;
+top: 55px;
+left: 0px;
+width: 450px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-date-picker-0-3 {
+position: absolute !important;
+top: 71px;
+left: 15px;
+width: 418px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-rect-0-4 {
+position: absolute !important;
+top: 185px;
+left: 19px;
+width: 410px;
+height: 42px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-high-light-text-0-5 {
+position: absolute !important;
+top: 197px;
+left: 38px;
+width: 373px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-row-0-6 {
+position: absolute !important;
+top: 0px;
+left: 18.5px;
+width: 413px;
+height: 54px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-text-0-6-0 {
+position: unset;
+top: -49.5px;
+left: 690px;
+width: 43px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-text-0-6-1 {
+position: unset;
+top: -50.5px;
+left: 749px;
+width: auto;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-text-0-6-2 {
+position: unset;
+top: -14.919248255287734px;
+left: 984.8575498999619px;
+width: 80px;
+height: 23px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-text-0-6-3 {
+position: unset;
+top: -49.5px;
+left: 828px;
+width: 40px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-airMonthlyAlarmRecords .airMonthlyAlarmRecords-t-table-0-7 {
+position: absolute !important;
+top: 234px;
+left: 20px;
+width: 409px;
+height: 650px;
+pointer-events: auto;
+}

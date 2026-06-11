@@ -1,0 +1,134 @@
+.t-l-c-zhcxDetailDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-rect-0-0 {
+position: absolute !important;
+top: 268px;
+left: 741px;
+width: 450px;
+height: 570px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-rect-0-1 {
+position: absolute !important;
+top: 267px;
+left: 741px;
+width: 450px;
+height: 570px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-rect-0-2 {
+position: absolute !important;
+top: 268px;
+left: 741px;
+width: 450px;
+height: 45px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-image-base-0-3 {
+position: absolute !important;
+top: 278px;
+left: 752px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-rect-0-4 {
+position: absolute !important;
+top: 279px;
+left: 1153px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-list-card-0-5 {
+position: absolute !important;
+top: 336px;
+left: 761px;
+width: 410px;
+height: 70px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-list-card-0-6 {
+position: absolute !important;
+top: 467px;
+left: 1225px;
+width: 410px;
+height: 108px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-tabs-base-0-7 {
+position: absolute !important;
+top: 188px;
+left: 995px;
+width: 183px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-text-0-8 {
+position: absolute !important;
+top: 279px;
+left: 784px;
+width: 96px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-text-0-9 {
+position: absolute !important;
+top: 423px;
+left: 761px;
+width: 88px;
+height: 17px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-list-card-0-10 {
+position: absolute !important;
+top: 454px;
+left: 761px;
+width: 410px;
+height: 103px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-list-card-0-11 {
+position: absolute !important;
+top: 314px;
+left: 1225px;
+width: 410px;
+height: 136px;
+pointer-events: auto;
+}
+
+.t-l-c-zhcxDetailDialog .zhcxDetailDialog-t-list-card-0-12 {
+position: absolute !important;
+top: 594px;
+left: 1223px;
+width: 410px;
+height: 106px;
+pointer-events: auto;
+}

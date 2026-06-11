@@ -1,0 +1,1 @@
+window.searchByCoordinatesComponent = {template: 'searchByCoordinatesComponent'};

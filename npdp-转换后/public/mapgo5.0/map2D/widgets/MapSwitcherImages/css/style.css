@@ -1,0 +1,133 @@
+/**
+ * 底图切换-图片版
+ * @file
+ */
+
+ .map-switcher-images {
+  position: absolute;
+  width: 110px;
+  height: 80px;
+  -webkit-transition-property: width,background-color;
+  transition-property: width,background-color;
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+}
+
+.map-switcher-images .switcher-maps {
+  position: absolute;
+  width: 110px;
+  height: 80px;
+  background-color: rgba(255,255,255,0);
+  cursor: pointer;
+  -webkit-transition-property: width,height,background-color;
+  transition-property: width,height,background-color;
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+}
+
+.map-switcher-images.expand .switcher-maps {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.map-switcher-images .map-card {
+  position: absolute;
+  margin: 10px;
+  box-sizing: border-box;
+  width: 86px;
+  height: 60px;
+  border: 1px solid rgba(153,153,153,0);
+  border-radius: 2px;
+  background-size: contain;
+  -webkit-transition-property: right,left,top,bottom,background-image;
+  transition-property: right,left,top,bottom,background-image;
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+}
+
+.map-switcher-images.expand .map-card.active,
+.map-switcher-images .map-card:hover {
+  border: 1px solid #3385FF;
+}
+
+.map-switcher-images .map-card:hover span {
+  background-color: #3385FF;
+}
+
+.map-switcher-images .map-card:hover .switch-label-box {
+  visibility: visible !important;
+}
+
+.map-switcher-images:not(.expand) .map-card:not(:last-child) {
+  background-image: none !important;
+}
+
+.switch-label-box {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  line-height: 22px;
+}
+
+.switch-label-box.bottom {
+  bottom: 0;
+}
+
+.switch-label-box input.switch-label-input {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.switch-label-box p {
+  display: inline-block;
+  margin-left: 25px;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif;
+}
+
+.map-card span {
+  display: inline-block;
+  position: absolute;
+  box-sizing: content-box;
+  width: fit-content;
+  max-width: 80px;
+  height: 12px;
+  border-top-left-radius: 2px;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.map-card span.left {
+  bottom: 0px;
+  right: 0px;
+  padding: 3px 3px 2px 4px;
+}
+
+.map-card span.right {
+  bottom: 0px;
+  left: 0px;
+  padding: 3px 3px 2px 4px;
+}
+
+.map-card span.top {
+  bottom: 0px;
+  right: 0px;
+  padding: 3px 3px 2px 4px;
+}
+
+.map-card span.bottom {
+  top: 0px;
+  left: 0px;
+  padding: 3px 3px 2px 4px;
+}
+
+.map-card.active span {
+  background-color: #3385FF;
+}

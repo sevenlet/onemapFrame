@@ -1,0 +1,21 @@
+/**
+ * API - 自定义样式
+ * @file
+ */
+
+/* 仅二维或者仅三维标识符的样式 */
+.only-dimension {
+  font-size: 12px;
+  border: 1px solid #f44336;
+  padding: 4px 6px;;
+  border-radius: 14px;
+  color: white;
+  background: #f44336;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+/* 自定义描述文本的样式 */
+.custom-description {
+  padding-left: 20px;
+}

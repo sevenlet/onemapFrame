@@ -1,0 +1,35 @@
+.t-l-c-cockpitCenter {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 590px;
+height: 890px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-cockpitCenter .cockpitCenter-t-component-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 590px;
+height: 354px;
+pointer-events: auto;
+}
+
+.t-l-c-cockpitCenter .cockpitCenter-t-component-0-1 {
+position: absolute !important;
+top: 368px;
+left: 0px;
+width: 590px;
+height: 520px;
+pointer-events: auto;
+}

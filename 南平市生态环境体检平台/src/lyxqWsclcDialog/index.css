@@ -1,0 +1,119 @@
+.t-l-c-lyxqWsclcDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: none;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(255, 255, 255, 0);
+left: 50%;
+top: 50%;
+transform: translateX(-50%) translateY(-50%);
+}
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-rect-0-0 {
+position: absolute !important;
+top: 315px;
+left: 487px;
+width: 946px;
+height: 450px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-rect-0-1 {
+position: absolute !important;
+top: 315px;
+left: 487px;
+width: 945px;
+height: 47px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-text-0-2 {
+position: absolute !important;
+top: 329px;
+left: 511px;
+width: 860px;
+height: 21px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-rect-0-3 {
+position: absolute !important;
+top: 327px;
+left: 1393px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-rect-0-4 {
+position: absolute !important;
+top: 713px;
+left: 487px;
+width: 946px;
+height: 52px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-text-0-5 {
+position: absolute !important;
+top: 726px;
+left: 1104px;
+width: 90px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-text-0-6 {
+position: absolute !important;
+top: 726px;
+left: 1213px;
+width: 90px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-text-0-7 {
+position: absolute !important;
+top: 726px;
+left: 1322px;
+width: 90px;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-list-card-0-8 {
+position: absolute !important;
+top: 381px;
+left: 507px;
+width: 467px;
+height: 280px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-list-card-0-9 {
+position: absolute !important;
+top: 381px;
+left: 977px;
+width: 435px;
+height: 280px;
+pointer-events: auto;
+}
+
+.t-l-c-lyxqWsclcDialog .lyxqWsclcDialog-t-list-card-0-10 {
+position: absolute !important;
+top: 661px;
+left: 507px;
+width: 905px;
+height: 33px;
+pointer-events: auto;
+}

@@ -1,0 +1,217 @@
+/**
+ * 时间轴
+ */
+ul {
+  list-style: none;
+}
+.time-line {
+  width: 1490px;
+  height: 72px;
+  overflow: visible;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.time-line .time-line-play {
+  float: left;
+  width: 116px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.time-line .time-line-play i {
+  margin: 5px 0 0 55px;
+  width: 31px;
+  height: 31px;
+  display: block;
+  cursor: pointer;
+}
+
+.time-line .time-line-play i.play {
+  background: url(../images/play2.png) no-repeat center;
+}
+
+.time-line .time-line-play i.stop {
+  background: url(../images/stop2.png) no-repeat center;
+}
+
+.time-line .time-line-info {
+  position: relative;
+  float: left;
+  width: 1249px;
+  height: 100%;
+  overflow: visible;
+}
+
+.time-line .scroll-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 17px;
+  width: 0%;
+  height: 6px;
+  background: rgba(0, 240, 255, 1);
+  transition: all ease-in-out 0.25s;
+  border-radius: 3px;
+}
+
+.time-line .time-data {
+  position: relative;
+  z-index: 3;
+  margin-top: 17px;
+  height: 6px;
+  border: 1px solid rgba(0, 240, 255, 1);
+  border-radius: 3px;
+}
+
+.time-line .time-data li {
+  position: relative;
+  float: left;
+  text-align: left;
+  width: 25%;
+  height: 100%;
+}
+
+.time-line .time-data li:last-child {
+  position: absolute;
+  right: 0;
+  width: 0 !important;
+}
+
+.time-line .time-data span {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  color: #fff;
+  font-size: 24px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.time-line .time-data span.opacity {
+  opacity: 0;
+}
+
+.time-line .time-data .time-data-item {
+  position: absolute;
+  left: -4px;
+  top: 0px;
+  width: 8px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.time-line .time-data .time-data-item::before {
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 1px;
+  height: 8px;
+  background: rgba(0, 240, 255, 1);
+  content: "";
+}
+
+.time-line .time-data .time-data-item:hover .tooltip,
+.time-line .time-data .active .tooltip {
+  display: block;
+}
+
+.time-line .time-data .time-data-item:hover .tooltip {
+  z-index: 5;
+}
+.time-line .time-data .tooltip {
+  position: absolute;
+  left: 0px;
+  margin-top: -63px;
+  margin-left: -66px;
+  width: 140px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: bold;
+  color: rgba(0, 22, 25, 1);
+  font-size: 24px;
+  text-align: center;
+  background: rgba(0, 240, 255, 1);
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: none;
+}
+
+.time-line .time-data .tooltip.day {
+  width: 170px;
+  margin-left: -80px;
+}
+
+.time-line .time-data .tooltip.hour {
+  width: 226px;
+  margin-left: -109px;
+}
+
+.time-line .time-data .tooltip::before {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  margin-left: -13px;
+  width: 25px;
+  height: 25px;
+  background: url(../images/p.png) no-repeat center;
+  content: "";
+}
+
+.time-line .time-data .tooltip::after {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid rgba(0, 240, 255, 1);
+  content: "";
+}
+
+/* 分区 */
+.time-line .time-line-partition {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 0;
+  margin-left: -121px;
+  width: 241px;
+  height: 109px;
+  background: url(../images/bg.png) no-repeat;
+  display: none;
+}
+
+.time-line .time-line-partition p {
+  float: left;
+  margin-top: 77px;
+  width: 78px;
+  font-size: 22px;
+  color: #02004e;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time-line .time-line-partition p:first-child {
+  margin-right: 85px;
+}
+
+.time-line .time-line-partition-bg {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: 0;
+  width: 0;
+  height: 28px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 240, 255, 0.4),
+    rgba(0, 240, 255, 0.1)
+  );
+  display: none;
+}

@@ -24,6 +24,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   server: {
-    port: 3000,
+    port: 4000,
+    // 代理配置示例（根据需要启用）
+    // proxy: {
+    //   '/mapgo5.0': {
+    //     target: 'http://192.168.0.202:7777',
+    //     changeOrigin: true,
+    //   }
+    // }
   },
 });

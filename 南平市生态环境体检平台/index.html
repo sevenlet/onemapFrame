@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script src="resources/customjs/turf.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>南平市生态环境体检平台</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/style/font-awesome.min.css">
+    <script src="./resources/qs.js"></script>
+
+      <script src="./resources/jsencrypt.min.js"></script>
+      <script src="./resources/web-control_1.2.7.min.js"></script>
+    <!-- vue 这里最终应该下载一个稳定版本 -->
+    <script src="./resources/vue.min.js"></script>
+
+    <!-- vue-router 这里最终应该下载一个稳定版本 -->
+    <script src="./resources/vue-router.min.js"></script>
+    <!-- 语言 -->
+    <script src="./resources/lang.js"></script>
+    <script src="./resources/vue-i18n.global.js"></script>
+    <script src="./resources/i18n.js"></script>
+
+    <!-- socket插件 -->
+    <script src="./resources/socket.io.js"></script>
+
+    <!-- lodash插件 -->
+	<script src="./resources/lodash.min.js"></script>
+
+    <!-- echarts 相关插件 -->
+    <script src="./resources/echarts.min.js"></script>
+    <script src="./resources/echarts-wordcloud.min.js"></script>
+    <script src="./resources/echarts-liquidfill.min.js"></script>
+    <script src="./resources/highcharts.js"></script>
+
+    <!-- 视频插件 -->
+    <script src="./resources/video.min.js"></script>
+
+    <!-- 视频监控插件 -->
+    <script src="./resources/video-monitor/h5player.min.js"></script>
+    <!-- 引入样式 -->
+    <link
+      rel="stylesheet"
+      href="./resources/element-plus/element-plus.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./resources/video-js.css"
+    />
+    <!-- 引入组件库 -->
+    <script src="./resources/element-plus/element-plus.min.js"></script>
+    <script src="./resources/element-plus/zhCn.js"></script>
+
+    <!-- 组件库 这里最终应该下载一个稳定版本 待修改 -->
+    <script src="./resources/ths-design/index.js"></script>
+    <!-- 组件库样式 待修改 -->
+    <link rel="stylesheet" href="./resources/ths-design/index.css" />
+
+    <!-- 通信插件mitt https://www.npmjs.com/package/mitt -->
+    <script src="./resources/mitt.min.js"></script>
+
+    <!-- HTTP库 -->
+    <script src="./resources/axios.min.js"></script>
+
+    <!-- 全局使用变量 方法 包括Vue  VueRouter等框架中的变量及方法 -->
+    <script src="src/http.js"></script>
+    <script src="src/global.js"></script>
+    <script src="src/global-function.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/theme.js"></script>
+    <script src="src/websocket.js"></script>
+
+    <!-- 所有页面 新建页面着这里添加引入 -->
+    <!-- insertPageStart --><!--  insertPageEnd -->
+
+    <!-- 路由配置 -->    <script src="src/route.js"></script>
+
+    <!-- 加载全局变量清单 -->
+    <script src="./config/global-variable-registry.js"></script>
+    <!-- 加载全局函数清单 -->
+    <script src="./config/global-function-registry.js"></script>
+    <!-- 加载公共全局变量 -->
+    <script src="src/globals/variables/publicGlobalVariables.js"></script>
+    <!-- 加载公共全局函数 -->
+    <script src="src/globals/functions/publicGlobalFunctions.js"></script>
+
+    <!-- 过滤器 -->
+	<script src="src/globals/filters/builtin.js"></script>
+	<script src="src/globals/filters/custom.js"></script>
+	<script src="src/globals/filters/index.js"></script>
+<!-- 根组件 -->
+    <script src="src/root/index.js"></script>
+    <link rel="stylesheet" href="src/root/index.css" />
+
+    <!-- 入口文件 -->
+    <script src="src/main.js"></script>
+
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!--组件库主题样式 -->
+    <link rel="stylesheet" href="assets/style/themes.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+	<script>
+      // 初始化全局变量对象 - 用于存储所有动态加载的全局变量模块
+      window.legoGlobalVariables = {};
+
+      /**
+       * 处理全局变量文件
+       * @param file
+       */
+      function processVariableFile(file) {
+        // 从文件路径中提取文件名（不含扩展名）作为模块名
+        const fileName = file.split('/').pop().replace('.js', '');
+        // 如果没有模块名 则直接返回
+        if (!window.moduleGlobalVariables[fileName]) return;
+        // 将模块全局变量存储到legoGlobalVariables对象中
+        window.legoGlobalVariables[fileName] = window.moduleGlobalVariables[fileName];
+        if (window.moduleGlobalVariables[fileName]?.fromPublic) {
+          // 在这里将专题里来自公共变量的合并到全局公共变量
+          window.publicGlobalVariables = Object.assign({}, window.moduleGlobalVariables[fileName]?.fromPublic, window.publicGlobalVariables)
+          // 删除专题下面fromPublic字段 因为已经放到公共变量中了
+          delete window.legoGlobalVariables[fileName].fromPublic;
+        }
+      }
+
+      /**
+       * 启动应用函数
+       */
+       const startApp = () => {
+        window.qs = Qs;
+        window.app = createApp(MainComponent);
+        window.app.use(i18n)
+          .use(router)
+          .use(ElementPlus, {
+            size: 'small',
+            locale: ElementPlusLocaleZhCn,
+            i18n: (key, value) => i18n.global.t(key, value),
+          })
+
+.use(ThsDesign).mount("#app");
+      };
+
+      // 使用ResourceLoader加载脚本 先加载全局变量文件后 再加载全局函数
+      window.ResourceLoader.loadScripts(window.legoGlobalVariableFiles, processVariableFile)
+        .then(() => {
+          window.globalFilesLoaded = true;
+          document.dispatchEvent(new Event('globalFilesLoaded'));
+          // 加载全局函数
+          return window.ResourceLoader.loadScripts(window.legoGlobalFunctionFiles);
+        })
+        .then(() => {
+          startApp();
+        })
+        .catch(error => {
+          console.error('脚本加载过程中发生错误:', error);
+        });
+    </script>
+  </body>
+</html>

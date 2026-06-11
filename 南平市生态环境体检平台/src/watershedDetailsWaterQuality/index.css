@@ -1,0 +1,167 @@
+.t-l-c-watershedDetailsWaterQuality {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 313px;
+background-color: rgba(0, 0, 0, 0);
+width: 450px;
+}
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-component-0-0 {
+position: absolute !important;
+top: -1px;
+left: 19px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-text-0-1 {
+position: absolute !important;
+top: -1px;
+left: 59px;
+width: 130px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-rect-0-2 {
+position: absolute !important;
+top: 223px;
+left: 19px;
+width: 131px;
+height: 72px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-rect-0-3 {
+position: absolute !important;
+top: 224px;
+left: 158px;
+width: 131px;
+height: 72px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-rect-0-4 {
+position: absolute !important;
+top: 224px;
+left: 298px;
+width: 131px;
+height: 72px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-list-card-0-5 {
+position: absolute !important;
+top: 239px;
+left: 11px;
+width: 420px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-list-card-0-6 {
+position: absolute !important;
+top: 210px;
+left: 11px;
+width: 420px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-list-card-0-7 {
+position: absolute !important;
+top: 144px;
+left: 15px;
+width: 418px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-rect-0-8 {
+position: absolute !important;
+top: 44px;
+left: 20px;
+width: 410px;
+height: 87px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-row-0-9 {
+position: absolute !important;
+top: 84px;
+left: 125px;
+width: 293px;
+height: 16px;
+pointer-events: auto;
+text-align: right;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: visible;
+line-height: 16px;
+font-size: 16px;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-text-0-9-0 {
+position: unset;
+top: 86px;
+left: 202px;
+width: auto;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-high-light-text-0-9-1 {
+position: unset;
+top: 84px;
+left: 264px;
+width: auto;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-text-0-9-2 {
+position: unset;
+top: 86px;
+left: 313px;
+width: auto;
+height: 14px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-high-light-text-0-9-3 {
+position: unset;
+top: 84px;
+left: 385px;
+width: auto;
+height: 16px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-text-0-10 {
+position: absolute !important;
+top: 52px;
+left: 32px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-watershedDetailsWaterQuality .watershedDetailsWaterQuality-t-text-common-0-12 {
+position: absolute !important;
+top: 82px;
+left: 16px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}

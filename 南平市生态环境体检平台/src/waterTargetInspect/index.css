@@ -1,0 +1,260 @@
+.t-l-c-waterTargetInspect {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 846px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-waterTargetInspect .waterTargetInspect-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 448px;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-rect-0-1 {
+position: absolute !important;
+top: 303px;
+left: 231px;
+width: 201px;
+height: 140px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-select-0-2 {
+position: absolute !important;
+top: 16px;
+left: 16px;
+width: 132px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-date-picker-0-3 {
+position: absolute !important;
+top: 16px;
+left: 160px;
+width: 150px;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-component-0-4 {
+position: absolute !important;
+top: 186px;
+left: 20px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-component-0-5 {
+position: absolute !important;
+top: 475px;
+left: 22px;
+width: 410px;
+height: 31px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-0-6 {
+position: absolute !important;
+top: 191px;
+left: 60px;
+width: 247px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-0-7 {
+position: absolute !important;
+top: 480px;
+left: 62px;
+width: 244px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-0-8 {
+position: absolute !important;
+top: 480px;
+left: 62px;
+width: 244px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-circle-0-9 {
+position: absolute !important;
+top: 318px;
+left: 275px;
+width: 113px;
+height: 113px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-0-10 {
+position: absolute !important;
+top: 381px;
+left: 275px;
+width: 113px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-image-base-0-11 {
+position: absolute !important;
+top: 325px;
+left: 282px;
+width: 99px;
+height: 99px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-chart-pie-percent-0-12 {
+position: absolute !important;
+top: 318px;
+left: 275px;
+width: 113px;
+height: 113px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-unit-0-13 {
+position: absolute !important;
+top: 349px;
+left: 299px;
+width: 89px;
+height: 29px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-list-card-0-14 {
+position: absolute !important;
+top: 88px;
+left: 16px;
+width: 418px;
+height: 68px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-rect-0-15 {
+position: absolute !important;
+top: 303px;
+left: 22px;
+width: 201px;
+height: 140px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-table-0-16 {
+position: absolute !important;
+top: 517px;
+left: 22px;
+width: 410px;
+height: 300px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-table-0-17 {
+position: absolute !important;
+top: 518px;
+left: 22px;
+width: 410px;
+height: 300px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-circle-0-18 {
+position: absolute !important;
+top: 318px;
+left: 66px;
+width: 113px;
+height: 113px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-0-19 {
+position: absolute !important;
+top: 381px;
+left: 66px;
+width: 113px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-image-base-0-20 {
+position: absolute !important;
+top: 325px;
+left: 73px;
+width: 99px;
+height: 99px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-chart-pie-percent-0-21 {
+position: absolute !important;
+top: 318px;
+left: 66px;
+width: 113px;
+height: 113px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-text-unit-0-22 {
+position: absolute !important;
+top: 349px;
+left: 89px;
+width: 90px;
+height: 29px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTargetInspect .waterTargetInspect-t-rank-single-0-23 {
+position: absolute !important;
+top: 229px;
+left: 20px;
+width: 410px;
+height: 60px;
+pointer-events: auto;
+}
+
+@keyframes custom0a3ca1621db92 {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}
+@keyframes custom7498be6597a9b {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+100% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}

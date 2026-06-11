@@ -1,0 +1,108 @@
+.t-l-c-dialogTitleFirstBgAnimation {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+background-color: rgba(255, 0, 0, 0);
+height: 28px;
+width: 191px;
+}
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-0 {
+position: absolute !important;
+top: -4px;
+left: 2.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-1 {
+position: absolute !important;
+top: -4px;
+left: 24.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-2 {
+position: absolute !important;
+top: -4px;
+left: 47.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-3 {
+position: absolute !important;
+top: -4px;
+left: 69.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-4 {
+position: absolute !important;
+top: -4px;
+left: 92.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-5 {
+position: absolute !important;
+top: -4px;
+left: 114.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-6 {
+position: absolute !important;
+top: -4px;
+left: 137.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+.t-l-c-dialogTitleFirstBgAnimation .dialogTitleFirstBgAnimation-t-rect-0-7 {
+position: absolute !important;
+top: -4px;
+left: 159.5px;
+width: 29px;
+height: 36px;
+pointer-events: auto;
+}
+
+@keyframes custom4f535b3e2b5f4 {
+
+0% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+50% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+10%;
+}
+100% {
+transform: perspective(900px) translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(100%) scaleY(100%) skewX(0deg) skewY(0deg);
+opacity: 
+100%;
+}
+}

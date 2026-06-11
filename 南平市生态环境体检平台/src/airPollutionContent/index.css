@@ -1,0 +1,89 @@
+.t-l-c-airPollutionContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+height: 1358px;
+width: 450px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-airPollutionContent .airPollutionContent-t-rect-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 450px;
+height: 78px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-component-0-1 {
+position: absolute !important;
+top: 990px;
+left: 20px;
+width: 410px;
+height: 340px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-component-0-2 {
+position: absolute !important;
+top: 431px;
+left: 20px;
+width: 410px;
+height: 492px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-component-0-3 {
+position: absolute !important;
+top: 384px;
+left: 20px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-component-0-4 {
+position: absolute !important;
+top: 97px;
+left: 20px;
+width: 410px;
+height: 251px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-component-0-5 {
+position: absolute !important;
+top: 946px;
+left: 19px;
+width: 410px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-radio-0-6 {
+position: absolute !important;
+top: 40px;
+left: 18px;
+width: 150px;
+height: 22px;
+pointer-events: auto;
+}
+
+.t-l-c-airPollutionContent .airPollutionContent-t-date-picker-0-8 {
+position: absolute !important;
+top: 0px;
+left: 16px;
+width: 418px;
+height: 32px;
+pointer-events: auto;
+}

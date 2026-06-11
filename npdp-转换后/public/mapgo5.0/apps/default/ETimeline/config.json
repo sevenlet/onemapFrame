@@ -1,0 +1,33 @@
+[{
+  "options": {
+    "name": "time-line",
+    "dataSource": "custom",
+    "timeType": "month",
+    "timeSetting": "fixedTime",
+    "startTime": "2019-01",
+    "endTime": "2019-12",
+    "curDate": "2019-08",
+    "label": {
+      "format": "yyyy",
+      "interval": 1,
+      "position": "left"
+    },
+    "line": {
+      "longInterval": 1,
+      "shortInterval": 0
+    },
+    "speed": 3000,
+    "startPlay": false,
+    "loopPlay": false,
+    "isRememberTime": true,
+    "partitionLine": "",
+    "partitionTime": "2019-10",
+    "defaultVisible": true,
+    "isCallBack": false,
+    "change": "timeChange",
+    "degree": ""
+  },
+  "name": "sd",
+  "defaultVisible": true,
+  "layers": []
+}]

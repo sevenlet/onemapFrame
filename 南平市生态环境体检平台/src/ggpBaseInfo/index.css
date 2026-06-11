@@ -1,0 +1,203 @@
+.t-l-c-ggpBaseInfo {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 824px;
+height: 580px;
+background-color: rgba(255, 12, 12, 0);
+}
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-list-card-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 95px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-component-0-1 {
+position: absolute !important;
+top: 120px;
+left: 0px;
+width: 100%;
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-text-0-2 {
+position: absolute !important;
+top: 124px;
+left: 40px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-circle-0-3 {
+position: absolute !important;
+top: 168px;
+left: 0px;
+width: 9px;
+height: 9px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-text-0-4 {
+position: absolute !important;
+top: 160px;
+left: 13px;
+width: 334px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-scrollable-cards-0-5 {
+position: absolute !important;
+top: 196px;
+left: 0px;
+width: 100%;
+height: 64px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-row-0-6 {
+position: absolute !important;
+top: 275px;
+left: 0px;
+width: 100%;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-col-0-6-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-text-0-6-0-0 {
+position: unset;
+top: 299px;
+left: 10px;
+width: 240px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-tabs-base-0-6-0-1 {
+position: unset;
+top: -155px;
+left: 62px;
+width: 141px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-col-0-6-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-date-picker-0-6-1-0 {
+position: unset;
+top: 284px;
+left: 394px;
+width: 330px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-date-picker-0-6-1-1 {
+position: unset;
+top: 294px;
+left: 404px;
+width: 330px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-col-0-6-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 32px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-select-0-6-2-0 {
+position: unset;
+top: 284px;
+left: 704px;
+width: 120px;
+height: 33px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-row-0-7 {
+position: absolute !important;
+top: 120px;
+left: 0px;
+width: 824px;
+height: 28px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-text-0-7-0 {
+position: unset;
+top: 124.5px;
+left: 645px;
+width: 164px;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-chart-line-single-0-8 {
+position: absolute !important;
+top: 320px;
+left: 0px;
+width: 100%;
+height: calc(100% - 320px);
+pointer-events: auto;
+}
+
+.t-l-c-ggpBaseInfo .ggpBaseInfo-t-text-0-9 {
+position: absolute !important;
+top: 312px;
+left: 3px;
+width: 62px;
+height: 0px;
+pointer-events: auto;
+}

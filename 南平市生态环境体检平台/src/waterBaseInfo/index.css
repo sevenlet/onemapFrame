@@ -1,0 +1,152 @@
+.t-l-c-waterBaseInfo {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 788px;
+height: 468px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-0 {
+position: absolute !important;
+top: 280px;
+left: 2px;
+width: 126px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-1 {
+position: absolute !important;
+top: 348px;
+left: 2px;
+width: 126px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-2 {
+position: absolute !important;
+top: 314px;
+left: 518px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-3 {
+position: absolute !important;
+top: 314px;
+left: 398px;
+width: 120px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-4 {
+position: absolute !important;
+top: 280px;
+left: 518px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-5 {
+position: absolute !important;
+top: 348px;
+left: 518px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-6 {
+position: absolute !important;
+top: 280px;
+left: 398px;
+width: 120px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-7 {
+position: absolute !important;
+top: 348px;
+left: 398px;
+width: 120px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-8 {
+position: absolute !important;
+top: 314px;
+left: 128px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-9 {
+position: absolute !important;
+top: 382px;
+left: 128px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-10 {
+position: absolute !important;
+top: 314px;
+left: 2px;
+width: 126px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-11 {
+position: absolute !important;
+top: 382px;
+left: 2px;
+width: 126px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-12 {
+position: absolute !important;
+top: 280px;
+left: 128px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-text-0-13 {
+position: absolute !important;
+top: 348px;
+left: 128px;
+width: 269px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-waterBaseInfo .waterBaseInfo-t-iframe-0-14 {
+position: absolute !important;
+top: -17px;
+left: 1px;
+width: 786px;
+height: 286px;
+pointer-events: auto;
+}

@@ -1,0 +1,62 @@
+/*波纹效果*/
+.ripple-box {
+    margin: 100px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ripple-box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 6px #00ffff inset;
+    transition: all 1s;
+    transform: scale(0, 0)
+}
+.ripple1 {
+    animation: rippleAnimation 2s infinite linear;
+}
+
+.ripple2 {
+    animation: rippleAnimation 2s infinite linear;
+    animation-delay: 0.6s;
+}
+
+.ripple3 {
+    animation: rippleAnimation 2s infinite linear;
+    animation-delay: 1.2s;
+}
+
+@keyframes rippleAnimation {
+    from {
+        opacity: 1;
+        transform: scale(0, 0)
+    }
+    to {
+        opacity: 0.1;
+        transform: scale(3, 3)
+    }
+}
+
+/*上下跳动*/
+.bounce-img{
+    animation: bounceAnimation 2s infinite ease;
+}
+@keyframes bounceAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,272 @@
+.t-l-c-rcxftcbf {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+width: 100%;
+height: 100%;
+filter: ;
+background-color: rgba(0, 0, 0, 0);
+}
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-row-0-0 {
+position: absolute !important;
+top: 50px;
+left: 1%;
+width: 98%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+gap: 20px;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-component-0-0-0-0 {
+position: unset;
+top: 66px;
+left: 24px;
+width: 98%;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-text-unit-0-0-0-1 {
+position: unset;
+top: 475px;
+left: 78px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-row-0-0-1-0 {
+position: unset;
+top: 274px;
+left: -378px;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-1-0-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-chart-bar-simple-0-0-1-0-0-0 {
+position: unset;
+top: 108px;
+left: 57px;
+width: 100%;
+height: 333px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-1-0-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-chart-pie-doughnut-data-0-0-1-0-1-0 {
+position: unset;
+top: 155px;
+left: 752px;
+width: 100%;
+height: 322px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-2 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: start;
+animation-name: ;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-component-0-0-2-0 {
+position: unset;
+top: 76px;
+left: 34px;
+width: 98%;
+height: 34px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-text-unit-0-0-2-1 {
+position: unset;
+top: 485px;
+left: 88px;
+width: auto;
+height: auto;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-3 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+padding-left: 10px;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-text-common-0-0-3-0 {
+position: unset;
+top: 520px;
+left: 39px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-select-0-0-3-1 {
+position: unset;
+top: 514px;
+left: 179px;
+width: 268px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-text-common-0-0-3-2 {
+position: unset;
+top: 520px;
+left: 492px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-select-0-0-3-3 {
+position: unset;
+top: 514px;
+left: 632px;
+width: 268px;
+height: 32px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-4 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 10px;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-table-0-0-4-0 {
+position: unset;
+top: 563px;
+left: 27px;
+width: 100%;
+height: 230px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-col-0-0-5 {
+position: relative;
+top: null;
+left: null;
+width: 100%;
+height: auto;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-pagination-base-0-0-5-0 {
+position: unset;
+top: 984px;
+left: 790px;
+width: 410px;
+height: 38px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-text-common-0-1 {
+position: absolute !important;
+top: 19px;
+left: 22px;
+width: 96px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-rcxftcbf .dailyComplaintPopup-t-date-picker-0-2 {
+position: absolute !important;
+top: 16px;
+left: 107px;
+width: 507px;
+height: 31px;
+pointer-events: auto;
+}

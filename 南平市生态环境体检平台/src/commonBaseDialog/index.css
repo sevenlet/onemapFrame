@@ -1,0 +1,121 @@
+.t-l-c-commonBaseDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Relative;
+z-index: 1;
+filter: ;
+width: 1000px;
+height: 680px;
+left: calc(50% - 532px);
+top: calc(50% - 356px);
+border-radius: 12px 12px 0 0;
+background-color: var(--business-dialog-bg);
+}
+.t-l-c-commonBaseDialog .commonBaseDialog-t-row-0-1 {
+position: absolute !important;
+top: 40px;
+left: 0px;
+width: 100%;
+height: 600px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: start;
+padding-top: 10px;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-table-0-1-0 {
+position: unset;
+top: 118px;
+left: 1360px;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-row-0-2 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 40px;
+pointer-events: auto;
+white-space: nowrap;
+text-overflow: ellipsis;
+animation-name: ;
+justify-content: center;
+align-items: center;
+background-color: var(--business-show-bg30);
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-col-0-2-0 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+padding-left: 20px;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-text-0-2-0-0 {
+position: unset;
+top: -149px;
+left: 537px;
+width: auto;
+height: 19px;
+pointer-events: auto;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-col-0-2-1 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-rect-0-2-1-0 {
+position: unset;
+top: 9px;
+left: 919px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-col-0-2-2 {
+position: relative;
+top: null;
+left: null;
+width: 100px;
+height: 40px;
+pointer-events: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.t-l-c-commonBaseDialog .commonBaseDialog-t-rect-0-2-2-0 {
+position: unset;
+top: 9px;
+left: 951px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}

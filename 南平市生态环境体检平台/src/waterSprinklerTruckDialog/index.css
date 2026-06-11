@@ -1,0 +1,110 @@
+.t-l-c-waterSprinklerTruckDialog {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 1920px;
+height: 1080px;
+background-color: rgba(0,0,0,0);
+}
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-rect-0-0 {
+position: absolute !important;
+top: 290px;
+left: 677px;
+width: 558px;
+height: 324px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-list-card-0-1 {
+position: absolute !important;
+top: 344px;
+left: 688px;
+width: 536px;
+height: 182px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-rect-0-2 {
+position: absolute !important;
+top: 567px;
+left: 676px;
+width: 560px;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-rect-0-3 {
+position: absolute !important;
+top: 290px;
+left: 677px;
+width: 557px;
+height: 46px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-rect-0-4 {
+position: absolute !important;
+top: 301px;
+left: 1195px;
+width: 24px;
+height: 24px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-text-0-5 {
+position: absolute !important;
+top: 576px;
+left: 1090px;
+width: calc(100px + var(--business-text-size-14));
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-text-0-6 {
+position: absolute !important;
+top: 576px;
+left: 950px;
+width: calc(100px + var(--business-text-size-14));
+height: 28px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-row-0-7 {
+position: absolute !important;
+top: 290px;
+left: 706px;
+width: 445px;
+height: 46px;
+pointer-events: auto;
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-text-common-0-7-0 {
+position: unset;
+top: 207px;
+left: 375px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterSprinklerTruckDialog .waterSprinklerTruckDialog-t-rect-0-7-1 {
+position: unset;
+top: 205px;
+left: 505px;
+width: auto;
+height: 24px;
+pointer-events: auto;
+}

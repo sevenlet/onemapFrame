@@ -1,0 +1,3 @@
+//>>built
+define({root:{_widgetLabel:"Coordinate",hintMessage:"Click the map to get coordinates",defaultLabel:"Default",realtimeLabel:"Move mouse to get coordinates",computing:"Computing...",latitudeLabel:"Latitude",longitudeLabel:"Longitude",loading:"loading...",enableClick:"Click to enable clicking map to get coordinates",disableClick:"Click to disable clicking map to get coordinates",Default:"Default",Inches:"Inches",Foot:"Feet",Foot_US:"Feet_US",Yards:"Yards",Miles:"Miles",Nautical_Miles:"Nautical miles",
+Millimeters:"Millimeters",Centimeters:"Centimeters",Meter:"Meters",Kilometers:"Kilometers",Decimeters:"Decimeters",Decimal_Degrees:"Degrees",Degree_Minutes_Seconds:"Degrees minutes seconds",MGRS:"MGRS",USNG:"USNG"},"zh-cn":1,"zh-hk":1,"zh-tw":1});

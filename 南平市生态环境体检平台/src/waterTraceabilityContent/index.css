@@ -1,0 +1,117 @@
+.t-l-c-waterTraceabilityContent {
+position: relative;
+overflow: hidden;
+--theme-color: var(--t-brand8);
+--theme-color-opacity-10: rgba(var(--t-brand8), .1);
+--theme-color-opacity-15: rgba(var(--t-brand8), .15);
+--theme-color-opacity-40: rgba(var(--t-brand8), .4);
+--theme-color-opacity-60: rgba(var(--t-brand8), .6);
+--theme-color-opacity-80: rgba(var(--t-brand8), .8);
+--theme-color-opacity-90: rgba(var(--t-brand8), .9);
+pointer-events: auto;
+position: Static;
+z-index: 1;
+filter: ;
+width: 450px;
+height: 900px;
+background-color: rgba(255, 255, 255, 0);
+}
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-component-0-0 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 445px;
+height: 900px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-component-0-1 {
+position: absolute !important;
+top: 0px;
+left: 0px;
+width: 445px;
+height: 900px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-row-0-2 {
+position: absolute !important;
+top: 8px;
+left: 20px;
+width: 419px;
+height: 47px;
+pointer-events: auto;
+animation-name: ;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-text-0-2-0 {
+position: unset;
+top: 18px;
+left: 16px;
+width: 43px;
+height: 18px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-text-0-2-1 {
+position: unset;
+top: 205.12660047743043px;
+left: 469.8092289677372px;
+width: auto;
+height: var(--business-text-size-18);
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-text-0-2-2 {
+position: unset;
+top: -106px;
+left: 260px;
+width: auto;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-list-card-common-0-2-3 {
+position: unset;
+top: 207.12660047743043px;
+left: 672.8092289677372px;
+width: 50px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-list-card-common-0-2-4 {
+position: unset;
+top: 241px;
+left: 634px;
+width: 50px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-rect-0-2-5 {
+position: unset;
+top: 206.12660047743043px;
+left: 852.8092289677372px;
+width: 20px;
+height: 20px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-rect-0-3 {
+position: absolute !important;
+top: 60px;
+left: 2px;
+width: 450px;
+height: 1px;
+pointer-events: auto;
+}
+
+.t-l-c-waterTraceabilityContent .waterTraceabilityContent-t-component-0-4 {
+position: absolute !important;
+top: 78px;
+left: 0px;
+width: 450px;
+height: 831px;
+pointer-events: auto;
+}
