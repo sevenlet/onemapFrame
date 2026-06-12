@@ -50,190 +50,10 @@ const CONFIG = {
 
 // ============================================================
 // ths-design 组件名映射（kebab-case → PascalCase）
-// 来源：add-ths-design-imports.js
+// 数据源：config/component-name-map.json（约 180 项，纯数据查找表，新增组件只改 JSON 即可）
+// 来源：add-ths-design-imports.js（最早的版本）
 // ============================================================
-const COMPONENT_NAME_MAP = {
-  't-radio': 'TRadio',
-  't-button': 'TButton',
-  't-cascader': 'TCascader',
-  't-chart-design': 'TChartDesign',
-  't-chart-pie-percent': 'TChartPiePercent',
-  't-chart-sankey': 'TChartSankey',
-  't-checkbox': 'TCheckbox',
-  't-circle': 'TCircle',
-  't-col': 'TCol',
-  't-component': 'TComponent',
-  't-date-picker': 'TDatePicker',
-  't-gradient-shadow-text': 'TGradientShadowText',
-  't-high-light-text': 'THighLightText',
-  't-iframe': 'TIframe',
-  't-image-base': 'TImageBase',
-  't-input': 'TInput',
-  't-line': 'TLine',
-  't-list-card': 'TListCard',
-  't-list-card-common': 'TListCardCommon',
-  't-list-card-preview': 'TListCardPreview',
-  't-loop-video': 'TLoopVideo',
-  't-pagination-base': 'TPaginationBase',
-  't-rect': 'TRect',
-  't-rolling-number': 'TRollingNumber',
-  't-row': 'TRow',
-  't-scrollable-cards': 'TScrollableCards',
-  't-search': 'TSearch',
-  't-select': 'TSelect',
-  't-switch': 'TSwitch',
-  't-table': 'TTable',
-  't-tabs': 'TTabs',
-  't-tabs-base': 'TTabsBase',
-  't-text': 'TText',
-  't-text-common': 'TTextCommon',
-  't-text-unit': 'TTextUnit',
-  't-trace-path': 'TTracePath',
-  't-chart-pie-doughnut-data': 'TChartPieDoughnutData',
-  't-chart-pie-doughnut': 'TChartPieDoughnut',
-  't-chart-bar-base': 'TChartBarBase',
-  't-chart-liquidfill-base': 'TChartLiquidfillBase',
-  't-chart-line-base': 'TChartLineBase',
-  't-chart-line-simple': 'TChartLineSimple',
-  't-chart-line-discolor': 'TChartLineDiscolor',
-  't-chart-stacked-column': 'TChartStackedColumn',
-  't-chart-pie-base': 'TChartPieBase',
-  't-chart-pie-ring': 'TChartPieRing',
-  't-chart-pie': 'TChartPie',
-  't-chart-word-cloud': 'TChartWordCloud',
-  't-chart-line-area': 'TChartLineArea',
-  't-chart-bar-horizontal': 'TChartBarHorizontal',
-  't-chart-bar-horizontal-stacked': 'TChartBarHorizontalStacked',
-  't-chart-radar': 'TChartRadar',
-  't-chart-tower-diagram': 'TChartTowerDiagram',
-  't-chart-transverse': 'TChartTransverse',
-  't-chart-curve': 'TChartCurve',
-  't-chart-curve-card': 'TChartCurveCard',
-  't-chart-dashboard': 'TChartDashboard',
-  't-chart-bar-stacked': 'TChartBarStacked',
-  't-chart-scatter-base': 'TChartScatterBase',
-  't-chart-bar-3d': 'TChartBar3d',
-  't-chart-bar-3d-cylindrical': 'TChartBar3dCylindrical',
-  't-chart-bar-capsule': 'TChartBarCapsule',
-  't-chart-pie-3d': 'TChartPie3d',
-  't-chart-type-treemap': 'TChartTypeTreeMap',
-  't-chart-heatmap-base': 'TChartHeatmapBase',
-  't-chart-rose': 'TChartRose',
-  't-chart-excellent-rate': 'TChartExcellentRate',
-  't-chart-bar-simple': 'TChartBarSimple',
-  't-chart-liquidfill': 'TChartLiquidfill',
-  't-chart-line-single': 'TChartLineSingle',
-  't-chart-yaxis-inverse': 'TChartYaxisInverse',
-  't-chart-dashboard-aqi': 'TChartDashboardAqi',
-  't-chart-dashboard-aqi-label': 'TChartDashboardAqiLabel',
-  't-chart-double-xaxis': 'TChartDoubleXaxis',
-  't-chart-angle-axis': 'TChartAngleAxis',
-  't-chart-bar-compare': 'TChartBarCompare',
-  't-chart-border-rose': 'TChartBorderRose',
-  't-chart-bar-3d-gradual': 'TChartBar3dGradual',
-  't-chart-pie-border': 'TChartPieBorder',
-  't-chart-bar-across': 'TChartBarAcross',
-  't-chart-wind-direction': 'TChartWindDirection',
-  't-chart-custom-stacked': 'TChartCustomStacked',
-  't-chart-muti-ring-pie': 'TChartMutiRingPie',
-  't-chart-funnel': 'TChartFunnel',
-  't-chart-liquidfill-rect': 'TChartLiquidfillRect',
-  't-chart-stacked-curve': 'TChartStackedCurve',
-  't-chart-area-3d': 'TChartArea3d',
-  't-chart-tag-cloud-3d': 'TChartTagClud3d',
-  't-carousel-text': 'TCarouselText',
-  't-swiper-base': 'TSwiperBase',
-  't-tree': 'TTree',
-  't-tree-panel': 'TTreePanel',
-  't-timeline': 'TTimeline',
-  't-timeline-base': 'TTimelineBase',
-  't-proportion-bar': 'TProportionBar',
-  't-calendar-base': 'TCalendarBase',
-  't-three-circle-chart': 'TThreeCircleChart',
-  't-time-axis-complex': 'TTimeAxisComplex',
-  't-composite-timeline': 'TCompositeTimeline',
-  't-header-base': 'THeaderBase',
-  't-header-tabs': 'THeaderTabs',
-  't-title': 'TTitle',
-  't-menu': 'TMenu',
-  't-menu-item': 'TMenuItem',
-  't-submenu': 'TSubmenu',
-  't-submenu-item': 'TSubmenuItem',
-  't-tabs-scroll': 'TTabsScroll',
-  't-breadcrumb-base': 'TBreadcrumbBase',
-  't-tabs-vertical-icon': 'TTabsVerticalIcon',
-  't-steps': 'TSteps',
-  't-steps-base': 'TStepsBase',
-  't-header-menu': 'THeaderMenu',
-  't-secondary-menu': 'TSecondaryMenu',
-  't-year-contrast': 'TYearContrast',
-  't-trigger-menu': 'TTriggerMenu',
-  't-checkbox-menu': 'TRadioMenu',
-  't-header-menu-scroll': 'THeaderMenuScroll',
-  't-upload-button': 'TUploadButton',
-  't-button-back': 'TButtonBack',
-  't-button-full-screen': 'TButtonFullScreen',
-  't-list': 'TList',
-  't-list-status': 'TListStatus',
-  't-grid': 'TGrid',
-  't-quality-statistics': 'TQualityStatistics',
-  't-aqi': 'TAqi',
-  't-compare': 'TCompare',
-  't-list-card-item': 'TListCardItem',
-  't-card-icon-base': 'TCardIconBase',
-  't-card-pollution-base': 'TCardPollutionBase',
-  't-list-card-rate': 'TListCardRate',
-  't-list-card-weather-forecast': 'TListCardWeatherForecast',
-  't-list-card-air-quality-forecast': 'TListCardAirQualityForecast',
-  't-collapse': 'TCollapse',
-  't-weather-day': 'TWeatherDay',
-  't-self-adaption-card': 'TSelfAdaptionCard',
-  't-module-tabs': 'TModuleTabs',
-  't-list-card-multiple-choice': 'TListCardMultipleChoice',
-  't-quality-monitor': 'TQualityMonitor',
-  't-back-top': 'TBackTop',
-  't-chart-map-base': 'TChartMapBase',
-  't-layer-toolbox': 'TLayerToolbox',
-  't-chart-map-scatter': 'TChartMapScatter',
-  't-pollution-forecast': 'TPollutionForecast',
-  't-two-dimension-container': 'TTwoDimensionContainer',
-  't-two-dimension-pie': 'TTwoDimensionPie',
-  't-two-dimension-text': 'TTwoDimensionText',
-  't-rank-contrast': 'TRankContrast',
-  't-rank-single': 'TRankSingle',
-  't-two-dimension-image': 'TTwoDimensionImage',
-  't-four-dimension': 'TFourDimension',
-  't-six-dimension': 'TSixDimension',
-  't-calendar-pollution': 'TCalendarPollution',
-  't-target-assessment': 'TTargetAssessment',
-  't-chart-dashboard-aqi-base': 'TChartDashboardAqiBase',
-  't-chart-dashboard-aqi-segment': 'TChartDashboardAqiSegment',
-  't-magnifier': 'TMagnifier',
-  't-dialog': 'TDialog',
-  't-regulatory-target-selector': 'TRegulatoryTargetSelector',
-  't-dialog-single-tree': 'TDialogSingleTree',
-  't-dialog-single-tree-input': 'TDialogSingleTreeInput',
-  't-svg-icon': 'TSvgIcon',
-  't-user-multiple-dialog': 'TUserMultipleDialog',
-  't-user-multiple-dialog-input': 'TUserMultipleDialogInput',
-  't-dialog-multiple-tree': 'TDialogMultipleTree',
-  't-dialog-multiple-tree-input': 'TDialogMultipleTreeInput',
-  't-select-law-person': 'TSelectLawPerson',
-  't-slider': 'TSlider',
-  't-dynamically-module-container': 'TDynamicallyModuleContainer',
-  't-video-base': 'TVideoBase',
-  't-video-monitor': 'TVideoMonior',
-  't-gradient-text': 'TGradientText',
-  't-background-box': 'TBackgroundBox',
-  't-background-animation': 'TBackgroundAnimation',
-  't-pagination': 'TPagination',
-  't-progress-base': 'TProgressBase',
-  't-area-selector': 'TAreaSelector',
-  't-area-selector-simple': 'TAreaSelectorSimple',
-  't-area-selector-data': 'TAreaSelectorData',
-  't-regional-multiple-selector': 'TRegionalMultipleSelector',
-  't-area-selector-custom-data': 'TAreaSelectorCustomData',
-};
+const COMPONENT_NAME_MAP = require('./config/component-name-map.json');
 
 // ============================================================
 // 工具函数
@@ -408,49 +228,13 @@ function main() {
 // Step 1: 生成 Vite 脚手架
 // ============================================================
 function generateScaffold(projectDir) {
-  const packageJson = {
-    name: sanitizePackageName(path.basename(projectDir)),
-    version: '1.0.0',
-    private: true,
-    type: 'module',
-    scripts: {
-      dev: 'vite',
-      build: 'vite build',
-      preview: 'vite preview',
-    },
-    dependencies: {
-      'echarts': '^5.4.0',
-      'echarts-liquidfill': '^3.0.0',
-      'echarts-wordcloud': '^2.0.0',
-      '@ths/design': '^1.1.28',
-      'vue': '^3.4.0',
-      'vue-router': '^4.3.0',
-      'axios': '^1.6.0',
-      'mitt': '^3.0.1',
-      'lodash': '^4.17.21',
-      'qs': '^6.11.0',
-      'element-plus': '^1.0.2-beta.71',
-      'vue-i18n': '^9.13.0',
-      'socket.io-client': '^4.7.0',
-      'vuedraggable': '^4.1.0',
-      'moment': '^2.29.4',
-      'pinyin-pro': '^3.16.0',
-      'highcharts': '^9.3.3',
-      '@ths/c-common-base-button': '^2.0.10',
-      '@ths/c-common-base-paging': '^2.0.5',
-      '@ths/c-common-base-table': '2.0.6',
-      'three': '^0.168.0',
-      'video.js': '^7.12.3',
-      '@microsoft/fetch-event-source': '^2.0.1',
-      "@micro-zoe/micro-app": "1.0.0-rc.30",
-      "terser": "^5.48.0"
-    },
-    devDependencies: {
-      'vite': '^5.4.0',
-      '@vitejs/plugin-vue': '^5.0.0',
-    },
-  };
-  writeFile(path.join(projectDir, 'package.json'), JSON.stringify(packageJson, null, 2));
+  // package.json（模板：templates/package.json，占位符 {{name}}）
+  // 各项目依赖版本完全一致，只有 name 不同（取自目录名 + sanitize）。
+  // 升级某个依赖只需改模板，不必动转换脚本。
+  writeFile(
+    path.join(projectDir, 'package.json'),
+    readTemplate('package.json', { name: sanitizePackageName(path.basename(projectDir)) })
+  );
 
   // vite.config.js（模板：templates/vite.config.js）
   writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
@@ -476,16 +260,9 @@ function generateScaffold(projectDir) {
 function convertCoreFiles(projectDir) {
   const srcDir = path.join(projectDir, 'src');
 
-  // http.js
-  writeFile(path.join(srcDir, 'http.js'), `/**
- * HTTP 请求封装
- */
-import axios from 'axios';
-
-const http = axios.create({});
-
-export default http;
-`);
+  // http.js（模板：templates/http.js）
+  // 跨项目完全相同，axios 实例无任何自定义配置；如需添加拦截器/baseURL，改模板即可。
+  writeFile(path.join(srcDir, 'http.js'), readTemplate('http.js'));
 
   // utils.js
   convertUtilsFile(projectDir);
@@ -500,13 +277,15 @@ export default http;
     writeFile(themeJsPath, convertedTheme);
   }
 
-  // websocket.js
+  // websocket.js（模板：templates/websocket.js）
+  // 各项目的 websocket.js 源码完全相同，正则改写易出错（早期 if(false){} 死代码导致
+  // ths 是模块局部对象，window.ths 永远 undefined，main.js 里 createWebSocket 进不去）。
+  // 直接覆盖为模板版本，模板里已经做好两件事：
+  //   1) const ths = (window.ths = window.ths || {}) —— 真正挂到 window
+  //   2) export const initSocket + ths.initSocket = initSocket —— 两种调用方式都能走通
   const websocketJsPath = path.join(srcDir, 'websocket.js');
   if (fs.existsSync(websocketJsPath)) {
-    let convertedWs = readFile(websocketJsPath);
-    convertedWs = convertedWs.replace(/^if \(typeof ths == "undefined"\)/m, 'let ths = window.ths || {}; if (false)');
-    convertedWs = convertedWs.replace('ths.initSocket = function', 'export const initSocket = function');
-    writeFile(websocketJsPath, convertedWs);
+    writeFile(websocketJsPath, readTemplate('websocket.js'));
   }
 
   convertMainFile(projectDir);

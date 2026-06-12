@@ -1,0 +1,14 @@
+{
+  "name": "lego-to-vite-converter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "把低代码平台导出的静态 Vue 3 项目转换为 Vite + 单文件 .vue 工程",
+  "bin": {
+    "convert-to-vite": "./convert.cjs"
+  },
+  "scripts": {
+    "convert": "node convert.cjs"
+  },
+  "_comment_type": "不写 type 字段 → 默认 CommonJS（与父目录的 type:module 隔离）。所有 .js 都按 CJS 解析。",
+  "_comment_deps": "依赖 @babel/parser 和 prettier，由父目录 node_modules 提供（Node 自动向上查找），不必在此独立安装。"
+}

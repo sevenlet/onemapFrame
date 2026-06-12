@@ -2,6 +2,8 @@
  * 应用入口
  */
 import '@ths/design/lib/style.css';
+import 'element-plus/lib/theme-chalk/index.css';
+import 'video.js/dist/video-js.css';
 
 import {
   createApp, reactive, ref, watch, watchEffect, provide, inject,
@@ -15,7 +17,7 @@ import mitt from 'mitt';
 import _ from 'lodash';
 import { routes } from './route.js';
 import http from './http.js';
-import { replaceCssVariables, guid, getUrlParam, getQueryParam } from './utils.js';
+import { replaceCssVariables, guid, getUrlParam, getQueryParam, ComponentLoader } from './utils.js';
 import { initSocket } from './websocket.js';
 import { loadGlobalVariables, loadGlobalFunctions } from './globals/index.js';
 import { themes } from './theme.js';
@@ -59,24 +61,77 @@ router.addRoute = function(route) {
 window.router = router;
 
 const MainComponent = {
-  template: '<router-view></router-view>',
+  // root-component 全局常驻渲染（页面级框架，由 root.vue 中 v-if 控制是否显示）
+  // router-view 渲染当前路由匹配的子页面
+  // 与平台原版 src/main.js 行为一致
+  template: '<root-component /><router-view></router-view>',
   components: { rootComponent: RootComponent },
   setup() {
     const internalKey = ref(0);
     window.internalKeyRef = internalKey;
 
+    // ============================================================
+    // 路由处理（与平台原版 src/main.js 一致）
+    //   - 刷新进入：window.onload 时根据 location.hash 触发 handleRouteChange，
+    //     用 ComponentLoader.loadComponent 动态注册组件再 push 路由
+    //   - 切换路由：beforeEach 守卫，遇到未注册的组件先 loadComponent，再 next()
+    //
+    // 即便我们已经把所有页面静态注册到 routes 里，刷新场景下
+    // ths-design 的 ComponentLoader 可能还需要执行内部初始化（注册组件到 app.component、
+    // 添加路由 name 等，见 utils.js 的 loadComponent 实现），缺了这一步会出现
+    // "<router-view> 内容空" 的现象。
+    // ============================================================
+    function getComponentNameByRoute(route) {
+      return route.replace(/^\//, '').split(/[?#]/)[0];
+    }
+
+    async function handleRouteChange() {
+      const route = location.hash.replace('#', '');
+      if (!route) return;
+      const componentName = getComponentNameByRoute(route);
+      await ComponentLoader.loadComponent(componentName, () => {
+        const originalHashParams = window.location.hash.split('?')[1];
+        window.router.push(`/${componentName}?${originalHashParams || ''}`);
+      });
+    }
+
+    window.router.beforeEach(async (to, from, next) => {
+      const pageCode = getComponentNameByRoute(to.path);
+      const componentName = `${pageCode}Component`;
+      if (!window[componentName]) {
+        await ComponentLoader.loadComponent(pageCode, () => {
+          const originalHashParams = window.location.hash.split('?')[1];
+          window.router.push(`/${pageCode}?${originalHashParams || ''}`);
+        });
+      }
+      next();
+    });
+
+    window.onload = handleRouteChange;
+
     const rootEmitter = mitt();
 
-    let global = reactive({});
+    // global 必须在 setup 同步阶段就用 publicGlobalVariables 初始化，
+    // 否则 router-view 里的页面（如 airPollution.vue）首屏渲染时
+    // global.currentSmallSection 等关键字段还是 undefined，导致 t-component
+    // 拿不到 componentName，子组件不渲染。
+    //
+    // 顺序保证：本 main.js 顶部 `import './globals/index.js'` 是同步的，
+    // 它内部先 `import './variables/publicGlobalVariables.js'` 把 publicGlobalVariables
+    // 挂到 window 上，再触发 globalFilesLoaded 事件 —— 因此在 setup 执行时
+    // window.publicGlobalVariables 必然已就位。
+    let global = reactive({
+      ...(window.publicGlobalVariables || {}),
+      ...(window.legoGlobalVariables || {}),
+    });
 
     function initGlobal() {
-      const mergedVars = {
+      // 兼容场景：globalFilesLoaded 在 setup 之后才触发（如异步动态加载分支）
+      // 直接 Object.assign 到既有 reactive 对象上，保留 provide 拿到的引用
+      Object.assign(global, {
         ...(window.publicGlobalVariables || {}),
         ...(window.legoGlobalVariables || {}),
-      };
-      Object.assign(global, mergedVars);
-      global = reactive(global);
-      console.log('全局变量初始化完成', global);
+      });
     }
 
     if (window.globalFilesLoaded) {
