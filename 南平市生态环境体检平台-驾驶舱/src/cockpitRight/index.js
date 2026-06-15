@@ -1,1 +1,0 @@
-window.cockpitRightComponent = {template: 'cockpitRightComponent'};

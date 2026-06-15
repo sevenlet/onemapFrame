@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node /tmp/gen-bridge.js)",
+      "Read(//tmp/**)",
+      "Bash(node -e \"require\\('./convert-to-vite-new.cjs'\\)\")",
+      "Bash(node convert-to-vite-new.cjs \"南平市生态环境体检平台-驾驶舱\" \"南平市生态环境体检平台-驾驶舱-转换后\")",
+      "Bash(npm install *)",
+      "Bash(md5 \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/npdp-转换后/assets/style/ths-design.css\" \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/南平市生态环境体检平台-转换后/assets/style/ths-design.css\" \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/npdp-转换后/public/assets/style/ths-design.css\")",
+      "Bash(md5 /Users/zhangjinxiu/Documents/工作/一张图框架3.0/templates/bridge.js /Users/zhangjinxiu/Documents/工作/一张图框架3.0/npdp-转换后/src/bridge.js)",
+      "Bash(cp convert-to-vite-new.cjs /tmp/convert-backup.cjs)",
+      "Bash(sed -i.bak '51,311d' convert-to-vite-new.cjs)",
+      "Bash(sed -n '48,55p' convert-to-vite-new.cjs)",
+      "Bash(sed -i.bak '688,969d' convert-to-vite-new.cjs)",
+      "Bash(sed -n '683,692p' convert-to-vite-new.cjs)",
+      "Bash(rm -rf \"南平市生态环境体检平台-转换后\" \"南平市生态环境体检平台-驾驶舱-转换后\")",
+      "Bash(node convert-to-vite-new.cjs \"南平市生态环境体检平台\" \"南平市生态环境体检平台-转换后\")",
+      "Bash(md5 \"南平市生态环境体检平台-转换后/src/bridge.js\" \"templates/bridge.js\")",
+      "Bash(md5 \"南平市生态环境体检平台-转换后/vite.config.js\" \"templates/vite.config.js\")",
+      "Bash(md5 \"南平市生态环境体检平台-驾驶舱-转换后/src/bridge.js\" \"templates/bridge.js\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@ths/design/package.json'\\).version\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(npm config *)",
+      "Bash(npm view *)",
+      "Bash(npm cache *)",
+      "Bash(node -e \"console.log\\('安装到的版本:', require\\('./node_modules/@ths/design/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./node_modules/@ths/design/package.json'\\).exports, null, 2\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(find . -name \"vite.config.js\" -not -path \"*/node_modules/*\")",
+      "Bash(ls -d */dist)",
+      "Bash(grep -oE \"return\\\\s*\\\\{[^}]{0,500}\\\\}\" \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/南平市生态环境体检平-转换后/src/pages/leftMenu.vue\")",
+      "Bash(node /tmp/replace-dist.js --dry-run)",
+      "Bash(awk 'NR==138' \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/南平市生态环境体检平-转换后/src/pages/leftMenu.vue\")",
+      "Bash(rm -rf /tmp/_v)",
+      "Bash(node converter/convert.js \"测试项目/前端国产化-减污降碳-最新_src\" \"/tmp/_v\")"
+    ],
+    "additionalDirectories": [
+      "/tmp",
+      "/private/tmp"
+    ]
+  }
+}

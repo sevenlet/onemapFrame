@@ -1,1 +1,10 @@
 node_modules
+dist
+dist-ssr
+.DS_Store
+*.local
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea
+测试项目
