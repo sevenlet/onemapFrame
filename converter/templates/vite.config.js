@@ -42,6 +42,9 @@ function stripConsoleFromSource() {
 export default defineConfig({
   base: './',
   plugins: [
+    // 下面两个插件平时不挂载（生产构建已通过 esbuild.drop / terserOptions.drop_console
+    // 移除 console，足够日常需求）。仅当遇到「某些第三方库在运行时仍打日志」的场景，
+    // 临时取消注释，强制源码层 / index.html 注入双重屏蔽。
     // injectConsoleKiller(),
     // stripConsoleFromSource(),
     vue({

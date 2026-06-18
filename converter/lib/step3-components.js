@@ -12,9 +12,13 @@ const fs = require('fs');
 const path = require('path');
 
 const { log, writeFile, readFile, ensureDir, fixEsmStrictModeIssues } = require('./util.js');
-const { CONFIG, UTILS_EXPORTED_NAMES } = require('./constants.js');
+const {
+  CONFIG,
+  UTILS_EXPORTED_NAMES,
+  VUE_DEFAULT_IMPORT_APIS,
+} = require('./constants.js');
 const { extractThsComponentsFromTemplate, buildThsImportInfo } = require('./ths-design.js');
-const { jsToVue } = require('./js-to-vue.js');
+const { jsToVue, extractKeyframesFromCss } = require('./js-to-vue.js');
 
 function convertComponentsToVue(projectDir) {
   const srcDir = path.join(projectDir, 'src');
@@ -129,18 +133,9 @@ function fixCustomVue(vueSource, dirName) {
 
   const missingImports = [];
 
-  // Vue API — 检测代码中使用了哪些 Vue API
-  const vueApis = [
-    'reactive', 'ref', 'computed', 'watch', 'watchEffect',
-    'onMounted', 'onUnmounted', 'onBeforeMount', 'onBeforeUnmount',
-    'provide', 'inject', 'toRefs', 'toRef', 'nextTick', 'isRef',
-    'shallowRef', 'shallowReactive', 'triggerRef',
-    'h', 'createVNode', 'createElementBlock', 'openBlock',
-    'withCtx', 'withDirectives', 'withModifiers',
-    'resolveComponent', 'defineAsyncComponent',
-    'markRaw', 'toRaw', 'toDisplayString', 'createElementVNode',
-  ];
-  const usedVueApis = vueApis.filter(api => new RegExp(`\\b${api}\\b`).test(scriptContent) && !new RegExp(`import\\s+[^;]*\\b${api}\\b`).test(existingImportText));
+  // Vue API — 检测代码中使用了哪些 Vue API（名单与标准格式 .vue 共用同一份，
+  // 集中维护在 constants.VUE_DEFAULT_IMPORT_APIS）
+  const usedVueApis = VUE_DEFAULT_IMPORT_APIS.filter(api => new RegExp(`\\b${api}\\b`).test(scriptContent) && !new RegExp(`import\\s+[^;]*\\b${api}\\b`).test(existingImportText));
   if (usedVueApis.length) {
     missingImports.push(`import { ${usedVueApis.join(', ')} } from 'vue';`);
   }
@@ -251,7 +246,22 @@ function fixCustomVue(vueSource, dirName) {
     // 保留原始 style 属性（scoped、lang 等）
     const styleAttrs = styleMatch[0].match(/^<style([^>]*)>/)?.[1] || '';
     const styleContent = styleMatch[1];
-    result += `\n<style${styleAttrs}>\n${styleContent.trim()}\n</style>\n`;
+
+    // 如果原始 <style> 带 scoped，将 @keyframes 抽到独立的无 scoped 块，
+    // 避免 PostCSS 错误处理 keyframe 名称导致动画失效
+    if (/\bscoped\b/.test(styleAttrs)) {
+      const { scoped: scopedCss, keyframes: keyframesCss } = extractKeyframesFromCss(styleContent.trim());
+      if (scopedCss) {
+        result += `\n<style${styleAttrs}>\n${scopedCss}\n</style>\n`;
+      }
+      if (keyframesCss) {
+        // 去掉 scoped 属性，其余属性（如 lang）保留
+        const nonScopedAttrs = styleAttrs.replace(/\bscoped\b/, '').trim();
+        result += `\n<style${nonScopedAttrs ? ' ' + nonScopedAttrs : ''}>\n${keyframesCss}\n</style>\n`;
+      }
+    } else {
+      result += `\n<style${styleAttrs}>\n${styleContent.trim()}\n</style>\n`;
+    }
   }
 
   return result;

@@ -4,11 +4,17 @@
   "private": true,
   "description": "把低代码平台导出的静态 Vue 3 项目转换为 Vite + 单文件 .vue 工程",
   "bin": {
-    "convert-to-vite": "./convert.cjs"
+    "convert-to-vite": "./convert.js"
   },
   "scripts": {
-    "convert": "node convert.cjs"
+    "convert": "node convert.js"
   },
-  "_comment_type": "不写 type 字段 → 默认 CommonJS（与父目录的 type:module 隔离）。所有 .js 都按 CJS 解析。",
-  "_comment_deps": "依赖 @babel/parser 和 prettier，由父目录 node_modules 提供（Node 自动向上查找），不必在此独立安装。"
+  "_comment_type": "不写 type 字段 → 默认 CommonJS（与父目录可能存在的 type:module 项目隔离）。所有 .js 都按 CJS 解析。",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.7",
+    "prettier": "^3.8.3"
+  }
 }

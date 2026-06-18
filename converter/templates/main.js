@@ -15,9 +15,10 @@ import ElementPlusLocaleZhCn from 'element-plus/es/locale/lang/zh-cn';
 import { createI18n } from 'vue-i18n';
 import mitt from 'mitt';
 import _ from 'lodash';
+import { io } from 'socket.io-client';
 import { routes } from './route.js';
 import http from './http.js';
-import { replaceCssVariables, guid, getUrlParam, getQueryParam, ComponentLoader } from './utils.js';
+import { replaceCssVariables, guid, getUrlParam, getQueryParam } from './utils.js';
 import { initSocket } from './websocket.js';
 import { loadGlobalVariables, loadGlobalFunctions } from './globals/index.js';
 import { themes } from './theme.js';
@@ -44,70 +45,28 @@ const router = createRouter({
   routes,
 });
 
-// 防止 t-component 动态加载组件时重复添加同 path 路由
-// ths-design 的 ComponentLoader.loadComponent 会调用 router.addRoute，
-// 若不拦截，同一 path 会被添加多次，导致 router-view 反复渲染（"阴影叠加"症状）。
+// 所有路由已通过 route.js 的 import.meta.glob 静态注册。
+// 完全接管 router.addRoute 为 no-op —— 防止 ths-design 的 ComponentLoader
+// 在 Vue watcher 上下文中调用 addRoute → getRoutes() 触发内部响应式追踪，
+// 导致 watch(route) 被连带触发形成无限循环。
 const originalAddRoute = router.addRoute;
-router.addRoute = function(route) {
-  // 同 name 路由 Vue Router 4 会自动替换，但同 path 不同 name 会导致重复
-  // 检查 path 是否已存在，存在则跳过
-  const exists = router.getRoutes().some(r => r.path === route.path);
-  if (!exists) {
-    return originalAddRoute.call(router, route);
-  }
-  console.log('路由已存在，跳过重复添加:', route.path);
+router.addRoute = function() {
+  // 静默跳过
+  return;
 };
 
 window.router = router;
 
 const MainComponent = {
-  // root-component 全局常驻渲染（页面级框架，由 root.vue 中 v-if 控制是否显示）
+  // root-component 全局常驻渲染（页面级框架）
   // router-view 渲染当前路由匹配的子页面
-  // 与平台原版 src/main.js 行为一致
   template: '<root-component /><router-view></router-view>',
   components: { rootComponent: RootComponent },
   setup() {
-    const internalKey = ref(0);
-    window.internalKeyRef = internalKey;
-
-    // ============================================================
-    // 路由处理（与平台原版 src/main.js 一致）
-    //   - 刷新进入：window.onload 时根据 location.hash 触发 handleRouteChange，
-    //     用 ComponentLoader.loadComponent 动态注册组件再 push 路由
-    //   - 切换路由：beforeEach 守卫，遇到未注册的组件先 loadComponent，再 next()
-    //
-    // 即便我们已经把所有页面静态注册到 routes 里，刷新场景下
-    // ths-design 的 ComponentLoader 可能还需要执行内部初始化（注册组件到 app.component、
-    // 添加路由 name 等，见 utils.js 的 loadComponent 实现），缺了这一步会出现
-    // "<router-view> 内容空" 的现象。
-    // ============================================================
-    function getComponentNameByRoute(route) {
-      return route.replace(/^\//, '').split(/[?#]/)[0];
-    }
-
-    async function handleRouteChange() {
-      const route = location.hash.replace('#', '');
-      if (!route) return;
-      const componentName = getComponentNameByRoute(route);
-      await ComponentLoader.loadComponent(componentName, () => {
-        const originalHashParams = window.location.hash.split('?')[1];
-        window.router.push(`/${componentName}?${originalHashParams || ''}`);
-      });
-    }
-
-    window.router.beforeEach(async (to, from, next) => {
-      const pageCode = getComponentNameByRoute(to.path);
-      const componentName = `${pageCode}Component`;
-      if (!window[componentName]) {
-        await ComponentLoader.loadComponent(pageCode, () => {
-          const originalHashParams = window.location.hash.split('?')[1];
-          window.router.push(`/${pageCode}?${originalHashParams || ''}`);
-        });
-      }
-      next();
-    });
-
-    window.onload = handleRouteChange;
+    // rootComponent 由 <root-component /> 渲染，不走 router-view。
+    // 提前挂到 window，让它满足 ths-design ComponentLoader 的 window[componentName] 检查，
+    // 避免 ths-design 尝试动态加载 root/index.js。
+    window.rootComponent = RootComponent;
 
     const rootEmitter = mitt();
 
@@ -160,17 +119,11 @@ const MainComponent = {
     setSocketRoomId();
 
     let socket = ref(null);
-    async function initSocketIO() {
-      const { io } = await import('socket.io-client');
-      return io;
-    }
 
     if (global.socketIp) {
-      initSocketIO().then(io => {
-        const options = {};
-        if (global?.socketPath) options.path = global.socketPath;
-        socket.value = io(global.socketIp, options);
-      });
+      const options = {};
+      if (global?.socketPath) options.path = global.socketPath;
+      socket.value = io(global.socketIp, options);
     }
 
     function sendMessage(obj) {
@@ -204,7 +157,15 @@ const MainComponent = {
     }, { immediate: true });
 
     rootEmitter.on('rootData:change', (obj) => {
-      global = _.set(global, obj.key, obj.value);
+      // 用直接赋值代替 _.set —— _.set 对 Proxy(reactive) 顶层 key 赋值在某些 lodash
+      // 版本下不会经过 Proxy.set trap，导致 watch(() => global.xxx) 监听不到，
+      // 进而 watch socketIp 重连 socket 这条链断掉。
+      // obj.key 可能是 'a.b.c' 形式的路径，需要分情况处理。
+      if (typeof obj.key === 'string' && obj.key.includes('.')) {
+        _.set(global, obj.key, obj.value);
+      } else {
+        global[obj.key] = obj.value;
+      }
       if (global.socketIp && global.socketRoom && socket.value) {
         socket.value.emit('message', {
           room: global.socketRoom,
@@ -214,8 +175,7 @@ const MainComponent = {
       }
     });
 
-    watch(() => global.socketIp, async (val) => {
-      const io = await initSocketIO();
+    watch(() => global.socketIp, (val) => {
       if (socket.value) socket.value.close();
       if (val) {
         const options = {};
@@ -249,6 +209,10 @@ const MainComponent = {
         socket.value.on('message', messageHandler);
         socket.value.on('connect', connectHandler);
         socket.value.on('disconnect', disconnectHandler);
+        // connect 事件可能在注册 handler 之前已触发，socket 已处于连接状态
+        if (socket.value.connected) {
+          connectHandler();
+        }
         onCleanup(() => {
           socket.value?.off('message', messageHandler);
           socket.value?.off('connect', connectHandler);
@@ -313,7 +277,20 @@ const MainComponent = {
       rootEmit: rootEmitter.emit,
       rootOn: rootEmitter.on,
       rootOff: rootEmitter.off,
-      get rootSocket() { return socket.value; },
+      get rootSocket() {
+        const sock = socket.value;
+        // socket 不可用时，通过 rootEmitter 本地回环，确保组件间通信不受影响
+        if (!sock || !sock.connected) {
+          return {
+            emit: (event, data) => {
+              if (event === 'message') rootEmitter.emit('rootSocket:change', data);
+            },
+            on: () => {},
+            off: () => {},
+          };
+        }
+        return sock;
+      },
       setSocketRoomId,
       sendMessage,
     };

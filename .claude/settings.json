@@ -32,7 +32,15 @@
       "Bash(node /tmp/replace-dist.js --dry-run)",
       "Bash(awk 'NR==138' \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/南平市生态环境体检平-转换后/src/pages/leftMenu.vue\")",
       "Bash(rm -rf /tmp/_v)",
-      "Bash(node converter/convert.js \"测试项目/前端国产化-减污降碳-最新_src\" \"/tmp/_v\")"
+      "Bash(node converter/convert.js \"测试项目/前端国产化-减污降碳-最新_src\" \"/tmp/_v\")",
+      "Bash(node convert.js \"../测试项目/鹿小图-开发版本_src\" \"../转换后/鹿小图-开发版本\")",
+      "Bash(ls -d *_src)",
+      "Bash(ls -d \"南平市生态环境体检平台_src 2\")",
+      "Bash(cat ~/.npmrc 2>/dev/null | grep -v '^#'; echo '---'; cat \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/npdp-转换后/.npmrc\" 2>/dev/null; echo '---'; cat \"/Users/zhangjinxiu/Documents/工作/一张图框架3.0/测试项目/前端国产化-减污降碳-最新转换后/.npmrc\" 2>/dev/null)",
+      "Read(//Users/zhangjinxiu/**)",
+      "Bash(yarn install *)",
+      "Bash(chmod +x /tmp/batch-convert-build.sh)",
+      "Bash(bash /tmp/batch-convert-build.sh)"
     ],
     "additionalDirectories": [
       "/tmp",

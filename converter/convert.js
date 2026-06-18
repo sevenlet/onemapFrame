@@ -42,11 +42,12 @@ const { generateRoutes } = require('./lib/step7-route.js');
 const { injectMicroAppFramework } = require('./lib/step7-microapp.js');
 const { cleanUp } = require('./lib/step8-cleanup.js');
 
-// ---- 依赖注入（可选依赖，运行时才 require） ----
+// ---- 可选依赖：解析 / 格式化都在转换时才需要，运行时延迟 require ----
+// 缺失时不立即抛错，留到 main() 统一检查并打印安装提示
 let babelParser = null;
 let prettier = null;
-try { babelParser = require('@babel/parser'); } catch (e) { /* 留到 main() 检查 */ }
-try { prettier = require('prettier'); } catch (e) { /* 同上 */ }
+try { babelParser = require('@babel/parser'); } catch (e) { /* noop */ }
+try { prettier = require('prettier'); } catch (e) { /* noop */ }
 
 // ============================================================
 // 主流程

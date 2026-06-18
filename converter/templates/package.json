@@ -12,7 +12,7 @@
     "echarts": "^5.4.0",
     "echarts-liquidfill": "^3.0.0",
     "echarts-wordcloud": "^2.0.0",
-    "@ths/design": "^1.1.31",
+    "@ths/design": "^1.1.32",
     "vue": "^3.4.0",
     "vue-router": "^4.3.0",
     "axios": "^1.6.0",

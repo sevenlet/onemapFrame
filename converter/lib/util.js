@@ -84,6 +84,27 @@ function escapeScriptCloseTags(code) {
   return code.replace(/<\/script\s*>/gi, m => m.replace('</', '<\\/'));
 }
 
+/**
+ * 剥离平台导出 JS 文件外层的「JSDoc 头注释 + IIFE 外壳」。
+ *
+ * 平台输出的 index.js 形如：
+ *   /** ... *\/
+ *   (function () {
+ *     ...组件对象 / 编译后语句...
+ *   })();
+ *
+ * 三个分支（格式探测 / 标准格式预清理 / 编译后预清理）都需要先去掉这层壳，
+ * 才能继续做 AST 解析或字符串改写。
+ */
+function stripIIFEShell(content) {
+  let out = content.replace(/^\/\*\*[\s\S]*?\*\/\s*/, '').trimStart();
+  if (/^\s*\(\s*function\s*\(/.test(out)) {
+    out = out.replace(/^\s*\(\s*function\s*\([^)]*\)\s*\{/, '');
+    out = out.replace(/\}\s*\)\s*\(\s*\)\s*;?\s*$/, '');
+  }
+  return out;
+}
+
 // ---- ESM 严格模式修复 ----
 
 /**
@@ -120,9 +141,10 @@ function fixEsmStrictModeIssues(code) {
   for (const varName of constVars) {
     if (varName === 'undefined' || varName === 'NaN' || varName === 'Infinity') continue;
 
-    // 检测是否有重赋值（独立的 varName 后跟 =，且不是 ==/===，前面不是 const/let/var）
+    // 检测是否有重赋值（以语句边界为锚点：行首 / ; / } 之后出现 varName = 且不是 ==/===，
+    // 避免负向 lookbehind 被中间空白/注释绕过的脆弱性）
     const reassignRegex = new RegExp(
-      `(?<!(?:const|let|var)\\s+)\\b${varName}\\s*=[^=]`
+      `(?:^|[;}\\n])\\s*${escapeRegExp(varName)}\\s*=(?!=)`, 'm'
     );
     if (reassignRegex.test(code)) {
       // 把所有 const 声明改为 let（同名变量可能多处声明，需要全局替换）
@@ -144,5 +166,6 @@ module.exports = {
   escapeRegExp,
   indent,
   escapeScriptCloseTags,
+  stripIIFEShell,
   fixEsmStrictModeIssues,
 };

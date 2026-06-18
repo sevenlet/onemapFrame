@@ -22,10 +22,8 @@ function generateScaffold(projectDir) {
   );
 
   // vite.config.js（模板：templates/vite.config.js）
+  // 注：自 ths-design 1.1.27 起组件库自带 .vue 扁平结构 loader，无需 postinstall 补丁
   writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
-
-  // 组件库已自带兼容 .vue 扁平结构的 loader（自 1.1.27 起），
-  // 不再需要 postinstall patch 脚本
 
   // index.html（模板：templates/index.html，占位符 {{title}}）
   // 从源 index.html 的 <title> 抽取标题，没有就用 'Dashboard'

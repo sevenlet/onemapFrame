@@ -21,8 +21,16 @@ const {
   escapeRegExp,
   indent,
   escapeScriptCloseTags,
+  stripIIFEShell,
   fixEsmStrictModeIssues,
 } = require('./util.js');
+const {
+  UTILS_EXPORTED_NAMES,
+  VUE_SETUP_APIS,
+  VUE_RENDER_APIS,
+  VUE_DEFAULT_IMPORT_APIS,
+  VUE_PREFIX_APIS,
+} = require('./constants.js');
 const {
   extractThsComponentsFromTemplate,
   buildThsImportInfo,
@@ -51,7 +59,7 @@ function jsToVue(rawContent, dirName, cssContent) {
   rawContent = renameReservedWordsAsIdentifiers(rawContent);
 
   // 用最少的清理（仅去注释 + IIFE 外壳）来判断格式
-  const probe = stripCommentsAndIIFE(rawContent);
+  const probe = stripIIFEShell(rawContent);
   const isCompiledPattern =
     /\bconst\s+componentOptions\s*=/.test(probe) &&
     /\bfunction\s+render\s*\(/.test(probe);
@@ -173,17 +181,8 @@ function renameReservedWordsAsIdentifiers(code) {
 }
 
 /**
- * 仅做去注释 + 去 IIFE 外壳；用来判断格式
+ * 仅做去注释 + 去 IIFE 外壳；用来判断格式 — 见 util.stripIIFEShell。
  */
-function stripCommentsAndIIFE(rawContent) {
-  let content = rawContent.replace(/^\/\*\*[\s\S]*?\*\/\s*/, '').trimStart();
-  const isIIFE = /^\s*\(\s*function\s*\(/.test(content);
-  if (isIIFE) {
-    content = content.replace(/^\s*\(\s*function\s*\([^)]*\)\s*\{/, '');
-    content = content.replace(/\}\s*\)\s*\(\s*\)\s*;?\s*$/, '');
-  }
-  return content;
-}
 
 // ============================================================
 // 格式 1：标准格式 — 内容应为单个对象表达式
@@ -251,11 +250,16 @@ export default ${safeScriptObjectCode}
 ${indent(formattedTemplate, '  ')}
 </template>`;
 
-  const styleBlock = cssContent.trim()
-    ? `<style scoped>\n${cssContent.trim()}\n</style>\n`
+  const { scoped: scopedCss, keyframes: keyframesCss } = extractKeyframesFromCss(cssContent.trim());
+
+  const styleBlock = scopedCss
+    ? `<style scoped>\n${scopedCss}\n</style>\n`
+    : '';
+  const keyframeBlock = keyframesCss
+    ? `<style>\n${keyframesCss}\n</style>\n`
     : '';
 
-  return `${templateBlock}\n\n${scriptBlock}\n\n${styleBlock}`;
+  return `${templateBlock}\n\n${scriptBlock}\n\n${styleBlock}${keyframeBlock ? '\n' + keyframeBlock : ''}`;
 }
 
 // ============================================================
@@ -264,13 +268,7 @@ ${indent(formattedTemplate, '  ')}
 function convertCompiled(rawContent, componentName, dirName, cssContent) {
   // 编译后格式的预清理：把 window.xxxComponent = X 改写为 var 赋值，让 AST 能解析
   // 否则 X = { ...componentOptions } 在表达式语句位置会被当成 BlockStatement，spread 报错
-  let content = rawContent.replace(/^\/\*\*[\s\S]*?\*\/\s*/, '').trimStart();
-
-  const isIIFE = /^\s*\(\s*function\s*\(/.test(content);
-  if (isIIFE) {
-    content = content.replace(/^\s*\(\s*function\s*\([^)]*\)\s*\{/, '');
-    content = content.replace(/\}\s*\)\s*\(\s*\)\s*;?\s*$/, '');
-  }
+  let content = stripIIFEShell(rawContent);
 
   // window.xxxComponent = {...} → var __EXPORT_COMPONENT__ = {...}
   const windowAssignRegex = new RegExp(`window\\.${escapeRegExp(componentName)}\\s*=\\s*`, 'g');
@@ -421,14 +419,7 @@ function convertCompiled(rawContent, componentName, dirName, cssContent) {
 // 预清理：标准格式的去注释、去 IIFE、去 window.xxx 赋值、去 Vue. 前缀
 // ============================================================
 function preCleanStandard(rawContent, componentName) {
-  let content = rawContent.replace(/^\/\*\*[\s\S]*?\*\/\s*/, '').trimStart();
-
-  // 去 IIFE 外壳
-  const isIIFE = /^\s*\(\s*function\s*\(/.test(content);
-  if (isIIFE) {
-    content = content.replace(/^\s*\(\s*function\s*\([^)]*\)\s*\{/, '');
-    content = content.replace(/\}\s*\)\s*\(\s*\)\s*;?\s*$/, '');
-  }
+  let content = stripIIFEShell(rawContent);
 
   // 去 window.xxxComponent =  —— 标准格式去掉后只剩 `{...}` 纯对象
   const windowAssignRegex = new RegExp(`window\\.${escapeRegExp(componentName)}\\s*=\\s*`, 'g');
@@ -448,31 +439,12 @@ function preCleanStandard(rawContent, componentName) {
 // 工具函数
 // ============================================================
 
-const RENDER_API_LIST = [
-  'openBlock', 'createElementBlock', 'createElementVNode', 'createVNode',
-  'createTextVNode', 'createCommentVNode', 'Fragment',
-  'renderList', 'withCtx', 'withDirectives', 'withModifiers',
-  'normalizeClass', 'normalizeStyle', 'toDisplayString',
-  'resolveComponent', 'resolveDirective',
-  'vShow', 'vModelText',
-  'createBlock', 'withKeys', 'mergeProps', 'guardReactiveProps',
-];
-
-const SETUP_API_LIST = [
-  'reactive', 'ref', 'computed', 'watch', 'watchEffect',
-  'onMounted', 'onUnmounted', 'onBeforeMount', 'onBeforeUnmount',
-  'provide', 'inject', 'toRefs', 'toRef', 'nextTick', 'isRef',
-  'shallowRef', 'shallowReactive', 'triggerRef',
-  'h', 'resolveComponent', 'defineAsyncComponent',
-  'markRaw', 'toRaw',
-];
-
 function detectRenderApis(code) {
-  return RENDER_API_LIST.filter(api => new RegExp(`\\b${api}\\b`).test(code));
+  return VUE_RENDER_APIS.filter(api => new RegExp(`\\b${api}\\b`).test(code));
 }
 
 function detectSetupApis(code) {
-  return SETUP_API_LIST.filter(api => new RegExp(`\\b${api}\\b`).test(code));
+  return VUE_SETUP_APIS.filter(api => new RegExp(`\\b${api}\\b`).test(code));
 }
 
 /**
@@ -497,11 +469,10 @@ function buildImportBlockForCompiled(dirName, originalCode, vueApis) {
     block += `import http from '@/http.js';\n`;
   }
 
-  // 检测是否用了 utils
-  const utilsPattern = /\b(runAnimation|setPageScale|AQI|convertCharacter|getUrlParam|getQueryParam|guid|mountDynamicComponent|ResourceLoader|ComponentLoader|replaceCssVariables|loadInitialApis|fetchApiData|getDataValue|applyFilter|filterData|watchComponentVisible|requestApi|generateCacheKey)\b/;
-  if (utilsPattern.test(originalCode)) {
-    block += `import { ComponentLoader, watchComponentVisible, generateCacheKey, requestApi, ResourceLoader, replaceCssVariables, getUrlParam, getQueryParam, guid, runAnimation, setPageScale, mountDynamicComponent, loadInitialApis, fetchApiData, getDataValue, applyFilter, filterData, convertCharacter } from '@/utils.js';\n`;
-  }
+  // 检测是否用了 utils.js 的任一导出 —— 名单维护在 constants.UTILS_EXPORTED_NAMES，
+  // 这里直接基于该名单构造检测正则与 import 语句，避免硬编码漂移
+  const utilsImport = buildUtilsImportLine(originalCode);
+  if (utilsImport) block += utilsImport;
 
   if (/\bthemes\b/.test(originalCode)) {
     block += `import { themes } from '@/theme.js';\n`;
@@ -636,23 +607,38 @@ function formatTemplateHtml(template) {
 }
 
 /**
+ * 检测代码中实际用到的 utils.js 导出名，生成 `import { ... } from '@/utils.js';` 行；
+ * 一个都没用就返回空串。
+ *
+ * 名单单一来源：constants.UTILS_EXPORTED_NAMES。新加 utils 工具只改 constants，
+ * 不必同时改 step3 的 fixCustomVue / step4 / 这里三处。
+ */
+function buildUtilsImportLine(code) {
+  const used = UTILS_EXPORTED_NAMES.filter(
+    name => new RegExp(`\\b${name}\\b`).test(code)
+  );
+  if (used.length === 0) return '';
+  return `import { ${used.join(', ')} } from '@/utils.js';\n`;
+}
+
+/**
  * 构建标准格式组件的 import 块
+ *
+ * 标准格式来自平台的低代码模板，一律默认全量 import 常用 Vue API + 平台必备工具，
+ * 多余 import 会被 Vite tree-shaking 掉，不影响产物体积，但能避免「组件里写了
+ * computed 却没引入」的低级运行错误。
  */
 function buildImportBlockForVue(originalContent, dirName, thsImportStatement) {
-  let importBlock = `import {
-  reactive, ref, computed, watch, watchEffect,
-  onMounted, onUnmounted, onBeforeMount, onBeforeUnmount,
-  provide, inject, toRefs, toRef, nextTick, isRef,
-  shallowRef, shallowReactive, triggerRef,
-  h, createVNode, createElementBlock, openBlock,
-  withCtx, withDirectives, withModifiers,
-  resolveComponent, defineAsyncComponent,
-  markRaw, toRaw, toDisplayString, createElementVNode,
-} from 'vue';
+  const vueApisStr = [...new Set(VUE_DEFAULT_IMPORT_APIS)].sort().join(', ');
+  const utilsImport = buildUtilsImportLine(originalContent)
+    // 标准格式默认全量引入；即使代码里没用也保留，避免漏引导致运行报错
+    || `import { ${UTILS_EXPORTED_NAMES.join(', ')} } from '@/utils.js';\n`;
+
+  let importBlock =
+`import { ${vueApisStr} } from 'vue';
 import { useRoute } from 'vue-router';
 import http from '@/http.js';
-import { ComponentLoader, watchComponentVisible, generateCacheKey, requestApi, ResourceLoader, replaceCssVariables, getUrlParam, getQueryParam, guid, runAnimation, setPageScale, mountDynamicComponent, loadInitialApis, fetchApiData, getDataValue, applyFilter, filterData, convertCharacter } from '@/utils.js';
-import { themes } from '@/theme.js';
+${utilsImport}import { themes } from '@/theme.js';
 import * as echarts from 'echarts';
 `;
 
@@ -686,13 +672,12 @@ import * as echarts from 'echarts';
 }
 
 /**
- * 剥离 Vue. 前缀
+ * 剥离源代码中 `Vue.xxx` 形式的前缀（白名单见 constants.VUE_PREFIX_APIS），
+ * 让它变成无前缀的 `xxx`，再由顶部 import 语句提供绑定。
  */
 function stripVuePrefix(content) {
-  return content.replace(
-    /Vue\.(reactive|ref|computed|watch|watchEffect|nextTick|onMounted|onUnmounted|markRaw|toRaw|shallowRef|shallowReactive|triggerRef|isRef|toRefs|toRef|unref|isReactive|provide|inject|createVNode|h|resolveComponent|defineAsyncComponent|defineComponent|createElementBlock|openBlock|createBlock|withCtx|withDirectives|withModifiers|normalizeClass|normalizeStyle|mergeProps|renderList|toDisplayString|createTextVNode|createCommentVNode|vShow|KeepAlive|Transition|Suspense|Fragment)\b/g,
-    '$1'
-  );
+  const pattern = new RegExp(`Vue\\.(${VUE_PREFIX_APIS.join('|')})\\b`, 'g');
+  return content.replace(pattern, '$1');
 }
 
 // ============================================================
@@ -729,9 +714,9 @@ function wrapperClassName(dirName) {
  * createElementBlock 是编译输出用的，有 patch flag 等额外语义。
  */
 function wrapRenderWithDiv(renderSource, wrapperClass) {
-  // 找最后一个 return 语句的位置，把它的表达式包起来。
-  // render 函数内可能有多个 return（条件分支），但通常只有最后一个返回根 VNode；
-  // 这里用 babel AST 找 BlockStatement 的最后一条 ReturnStatement。
+  // render 函数内可能有多个 return（条件分支），需要对每一条带 argument 的
+  // ReturnStatement 都包装一层 <div>，确保所有分支都有 wrapper class。
+  // 从后往前处理，避免前面的偏移影响后面。
   let ast;
   try {
     ast = babelParser.parse(`(${renderSource})`, { sourceType: 'module' });
@@ -747,31 +732,115 @@ function wrapRenderWithDiv(renderSource, wrapperClass) {
   const body = fnExpr.body;
   if (!body || body.type !== 'BlockStatement') return renderSource;
 
-  // 找最后一个 ReturnStatement
-  let returnStmt = null;
+  // 收集所有有 argument 的 ReturnStatement（按源码位置从后往前排序）
+  const returnStmts = [];
   for (let i = body.body.length - 1; i >= 0; i--) {
-    if (body.body[i].type === 'ReturnStatement') {
-      returnStmt = body.body[i];
-      break;
+    if (body.body[i].type === 'ReturnStatement' && body.body[i].argument) {
+      returnStmts.push(body.body[i]);
     }
   }
-  if (!returnStmt || !returnStmt.argument) return renderSource;
+  if (returnStmts.length === 0) return renderSource;
 
-  // 提取 return 表达式的源码（注意 babel 的 start/end 是基于 `(${renderSource})`，要减 1）
-  const argStart = returnStmt.argument.start - 1;
-  const argEnd = returnStmt.argument.end - 1;
-  const argSource = renderSource.substring(argStart, argEnd);
+  // 从后往前逐条替换（后改的不影响前面未改位置的偏移）
+  let result = renderSource;
+  for (const stmt of returnStmts) {
+    // 注意 babel 的 start/end 是基于 `(${renderSource})`，要减 1
+    const argStart = stmt.argument.start - 1;
+    const argEnd = stmt.argument.end - 1;
+    const argSource = result.substring(argStart, argEnd);
+    const before = result.substring(0, argStart);
+    const after = result.substring(argEnd);
+    result = before + `h('div', { class: '${wrapperClass}' }, [${argSource}])` + after;
+  }
 
-  // 拼装替换后的源码
-  const before = renderSource.substring(0, argStart);
-  const after = renderSource.substring(argEnd);
-  const wrapped = `h('div', { class: '${wrapperClass}' }, [${argSource}])`;
-
-  return before + wrapped + after;
+  return result;
 }
 
 /**
- * 给 CSS 所有顶层选择器加 wrapper class 前缀。
+ * 按逗号分割 CSS 选择器列表，忽略括号内的逗号。
+ * e.g. ":is(.a, .b), .c .d" → [":is(.a, .b)", ".c .d"]
+ */
+function splitSelectorList(selector) {
+  const parts = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < selector.length; i++) {
+    const ch = selector[i];
+    if (ch === '(') depth++;
+    else if (ch === ')') depth--;
+    else if (ch === ',' && depth === 0) {
+      parts.push(selector.substring(start, i));
+      start = i + 1;
+    }
+  }
+  parts.push(selector.substring(start));
+  return parts;
+}
+
+/**
+ * 从 CSS 中分离 @keyframes 规则。
+ *
+ * Vue 3 的 <style scoped> 通过 PostCSS 给所有选择器追加 [data-v-xxx] 属性选择器，
+ * 某些 PostCSS 版本会错误地把 @keyframes 规则名也加上后缀，变成非法语法：
+ *   @keyframes foo[data-v-xxx] { ... }
+ * 浏览器解析到后会直接丢弃整条规则，导致动画失效。
+ *
+ * 解决方案：把 @keyframes 从 scoped 块中抽出来，放到独立的不带 scoped 的 <style> 中。
+ *
+ * @param {string} css 原始 CSS 文本
+ * @returns {{ scoped: string, keyframes: string }}
+ */
+function extractKeyframesFromCss(css) {
+  if (!css) return { scoped: '', keyframes: '' };
+
+  const keyframeBlocks = [];
+  const scopedParts = [];
+  let i = 0;
+
+  while (i < css.length) {
+    const remaining = css.substring(i);
+
+    // 匹配 @keyframes / @-webkit-keyframes / @-moz-keyframes 等
+    if (/^@(?:-\w+-)?keyframes\s/.test(remaining)) {
+      // 用括号深度找到匹配的闭合 }
+      let depth = 0;
+      let j = i;
+      let foundBrace = false;
+      while (j < css.length) {
+        if (css[j] === '{') {
+          depth++;
+          foundBrace = true;
+        } else if (css[j] === '}') {
+          depth--;
+          if (foundBrace && depth === 0) {
+            j++;
+            break;
+          }
+        }
+        j++;
+      }
+      const block = css.substring(i, j);
+      keyframeBlocks.push(block);
+      // 在 scoped CSS 中用空串代替（避免残留空白 keyframe 声明头）
+      scopedParts.push('');
+      i = j;
+    } else {
+      scopedParts.push(css[i]);
+      i++;
+    }
+  }
+
+  // 清理连续空行
+  const scopedCss = scopedParts.join('').replace(/\n{3,}/g, '\n\n').trim();
+  const keyframesCss = keyframeBlocks.length > 0
+    ? keyframeBlocks.join('\n\n')
+    : '';
+
+  return { scoped: scopedCss, keyframes: keyframesCss };
+}
+
+/**
+ * 给 CSS 所有顶层选择器加 wrapper class 前缀，实现编译后组件的样式隔离。
  *
  * 处理规则：
  *   - 普通规则 `.foo { ... }` → `.WRAPPER .foo { ... }`
@@ -846,8 +915,7 @@ function doPrefix(css, prefix) {
       braceDepth++;
       const sel = buffer.trim();
       if (sel) {
-        const prefixed = sel
-          .split(',')
+        const prefixed = splitSelectorList(sel)
           .map(s => {
             const t = s.trim();
             if (!t) return t;
@@ -892,4 +960,5 @@ function doPrefix(css, prefix) {
 module.exports = {
   jsToVue,
   setDeps,
+  extractKeyframesFromCss,
 };

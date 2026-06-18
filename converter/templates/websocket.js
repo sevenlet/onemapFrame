@@ -1,6 +1,4 @@
-// // 定义大屏的地址，即使websocket的服务器地址
-// var socketServer = "http://192.168.0.202:7777/view";
-// 定义接收socket的客户端编码的参数变量名
+// 接收 socket 客户端编码的 URL 参数名（动态注入 clientCode，让多账户登录互不影响）
 let wsClientCode = "wsClientCode";
 let c = 0;
 
