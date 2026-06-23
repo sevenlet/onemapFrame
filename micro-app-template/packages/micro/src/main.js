@@ -48,12 +48,15 @@ function unmount() {
   }
 }
 
-// ===== 立即挂载 =====
-// iframe 模式下，micro-app 不主动调用 mount —— 所以无论何种环境都先挂上
-mount();
-
-// ===== 同时暴露生命周期 =====
-// 兼容 default 沙箱模式 / 未来切换沙箱方式时无需改代码
-if (window.__MICRO_APP_ENVIRONMENT__) {
-  window[`micro-app-${window.__MICRO_APP_NAME__}`] = { mount, unmount };
+// ===== 挂载策略 =====
+// - 独立运行（__MICRO_APP_ENVIRONMENT__ 不存在）：模块一加载就立即 mount
+// - 被基座嵌入：把 mount 控制权交给 micro-app 框架，不要自己提前挂载，
+//   避免出现 "There is already an app instance mounted on the host container" 告警
+if (!window.__MICRO_APP_ENVIRONMENT__) {
+  mount();
 }
+
+// ===== 暴露生命周期给 micro-app 框架 =====
+// micro-app 会通过 window['micro-app-${name}'].mount/unmount 控制生命周期
+// iframe 模式下虽不调用，但暴露了也无副作用；default 模式下必须暴露
+window[`micro-app-${window.__MICRO_APP_NAME__ || 'default'}`] = { mount, unmount };

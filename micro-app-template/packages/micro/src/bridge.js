@@ -21,7 +21,13 @@ import { ref, watch, onUnmounted, getCurrentInstance } from 'vue';
 
 // windows.microApp 存在 = 被基座嵌入
 function getMicroApp() {
-  return typeof window !== 'undefined' ? window.microApp || null : null;
+  // @micro-zoe/micro-app 注入到子应用全局的 window.microApp 是 ESM namespace 对象，
+  // 真正的实例（含 getData / addDataListener / setGlobalData / addGlobalDataListener / dispatch 等）
+  // 在 .default 上。兼容旧版本直接挂实例的情况，做 fallback。
+  if (typeof window === 'undefined') return null;
+  const raw = window.microApp;
+  if (!raw) return null;
+  return raw.default || raw;
 }
 
 // ===================================================================
@@ -66,6 +72,7 @@ export function callBase(method, ...params) {
     console.log('[bridge] 独立运行下 callBase（仅调试可见）:', method, params);
     return Promise.resolve(undefined);
   }
+  ensureBaseDataListener();
 
   const requestId = `rpc_${Date.now()}_${++rpcSeq}`;
   const promise = new Promise((resolve, reject) => {
@@ -103,6 +110,27 @@ function handleRpcResponse(rpc) {
 let baseDataRef = null;
 let baseDataListenerAttached = false;
 
+function ensureBaseDataListener() {
+  if (!baseDataRef) {
+    baseDataRef = ref({});
+  }
+  if (baseDataListenerAttached) return;
+  const ma = getMicroApp();
+  if (ma && typeof ma.addDataListener === 'function') {
+    const handler = (data) => {
+      if (!data) return;
+      // 拦截 RPC 响应（不暴露给业务层）
+      if (data.__CALL_RESPONSE__) {
+        handleRpcResponse(data.__CALL_RESPONSE__);
+      }
+      baseDataRef.value = { ...data };
+    };
+    // 第二个参数 true：立即用当前 data 触发一次（拿到初始值）
+    ma.addDataListener(handler, true);
+    baseDataListenerAttached = true;
+  }
+}
+
 /**
  * 订阅基座通过 :data 下发的数据
  * 独立运行时 baseData 为空对象，安全降级
@@ -110,25 +138,7 @@ let baseDataListenerAttached = false;
  * 同时在内部拦截 __CALL_RESPONSE__ 字段，用于 callBase() 的返回值通道
  */
 export function useBaseBridge() {
-  if (!baseDataRef) {
-    baseDataRef = ref({});
-  }
-  if (!baseDataListenerAttached) {
-    const ma = getMicroApp();
-    if (ma && typeof ma.addDataListener === 'function') {
-      const handler = (data) => {
-        if (!data) return;
-        // 拦截 RPC 响应（不暴露给业务层）
-        if (data.__CALL_RESPONSE__) {
-          handleRpcResponse(data.__CALL_RESPONSE__);
-        }
-        baseDataRef.value = { ...data };
-      };
-      // 第二个参数 true：立即用当前 data 触发一次（拿到初始值）
-      ma.addDataListener(handler, true);
-      baseDataListenerAttached = true;
-    }
-  }
+  ensureBaseDataListener();
   return {
     baseData: baseDataRef,
     sendToBase,

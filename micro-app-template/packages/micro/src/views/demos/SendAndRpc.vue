@@ -126,6 +126,10 @@ async function callNavigate() {
   rpcResult.value = null;
   try {
     rpcResult.value = await callBase('navigate', '/some-path');
+    // 以下写法不推荐
+    // rpcResult.value = await callBase('getData', '/some-path');
+    // 调用全局的专题函数
+    // rpcResult.value = await callBase('waterGlobalFunctions.getData');
   } catch (err) {
     rpcResult.value = { error: String(err) };
   }

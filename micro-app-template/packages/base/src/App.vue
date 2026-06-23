@@ -1,3 +1,38 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║ 微前端调试基座 — 演示基座 ↔ 子应用 三大通信通道
+  ║
+  ║ ━━━━ 通道 ① 基座 → 子应用 定向数据（baseData）━━━━
+  ║
+  ║ 基座侧两种等价写法（任选其一，看场景）：
+  ║   const { data, setData, dataToChild } = useChildBridge('child');
+  ║
+  ║   // 写法 A：直接赋值 —— 适合改单字段
+  ║   data.userName = '张三';
+  ║   data.theme = 'dark';
+  ║
+  ║   // 写法 B：setData 批量推送 —— 适合一次推多字段 / 在 watch 回调里
+  ║   setData({ userName: '张三', theme: 'dark', token: 'xxx' });
+  ║
+  ║   // 配合 watch 全量同步整个 state：
+  ║   watch(state, val => setData(val), { deep: true, immediate: true });
+  ║
+  ║ 模板里：<micro-app :data="dataToChild" />（dataToChild 是 computed）
+  ║
+  ║ 子应用侧：const { baseData } = useBaseBridge();
+  ║          baseData.userName / baseData.theme 直接读，响应式
+  ║
+  ║ ━━━━ 通道 ② 子应用 → 基座（dispatch / RPC）━━━━
+  ║   基座侧：registerHandler('xxx', payload => {...})       接收无返回值
+  ║          registerMethod('xxx', (...args) => result)     RPC 有返回值
+  ║   子应用：sendToBase({ type: 'xxx', ...payload })       发无返回值
+  ║          const r = await callBase('xxx', ...args)       RPC 等返回值
+  ║
+  ║ ━━━━ 通道 ③ 全局共享数据（globalData）━━━━
+  ║   const { globalData, setGlobalData } = useGlobalData();
+  ║   基座和所有子应用共用一份，任意一方写入大家都收到
+  ╚══════════════════════════════════════════════════════════════╝
+-->
 <template>
   <div class="base-root">
     <!-- 顶部栏：演示数据下发 -->
@@ -15,6 +50,9 @@
           主题：<strong>{{ dataToChild.theme }}</strong>
         </span>
         <el-button size="small" @click="toggleTheme">切换主题</el-button>
+        <el-button size="small" type="primary" plain @click="batchUpdate">
+          批量 setData 推送
+        </el-button>
       </div>
     </header>
 
@@ -131,11 +169,30 @@ import RegionPickerDialog from './dialogs/RegionPickerDialog.vue';
 // ===== 通道 1+2：定向数据 / dispatch =====
 // useChildBridge(name) 按 <micro-app name="child"> 拿独立实例。
 // 模板里两端 name 都是 'child'，所以这里也传 'child'。
-const { data, dataToChild, handleChildData, registerHandler, registerMethod } = useChildBridge('child');
+const { data, setData, dataToChild, handleChildData, registerHandler, registerMethod } = useChildBridge('child');
 
+// ─── 写法 A：直接给 data.xxx 赋值（适合改单个字段）───
+// data 是 reactive 对象，赋值会自动驱动 dataToChild computed 重算 →
+// micro-app 框架检测 props 引用变化 → 子应用 addDataListener 触发
 data.userName = '张三';
 data.theme = 'light';
 data.token = 'Bearer dev-token-abc123';
+
+// ─── 写法 B：setData({...}) 批量推送（适合一次推多字段 / watch 回调里用）───
+// 等价于：Object.assign(data, patch)，底层改的是同一个 data 对象
+// 例：basicInit / handshake / 把整个业务 state 全量推下去
+setData({
+  appVersion: '1.0.0',
+  initTimestamp: Date.now(),
+  permissions: ['read', 'write'],
+  features: { darkMode: true, beta: false },
+});
+
+// 真实业务里典型的"全量同步"用法：把基座 state / global 全量推给子应用
+// import { watch, reactive } from 'vue'
+// const state = reactive({ isShowMain: false, currentTab: 'air' })
+// watch(state, (val) => setData(val), { deep: true, immediate: true })
+
 
 const inbox = reactive([]);
 const inboxRef = ref(null);
@@ -279,10 +336,22 @@ function onDialogClose() {
 }
 
 function changeUser() {
+  // 写法 A：单字段赋值
   data.userName = data.userName === '张三' ? '李四' : '张三';
 }
 function toggleTheme() {
+  // 写法 A：单字段赋值
   data.theme = data.theme === 'light' ? 'dark' : 'light';
+}
+function batchUpdate() {
+  // 写法 B：setData 一次性批量更新多个字段
+  // 注意：setData 是合并语义（Object.assign），不会覆盖未传入的字段
+  setData({
+    userName: '王五',
+    theme: 'dark',
+    token: `Bearer refreshed-${Date.now()}`,
+    lastUpdate: new Date().toLocaleTimeString(),
+  });
 }
 
 // ===== 通道 3：globalData 全局共享 =====

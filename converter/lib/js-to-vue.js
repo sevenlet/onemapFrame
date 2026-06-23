@@ -482,6 +482,10 @@ function buildImportBlockForCompiled(dirName, originalCode, vueApis) {
     block += `import * as echarts from 'echarts';\n`;
   }
 
+  if (/\buseChildBridge\b/.test(originalCode)) {
+    block += `import { useChildBridge } from '@/bridge.js';\n`;
+  }
+
   if (/\b_\./.test(originalCode)) {
     block += `import _ from 'lodash';\n`;
   }
@@ -658,6 +662,9 @@ import * as echarts from 'echarts';
   }
   if (/\b_\./.test(originalContent)) {
     extraImports.push(`import _ from 'lodash';`);
+  }
+  if (/\buseChildBridge\b/.test(originalContent)) {
+    extraImports.push(`import { useChildBridge } from '@/bridge.js';`);
   }
 
   if (extraImports.length) {

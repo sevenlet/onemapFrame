@@ -121,15 +121,16 @@ export function useChildBridge(name) {
     }
   }
 
-  // 通过 microApp.setData 给子应用回传 RPC 结果
+  // 通过 data 响应式更新 + microApp.setData 给子应用回传 RPC 结果
   // 关键：必须合并当前 dataToChild，否则会覆盖基座下发的其它字段
   // name 由闭包持有，不会被其它实例覆盖
   function sendRpcResponse(requestId, result, error) {
-    const responsePayload = {
+    const response = { requestId, result, error, __t: Date.now() };
+    data.__CALL_RESPONSE__ = response;
+    microApp.setData(name, {
       ...dataToChild.value,
-      __CALL_RESPONSE__: { requestId, result, error, __t: Date.now() },
-    };
-    microApp.setData(name, responsePayload);
+      __CALL_RESPONSE__: response,
+    });
   }
 
   const instance = {

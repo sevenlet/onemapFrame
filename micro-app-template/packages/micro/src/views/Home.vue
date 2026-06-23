@@ -82,6 +82,32 @@
 import { computed } from 'vue';
 import { ElCard, ElAlert } from 'element-plus';
 
+
+import { watch, ref } from 'vue';
+import { useBaseBridge, useGlobalData } from '@/bridge.js';
+
+// ─── 通道 ①：监听基座定向数据 setData ───
+const { baseData } = useBaseBridge();
+watch(baseData, (newVal) => {
+  console.log('[子应用] 收到基座 setData（定向）：', newVal);
+}, { deep: true });
+
+// ─── 通道 ③：监听基座 globalData 全局广播 ───
+const { globalData } = useGlobalData();
+const lastBroadcast = ref(null);
+watch(
+  globalData,
+  (val) => {
+    // 约定：type = 'base-says-hi' 表示这是基座广播的一次性通知
+    if (val?.type === 'base-says-hi' && val?.timestamp !== lastBroadcast.value) {
+      console.log('[子应用] 收到基座全局广播：', val.msg, val.data);
+      lastBroadcast.value = val.timestamp;
+      // 拿到消息以后可以做业务逻辑：比如弹 toast、刷新数据、跳转路由
+    }
+  },
+  { deep: true, immediate: true }
+);
+
 const isEmbedded = computed(() => !!window.__MICRO_APP_ENVIRONMENT__);
 
 // 5 张能力卡片的元数据 —— 加新 demo 时往这里加一行即可
