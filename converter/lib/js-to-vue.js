@@ -22,6 +22,8 @@ const {
   indent,
   escapeScriptCloseTags,
   stripIIFEShell,
+  stripTrailingIIFE,
+  unwrapBabelHelpers,
   fixEsmStrictModeIssues,
 } = require('./util.js');
 const {
@@ -46,6 +48,23 @@ function setDeps({ babelParser: bp, prettier: pr }) {
 }
 
 /**
+ * 把代码里的 axios 全局调用替换为 http（axios 实例）。
+ *
+ * 原平台通过 <script src="axios.min.js"> 提供全局 axios，
+ * 新 Vite 项目里是 import http from '@/http.js'（一个预配置的 axios 实例）。
+ * 要替换的模式：
+ *   axios.get/post/put/delete/patch/head/options(...) → http.$1(...)
+ *   axios(...) 或 axios.create(...)                    → http(...)  / http.create(...)
+ */
+function replaceAxiosWithHttp(code) {
+  if (!/\baxios\b/.test(code)) return code;
+  code = code.replace(/\baxios\.(get|post|put|delete|patch|head|options)\b/g, 'http.$1');
+  code = code.replace(/\baxios\.(create|request)\b/g, 'http.$1');
+  code = code.replace(/\baxios\(/g, 'http(');
+  return code;
+}
+
+/**
  * 入口：把一个 index.js 转为单文件 .vue。
  *
  * 先按编译后格式检测；不匹配就走标准格式。
@@ -58,10 +77,22 @@ function jsToVue(rawContent, dirName, cssContent) {
   //    源代码原本运行在 sloppy mode（<script> 全局），这些保留字曾合法。
   rawContent = renameReservedWordsAsIdentifiers(rawContent);
 
+  // 0.5) 反向还原 Babel 编译产物：删 `_typeof` / `_objectSpread` 等 helper 函数声明，
+  //      把 `_objectSpread({}, X)` 改成 `Object.assign({}, X)`，`_typeof(X)` 改成 `typeof X`。
+  //      平台对部分含 ES6+ 语法的组件做了 Babel 编译，产物头部裸着一组 helper 函数
+  //      + 顶层 `"use strict"`，没有外层 IIFE — 不还原的话 preCleanStandard 后剩下
+  //      `"use strict"; function _typeof... { 组件对象 }` 不可能被 parse 成单对象表达式。
+  //
+  //      注：_regeneratorRuntime / _asyncToGenerator / asyncGeneratorStep 等 async 编译
+  //      产物不会删除 — 业务会调用它们。删除 helper 后如果文件是编译后格式（IIFE 内
+  //      componentOptions + render），会走 convertCompiled 分支，它通过 extraTopScope
+  //      自动收集这些保留函数到 <script> 顶部。
+  rawContent = unwrapBabelHelpers(rawContent, babelParser);
+
   // 用最少的清理（仅去注释 + IIFE 外壳）来判断格式
   const probe = stripIIFEShell(rawContent);
   const isCompiledPattern =
-    /\bconst\s+componentOptions\s*=/.test(probe) &&
+    /\b(?:const|var|let)\s+componentOptions\s*=/.test(probe) &&
     /\bfunction\s+render\s*\(/.test(probe);
 
   if (isCompiledPattern) {
@@ -188,6 +219,12 @@ function renameReservedWordsAsIdentifiers(code) {
 // 格式 1：标准格式 — 内容应为单个对象表达式
 // ============================================================
 function convertStandard(content, rawContent, dirName, cssContent) {
+  // ESM 严格模式修复必须在 AST parse 之前先跑一次。
+  // 否则像 `let arguments = document.querySelectorAll(...)` 这种 sloppy mode 合法
+  // 的写法，会让 babelParser({sourceType:'module'}) 直接抛 "Binding 'arguments' in strict mode"。
+  // 后面 scriptObjectCode 再跑一次是幂等的，保留作为兜底。
+  content = fixEsmStrictModeIssues(content);
+
   // 包成表达式
   const wrapped = `(${content})`;
   let ast;
@@ -233,6 +270,8 @@ function convertStandard(content, rawContent, dirName, cssContent) {
 
   let scriptObjectCode = reassembleObject(otherProps, wrapped, thsImports.componentEntries);
   scriptObjectCode = fixEsmStrictModeIssues(scriptObjectCode);
+  // 原平台 axios 是全局变量，新版 Vite 项目里是 import http from '@/http.js'
+  scriptObjectCode = replaceAxiosWithHttp(scriptObjectCode);
 
   const importBlock = buildImportBlockForVue(rawContent, dirName, thsImports.statement);
 
@@ -269,6 +308,12 @@ function convertCompiled(rawContent, componentName, dirName, cssContent) {
   // 编译后格式的预清理：把 window.xxxComponent = X 改写为 var 赋值，让 AST 能解析
   // 否则 X = { ...componentOptions } 在表达式语句位置会被当成 BlockStatement，spread 报错
   let content = stripIIFEShell(rawContent);
+  // stripIIFEShell 只处理文件以 IIFE 开头的情况。当头部有 Babel helper 函数声明
+  // （_regeneratorRuntime / _asyncToGenerator 等）时，IIFE 被挤到文件中间，此时
+  // stripIIFEShell 匹配不到。用 stripTrailingIIFE 做兜底：只剥末尾的 IIFE。
+  if (content === rawContent) {
+    content = stripTrailingIIFE(rawContent);
+  }
 
   // window.xxxComponent = {...} → var __EXPORT_COMPONENT__ = {...}
   const windowAssignRegex = new RegExp(`window\\.${escapeRegExp(componentName)}\\s*=\\s*`, 'g');
@@ -284,11 +329,16 @@ function convertCompiled(rawContent, componentName, dirName, cssContent) {
   content = content.replace(/\bwindow\.ComponentLoader\b/g, 'ComponentLoader');
 
   // ---- AST 解析整个内容（多条语句）----
+  // sourceType: 'script' 而非 'module'：编译后组件内容是从 IIFE 中取出的 sloppy
+  // mode 代码，可能包含无分号的 minified helper（_regeneratorRuntime 等），
+  // module 模式会报 "Missing semicolon"。script 模式在这些点上更宽容，
+  // 且我们只需要提取 AST 节点，不依赖模块特性。
   let ast;
   try {
     ast = babelParser.parse(content, {
-      sourceType: 'module',
+      sourceType: 'script',
       plugins: ['objectRestSpread'],
+      errorRecovery: true,
     });
   } catch (e) {
     throw new Error(`编译后组件 AST 解析失败: ${e.message}`);
@@ -387,7 +437,9 @@ function convertCompiled(rawContent, componentName, dirName, cssContent) {
 
   // ---- ESM 严格模式修复 ----
   exportSrc = fixEsmStrictModeIssues(exportSrc);
-  const topScopeSrc = extraTopScope.map(s => fixEsmStrictModeIssues(s));
+  // 原平台 axios 是全局变量，新版 Vite 项目里是 import http from '@/http.js'
+  exportSrc = replaceAxiosWithHttp(exportSrc);
+  const topScopeSrc = extraTopScope.map(s => replaceAxiosWithHttp(fixEsmStrictModeIssues(s)));
   const safeImportBlock = escapeScriptCloseTags(importBlock);
   const safeExportSrc = escapeScriptCloseTags(exportSrc);
 
@@ -423,7 +475,15 @@ function preCleanStandard(rawContent, componentName) {
 
   // 去 window.xxxComponent =  —— 标准格式去掉后只剩 `{...}` 纯对象
   const windowAssignRegex = new RegExp(`window\\.${escapeRegExp(componentName)}\\s*=\\s*`, 'g');
+  const before = content;
   content = content.replace(windowAssignRegex, '');
+
+  // 兜底：有些组件目录是从别处复制过来的，window 名字和目录名对不上
+  // （例如目录 airOverViewRightContent222 内引用 window.airOverViewRightContent111Component）。
+  // 精确替换没匹配到时，再用通用 `window.<标识符>Component =` 删一次。
+  if (content === before) {
+    content = content.replace(/\bwindow\.\w+Component\s*=\s*/g, '');
+  }
 
   // 去 Vue. 前缀
   content = stripVuePrefix(content);

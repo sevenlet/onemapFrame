@@ -150,8 +150,8 @@ function fixCustomVue(vueSource, dirName) {
     if (!/\bimport.*http\b/.test(existingImportText)) {
       missingImports.push(`import http from '@/http.js';`);
     }
-    // axios.get/post/put/delete → http.get/post/put/delete
-    scriptContent = scriptContent.replace(/\baxios\.(get|post|put|delete|patch|head|options)\b/g, 'http.$1');
+    // axios.xxx → http.xxx
+    scriptContent = scriptContent.replace(/\baxios\.(get|post|put|delete|patch|head|options|create|request)\b/g, 'http.$1');
     // axios({ method: ... }) → http({ method: ... })
     scriptContent = scriptContent.replace(/\baxios\(/g, 'http(');
   } else if (/\bhttp\b/.test(scriptContent) && !/\bimport.*http\b/.test(existingImportText)) {

@@ -178,5 +178,6 @@
   "t-area-selector-simple": "TAreaSelectorSimple",
   "t-area-selector-data": "TAreaSelectorData",
   "t-regional-multiple-selector": "TRegionalMultipleSelector",
-  "t-area-selector-custom-data": "TAreaSelectorCustomData"
+  "t-area-selector-custom-data": "TAreaSelectorCustomData",
+  "t-micro-app": "TMicroApp"
 }

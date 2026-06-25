@@ -25,8 +25,11 @@ function generateScaffold(projectDir) {
   // 注：自 ths-design 1.1.27 起组件库自带 .vue 扁平结构 loader，无需 postinstall 补丁
   writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
 
-  // index.html（模板：templates/index.html，占位符 {{title}}）
+  // index.html（模板：templates/index.html，占位符 {{title}} / {{customScripts}}）
   // 从源 index.html 的 <title> 抽取标题，没有就用 'Dashboard'
+  // 同时把源 html 中 resources/customjs/* 的脚本引入抽出来回填，
+  // 这些是用户在平台上自行上传的 js（dayjs/echarts/moment/Sortable/vuedraggable/marked/index.umd 等），
+  // 文件已随 resources/ 一起拷到 public/，但 index.html 模板没有这些 <script>，全局变量会丢失。
   const originalIndexHtmlPath = path.join(projectDir, 'index.html');
   const originalIndexHtml = fs.existsSync(originalIndexHtmlPath)
     ? readFile(originalIndexHtmlPath)
@@ -34,7 +37,52 @@ function generateScaffold(projectDir) {
   const titleMatch = originalIndexHtml.match(/<title>([^<]+)<\/title>/);
   const title = titleMatch ? titleMatch[1] : 'Dashboard';
 
-  writeFile(path.join(projectDir, 'index.html'), readTemplate('index.html', { title }));
+  const customScripts = extractCustomJsScripts(originalIndexHtml);
+
+  writeFile(
+    path.join(projectDir, 'index.html'),
+    readTemplate('index.html', { title, customScripts })
+  );
+}
+
+/**
+ * 从原始 index.html 中抽取 `resources/customjs/` 下的 <script> 引入。
+ *
+ * 兼容点：
+ *   - 路径前缀可能是 `resources/...`、`./resources/...`、`/resources/...`、`resources\customjs\...`（Windows 反斜杠）
+ *   - 属性可能用单/双引号
+ *   - 可能带 defer / type="text/javascript" 等其他属性
+ *
+ * 输出：统一规范化为绝对路径 `/resources/customjs/<file>` 的 <script src="..."></script>，
+ *      多个之间用换行 + 4 空格缩进，匹配模板的缩进风格。返回值末尾不带换行，由模板控制位置。
+ *
+ * 这些是经典脚本（暴露 window.xxx），必须在 `/src/main.js` 之前同步加载，
+ * 因此回填到 </head> 之前、ths-design 等基础库之后。
+ */
+function extractCustomJsScripts(html) {
+  if (!html) return '';
+
+  // 抓所有 <script ... src="..."> 标签，再过滤路径含 customjs/ 的
+  const scriptRe = /<script\b[^>]*\bsrc\s*=\s*(['"])([^'"]+)\1[^>]*>\s*<\/script>/gi;
+  const seen = new Set();
+  const tags = [];
+  let m;
+  while ((m = scriptRe.exec(html)) !== null) {
+    const rawSrc = m[2];
+    // 兼容 Windows 反斜杠
+    const normalized = rawSrc.replace(/\\/g, '/');
+    if (!/(^|\/)resources\/customjs\//i.test(normalized)) continue;
+    // 去掉前导 ./ 或 / 后再加单一前导 /，保证 vite 下 public/ 根访问
+    const stripped = normalized.replace(/^\.\//, '').replace(/^\/+/, '');
+    const finalSrc = '/' + stripped;
+    if (seen.has(finalSrc)) continue;
+    seen.add(finalSrc);
+    tags.push(`<script src="${finalSrc}"></script>`);
+  }
+
+  if (tags.length === 0) return '';
+  // 4 空格缩进 + 换行连接，使其落在 <head> 内的同一缩进层级
+  return tags.join('\n    ');
 }
 
 module.exports = { generateScaffold };
