@@ -1,0 +1,32 @@
+# 默认排除一切，再用 package.json 的 files 字段做白名单
+# 这里再补一道保险：即使 files 漏了，下面这些也绝不发布
+
+node_modules/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# 备份 / 临时文件
+*.copy.cjs
+*.copy.js
+*.bak
+*.swp
+*.tmp
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 测试用例（如果以后有）
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# 文档源（README.md 由 files 白名单显式包含）
+docs/

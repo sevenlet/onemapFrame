@@ -1,13 +1,34 @@
 {
-  "name": "lego-to-vite-converter",
-  "version": "1.0.0",
-  "private": true,
-  "description": "把低代码平台导出的静态 Vue 3 项目转换为 Vite + 单文件 .vue 工程",
+  "name": "@ths-fe-cli/lego-to-vite-converter",
+  "version": "1.0.5",
+  "description": "把低代码平台（一张图/lego）导出的纯静态 Vue 3 项目，一键转换为 Vite + 单文件 .vue 工程，并接入 micro-app 微前端基座。",
+  "keywords": [
+    "ths",
+    "lego",
+    "vite",
+    "vue3",
+    "converter",
+    "micro-app",
+    "cli"
+  ],
+  "author": "thssilu",
+  "license": "MIT",
   "bin": {
     "convert-to-vite": "./convert.js"
   },
+  "main": "convert.js",
+  "files": [
+    "convert.js",
+    "lib/",
+    "templates/",
+    "config/",
+    "README.md"
+  ],
   "scripts": {
-    "convert": "node convert.js"
+    "convert": "node convert.js",
+    "release:patch": "npm version patch --no-git-tag-version && npm publish",
+    "release:minor": "npm version minor --no-git-tag-version && npm publish",
+    "release:major": "npm version major --no-git-tag-version && npm publish"
   },
   "_comment_type": "不写 type 字段 → 默认 CommonJS（与父目录可能存在的 type:module 项目隔离）。所有 .js 都按 CJS 解析。",
   "engines": {
@@ -16,5 +37,13 @@
   "dependencies": {
     "@babel/parser": "^7.29.7",
     "prettier": "^3.8.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thssilu/lego-to-vite-converter.git"
   }
 }
