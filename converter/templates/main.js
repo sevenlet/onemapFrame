@@ -4,6 +4,8 @@
 import '@ths/design/lib/style.css';
 import 'element-plus/lib/theme-chalk/index.css';
 import 'video.js/dist/video-js.css';
+import 'ol/ol.css';
+import '@ths-map-sdk/widgets/style.css';
 
 import {
   createApp, reactive, ref, watch, watchEffect, provide, inject,

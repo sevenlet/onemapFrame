@@ -50,14 +50,55 @@ try { babelParser = require('@babel/parser'); } catch (e) { /* noop */ }
 try { prettier = require('prettier'); } catch (e) { /* noop */ }
 
 // ============================================================
+// CLI 元信息 / 帮助
+// ============================================================
+const pkg = require('./package.json');
+
+function printVersion() {
+  console.log(pkg.version);
+}
+
+function printHelp() {
+  console.log(`
+${pkg.name} v${pkg.version}
+${pkg.description || ''}
+
+用法:
+  convert-to-vite <源目录> <输出目录>
+
+参数:
+  <源目录>    平台导出的原始静态项目（含 src/<dirName>/index.js 等）
+  <输出目录>  转换后的 Vite 工程目录（不存在会自动创建）
+
+选项:
+  -v, --version   显示版本号
+  -h, --help      显示帮助信息
+
+示例:
+  convert-to-vite ./export-project ./vite-project
+`.trimStart());
+}
+
+// ============================================================
 // 主流程
 // ============================================================
 function main() {
-  const sourceDir = process.argv[2];
-  const outputDir = process.argv[3];
+  const args = process.argv.slice(2);
+
+  if (args.includes('-v') || args.includes('--version')) {
+    printVersion();
+    process.exit(0);
+  }
+  if (args.includes('-h') || args.includes('--help') || args.length === 0) {
+    printHelp();
+    process.exit(0);
+  }
+
+  const sourceDir = args[0];
+  const outputDir = args[1];
 
   if (!sourceDir || !outputDir) {
-    log('用法: node convert-to-vite-new.js <源目录> <输出目录>', 'error');
+    printHelp();
     process.exit(1);
   }
   if (!babelParser || !prettier) {
