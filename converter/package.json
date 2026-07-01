@@ -1,6 +1,6 @@
 {
   "name": "@ths-fe-cli/lego-to-vite-converter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "把低代码平台（一张图/lego）导出的纯静态 Vue 3 项目，一键转换为 Vite + 单文件 .vue 工程，并接入 micro-app 微前端基座。",
   "keywords": [
     "ths",
@@ -39,7 +39,6 @@
     "prettier": "^3.8.3"
   },
   "publishConfig": {
-    "access": "public",
     "registry": "http://192.168.0.112:8081/repository/npm-cli/"
   },
   "repository": {
