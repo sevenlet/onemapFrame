@@ -21,6 +21,9 @@ import ElementPlusLocaleZhCn from 'element-plus/es/locale/lang/zh-cn';
 import { createI18n } from 'vue-i18n';
 import mitt from 'mitt';
 import microApp from '@micro-zoe/micro-app';
+// @ths/design 组件库样式（基座内嵌 <TGisMap> 需要 gis-map 容器/微件样式）。
+// 用 ./style.css 子路径（exports import 条件 → es/style.css）；1.1.41 的 lib/style.css 实际不存在。
+import '@ths/design/style.css';
 
 import http from './http.js';
 import { guid, getUrlParam, getQueryParam } from './utils.js';

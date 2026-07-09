@@ -2,12 +2,12 @@
   ╔══════════════════════════════════════════════════════════════╗
   ║ 微应用模板 — 总览首页
   ║
-  ║ 这个模板演示了子应用与基座通信的 4 大能力：
+  ║ 这个模板演示了子应用与基座通信的能力 + 地图两种用法：
   ║   1. 基座 → 子应用 定向数据（baseData）
   ║   2. 子应用 → 基座 消息/RPC（sendToBase / callBase）
   ║   3. 全局共享数据（globalData）
-  ║   4. 调用基座地图（TMap）
   ║   + 弹窗穿透（让基座弹覆盖整个浏览器）
+  ║   + 地图：微应用自带 <TGisMap> / 操作基座地图（baseData.value.mapRef）
   ║
   ║ 每张卡片点进去都是独立的一页 demo，结构相同：
   ║   • 顶部一段四段式注释：场景 / 子应用代码 / 基座代码 / 注意事项
@@ -15,7 +15,7 @@
   ║   • 复制单页文件即可在自己项目里用
   ║
   ║ 文件位置：
-  ║   • bridge.js / ths-map.js  — 通信底层（拷过去即可，不要改）
+  ║   • bridge.js              — 通信底层（拷过去即可，不要改）
   ║   • views/demos/*.vue       — 每个能力的示例代码
   ║   • main.js / router.js     — Vue + 路由的标准初始化
   ╚══════════════════════════════════════════════════════════════╝
@@ -54,12 +54,12 @@
         你可以直接复制本目录，改成自己的业务子应用 —— 通信、地图调用、弹窗等通用部分都不用重写。
       </p>
       <p class="hint">
-        💡 下面 5 张卡片是 5 个独立的演示页，建议先依次点开看一遍，
+        💡 下面 6 张卡片是 6 个独立的演示页，建议先依次点开看一遍，
         理解通信的几种方式，再开始写业务。
       </p>
     </el-card>
 
-    <!-- 5 张能力卡片 -->
+    <!-- 6 张能力卡片 -->
     <div class="grid">
       <router-link
         v-for="demo in demos"
@@ -110,7 +110,7 @@ watch(
 
 const isEmbedded = computed(() => !!window.__MICRO_APP_ENVIRONMENT__);
 
-// 5 张能力卡片的元数据 —— 加新 demo 时往这里加一行即可
+// 6 张能力卡片的元数据 —— 加新 demo 时往这里加一行即可
 const demos = [
   {
     path: '/demos/base-data',
@@ -141,11 +141,18 @@ const demos = [
     api: "callBase('showDialog', ...)",
   },
   {
-    path: '/demos/tmap',
+    path: '/demos/tmap-local',
     icon: '🗺️',
-    title: '调用基座地图 TMap',
-    desc: '像调用本地 TMap 一样使用，自动转发到基座地图 iframe',
-    api: 'TMap.goTo(...) / TMap.setZoom(...)',
+    title: '微应用自带地图',
+    desc: '内嵌真实 <TGisMap> 组件，mapRef.value.TMap/.Layer/.Control 直调',
+    api: 'mapRef.value.TMap.goTo(...)',
+  },
+  {
+    path: '/demos/tmap-base',
+    icon: '🗺️',
+    title: '操作基座地图',
+    desc: '基座 @ready 下发 mapRef，微应用 baseData.value.mapRef 直调',
+    api: 'baseData.value.mapRef.goTo(...)',
   },
 ];
 </script>

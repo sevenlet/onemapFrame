@@ -90,6 +90,26 @@
       </div>
     </section>
 
+    <!-- 基座地图：@ready 后把 mapRef 通过 :data 下发给微应用（tmap-base demo 用） -->
+    <!-- 默认收起，避免挤压微应用可视区；测 tmap-base 时点「展开」加载地图 -->
+    <section class="base-map-area">
+      <div class="section-title">
+        <span>🗺️ 基座地图 —— <code>mapRef</code> 经 <code>:data</code> 下发给微应用（tmap-base demo 用）</span>
+        <el-button size="small" text @click="baseMapVisible = !baseMapVisible">
+          {{ baseMapVisible ? '收起 ▲' : '展开 ▼' }}
+        </el-button>
+      </div>
+      <TGisMap
+        v-if="baseMapVisible"
+        ref="baseMapRef"
+        :map-config="baseMapConfig"
+        style="height: 340px"
+        @ready="onBaseMapReady"
+        @error="onBaseMapErr"
+        @destroy="onBaseMapDestroy"
+      />
+    </section>
+
     <!-- 微应用容器 -->
     <main class="main-area">
       <micro-app
@@ -165,11 +185,52 @@ import { useChildBridge, useGlobalData } from './bridge.js';
 // 弹窗里要显示的两个示例组件（基座自己定义，子应用按名字调）
 import DemoDialogContent from './dialogs/DemoDialogContent.vue';
 import RegionPickerDialog from './dialogs/RegionPickerDialog.vue';
+// 基座内嵌的真实 <TGisMap>（直连子路径，绕开 @ths/design 主入口拉全组件 + heavy peers）
+import TGisMap from '@ths/design/es/components/gis-map/index.js';
 
 // ===== 通道 1+2：定向数据 / dispatch =====
 // useChildBridge(name) 按 <micro-app name="child"> 拿独立实例。
 // 模板里两端 name 都是 'child'，所以这里也传 'child'。
 const { data, setData, dataToChild, handleChildData, registerHandler, registerMethod } = useChildBridge('child');
+
+// ===== 基座地图：<TGisMap> @ready 后把 mapRef 通过 :data 下发给微应用（tmap-base demo 用） =====
+const baseMapRef = ref(null);
+const baseMapVisible = ref(false);   // 默认收起，避免挤压微应用可视区
+const baseMapConfig = {
+  center: [119.296, 26.074],   // [lng, lat]
+  zoom: 10,
+  minZoom: 3,
+  maxZoom: 18,
+  projection: 'EPSG:4326',
+  basemaps: [
+    { type: 'tianditumercator', id: 'vec', label: '普通地图', visible: true },
+    { type: 'tianditusatellitemercator', id: 'img', label: '影像地图', visible: false },
+  ],
+  widgets: [
+    { type: 'Zoom', id: 'zoom', position: { top: 16, left: 16 } },
+    { type: 'Scalebar', id: 'scalebar', position: { left: 16, bottom: 16 } },
+  ],
+  controls: ['zoom', 'scale'],
+  theme: 'light',
+};
+function onBaseMapReady(engine) {
+  // 把 <TGisMap> 实例（mapRef）同时经 baseData（定向下发）和 globalData（全局共享）下发。
+  // 两个通道都按引用传活 mapRef，微应用 baseData/globalData 都能拿到，可直接调方法。
+  // dev 弹窗 / 跨源场景下 globalData 更可靠（全局共享，任何微应用实例都能读到）。
+  setData({ mapRef: baseMapRef.value });
+  setGlobalData({ mapRef: baseMapRef.value });
+  // eslint-disable-next-line no-console
+  console.log('[base] <TGisMap> ready，mapRef 已下发（baseData + globalData）', engine);
+}
+function onBaseMapErr(err) {
+  // eslint-disable-next-line no-console
+  console.error('[base] <TGisMap> error', err);
+}
+function onBaseMapDestroy() {
+  // 收起 / 组件卸载时清掉两个通道里的 mapRef，避免微应用拿到已销毁的实例
+  setData({ mapRef: null });
+  setGlobalData({ mapRef: null });
+}
 
 // ─── 写法 A：直接给 data.xxx 赋值（适合改单个字段）───
 // data 是 reactive 对象，赋值会自动驱动 dataToChild computed 重算 →
@@ -355,7 +416,7 @@ function batchUpdate() {
 }
 
 // ===== 通道 3：globalData 全局共享 =====
-const { globalData } = useGlobalData();
+const { globalData, setGlobalData } = useGlobalData();
 const regionName = computed(() => globalData.value?.regionaQuery?.regionName);
 const regionCode = computed(() => globalData.value?.regionaQuery?.regionCode);
 const activeTheme = computed(() => globalData.value?.activeTheme);
@@ -439,6 +500,35 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .monitor-cell strong {
   color: #303133;
   font-weight: 600;
+}
+
+/* ===== 基座地图区域 ===== */
+.base-map-area {
+  padding: 10px 24px;
+  border-bottom: 1px solid #e4e7ed;
+  background: #fafbff;
+  flex-shrink: 0;
+}
+.base-map-area .section-title {
+  font-size: 12px;
+  color: #5e6d82;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.base-map-area .section-title code {
+  background: rgba(64, 158, 255, 0.1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  color: #409eff;
+}
+.base-map-area :deep(.t-gis-map) {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 /* ===== 微应用区域 ===== */
