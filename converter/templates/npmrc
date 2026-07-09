@@ -1,0 +1,2 @@
+@ths:registry=http://192.168.0.112:8081/repository/npm-ths/
+@ths-map-sdk:registry=http://192.168.0.112:8081/repository/ths-map/

@@ -5,6 +5,8 @@
  * - resources/ → public/resources/（iframe srcdoc 仍按 /resources/xxx 加载，必须保留）
  * - resources/lang.js → src/resources/lang.js（去 "use strict" + `(var|let|const) X = ...` → `export default ...`）
  * - resources/i18n.js → src/resources/i18n.js（直接拷贝）
+ * - config/ → public/config/（微应用注册表等运行时配置需在 public 下才能被 fetch；
+ *   并补 micro-app-registry.json 占位，后端部署时覆盖为真实数据）
  */
 'use strict';
 
@@ -28,6 +30,22 @@ function moveStaticAssets(projectDir) {
   if (fs.existsSync(resourcesDir)) {
     const target = path.join(publicDir, 'resources');
     if (!fs.existsSync(target)) copyDirSync(resourcesDir, target);
+  }
+
+  // config/ → public/config/：微应用注册表（micro-app-registry.json）等运行时配置
+  // 文件必须落在 public 下，运行时才能被 fetch('config/...') 取到。
+  const configDir = path.join(projectDir, 'config');
+  if (fs.existsSync(configDir)) {
+    const target = path.join(publicDir, 'config');
+    if (!fs.existsSync(target)) copyDirSync(configDir, target);
+  }
+  // 确保微应用注册表占位文件存在。源项目里通常没有这个 json（由平台后端在
+  // 增删改微应用时生成），这里先放一个空对象占位，避免 dev 下 fetch 404 噪音；
+  // 后端部署时会覆盖为真实数据，缺失时 t-micro-app 回退到组件自身 url/defaultPage。
+  const registryFile = path.join(publicDir, 'config', 'micro-app-registry.json');
+  if (!fs.existsSync(registryFile)) {
+    ensureDir(path.join(publicDir, 'config'));
+    writeFile(registryFile, '{}\n');
   }
 
   const langFile = path.join(resourcesDir, 'lang.js');

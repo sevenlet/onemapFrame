@@ -92,6 +92,40 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    proxy: {
+      /**
+       * 使用MapGo5.0的开发环境时，前端请求的 /apps/、/icons/、/files/、/jsons/ 等资源路径
+       * 需要代理到 MapGo5.0 的后端服务地址（如 http://192.168.0.202:7777）
+       */
+      '/apps/': {
+        // 这里的地址根据实际情况修改，注意：必须是 http:// 或 https:// 开头的完整地址
+        target: 'http://192.168.0.202:7777',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/apps/, '/mapgo5.0/apps'),
+      },
+      '/icons/': {
+        target: 'http://192.168.0.202:7777',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/icons/, '/mapgo5.0/icons'),
+      },
+      '^/files/.*': {
+        target: 'http://192.168.0.202:7777',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/files/, '/mapgo5.0/files'),
+      },
+      '/jsons/': {
+        target: 'http://192.168.0.202:7777',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/jsons/, '/mapgo5.0/jsons'),
+        configure: (proxy) => {
+          proxy.on('proxyRes', (proxyRes) => {
+            proxyRes.headers['access-control-allow-origin'] = '*';
+            proxyRes.headers['access-control-allow-headers'] = 'X-Requested-With';
+            proxyRes.headers['access-control-allow-methods'] = 'GET,POST,OPTIONS';
+          });
+        },
+      },
+    },
     optimizeDeps: {
       include: ['vue', 'vue-router', 'element-plus', 'axios', 'mitt', 'lodash'],
     },

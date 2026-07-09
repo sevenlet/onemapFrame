@@ -176,6 +176,11 @@ function fixCustomVue(vueSource, dirName) {
     missingImports.push(`import * as echarts from 'echarts';`);
   }
 
+  // ElementPlus（平台里是 window.ElementPlus 全局；工程化 ESM 里裸标识符不读 window，需显式 import）
+  if (/\bElementPlus\b/.test(scriptContent) && !/\bimport\b[^\n]*['"]element-plus['"]/.test(existingImportText)) {
+    missingImports.push(`import * as ElementPlus from 'element-plus';`);
+  }
+
   // 第三方库按需引入
   if (/\bmoment\s*\(/.test(scriptContent) || /\bmoment\./.test(scriptContent)) {
     if (!/\bimport.*moment\b/.test(existingImportText)) {

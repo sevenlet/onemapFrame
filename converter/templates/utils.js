@@ -15,6 +15,58 @@ import _ from 'lodash';
 // Vite 动态导入映射表 —— 自动收集所有页面 .vue 文件
 const componentModules = import.meta.glob('./pages/*.vue');
 
+// ===== 微应用注册表 =====
+// 数据来源：config/micro-app-registry.json（工程化下即 public/config/micro-app-registry.json，
+//   Vite publicDir 运行时仍为 config/...；用相对路径 fetch 随部署子目录自适应）。
+// 由平台后端在增删改微应用时生成。t-micro-app 组件只存 microAppId，运行时通过 id
+// 查这里拿最新的 url/defaultPage，后端更新注册表后所有引用页面自动生效，无需重新发布。
+window.__legoMicroAppRegistry = window.__legoMicroAppRegistry || {};
+// 预加载 Promise，组件可 await 它以确保注册表就绪
+window.__legoMicroAppRegistryReady = null;
+
+/**
+ * 预加载微应用注册表（应用启动时调用一次；t-micro-app 挂载时也会调用，幂等）
+ * @returns {Promise<Object>} 以 id 为 key 的注册表对象
+ */
+function loadMicroAppRegistry() {
+  if (window.__legoMicroAppRegistryReady) return window.__legoMicroAppRegistryReady;
+  window.__legoMicroAppRegistryReady = fetch('config/micro-app-registry.json', { cache: 'no-cache' })
+    .then((res) => (res.ok ? res.json() : {}))
+    .then((data) => {
+      // 兼容后端返回数组或对象两种格式，内部统一存成以 id 为 key 的对象
+      if (Array.isArray(data)) {
+        const map = {};
+        data.forEach((item) => {
+          if (item && item.id != null) map[String(item.id)] = item;
+        });
+        window.__legoMicroAppRegistry = map;
+      } else {
+        window.__legoMicroAppRegistry = data || {};
+      }
+      return window.__legoMicroAppRegistry;
+    })
+    .catch((e) => {
+      console.warn('[micro-app] 加载注册表失败，微应用将回退到组件自身配置', e);
+      window.__legoMicroAppRegistry = {};
+      return window.__legoMicroAppRegistry;
+    });
+  return window.__legoMicroAppRegistryReady;
+}
+
+/**
+ * 根据 id 从注册表取一条微应用配置
+ * @param {string|number} id 微应用 id
+ * @returns {{id:string,name:string,url:string,defaultPage:string}|null}
+ */
+function getMicroAppById(id) {
+  if (id == null || id === '') return null;
+  return window.__legoMicroAppRegistry[String(id)] || null;
+}
+
+// t-micro-app 组件通过 window.loadMicroAppRegistry / window.getMicroAppById 调用
+window.loadMicroAppRegistry = loadMicroAppRegistry;
+window.getMicroAppById = getMicroAppById;
+
 async function runAnimation(id, animations, display) {
   const $el = document.getElementById(id);
   if (!$el) return;
@@ -1173,6 +1225,8 @@ export {
   watchComponentVisible,
   requestApi,
   generateCacheKey,
+  loadMicroAppRegistry,
+  getMicroAppById,
 };
 
 // 暴露 ComponentLoaderInternal 供 ths-design 的 ComponentLoader 使用

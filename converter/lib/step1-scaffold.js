@@ -25,6 +25,10 @@ function generateScaffold(projectDir) {
   // 注：自 ths-design 1.1.27 起组件库自带 .vue 扁平结构 loader，无需 postinstall 补丁
   writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
 
+  // .npmrc（模板：templates/npmrc）
+  // npm publish 会忽略包内 .npmrc，因此模板使用非点文件名，生成时写成 .npmrc。
+  writeFile(path.join(projectDir, '.npmrc'), readTemplate('npmrc'));
+
   // index.html（模板：templates/index.html，占位符 {{title}} / {{customScripts}}）
   // 从源 index.html 的 <title> 抽取标题，没有就用 'Dashboard'
   // 同时把源 html 中 resources/customjs/* 的脚本引入抽出来回填，

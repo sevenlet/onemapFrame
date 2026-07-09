@@ -239,6 +239,10 @@ function generateScaffold(projectDir) {
   // vite.config.js（模板：templates/vite.config.js）
   writeFile(path.join(projectDir, 'vite.config.js'), readTemplate('vite.config.js'));
 
+  // .npmrc（模板：templates/npmrc）
+  // npm publish 会忽略包内 .npmrc，因此模板使用非点文件名，生成时写成 .npmrc。
+  writeFile(path.join(projectDir, '.npmrc'), readTemplate('npmrc'));
+
   // 组件库已自带兼容 .vue 扁平结构的 loader（自 1.1.27 起），
   // 不再需要 postinstall patch 脚本
 

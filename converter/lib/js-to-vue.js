@@ -542,6 +542,11 @@ function buildImportBlockForCompiled(dirName, originalCode, vueApis) {
     block += `import * as echarts from 'echarts';\n`;
   }
 
+  // ElementPlus（平台里是 window.ElementPlus 全局；工程化 ESM 里裸标识符不读 window，需显式 import）
+  if (/\bElementPlus\b/.test(originalCode)) {
+    block += `import * as ElementPlus from 'element-plus';\n`;
+  }
+
   if (/\buseChildBridge\b/.test(originalCode)) {
     block += `import { useChildBridge } from '@/bridge.js';\n`;
   }
@@ -707,6 +712,11 @@ import * as echarts from 'echarts';
 `;
 
   const extraImports = [];
+
+  // ElementPlus（平台里是 window.ElementPlus 全局；工程化 ESM 里裸标识符不读 window，需显式 import）
+  if (/\bElementPlus\b/.test(originalContent)) {
+    extraImports.push(`import * as ElementPlus from 'element-plus';`);
+  }
 
   if (/\bfetchEventSource\s*\(/.test(originalContent)) {
     extraImports.push(`import { fetchEventSource } from '@microsoft/fetch-event-source';`);

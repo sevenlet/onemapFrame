@@ -179,5 +179,6 @@
   "t-area-selector-data": "TAreaSelectorData",
   "t-regional-multiple-selector": "TRegionalMultipleSelector",
   "t-area-selector-custom-data": "TAreaSelectorCustomData",
-  "t-micro-app": "TMicroApp"
+  "t-micro-app": "TMicroApp",
+  "t-gis-map": "TGisMap"
 }

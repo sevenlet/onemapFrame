@@ -20,7 +20,7 @@ import _ from 'lodash';
 import { io } from 'socket.io-client';
 import { routes } from './route.js';
 import http from './http.js';
-import { replaceCssVariables, guid, getUrlParam, getQueryParam } from './utils.js';
+import { replaceCssVariables, guid, getUrlParam, getQueryParam, loadMicroAppRegistry } from './utils.js';
 import { initSocket } from './websocket.js';
 import { loadGlobalVariables, loadGlobalFunctions } from './globals/index.js';
 import { themes } from './theme.js';
@@ -314,3 +314,6 @@ app.component('TDialog', TDialog);
 
 app.mount('#app');
 window.app = app;
+
+// 预加载微应用注册表（t-micro-app 组件按 id 查询 url/defaultPage；幂等，组件挂载时也会调用）
+loadMicroAppRegistry();

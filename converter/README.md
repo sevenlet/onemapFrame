@@ -73,6 +73,7 @@ npm run dev
 │   └── <pageCode2>/...
 ├── assets/                    # 图片等静态资源
 ├── resources/                 # iframe srcdoc 用的资源
+├── config/                    # 运行时配置（global-*-registry.js；micro-app-registry.json 由后端生成）
 ├── globals/                   # window 上挂的全局变量/函数
 │   ├── variables/
 │   └── functions/
@@ -97,7 +98,8 @@ npm run dev
 │   ├── utils.js / http.js / websocket.js / theme.js
 ├── public/
 │   ├── assets/
-│   └── resources/
+│   ├── resources/
+│   └── config/               # 含 micro-app-registry.json（运行时微应用注册表，后端生成）
 ├── index.html
 ├── vite.config.js
 └── package.json              # 已声明完整运行时依赖
@@ -116,7 +118,7 @@ npm run dev
 | 3 | [lib/step3-components.js](lib/step3-components.js) | **核心改写**：把 `src/<pageCode>/index.js` AST 改写为 `src/pages/<pageCode>.vue`。扫描 template 中的 `t-xxx` 自动生成 `@ths/design` import 与 `components` 注册 |
 | 4 | [lib/step4-globals.js](lib/step4-globals.js) | `globals/variables/*.js` 与 `globals/functions/*.js` 从 `window.X = ...` 改为 `export const X = ...`；`publicGlobalFunctions.js` 特殊处理 |
 | 5 | [lib/step5-znxl.js](lib/step5-znxl.js) | `znxl-inset*.js` 移到 `src/znxl-lib/`，改写 `const { ... } = Vue` 为标准 import |
-| 6 | [lib/step6-assets.js](lib/step6-assets.js) | `assets/` → `public/assets/`，`resources/` → `public/resources/` |
+| 6 | [lib/step6-assets.js](lib/step6-assets.js) | `assets/` → `public/assets/`，`resources/` → `public/resources/`，`config/` → `public/config/`（并补 `micro-app-registry.json` 占位） |
 | 7 | [lib/step7-route.js](lib/step7-route.js) | 生成 `src/route.js`，用 `import.meta.glob('./pages/*.vue')` 自动收集 |
 | 7.5 | [lib/step7-microapp.js](lib/step7-microapp.js) | 写入 `src/bridge.js`（基座侧三通道通信桥）|
 | 8 | [lib/step8-cleanup.js](lib/step8-cleanup.js) | 删掉已转为 `pages/<name>.vue` 的源组件目录 |
