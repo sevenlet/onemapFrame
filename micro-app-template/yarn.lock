@@ -155,7 +155,7 @@
     "@ths-map-sdk/map" "^2.0.5"
     "@ths-map-sdk/mapgo-runtime" "^2.0.7"
     "@ths-map-sdk/widgets" "^2.0.4"
-    "@ths/design" "^1.1.45"
+    "@ths/design" "^1.1.46"
     axios "^1.6.0"
     echarts "^5.4.0"
     element-plus "^2.7.0"
@@ -177,23 +177,23 @@
     "@ths-map-sdk/map" "^2.0.5"
     "@ths-map-sdk/mapgo-runtime" "^2.0.7"
     "@ths-map-sdk/widgets" "^2.0.4"
-    "@ths/design" "^1.1.45"
+    "@ths/design" "^1.1.46"
     element-plus "^2.7.0"
     ol "^10.0.0"
     vue "^3.4.0"
     vue-router "^4.3.0"
 
-"@ths-map-sdk/api@^2.0.2", "@ths-map-sdk/api@2.0.2":
-  version "2.0.2"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/api/-/api-2.0.2.tgz"
-  integrity sha512-f3cBUm/sOVL2fOHiwmRnt5DoJNNWeCRlR3gZpD3NTlp6OdNMflw2lIUtaPMvPu2e3CwRvQzPoevJWDTHjSfgfg==
+"@ths-map-sdk/api@^2.0.3", "@ths-map-sdk/api@2.0.3":
+  version "2.0.3"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/api/-/api-2.0.3.tgz"
+  integrity sha512-x8O8J68jg+bVekFArFkoybl55bRPk74zeXblGpeFv/2MdqrJr5Q3aMPikp/PyGiNR5hjwkA34M+ZIAg5T7mg3A==
 
-"@ths-map-sdk/core@2.0.5":
-  version "2.0.5"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.5.tgz"
-  integrity sha512-jv9dyEnjbG7IylAqwZOGDTXVZTEuco1LX6dSLRgsGvAdGT/GzG9l37WPUnIXOmrUGt6xCVgDIanahIZJSYKLrw==
+"@ths-map-sdk/core@2.0.6":
+  version "2.0.6"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.6.tgz"
+  integrity sha512-5lkVcw9mmsVjpzBMUCTD6EsL/n8KkslMo2pEB3WenJHvXEsXGFEe/jeKOlAPfPEzr8lk6Gzy2UCfDg9w3/dMkw==
   dependencies:
-    "@ths-map-sdk/api" "2.0.2"
+    "@ths-map-sdk/api" "2.0.3"
     "@turf/turf" "^7.3.5"
     alasql "^4.0.0"
     crypto-js "^4.2.0"
@@ -205,33 +205,33 @@
     proj4 ">=2.0.0"
     socket.io-client "^4.8.3"
 
-"@ths-map-sdk/map@^2.0.5", "@ths-map-sdk/map@2.0.5":
+"@ths-map-sdk/map@^2.0.6", "@ths-map-sdk/map@2.0.6":
+  version "2.0.6"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.6.tgz"
+  integrity sha512-o1Mz07RIg0QDGNbf214tJqEE1HPpkkcIIOOhobacPwDXakUCPh6HosvKIia+qOpIVZGKi50J/pMcphVzFvw6PQ==
+  dependencies:
+    "@ths-map-sdk/api" "2.0.3"
+    "@ths-map-sdk/core" "2.0.6"
+
+"@ths-map-sdk/mapgo-runtime@^2.0.8":
+  version "2.0.8"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.8.tgz"
+  integrity sha512-fmjYm4Hnbl5c7S6IpEBr3vkP+eN2toYF53E8SwFu08nYEjWp0/pg3jJy8fcr6j/MR/auLU+lIqE07E1qFdSsIg==
+  dependencies:
+    "@ths-map-sdk/map" "2.0.6"
+    "@ths-map-sdk/widgets" "2.0.5"
+
+"@ths-map-sdk/widgets@^2.0.5", "@ths-map-sdk/widgets@2.0.5":
   version "2.0.5"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.5.tgz"
-  integrity sha512-ve/xpsGKVBezQ6/37Eq48d/gnfkTkosQIhCpawXSoJ0iR97XH3WKIlQvH8k6sYCkfGv0u8W7pp+Ha88J8OGI1g==
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/widgets/-/widgets-2.0.5.tgz"
+  integrity sha512-XU4g2sllFzEWm8DtycqJUOebt6mt8TedOnFo9tm4eTGrcuevfxdHlClzY539TMSDi4jlx+wEOk60eta+OoPB9Q==
   dependencies:
-    "@ths-map-sdk/api" "2.0.2"
-    "@ths-map-sdk/core" "2.0.5"
+    "@ths-map-sdk/api" "2.0.3"
 
-"@ths-map-sdk/mapgo-runtime@^2.0.7":
-  version "2.0.7"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.7.tgz"
-  integrity sha512-YGfkQI5ojOvcelXg7sFFWdELeG3JnFzIwPiTs1YVOuwL8VzjIvoBAuO8PHuNGwB5WkxR/PCGTiuuJx9nVaypaA==
-  dependencies:
-    "@ths-map-sdk/map" "2.0.5"
-    "@ths-map-sdk/widgets" "2.0.4"
-
-"@ths-map-sdk/widgets@^2.0.4", "@ths-map-sdk/widgets@2.0.4":
-  version "2.0.4"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/widgets/-/widgets-2.0.4.tgz"
-  integrity sha512-K9NHnVH+TwEFHkxwfKzprzyrlQ6twVZrijmralgp18AaDoeAuF3b6QuGaDE7/uS9dhvS6ByZJjcQMlVqWe4+5g==
-  dependencies:
-    "@ths-map-sdk/api" "2.0.2"
-
-"@ths/design@^1.1.46":
-  version "1.1.46"
-  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.46.tgz"
-  integrity sha512-soDelcR4zBN6nsTeWGpkbNJCufEQLX3FittkG/FNFtse5pYbRJmWD5zUqovpDYTX5kwVRUaKof7/vRxq0ylAnA==
+"@ths/design@^1.1.48":
+  version "1.1.48"
+  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.48.tgz"
+  integrity sha512-ClXkRRiwMdQux/UNVXg4V2EkhDqBVIZfRTziSG4XZi387ZBSoYUdn+QNzLORoiqbZYfqdmX2+wwINScl7Knevg==
 
 "@turf/along@7.3.5":
   version "7.3.5"
