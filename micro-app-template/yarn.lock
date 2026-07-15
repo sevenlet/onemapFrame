@@ -151,10 +151,10 @@
   dependencies:
     "@micro-zoe/micro-app" "1.0.0-rc.30"
     "@microsoft/fetch-event-source" "^2.0.1"
-    "@ths-map-sdk/api" "^2.0.3"
-    "@ths-map-sdk/map" "^2.0.6"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.8"
-    "@ths-map-sdk/widgets" "^2.0.5"
+    "@ths-map-sdk/api" "^2.0.4"
+    "@ths-map-sdk/map" "^2.0.7"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.9"
+    "@ths-map-sdk/widgets" "^2.0.6"
     "@ths/design" "^1.1.48"
     axios "^1.6.0"
     echarts "^5.4.0"
@@ -173,10 +173,10 @@
   version "1.0.0"
   resolved "file:packages/micro"
   dependencies:
-    "@ths-map-sdk/api" "^2.0.3"
-    "@ths-map-sdk/map" "^2.0.6"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.8"
-    "@ths-map-sdk/widgets" "^2.0.5"
+    "@ths-map-sdk/api" "^2.0.4"
+    "@ths-map-sdk/map" "^2.0.7"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.9"
+    "@ths-map-sdk/widgets" "^2.0.6"
     "@ths/design" "^1.1.48"
     element-plus "^2.7.0"
     ol "^10.0.0"
@@ -228,10 +228,10 @@
   dependencies:
     "@ths-map-sdk/api" "2.0.4"
 
-"@ths/design@^1.1.48":
-  version "1.1.48"
-  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.48.tgz"
-  integrity sha512-ClXkRRiwMdQux/UNVXg4V2EkhDqBVIZfRTziSG4XZi387ZBSoYUdn+QNzLORoiqbZYfqdmX2+wwINScl7Knevg==
+"@ths/design@^1.1.49":
+  version "1.1.49"
+  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.49.tgz"
+  integrity sha512-sGOYGj35Mq7+eIdR2TP0R5K3p1tyjbWSRFiNmIsa/oHGWG6KpRlkM9ePVmAQ+9rnTv06A9kRJ7jVJvFGvHYjRw==
 
 "@turf/along@7.3.5":
   version "7.3.5"
