@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ths-map-sdk/api": "^2.0.5",
-    "@ths-map-sdk/map": "^2.0.8",
-    "@ths-map-sdk/mapgo-runtime": "^2.0.10",
-    "@ths-map-sdk/widgets": "^2.0.7",
-    "@ths/design": "^1.1.50",
+    "@ths-map-sdk/api": "^2.0.6",
+    "@ths-map-sdk/map": "^2.0.9",
+    "@ths-map-sdk/mapgo-runtime": "^2.0.11",
+    "@ths-map-sdk/widgets": "^2.0.8",
+    "@ths/design": "^1.1.51",
     "@micro-zoe/micro-app": "1.0.0-rc.30",
     "@microsoft/fetch-event-source": "^2.0.1",
     "axios": "^1.6.0",
