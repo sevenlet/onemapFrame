@@ -151,11 +151,11 @@
   dependencies:
     "@micro-zoe/micro-app" "1.0.0-rc.30"
     "@microsoft/fetch-event-source" "^2.0.1"
-    "@ths-map-sdk/api" "^2.0.7"
-    "@ths-map-sdk/map" "^2.0.10"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.12"
-    "@ths-map-sdk/widgets" "^2.0.9"
-    "@ths/design" "^1.1.53"
+    "@ths-map-sdk/api" "^2.0.8"
+    "@ths-map-sdk/map" "^2.0.11"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.13"
+    "@ths-map-sdk/widgets" "^2.0.10"
+    "@ths/design" "^1.1.54"
     axios "^1.6.0"
     echarts "^5.4.0"
     element-plus "^2.7.0"
@@ -173,27 +173,27 @@
   version "1.0.0"
   resolved "file:packages/micro"
   dependencies:
-    "@ths-map-sdk/api" "^2.0.7"
-    "@ths-map-sdk/map" "^2.0.10"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.12"
-    "@ths-map-sdk/widgets" "^2.0.9"
-    "@ths/design" "^1.1.53"
+    "@ths-map-sdk/api" "^2.0.8"
+    "@ths-map-sdk/map" "^2.0.11"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.13"
+    "@ths-map-sdk/widgets" "^2.0.10"
+    "@ths/design" "^1.1.54"
     element-plus "^2.7.0"
     ol "^10.0.0"
     vue "^3.4.0"
     vue-router "^4.3.0"
 
-"@ths-map-sdk/api@^2.0.8", "@ths-map-sdk/api@2.0.8":
-  version "2.0.8"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/api/-/api-2.0.8.tgz"
-  integrity sha512-cmu6nT2k6bWAXEwrc9mmNCws54sIEZjCzRgQCuNMwTqYpEWoNBfH/rHWvjVY4hddQ9137fug+VemUDJdUMGGXw==
+"@ths-map-sdk/api@^2.0.9", "@ths-map-sdk/api@2.0.9":
+  version "2.0.9"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/api/-/api-2.0.9.tgz"
+  integrity sha512-b3SrHzeFby/2sJP27Z82ha5dh0gDDtH3MaipzWEVHptAnW1jdtVIjgsfT9+FHdXhJSIXapYHPaT3/Y80gPytYw==
 
-"@ths-map-sdk/core@2.0.11":
-  version "2.0.11"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.11.tgz"
-  integrity sha512-ajlwtsFXkRY43vighYOKq7riYKwFju9Pp5BUIpGGhGG2jIWW9PvPdrHiT/T2Isx/GapzELmW09UPWobqOHQwUQ==
+"@ths-map-sdk/core@2.0.12":
+  version "2.0.12"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.12.tgz"
+  integrity sha512-nZDwRw1uDwGsfDsFBDJJMbKT19SBoSq2AEGrQ6e6iiZAzqg06Vpvy5nCntlFrZ+7J7iTN/XpMO9UYvdboATzpg==
   dependencies:
-    "@ths-map-sdk/api" "2.0.8"
+    "@ths-map-sdk/api" "2.0.9"
     "@turf/turf" "^7.3.5"
     alasql "^4.0.0"
     crypto-js "^4.2.0"
@@ -205,33 +205,33 @@
     proj4 ">=2.0.0"
     socket.io-client "^4.8.3"
 
-"@ths-map-sdk/map@^2.0.11", "@ths-map-sdk/map@2.0.11":
+"@ths-map-sdk/map@^2.0.12", "@ths-map-sdk/map@2.0.12":
+  version "2.0.12"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.12.tgz"
+  integrity sha512-t0x4bk0b2/NMNJ0T2ydvnmOiw0NCJpRw4ZjqU5igCIjY0p4zAM7Iy5SgeSA8fCgnVixpnSjXI8bYdDeVK9orJQ==
+  dependencies:
+    "@ths-map-sdk/api" "2.0.9"
+    "@ths-map-sdk/core" "2.0.12"
+
+"@ths-map-sdk/mapgo-runtime@^2.0.14":
+  version "2.0.14"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.14.tgz"
+  integrity sha512-ZVWGLOp/0Vh2JukR4fD5Qb16aYfpWFZwS9AFd3Q2Qz3C+0vT9sRKtPocyhVAWoGnNF8NCcQuQsXtSuZEPWqkzw==
+  dependencies:
+    "@ths-map-sdk/map" "2.0.12"
+    "@ths-map-sdk/widgets" "2.0.11"
+
+"@ths-map-sdk/widgets@^2.0.11", "@ths-map-sdk/widgets@2.0.11":
   version "2.0.11"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.11.tgz"
-  integrity sha512-cHeNICRY9kaIWmoAS64gYUcv3wGWO0M+vWju2fhoT6WlVCOKTTAskcEd3XpA1DOC6TlfkvqlJQfyzWqWBkDA3Q==
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/widgets/-/widgets-2.0.11.tgz"
+  integrity sha512-E9g9B+InZ1MBUuvqbSWc2Xw04u/nkvXuzCWv40BV2qJ4Yt+lnr4YiJ277butJFqdLygESV1PHz8Re3peolKglg==
   dependencies:
-    "@ths-map-sdk/api" "2.0.8"
-    "@ths-map-sdk/core" "2.0.11"
+    "@ths-map-sdk/api" "2.0.9"
 
-"@ths-map-sdk/mapgo-runtime@^2.0.13":
-  version "2.0.13"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.13.tgz"
-  integrity sha512-gOmKdfgdLTBVSVu9kBT7EyBL2s5SztPpiRxVvgA1XCFyOme8FGJtpC1OMXliir8jgVkjfrH1lBKNimivHlEd/A==
-  dependencies:
-    "@ths-map-sdk/map" "2.0.11"
-    "@ths-map-sdk/widgets" "2.0.10"
-
-"@ths-map-sdk/widgets@^2.0.10", "@ths-map-sdk/widgets@2.0.10":
-  version "2.0.10"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/widgets/-/widgets-2.0.10.tgz"
-  integrity sha512-syqrBqS04/A/thqHjDTMRAOb3OjKLA2YXXSZp+8774MRhY0OvRLmnfijmoAeS/CXEXSik4R0j1SnWqF/F8HW7A==
-  dependencies:
-    "@ths-map-sdk/api" "2.0.8"
-
-"@ths/design@^1.1.54":
-  version "1.1.54"
-  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.54.tgz"
-  integrity sha512-7+w0pc9cDQ9o1VJ8KENMykf3/xJ4Xyg1jQV61nLrs/qKH8stfHqzpR98Oo4Q/NeVRzKZyqetKeXs6oJRXLcyJw==
+"@ths/design@^1.1.55":
+  version "1.1.55"
+  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.55.tgz"
+  integrity sha512-afDEWtaKNf6myed3JYwY1kwXhjzmB7w3+t7ZQ5yCT7UGSjHpRao0dv+ww97voZIZi8t+5qV90+gN6Dw+oL0gwA==
 
 "@turf/along@7.3.5":
   version "7.3.5"
