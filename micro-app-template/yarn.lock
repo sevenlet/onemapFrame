@@ -151,11 +151,11 @@
   dependencies:
     "@micro-zoe/micro-app" "1.0.0-rc.30"
     "@microsoft/fetch-event-source" "^2.0.1"
-    "@ths-map-sdk/api" "^2.0.9"
-    "@ths-map-sdk/map" "^2.0.12"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.14"
-    "@ths-map-sdk/widgets" "^2.0.11"
-    "@ths/design" "^1.1.55"
+    "@ths-map-sdk/api" "^2.0.10"
+    "@ths-map-sdk/map" "^2.0.13"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.15"
+    "@ths-map-sdk/widgets" "^2.0.12"
+    "@ths/design" "^1.1.56"
     axios "^1.6.0"
     echarts "^5.4.0"
     element-plus "^2.7.0"
@@ -173,11 +173,11 @@
   version "1.0.0"
   resolved "file:packages/micro"
   dependencies:
-    "@ths-map-sdk/api" "^2.0.9"
-    "@ths-map-sdk/map" "^2.0.12"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.14"
-    "@ths-map-sdk/widgets" "^2.0.11"
-    "@ths/design" "^1.1.55"
+    "@ths-map-sdk/api" "^2.0.10"
+    "@ths-map-sdk/map" "^2.0.13"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.15"
+    "@ths-map-sdk/widgets" "^2.0.12"
+    "@ths/design" "^1.1.56"
     element-plus "^2.7.0"
     ol "^10.0.0"
     vue "^3.4.0"
@@ -229,10 +229,10 @@
   dependencies:
     "@ths-map-sdk/api" "2.0.10"
 
-"@ths/design@^1.1.56":
-  version "1.1.56"
-  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.56.tgz"
-  integrity sha512-X3buQ3AvgkDI01psJMZAf78HN9ZDkI4BrZroBAv2U4/hGoKidobpaSiq8UL7wRZPEGB/dlkq48fc7UGJ5c7mGQ==
+"@ths/design@^1.1.57":
+  version "1.1.57"
+  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.1.57.tgz"
+  integrity sha512-vVmJMY5nucuI4VqiFz6JKqil4CDIEyN+R2A+aWCg6HyeFqGNUPdDcBt3NZUiBJcAJMCzc92HJodCv+PatslLlQ==
 
 "@turf/along@7.3.5":
   version "7.3.5"

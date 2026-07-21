@@ -13,7 +13,7 @@
     "@ths-map-sdk/map": "^2.0.13",
     "@ths-map-sdk/mapgo-runtime": "^2.0.15",
     "@ths-map-sdk/widgets": "^2.0.12",
-    "@ths/design": "^1.1.56",
+    "@ths/design": "^1.1.57",
     "element-plus": "^2.7.0",
     "ol": "^10.0.0",
     "vue": "^3.4.0",
