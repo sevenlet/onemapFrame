@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ths-map-sdk/api": "^2.0.11",
-    "@ths-map-sdk/map": "^2.0.14",
-    "@ths-map-sdk/mapgo-runtime": "^2.0.16",
-    "@ths-map-sdk/widgets": "^2.0.13",
-    "@ths/design": "^1.1.58",
+    "@ths-map-sdk/api": "^2.0.13",
+    "@ths-map-sdk/map": "^2.0.16",
+    "@ths-map-sdk/mapgo-runtime": "^2.0.18",
+    "@ths-map-sdk/widgets": "^2.0.15",
+    "@ths/design": "^1.1.61",
     "element-plus": "^2.7.0",
     "ol": "^10.0.0",
     "vue": "^3.4.0",
