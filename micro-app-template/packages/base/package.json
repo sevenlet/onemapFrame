@@ -14,7 +14,7 @@
     "@ths-map-sdk/map": "^2.0.16",
     "@ths-map-sdk/mapgo-runtime": "^2.0.18",
     "@ths-map-sdk/widgets": "^2.0.15",
-    "@ths/design": "^1.1.61",
+    "@ths/design": "^1.1.62",
     "@micro-zoe/micro-app": "1.0.0-rc.30",
     "@microsoft/fetch-event-source": "^2.0.1",
     "axios": "^1.6.0",
