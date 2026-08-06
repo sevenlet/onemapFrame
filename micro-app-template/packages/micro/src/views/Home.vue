@@ -6,7 +6,7 @@
   ║   1. 基座 → 子应用 定向数据（baseData）
   ║   2. 子应用 → 基座 消息/RPC（sendToBase / callBase）
   ║   3. 全局共享数据（globalData）
-  ║   + 弹窗穿透（让基座弹覆盖整个浏览器）
+  ║   + 弹窗穿透（callBase dialogService / 旧 showDialog）
   ║   + 地图：微应用自带 <TGisMap> / 操作基座地图（baseData.value.mapRef）
   ║
   ║ 每张卡片点进去都是独立的一页 demo，结构相同：
@@ -54,7 +54,7 @@
         你可以直接复制本目录，改成自己的业务子应用 —— 通信、地图调用、弹窗等通用部分都不用重写。
       </p>
       <p class="hint">
-        💡 下面 6 张卡片是 6 个独立的演示页，建议先依次点开看一遍，
+        💡 下面卡片是独立的演示页，建议先依次点开看一遍，
         理解通信的几种方式，再开始写业务。
       </p>
     </el-card>
@@ -110,7 +110,7 @@ watch(
 
 const isEmbedded = computed(() => !!window.__MICRO_APP_ENVIRONMENT__);
 
-// 6 张能力卡片的元数据 —— 加新 demo 时往这里加一行即可
+// 能力卡片元数据 —— 加新 demo 时往这里加一行即可
 const demos = [
   {
     path: '/demos/base-data',
@@ -134,11 +134,18 @@ const demos = [
     api: 'useGlobalData / setGlobalData',
   },
   {
+    path: '/demos/host-theme',
+    icon: '🎨',
+    title: '跟随宿主主题名换肤',
+    desc: '只读 activeTheme，微应用自维护样式，不依赖 LEGO CSS 变量',
+    api: 'useHostTheme() → data-theme',
+  },
+  {
     path: '/demos/base-dialog',
     icon: '🎯',
     title: '弹窗穿透 iframe',
-    desc: '让基座渲染弹窗覆盖整个浏览器，支持回传选中值',
-    api: "callBase('showDialog', ...)",
+    desc: 'dialogService open/update/close；弹窗在基座渲染，可覆盖整页',
+    api: "callBase('dialogService', 'open', ...)",
   },
   {
     path: '/demos/tmap-local',

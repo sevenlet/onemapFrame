@@ -1,0 +1,79 @@
+﻿/**
+ * 微应用自维护主题 token
+ *
+ * 不依赖 LEGO / 宿主 CSS 变量。
+ * 仅根据 useHostTheme() 解析出的 data-theme 切换。
+ *
+ * 宿主主题名映射见 useHostTheme.js：
+ *   墨绿色版 → dark-green
+ *   绿色版   → green
+ *   蓝色版   → blue
+ *   PC浅色版 → pc-light
+ *   默认主题 → default
+ */
+
+.micro-theme-root,
+.micro-theme-root[data-theme='default'] {
+  --micro-bg: #f5f7fa;
+  --micro-surface: #ffffff;
+  --micro-border: #e4e7ed;
+  --micro-text: #303133;
+  --micro-text-secondary: #909399;
+  --micro-primary: #409eff;
+  --micro-primary-soft: rgba(64, 158, 255, 0.12);
+  --micro-success: #67c23a;
+  --micro-warning: #e6a23c;
+  --micro-card-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.micro-theme-root[data-theme='pc-light'] {
+  --micro-bg: #f0f2f5;
+  --micro-surface: #ffffff;
+  --micro-border: #dcdfe6;
+  --micro-text: #1f2d3d;
+  --micro-text-secondary: #606266;
+  --micro-primary: #2f6bff;
+  --micro-primary-soft: rgba(47, 107, 255, 0.12);
+  --micro-success: #18a058;
+  --micro-warning: #f0a020;
+  --micro-card-shadow: 0 2px 8px rgba(31, 45, 61, 0.08);
+}
+
+.micro-theme-root[data-theme='dark-green'] {
+  --micro-bg: #0b1f1c;
+  --micro-surface: #12332d;
+  --micro-border: #1f4a42;
+  --micro-text: #e8f5f1;
+  --micro-text-secondary: #8fb5ab;
+  --micro-primary: #3dcf9a;
+  --micro-primary-soft: rgba(61, 207, 154, 0.16);
+  --micro-success: #5ad8a6;
+  --micro-warning: #f2c97d;
+  --micro-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.micro-theme-root[data-theme='green'] {
+  --micro-bg: #0f2418;
+  --micro-surface: #163522;
+  --micro-border: #245536;
+  --micro-text: #e9f8ee;
+  --micro-text-secondary: #8fbf9e;
+  --micro-primary: #36c272;
+  --micro-primary-soft: rgba(54, 194, 114, 0.16);
+  --micro-success: #4cd98a;
+  --micro-warning: #e8c35a;
+  --micro-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.micro-theme-root[data-theme='blue'] {
+  --micro-bg: #0b1526;
+  --micro-surface: #12233d;
+  --micro-border: #1e3a5f;
+  --micro-text: #e8f1ff;
+  --micro-text-secondary: #8fabc9;
+  --micro-primary: #4c9aff;
+  --micro-primary-soft: rgba(76, 154, 255, 0.16);
+  --micro-success: #5bdb9a;
+  --micro-warning: #f0c35c;
+  --micro-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
