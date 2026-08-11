@@ -1,0 +1,39 @@
+{
+  "name": "@ths-map/topic-layer-runtime",
+  "version": "1.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": "./dist/topic-layer-runtime.global.js"
+  },
+  "unpkg": "dist/topic-layer-runtime.global.js",
+  "jsdelivr": "dist/topic-layer-runtime.global.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "http://192.168.0.112:8081/repository/ths-map/"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "vue": "^3.4.0"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0",
+    "@ths-map-sdk/api": ">=2.0.14",
+    "@ths-map-sdk/map": ">=2.0.17",
+    "@ths-map-sdk/widgets": ">=2.0.16",
+    "@ths-map-sdk/mapgo-runtime": ">=2.0.19"
+  }
+}
