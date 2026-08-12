@@ -72,7 +72,7 @@ description: 组件库 @ths/design 或地图插件 @ths-map-sdk/* 发布新包�
 - `ths-design/package.json`（根，是权威源，用户手动维护）
 - `ths-design/packages/ths-design/package.json` 的 `version`（@ths/design 自身版本，发布动作）
 - `micro-app-template/.npm-tarballs/` 已删（overrides 块也已删，临时方案清理完）
-- **topic-layer-runtime 的 UMD 4 文件**：`lc-visual-building/public/template/3.0.0/resources/topic-layer-runtime.global.js{,.map}` + `update/update-files/3.0.0/resources/` 同名 2 个。源头是 `一张图框架3.0/topic-layer-runtime/dist/`，**由用户 build 后手动拷**（update-config.json 有 2 条 `fileAdd` 引用，index.html + head.txt 有 script 标签）。本技能只报告是否与 dist 一致，不拷
+- **topic-layer-runtime 的 UMD 2 文件**：`lc-visual-building/public/template/3.0.0/resources/topic-layer-runtime.global.js` + `update/update-files/3.0.0/resources/` 同名 1 个。源头是 `一张图框架3.0/topic-layer-runtime/dist/`，**由用户 build 后手动拷**（update-config.json 有 1 条 `fileAdd` 引用，index.html + head.txt 有 script 标签）。本技能只报告是否与 dist 一致，不拷。**无 `.map`**：browser(iife) 构建已关 sourcemap（`build.mjs` 里 `sourcemap: false`），resources/ 不部署 map
 - **topic-layer-runtime 自身的 `@ths-map-sdk/*` peerDeps**（`/bump-map-sdk` 管）
 
 **E. 重新安装依赖（实跑后，Claude 执行）**
@@ -131,9 +131,9 @@ description: 组件库 @ths/design 或地图插件 @ths-map-sdk/* 发布新包�
 - **lc-visual-building commitlint**：该仓库 husky `commit-msg` 钩子强制 conventional commit（`type: subject`），`sync-deps:` 非合法 type 会被拒（报 `type may not be empty` + `header-max-length>100`）。lc 提交用 `build: sync-deps update ...` 前缀，header ≤ 100 字符。ths-design / 一图框架3.0 无此限制，`sync-deps:` 可用
 - **lc-visual-building lint-staged**：pre-commit 钩子对暂存的 UMD `index.js`/`style.css` 跑 `eslint --fix`/`stylelint --fix`，但压缩 bundle 无可改之处，md5 不变；提交后顺带校验产物与 lib 源一致即可。提交失败时（如 commitlint 拒绝）文件仍处于已暂存状态，改正信息后直接 `git commit` 重提，无需重新 `git add`
 - **`@ths-map/topic-layer-runtime` 的 scope 不带 `-sdk`**：`@ths-map/xxx` 与 `@ths-map-sdk/xxx` 是两个 scope（同一个 ths-map registry）。它是本仓库自产包（源码 `一张图框架3.0/topic-layer-runtime/`），版本读源码 package.json，只传播到 **3 处**下游（lc 不装 npm 包，走 UMD）
-- **topic-layer-runtime 的 UMD 只报告不拷**：lc 的 4 个 `topic-layer-runtime.global.js{,.map}` 源头是 `topic-layer-runtime/dist/`（不是 ths-design/lib），需 build 后由用户手动拷。本技能对比 md5 后报告是否一致，不动文件 —— 避免拷到未 build 的过期 dist
-  - **`.js` 与 `.map` 必须成对拷**：曾出现只拷 `.js`、`.map` 落后一周的漂移（`.js` 对但 `.map` 里缺新函数，debug 时源码映射到旧代码，极难察觉）。报告里若只有 `.map` 不一致，就是这个情况
-  - 4 个目标：`public/template/3.0.0/resources/` 与 `public/template/update/update-files/3.0.0/resources/` 各一对
+- **topic-layer-runtime 的 UMD 只报告不拷**：lc 的 2 个 `topic-layer-runtime.global.js` 源头是 `topic-layer-runtime/dist/`（不是 ths-design/lib），需 build 后由用户手动拷。本技能对比 md5 后报告是否一致，不动文件 —— 避免拷到未 build 的过期 dist
+  - **不部署 `.map`**：`build.mjs` 的 browser(iife) 构建 `sourcemap: false`，dist 里不产 `topic-layer-runtime.global.js.map`，产物末尾也无 `sourceMappingURL` 注释。历史上曾拷过 map（且出现只拷 `.js`、`.map` 落后一周的漂移），2026-08-12 已从 resources/、update-files/、update-config.json 全部移除
+  - 2 个目标：`public/template/3.0.0/resources/` 与 `public/template/update/update-files/3.0.0/resources/` 各一个 `.js`
 - **topic-layer-runtime 版本可能领先 registry**：源码 version 改了但没 `npm publish`，sync-deps 会照样传播到下游 package.json，随后 `npm install` 会 ETARGET。跑 `/bump-map-sdk` 的三方比对报告可提前发现；报错时让用户先在 `topic-layer-runtime/` 跑 `npm publish`
 
 ## 脚本模板
@@ -292,11 +292,10 @@ if (!DRY_RUN && zipRow.status.startsWith('✎')) {
 }
 
 // ===== 5b. topic-layer-runtime UMD 只报告不拷（源头是 topic-layer-runtime/dist/，需 build 后用户手动拷）=====
+// 不含 .map：browser(iife) 构建已关 sourcemap，resources/ 不部署 map
 const tlrArts = [
   [TLR_SRC_DIR + '/dist/topic-layer-runtime.global.js', LC + '/public/template/3.0.0/resources/topic-layer-runtime.global.js'],
-  [TLR_SRC_DIR + '/dist/topic-layer-runtime.global.js.map', LC + '/public/template/3.0.0/resources/topic-layer-runtime.global.js.map'],
   [TLR_SRC_DIR + '/dist/topic-layer-runtime.global.js', LC + '/public/template/update/update-files/3.0.0/resources/topic-layer-runtime.global.js'],
-  [TLR_SRC_DIR + '/dist/topic-layer-runtime.global.js.map', LC + '/public/template/update/update-files/3.0.0/resources/topic-layer-runtime.global.js.map'],
 ];
 const tlrArtRows = [];
 for (const [src, dst] of tlrArts) {

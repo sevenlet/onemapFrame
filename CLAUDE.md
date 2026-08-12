@@ -86,7 +86,7 @@ npm workspaces monorepo，开箱即用的微前端调试环境。
   - B2. `@ths-map/topic-layer-runtime` 版本号：converter/templates + micro+base（**3 处**，lc 不装 npm 包走 UMD）
   - C. UMD 产物：`ths-design/packages/ths-design/lib/{index.js,style.css}` -> template/3.0.0 + update-files/3.0.0（4 个文件，仅 3.0.0，不碰 2.0.0）+ 打包 ths-design.zip（lib/index.js + lib/style.css，flat zip -> lc-visual-building/public/）
   - D. 重新安装依赖（实跑后 Claude 执行）：ths-design / lc-visual-building `yarn install`，micro-app-template `npm install`（workspaces 根目录装一次，base/micro 自动链接）。不装 converter
-- **不碰**：ths-design 根 package.json（权威源）、`@ths/design` 自身 version、topic-layer-runtime 的 UMD 4 文件（只校验）。micro-app-template overrides 块 + `.npm-tarballs/` 已删（临时方案清理）
+- **不碰**：ths-design 根 package.json（权威源）、`@ths/design` 自身 version、topic-layer-runtime 的 UMD 2 文件（只校验）。micro-app-template overrides 块 + `.npm-tarballs/` 已删（临时方案清理）
 - dry-run 必做，保留约束风格（`^`/`>=`/无），peerDeps 有则更新无则跳过，产物字节校验
 - **lc-visual-building 有 commitlint**：提交必须用 conventional type，`build: sync-deps update ...`，header ≤ 100 字符；另两个仓库可用 `sync-deps:`
 
@@ -95,8 +95,8 @@ npm workspaces monorepo，开箱即用的微前端调试环境。
 源码 `topic-layer-runtime/`，发到 ths-map registry。**ths-design 里 0 处引用** —— 它变了不需要重发 `@ths/design`。
 
 - scope 是 `@ths-map` 不带 `-sdk`（与 `@ths-map-sdk/*` 是两个 scope，同一个 registry）
-- 两种消费形态：npm 包（3 处 dependencies，sync-deps 传播）+ **UMD 全局脚本**（lc 的 `template/3.0.0/resources/` 与 `update-files/3.0.0/resources/` 各一对 `topic-layer-runtime.global.js{,.map}`，index.html + head.txt 引用，update-config.json 有 2 条 fileAdd）
-- **UMD 4 文件由用户手动拷**（源头 `topic-layer-runtime/dist/`，两个技能都只校验不拷，避免拷到未 build 的过期 dist）。⚠️ **`.js` 与 `.map` 必须成对拷**：曾出现只拷 `.js`、`.map` 落后一周，debug 时源码映射到旧代码
+- 两种消费形态：npm 包（3 处 dependencies，sync-deps 传播）+ **UMD 全局脚本**（lc 的 `template/3.0.0/resources/` 与 `update-files/3.0.0/resources/` 各一个 `topic-layer-runtime.global.js`，index.html + head.txt 引用，update-config.json 有 1 条 fileAdd）
+- **UMD 2 文件由用户手动拷**（源头 `topic-layer-runtime/dist/`，两个技能都只校验不拷，避免拷到未 build 的过期 dist）。**不部署 `.map`**：`build.mjs` 的 browser(iife) 构建 `sourcemap: false`，产物末尾无 sourceMappingURL 注释（2026-08-12 从 resources/、update-files/、update-config.json 移除 map，此前曾出现 `.js` 与 `.map` 版本漂移）
 - 发包用户手动：`topic-layer-runtime/` 目录 `npm publish`（`prepack` 自动 build）。若源码 version 领先 registry，sync-deps 照样传播到下游，随后 `npm install` 会 ETARGET —— `/bump-map-sdk` 的三方比对（registry / 本地源 / 下游 3 处声明）会提前报出来
 
 - **⚠️ micro-app-template/.npmrc**：`@ths-map-sdk` 与 `@ths-map` registry 都必须走内网 ths-map（`http://192.168.0.112:8081/repository/ths-map/`，与 ths-design 一致）。曾误配公共 npm（仅 2.0.0），导致 sync-deps 同步到 2.0.2 后 npm install 报 ETARGET

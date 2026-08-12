@@ -11,7 +11,7 @@ description: "@ths-map-sdk/* 地图插件发布新版后的完整升级流程：
 
 **两条独立的发布线**（别混）：
 - `@ths-map-sdk/*` 变 -> **必须**重建 UMD + 重发 `@ths/design`（map SDK 打包进 UMD 里）-> 本技能全流程
-- `@ths-map/topic-layer-runtime` 变 -> **与 @ths/design 无关**（ths-design 里 0 处引用），只需传播下游 3 个 package.json（sync-deps 做）+ 拷 UMD 4 文件（用户手动）。本技能只**报告**，不发它的包
+- `@ths-map/topic-layer-runtime` 变 -> **与 @ths/design 无关**（ths-design 里 0 处引用），只需传播下游 3 个 package.json（sync-deps 做）+ 拷 UMD 2 文件（用户手动）。本技能只**报告**，不发它的包
 
 **与 sync-deps 的关系**：sync-deps 的「前提」要求 ths-design 源已更新 + 已 yarn lib + 已发布新 @ths/design。本技能把这些前置步骤全自动化，跑完再调 sync-deps 做下游传播。
 
@@ -45,7 +45,7 @@ gis-map peerDeps 无 core（core 是 map 的内部依赖，gis-map 不直接声�
 - 它自己的 `peerDependencies` 声明 `@ths-map-sdk/{api,map,widgets,mapgo-runtime}`（`>=` 风格，无 core）—— 本技能**顺带一起升到最新**，与 gis-map peerDeps 同处理
 - 下游消费方两种形态：
   - **npm 包**（`dependencies`，`^` 风格）：`converter/templates/package.json`、`micro-app-template/packages/{base,micro}/package.json` 共 3 处 -> 由 **sync-deps** 传播
-  - **UMD 全局脚本**：`lc-visual-building/public/template/3.0.0/resources/topic-layer-runtime.global.js(+.map)` 及 `update/update-files/3.0.0/` 同名 2 个，共 4 文件；index.html + head.txt 引用，update-config.json 有 2 条 `fileAdd` -> **本技能与 sync-deps 都不碰**，需要更新时由用户在 topic-layer-runtime 目录 build 后手动拷（源头是 `topic-layer-runtime/dist/`）
+  - **UMD 全局脚本**：`lc-visual-building/public/template/3.0.0/resources/topic-layer-runtime.global.js` 及 `update/update-files/3.0.0/` 同名 1 个，共 2 文件（**无 `.map`**，browser 构建已关 sourcemap）；index.html + head.txt 引用，update-config.json 有 1 条 `fileAdd` -> **本技能与 sync-deps 都不碰**，需要更新时由用户在 topic-layer-runtime 目录 build 后手动拷（源头是 `topic-layer-runtime/dist/`）
 - `@ths-map` scope 的 registry：`micro-app-template/.npmrc` 与 `converter/templates/npmrc` 已配 `@ths-map:registry=.../ths-map/`
 - 发包（用户手动，本技能不做）：`topic-layer-runtime` 目录 `npm publish`（`prepack` 自动跑 `node build.mjs`，`publishConfig.registry` = ths-map）
 
@@ -84,7 +84,7 @@ gis-map peerDeps 无 core（core 是 map 的内部依赖，gis-map 不直接声�
 - **版本号向上 +1**：patch 递增（1.1.49 -> 1.1.50），不跳号不回退。脚本会算出建议值
 - **core 只在根 devDeps**：core 是 map 的内部依赖，gis-map / topic-layer-runtime peerDeps 都不含，下游 dependencies 也不含（sync-deps 只同步 api/map/mapgo-runtime/widgets 4 个）
 - **`@ths-map/topic-layer-runtime` 的 scope 不带 `-sdk`**：`@ths-map/xxx` 与 `@ths-map-sdk/xxx` 是两个 scope，同一个 ths-map registry。写 npm view 时别漏 `-sdk` 或多写 `-sdk`
-- **topic-layer-runtime 只报告 + 只改它自己的 peerDeps**：它的**发包**（`npm publish`）和 **UMD 4 文件拷贝**都是用户手动，本技能不自动做 —— 它不进 @ths/design 的 UMD，两条发布线独立
+- **topic-layer-runtime 只报告 + 只改它自己的 peerDeps**：它的**发包**（`npm publish`）和 **UMD 2 文件拷贝**都是用户手动，本技能不自动做 —— 它不进 @ths/design 的 UMD，两条发布线独立
 
 ## 脚本模板
 
@@ -209,7 +209,7 @@ const stale = tlrDecls.filter(x => tlrLatest && x.d && x.d !== prefixOf(x.d) + t
 if (stale.length) notes.push(`⚠️ ${stale.length} 处下游声明落后于 registry latest(${tlrLatest}) -> 由 sync-deps 传播`);
 if (!notes.length) notes.push(`✓ registry / 本地源 / 下游 3 处声明 全部一致（${tlrLatest}），无需处理`);
 for (const s of notes) console.log('  ' + s);
-console.log('  ℹ️ UMD 4 文件（lc template/3.0.0 + update-files/3.0.0 的 topic-layer-runtime.global.js{,.map}）本技能与 sync-deps 都不碰，需更新时用户手动从 topic-layer-runtime/dist/ 拷');
+console.log('  ℹ️ UMD 2 文件（lc template/3.0.0 + update-files/3.0.0 的 topic-layer-runtime.global.js，无 .map）本技能与 sync-deps 都不碰，需更新时用户手动从 topic-layer-runtime/dist/ 拷');
 
 // ===== 8. 当前 @ths/design 版本 + 建议下一版本 =====
 const designPkg = readPkg(THS_DESIGN + '/packages/ths-design/package.json');
@@ -238,4 +238,4 @@ if (!DRY_RUN && n > 0) {
 - 不用 `yarn info` 校验发布（会回退本地 package.json 误报成功，用 `npm view --registry=npm-ths --cache=新目录`）
 - 不 git push（sync-deps 提交，push 用户手动）
 - 不动 2.0.0 产物
-- **不发布 `@ths-map/topic-layer-runtime`**（`npm publish` 用户在 `topic-layer-runtime/` 手动跑）、**不拷它的 UMD 4 文件**（用户手动从 `topic-layer-runtime/dist/` 拷到 lc 的 template/3.0.0 + update-files/3.0.0）
+- **不发布 `@ths-map/topic-layer-runtime`**（`npm publish` 用户在 `topic-layer-runtime/` 手动跑）、**不拷它的 UMD 2 文件**（用户手动从 `topic-layer-runtime/dist/` 拷到 lc 的 template/3.0.0 + update-files/3.0.0；无 `.map`）
