@@ -35,8 +35,66 @@ import microApp from '@micro-zoe/micro-app';
 
 // name → bridge 实例缓存（同 name 多次调用复用，不同 name 完全独立）
 const bridgeInstances = new Map();
+// 跨所有 micro-app name 共享的 RPC 方法（如 dialogService）
+const sharedMethods = new Map();
 
-export function useChildBridge(name) {
+function installSharedMethodOnInstance(sharedRegistration, instance, methodName) {
+  const method = sharedRegistration.contextual
+    ? (...params) => sharedRegistration.fn(instance.rpcContext, ...params)
+    : sharedRegistration.fn;
+  const unregisterMethod = instance.registerMethod(methodName, method);
+  sharedRegistration.instanceCleanups.set(instance, unregisterMethod);
+}
+
+function registerSharedMethod(methodName, fn, contextual) {
+  const normalizedMethodName = typeof methodName === 'string' ? methodName.trim() : '';
+  if (!normalizedMethodName) {
+    throw new Error('[bridge] shared method name must be a non-empty string');
+  }
+  if (typeof fn !== 'function') {
+    throw new Error('[bridge] shared method handler must be a function');
+  }
+
+  const previousRegistration = sharedMethods.get(normalizedMethodName);
+  previousRegistration?.instanceCleanups.forEach((unregisterMethod) => unregisterMethod());
+  previousRegistration?.instanceCleanups.clear();
+
+  const sharedRegistration = {
+    fn,
+    contextual,
+    instanceCleanups: new Map(),
+  };
+  sharedMethods.set(normalizedMethodName, sharedRegistration);
+  bridgeInstances.forEach((instance) => {
+    installSharedMethodOnInstance(sharedRegistration, instance, normalizedMethodName);
+  });
+
+  return () => {
+    if (sharedMethods.get(normalizedMethodName) === sharedRegistration) {
+      sharedMethods.delete(normalizedMethodName);
+    }
+    sharedRegistration.instanceCleanups.forEach((unregisterMethod) => unregisterMethod());
+    sharedRegistration.instanceCleanups.clear();
+  };
+}
+
+/**
+ * 注册共享 RPC 方法：所有已有 / 未来创建的 useChildBridge(name) 实例都能 callBase 到。
+ * @returns 取消注册函数
+ */
+export function registerSharedChildMethod(methodName, fn) {
+  return registerSharedMethod(methodName, fn, false);
+}
+
+/**
+ * 注册需要调用方微应用身份的共享 RPC 方法。
+ * handler 首参固定为 { microAppName }，不会改变普通共享方法的参数协议。
+ */
+export function registerContextualSharedChildMethod(methodName, fn) {
+  return registerSharedMethod(methodName, fn, true);
+}
+
+export function useChildBridge(name, rpcContextOverrides = {}) {
   if (!name || typeof name !== 'string') {
     throw new Error('[bridge] useChildBridge(name) 必须传入字符串 name，与 <micro-app name="..."> 对齐');
   }
@@ -67,8 +125,14 @@ export function useChildBridge(name) {
   }
 
   function registerMethod(methodName, fn) {
-    methods.set(methodName, fn);
-    return () => methods.delete(methodName);
+    // 身份记录：旧 cleanup 不会误删后来同名注册
+    const methodRegistration = { fn };
+    methods.set(methodName, methodRegistration);
+    return () => {
+      if (methods.get(methodName) === methodRegistration) {
+        methods.delete(methodName);
+      }
+    };
   }
 
   // 子应用通过 dispatch 发来的消息 → @datachange 事件
@@ -83,7 +147,8 @@ export function useChildBridge(name) {
 
       // 1. 优先匹配 registerMethod 注册的方法
       // 2. 否则 fallback 到 window[method] —— 与原项目一致，可调用 globals/functions 下的全局函数
-      const fn = methods.get(method) || (typeof window[method] === 'function' ? window[method] : null);
+      const methodRegistration = methods.get(method);
+      const fn = (methodRegistration && methodRegistration.fn) || (typeof window[method] === 'function' ? window[method] : null);
 
       if (typeof fn !== 'function') {
         console.warn(`[bridge:${name}] 子应用调用了未知方法: ${method}`);
@@ -141,9 +206,49 @@ export function useChildBridge(name) {
     registerHandler,
     registerMethod,
     name,              // 暴露 name 方便调试，业务一般用不到
+    rpcContext: Object.freeze({
+      microAppName: name,
+      ...rpcContextOverrides,
+    }),
+    destroy() {
+      handlers.clear();
+      methods.clear();
+      Object.keys(data).forEach((key) => delete data[key]);
+    },
   };
   bridgeInstances.set(name, instance);
+
+  // 把已注册的共享方法挂到本实例
+  sharedMethods.forEach((sharedRegistration, methodName) => {
+    installSharedMethodOnInstance(sharedRegistration, instance, methodName);
+  });
+
   return instance;
+}
+
+/**
+ * 销毁指定 micro-app name 对应的 bridge，供短生命周期弹窗正文清理。
+ */
+export function destroyChildBridge(name) {
+  const instance = bridgeInstances.get(name);
+  if (!instance) return false;
+
+  sharedMethods.forEach((sharedRegistration) => {
+    const unregisterMethod = sharedRegistration.instanceCleanups.get(instance);
+    unregisterMethod?.();
+    sharedRegistration.instanceCleanups.delete(instance);
+  });
+  instance.destroy();
+  bridgeInstances.delete(name);
+  return true;
+}
+
+// 与生产模板一致：挂 window，方便 t-micro-app / 其它脚本调用
+if (typeof window !== 'undefined') {
+  window.registerSharedChildMethod = registerSharedChildMethod;
+  window.registerContextualSharedChildMethod = registerContextualSharedChildMethod;
+  window.useChildBridge = useChildBridge;
+  window.destroyChildBridge = destroyChildBridge;
 }
 
 // ===================================================================

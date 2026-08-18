@@ -61,7 +61,7 @@
 │  └─ callBase()              └─ useGlobalDataKey()      │
 │                                                       │
 │  TMap 代理 ── callBase('tmapCall')                    │
-│  弹窗穿透 ── callBase('showDialog')                   │
+│  弹窗穿透 ── callBase('dialogService', action, ...)   │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -278,38 +278,47 @@ pointLayer.show()
 | `TMap` | `Proxy` | 地图代理对象，任意方法名自动转发基座 |
 | `createLayer(name)` | `Function` | Layer 代理工厂，返回 Proxy 对象 |
 
-### 2.8 弹窗穿透
+### 2.8 弹窗穿透（dialogService）
 
-子应用通过 `callBase('showDialog', config)` 触发基座渲染弹窗，弹窗默认 `append-to-body`，可覆盖整个浏览器。
+子应用通过 `callBase('dialogService', action, ...params)` 调宿主 DialogService。  
+弹窗挂在**基座 DOM**，可覆盖整个浏览器。
 
 ```js
-// 打开弹窗
-const result = await callBase('showDialog', {
-  componentName: 'RegionPickerDialog',  // 必填：基座注册的组件名
-  title: '选择区域',                      // 可选：弹窗标题
-  width: '800px',                        // 可选：弹窗宽度，默认 600px
-  props: { multiple: true }              // 可选：透传给组件的 props
+import { callBase } from '@/bridge.js';
+
+const dialogId = await callBase('dialogService', 'open', {
+  id: 'micro-app-station-detail',
+  title: '站点详情',
+  component: 'DemoDialogContent', // 生产：宿主 LEGO 组件名
+  params: { stationCode: '350100', stationName: '福州站' },
+  showMask: false,
+  locked: false,
 });
-// 弹窗关闭后 result 为组件 emit('close', resultData) 传入的值
-console.log('弹窗返回:', result);
+await callBase('dialogService', 'update', dialogId, { title: '更新后的站点详情', params: { stationCode: '350200' } });
+await callBase('dialogService', 'setLocked', dialogId, true);
+const isOpen = await callBase('dialogService', 'isOpen', dialogId);
+const info = await callBase('dialogService', 'get', dialogId);
+const params = await callBase('dialogService', 'getParams', dialogId);
+await callBase('dialogService', 'close', dialogId);
+await callBase('dialogService', 'closeAll', { includeLocked: false });
 ```
 
-**基座侧需提前注册弹窗组件：**
+**允许：** `open` `update` `close` `closeAll` `setLocked` `isOpen` `get` `getParams`  
+**禁止：** `destroy` `configure` `resetConfig` `getConfig`
+
+**基座：** `createDialogService()` + `registerSharedChildMethod('dialogService', facade)`；内容组件在 `dialogComponents` 注册。
+
+**兼容旧 API：**
 
 ```js
-// base/src/App.vue
-import MyDialog from './dialogs/MyDialog.vue';
-
-const dialogComponents = {
-  MyDialog: markRaw(MyDialog),  // 必须用 markRaw 包裹
-};
+const result = await callBase('showDialog', {
+  componentName: 'RegionPickerDialog',
+  title: '选择区域',
+  props: { regions: [], defaultCode: '' },
+});
 ```
 
-**弹窗组件约定：**
-
-- 组件通过 `emit('close', resultData)` 关闭弹窗并返回数据
-- 基座通过 `<component :is="dialogComponents[name]" v-bind="dialog.props" @close="closeDialog" />` 渲染
-- 未注册的组件名会在弹窗中显示友好提示
+可点示例：`packages/micro/src/views/demos/BaseDialog.vue`
 
 ### 2.9 inject('root') — 基座注入
 

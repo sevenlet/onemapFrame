@@ -1,0 +1,21 @@
+---
+description: Retrieve verified LEGO capabilities before answering map, dialog, bridge, or framework questions
+alwaysApply: true
+---
+
+# LEGO Capability Retrieval
+
+This workspace is a LEGO micro-app. Default to `micro-app` context.
+
+Before answering or editing code for LEGO capabilities, run:
+
+```powershell
+node docs/ai/search-lego-capabilities.mjs "<user question>" --context micro-app
+```
+
+Use only returned methods, parameters, constraints, and call patterns. If no method matches, report that the local LEGO capability library has no match.
+
+- Host services use `callBase` from `@/bridge.js`.
+- Host maps use `mapRef.value`.
+- Local `<TGisMap>` maps use `realMapRef.value`.
+- Generated files under `docs/ai/` must not be edited manually.
