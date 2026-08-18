@@ -11,10 +11,10 @@
   "dependencies": {
     "@ths-map/topic-layer-runtime": "^1.1.0",
     "@ths-map-sdk/api": "^2.0.16",
-    "@ths-map-sdk/map": "^2.0.19",
-    "@ths-map-sdk/mapgo-runtime": "^2.0.21",
+    "@ths-map-sdk/map": "^2.0.20",
+    "@ths-map-sdk/mapgo-runtime": "^2.0.22",
     "@ths-map-sdk/widgets": "^2.0.18",
-    "@ths/design": "^1.6.70",
+    "@ths/design": "^1.6.71",
     "@micro-zoe/micro-app": "1.0.0-rc.30",
     "@microsoft/fetch-event-source": "^2.0.1",
     "axios": "^1.6.0",
