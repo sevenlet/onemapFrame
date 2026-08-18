@@ -151,12 +151,12 @@
   dependencies:
     "@micro-zoe/micro-app" "1.0.0-rc.30"
     "@microsoft/fetch-event-source" "^2.0.1"
-    "@ths-map-sdk/api" "^2.0.15"
-    "@ths-map-sdk/map" "^2.0.18"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.20"
-    "@ths-map-sdk/widgets" "^2.0.17"
+    "@ths-map-sdk/api" "^2.0.16"
+    "@ths-map-sdk/map" "^2.0.19"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.21"
+    "@ths-map-sdk/widgets" "^2.0.18"
     "@ths-map/topic-layer-runtime" "^1.1.0"
-    "@ths/design" "^1.6.69"
+    "@ths/design" "^1.6.70"
     axios "^1.6.0"
     echarts "^5.4.0"
     element-plus "^2.7.0"
@@ -174,12 +174,12 @@
   version "1.0.0"
   resolved "file:packages/micro"
   dependencies:
-    "@ths-map-sdk/api" "^2.0.15"
-    "@ths-map-sdk/map" "^2.0.18"
-    "@ths-map-sdk/mapgo-runtime" "^2.0.20"
-    "@ths-map-sdk/widgets" "^2.0.17"
+    "@ths-map-sdk/api" "^2.0.16"
+    "@ths-map-sdk/map" "^2.0.19"
+    "@ths-map-sdk/mapgo-runtime" "^2.0.21"
+    "@ths-map-sdk/widgets" "^2.0.18"
     "@ths-map/topic-layer-runtime" "^1.1.0"
-    "@ths/design" "^1.6.69"
+    "@ths/design" "^1.6.70"
     element-plus "^2.7.0"
     ol "^10.0.0"
     vue "^3.4.0"
@@ -190,10 +190,10 @@
   resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/api/-/api-2.0.16.tgz"
   integrity sha512-oAMCrqFJ7GnKYhAWIT+oczFEqeaBd1+QmFN6EJP8EFLJVN4G8FKoV+KQdmbz9LPBW1R7CChUtOH/bxSJ/4tetQ==
 
-"@ths-map-sdk/core@2.0.19":
-  version "2.0.19"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.19.tgz"
-  integrity sha512-Gzjv6Almr6H60IlnDzFc5g3vRWRX5wLmDWK3ZrMRGKeDhWxQ0orzIJcsqV+Mj5AHjzWHmI3kwNPrega+nyXhXw==
+"@ths-map-sdk/core@2.0.20":
+  version "2.0.20"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/core/-/core-2.0.20.tgz"
+  integrity sha512-SLlcEzohD2GpOtvaH18ohBhRMuruOi8uXWB3TJ2XblCJPBJUi5yIHYwJKMWMCLzJIhR66TdRqQa2krRMhXbn4g==
   dependencies:
     "@ths-map-sdk/api" "2.0.16"
     "@turf/turf" "^7.3.5"
@@ -208,21 +208,21 @@
     proj4 ">=2.0.0"
     socket.io-client "^4.8.3"
 
-"@ths-map-sdk/map@^2.0.19", "@ths-map-sdk/map@2.0.19":
-  version "2.0.19"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.19.tgz"
-  integrity sha512-Fsw86qIm9NxCfOVGutnGhZnF1hdwUfciWX8Sa/DV7p/5MMrYJXgQsAKHFnQ9GNj+s2Sy5m5+QDtNXemgGx4EaA==
+"@ths-map-sdk/map@^2.0.20", "@ths-map-sdk/map@2.0.20":
+  version "2.0.20"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/map/-/map-2.0.20.tgz"
+  integrity sha512-GcLWrxV4lGlvLNO3ZrS4SQ5k8/n+RIUYxlm49hpfkDhiC640wGIDhr6p3bMJ20YIMPj1kuoYE3NRnUD1uHzvCw==
   dependencies:
     "@ths-map-sdk/api" "2.0.16"
-    "@ths-map-sdk/core" "2.0.19"
+    "@ths-map-sdk/core" "2.0.20"
 
-"@ths-map-sdk/mapgo-runtime@^2.0.21":
-  version "2.0.21"
-  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.21.tgz"
-  integrity sha512-QXqCAebJIVWWEmhDcuRVOY9ot7DrXKn3TW1tpxp8/pfvgpmiFkzW31eC68S0Q4Pr3ZlsqUZ0xewpWbbxb6iWgw==
+"@ths-map-sdk/mapgo-runtime@^2.0.22":
+  version "2.0.22"
+  resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map-sdk/mapgo-runtime/-/mapgo-runtime-2.0.22.tgz"
+  integrity sha512-AfDxmewstnqtkLft2nJEEsp/OV3REFnN1mC2Rdn6Hb3kUeWd9gUDYqeLar0GKZrXDVDfPeffGBcJ47ti2HvMUA==
   dependencies:
     "@ths-map-sdk/api" "2.0.16"
-    "@ths-map-sdk/map" "2.0.19"
+    "@ths-map-sdk/map" "2.0.20"
     "@ths-map-sdk/widgets" "2.0.18"
 
 "@ths-map-sdk/widgets@^2.0.18", "@ths-map-sdk/widgets@2.0.18":
@@ -237,10 +237,10 @@
   resolved "http://192.168.0.112:8081/repository/ths-map/@ths-map/topic-layer-runtime/-/topic-layer-runtime-1.1.0.tgz"
   integrity sha512-CoSF0tfGjMNEMi4ka5L7qm+SKpjVVTCoa63dS1zMUF9UYFO3ufsJ5sLdtBcK4vQMKKs7oPycs9DKI1iWg41s3w==
 
-"@ths/design@^1.6.70":
-  version "1.6.70"
-  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.6.70.tgz"
-  integrity sha512-oDOnUX9hg6e4fdSreICEP04fAbUHYkSMQFnW10tuTBH3OsrMCi0fVX4RVDJCGmAyfXuUGNfnlrW3JQPH2t8f+A==
+"@ths/design@^1.6.71":
+  version "1.6.71"
+  resolved "http://192.168.0.112:8081/repository/npm-ths/@ths/design/-/design-1.6.71.tgz"
+  integrity sha512-Rm69QXNPdQoTwusL7GKG754yTGBWn6jU5nrUJC6MEaWcBE9ZJVRJ57R2PVmwPYhB1JnfM2ehQsOyjCCvDCYOfw==
 
 "@turf/along@7.4.0":
   version "7.4.0"

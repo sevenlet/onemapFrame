@@ -18,6 +18,7 @@ import {
 import { createWebHashHistory, createRouter } from 'vue-router';
 import ElementPlus from 'element-plus';
 import ElementPlusLocaleZhCn from 'element-plus/es/locale/lang/zh-cn';
+import 'element-plus/dist/index.css';
 import { createI18n } from 'vue-i18n';
 import mitt from 'mitt';
 import microApp from '@micro-zoe/micro-app';

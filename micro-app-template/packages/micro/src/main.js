@@ -14,6 +14,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import ElementPlus from 'element-plus';
 import ElementPlusLocaleZhCn from 'element-plus/es/locale/lang/zh-cn';
+import 'element-plus/dist/index.css';
 // @ths/design 组件库样式（含 t-gis-map 容器/微件样式）。
 // 仅 import 样式，组件按需在用到的地方具名引入（@ths/design JS 无副作用，可 tree-shaking）。
 // 用 ./style.css 子路径（exports 的 import 条件 → es/style.css）；

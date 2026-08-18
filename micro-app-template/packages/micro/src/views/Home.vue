@@ -26,6 +26,7 @@
       <h1>🎯 微应用模板</h1>
       <nav class="nav">
         <router-link to="/home" class="nav-item">首页</router-link>
+        <router-link to="/section-assessment" class="nav-item">断面评价</router-link>
         <router-link to="/about" class="nav-item">关于</router-link>
       </nav>
     </div>

@@ -9,8 +9,8 @@
   ║   import { useBaseBridge, useGlobalData } from '@/bridge.js'
   ║   const { baseData } = useBaseBridge()
   ║   const { globalData } = useGlobalData()
-  ║   // 两个通道都试：baseData（定向下发）兜底 globalData（全局共享）
-  ║   const mapRef = computed(() => baseData.value?.mapRef || globalData.value?.mapRef)
+  ║   // 三层兜底：baseData（定向下发）-> globalData（全局共享）-> window/window.parent（直接挂载）
+  ║   const mapRef = computed(() => baseData.value?.mapRef || globalData.value?.mapRef || window.mapRef)
   ║   mapRef.value.goTo({ center: { x: 119.296, y: 26.074 }, level: 11 })   // flat
   ║   mapRef.value.TMap.goTo(...)                                           // 命名空间
   ║   mapRef.value.Layer.setVisibility('xxx', false)
@@ -41,12 +41,27 @@
         <strong>通过 data 通道拿基座 mapRef，直接调 &lt;TGisMap&gt; 的方法</strong>
       </template>
 
+      <div class="btn-group top-layer-action">
+        <el-button size="small" type="primary" :disabled="!ready" @click="loadEnterpriseLayer">
+          加载企业点位图层
+        </el-button>
+        <el-button size="small" type="warning" :disabled="!ready" @click="updateEnterpriseLayer">
+          更新模拟数据
+        </el-button>
+        <el-button size="small" :disabled="!ready" @click="resetEnterpriseLayer">
+          重置接口数据
+        </el-button>
+        <el-button size="small" type="success" :disabled="!ready" @click="loadOverviewScene">
+          加载总览分析场景
+        </el-button>
+      </div>
+
       <!-- 基座下发字段名 + 就绪状态 -->
       <div class="field-row">
         <span class="field-label">基座下发字段名：</span>
         <el-input v-model="fieldName" size="small" style="width: 160px;" placeholder="如 mapRef" />
         <el-tag v-if="ready" type="success" size="small">✅ mapRef 就绪</el-tag>
-        <el-tag v-else type="info" size="small">⏳ 等基座下发 mapRef…</el-tag>
+        <el-tag v-else type="info" size="small">⏳ 等基座下发/挂载 mapRef…</el-tag>
       </div>
       <p class="keys" v-if="baseDataKeys.length">
         baseData 当前字段：<code v-for="k in baseDataKeys" :key="k">{{ k }}</code>
@@ -75,6 +90,13 @@
         <el-button size="small" type="danger" :disabled="!ready" @click="removeLayer">removeLayer</el-button>
       </div>
 
+      <!-- HTML 特效图层 -->
+      <div class="btn-group">
+        <div class="btn-label">HTML 特效图层</div>
+        <el-button size="small" type="success" :disabled="!ready" @click="addRipple">添加涟漪图层 (TMap 原生)</el-button>
+        <el-button size="small" type="danger" :disabled="!ready" @click="removeRipple">移除涟漪图层</el-button>
+      </div>
+
       <!-- Control 命名空间 -->
       <div class="btn-group">
         <div class="btn-label">Control 命名空间</div>
@@ -84,7 +106,7 @@
 
       <div v-if="result !== null" class="result-box">
         <strong>📦 调用结果：</strong>
-        <pre>{{ typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result) }}</pre>
+        <pre>{{ formatResult(result) }}</pre>
       </div>
       <div v-if="error" class="error-box">
         <strong>❌ 错误：</strong> {{ error }}
@@ -107,33 +129,81 @@
       </div>
 
       <p class="hint">
-        💡 这里的 <code>mapRef</code> 是基座 <code>&lt;TGisMap&gt;</code> 实例的活引用，先读 <code>baseData</code>（定向下发）兜底 <code>globalData</code>（全局共享），不带翻译层、直接调。<br>
+        💡 这里的 <code>mapRef</code> 是基座 <code>&lt;TGisMap&gt;</code> 实例的活引用，三层兜底：<code>baseData</code>（定向下发）-> <code>globalData</code>（全局共享）-> <code>window</code>/<code>window.parent</code>（老式直接挂载），不带翻译层、直接调。<br>
         💡 <strong>基座建议把 mapRef 放 globalData</strong>（<code>setGlobalData({ mapRef })</code>）：globalData 全局共享，dev 弹窗 / 跨源 localhost 微应用都能读到；只放 <code>:data</code> 的话 dev 弹窗可能拿不到。<br>
         💡 字段名以基座实际下发的为准；多地图时基座下发 <code>maps={id:ref}</code>，字段名改成 <code>maps.main</code> 之类。<br>
-        💡 独立跑（无基座）时两个通道都空，mapRef 不可用，按钮禁用 —— 联调时接上基座即可。
+        💡 <strong>window 兜底</strong>：基座不走通道、直接 <code>window.mapRef=...</code> 时也能读到（同源 <code>window.parent</code> 同样兜底；跨源 iframe 因同源策略拿不到基座 window，需基座改用通道下发）。<br>
+        💡 独立跑（无基座）时三个通道都空，mapRef 不可用，按钮禁用 -- 联调时接上基座即可。
       </p>
     </el-card>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { ElCard, ElButton, ElForm, ElFormItem, ElInput, ElTag } from 'element-plus';
 import { useGlobalData, useBaseBridge } from '@/bridge.js';
+import { addRippleHTMLLayer, removeRippleHTMLLayer } from '@/utils/map-effects.js';
 
-const { baseData } = useBaseBridge();
+const { baseData, callBase } = useBaseBridge();
 const { globalData } = useGlobalData();
 
-// 基座下发的字段名 —— 默认 mapRef，可改成基座实际下发的变量名
+// 基座下发的字段名 -- 默认 mapRef，可改成基座实际下发的变量名
 const fieldName = ref('mapRef');
-// mapRef 活引用：先试 baseData（定向下发），兜底 globalData（全局共享，dev 弹窗/跨源更可靠）
-// 两个都没有（独立跑 / 基座没传）→ undefined → 按钮禁用
-const mapRef = computed(() => baseData.value?.[fieldName.value] || globalData.value?.[fieldName.value]);
+
+// window 兜底：基座不走 micro-app 通道，直接把 mapRef 挂 window 的场景。
+// 先读子应用自己的 window；iframe 同源时再回退 window.parent（跨源自动失败、不报错）
+function readWindowMapRef() {
+  if (typeof window === 'undefined') return undefined;
+  if (window[fieldName.value]) return window[fieldName.value];
+  try {
+    if (window.parent && window.parent !== window && window.parent[fieldName.value]) {
+      return window.parent[fieldName.value];
+    }
+  } catch { /* 跨源访问 window.parent 抛 SecurityError，忽略 */ }
+  return undefined;
+}
+
+// window 非响应式：基座后挂时 computed 不会自动重算，用 winTick + 轻量轮询触发一次
+const winTick = ref(0);
+let pollTimer = null;
+
+// mapRef 活引用：baseData（定向下发）-> globalData（全局共享）-> window/window.parent（老式直接挂载）
+// 三层都没有（独立跑 / 基座没传）-> undefined -> 按钮禁用
+const mapRef = computed(() => {
+  winTick.value; // 依赖 winTick：轮询命中 window 后触发重算
+  return baseData.value?.[fieldName.value]
+      || globalData.value?.[fieldName.value]
+      || readWindowMapRef();
+});
 const ready = computed(() => !!mapRef.value);
-const baseDataKeys = computed(() => Object.keys({ ...(baseData.value || {}), ...(globalData.value || {}) }));
+// 列出当前供数的所有字段（window 命中时标 (window)），方便排查走的是哪个通道
+const baseDataKeys = computed(() => Object.keys({
+  ...(baseData.value || {}),
+  ...(globalData.value || {}),
+  ...(readWindowMapRef() ? { [fieldName.value]: '(window)' } : {}),
+}));
 
 const result = ref(null);
 const error = ref('');
+
+function formatResult(val) {
+  if (val === null || val === undefined) return '';
+  if (typeof val !== 'object') return String(val);
+  try {
+    return JSON.stringify(val, null, 2);
+  } catch {
+    try {
+      const summary = {
+        type: val.constructor?.name || typeof val,
+        id: val.id || val.get?.('id') || val.getLayerId?.() || undefined,
+      };
+      return JSON.stringify(summary, null, 2);
+    } catch {
+      return String(val);
+    }
+  }
+}
 
 // 统一包装：同步/异步调用 + 结果/错误回显
 async function run(label, fn) {
@@ -157,6 +227,104 @@ const pointFeatures = {
   ],
 };
 const LAYER_ID = 'demo-points';
+const ENTERPRISE_LAYER_ID = 'enterprise-points';
+const ENTERPRISE_DATA_URL = 'http://192.168.0.202:7777/service/serviceinterface/search/run.action?interfaceId=f706442e3026b6d35abe8fa8dbb2d15c&token=dcp&REGION_CODE=150000000000&pageSize=1100';
+const enterpriseEventHandles = ref(null);
+
+const enterpriseRenderer = {
+  type: 'uniqueValue',
+  field1: 'ENTERPRISE_TYPE',
+  defaultSymbol: {
+    esri: { type: 'esriSMS', style: 'esriSMSCircle', color: '#909399', size: 8, outline: { color: '#ffffff', width: 1 } },
+  },
+  uniqueValueInfos: [
+    { value: '1', label: '企业类型 1', symbol: { esri: { type: 'esriSMS', style: 'esriSMSCircle', color: '#409eff', size: 9, outline: { color: '#ffffff', width: 1 } } } },
+    { value: '2', label: '企业类型 2', symbol: { esri: { type: 'esriSMS', style: 'esriSMSSquare', color: '#67c23a', size: 9, outline: { color: '#ffffff', width: 1 } } } },
+    { value: '3', label: '企业类型 3', symbol: { esri: { type: 'esriSMS', style: 'esriSMSTriangle', color: '#e6a23c', size: 10, outline: { color: '#ffffff', width: 1 } } } },
+  ],
+};
+
+function getEnterpriseLayerApi() {
+  const TMap = mapRef.value?.TMap;
+  const Layer = mapRef.value?.Layer;
+  if (!TMap || !Layer) throw new Error('基座地图或图层 API 尚未就绪');
+  return { TMap, Layer };
+}
+
+function registerEnterpriseClickEvent(Layer) {
+  if (enterpriseEventHandles.value) Layer.unRegisterEvent(ENTERPRISE_LAYER_ID, enterpriseEventHandles.value);
+  Layer.registerEvent(ENTERPRISE_LAYER_ID, {
+    click: ({ feature }) => {
+      const properties = feature?.properties || {};
+      result.value = properties;
+    },
+  }, (handles) => { enterpriseEventHandles.value = handles; });
+}
+
+function loadEnterpriseLayer() {
+  run('加载企业点位图层', () => {
+    const { TMap, Layer } = getEnterpriseLayerApi();
+    if (TMap.getLayer(ENTERPRISE_LAYER_ID)) TMap.removeLayer(ENTERPRISE_LAYER_ID);
+    const layer = TMap.addLayer('Vector', {
+      id: ENTERPRISE_LAYER_ID,
+      geometryType: 'point',
+      dataSource: {
+        type: 'API',
+        data: ENTERPRISE_DATA_URL,
+        xField: 'LONGITUDE',
+        yField: 'LATITUDE',
+        path: 'data',
+      },
+      renderer: enterpriseRenderer,
+      popup: {
+        title: '${ENTER_NAME}',
+        content: '企业类型：${ENTERPRISE_TYPE}<br>行政区：${REGION_NAME}<br>行业：${TRADE_NAME}<br>经度：${LONGITUDE}<br>纬度：${LATITUDE}',
+      },
+    });
+    registerEnterpriseClickEvent(Layer);
+    return layer;
+  });
+}
+
+function updateEnterpriseLayer() {
+  run('更新模拟企业数据', () => {
+    const { TMap, Layer } = getEnterpriseLayerApi();
+    if (!TMap.getLayer(ENTERPRISE_LAYER_ID)) throw new Error('请先加载企业点位图层');
+    const data = [
+      { ENTER_NAME: '模拟企业 A', ENTERPRISE_TYPE: '1', REGION_NAME: '呼和浩特市', TRADE_NAME: '模拟制造业', LONGITUDE: '111.6708', LATITUDE: '40.8183' },
+      { ENTER_NAME: '模拟企业 B', ENTERPRISE_TYPE: '2', REGION_NAME: '包头市', TRADE_NAME: '模拟采矿业', LONGITUDE: '109.8404', LATITUDE: '40.6578' },
+      { ENTER_NAME: '模拟企业 C', ENTERPRISE_TYPE: '3', REGION_NAME: '鄂尔多斯市', TRADE_NAME: '模拟能源业', LONGITUDE: '109.7813', LATITUDE: '39.6083' },
+    ];
+    Layer.setData(ENTERPRISE_LAYER_ID, {
+      mode: 'all-replace',
+      layer: { data },
+      success: () => { result.value = `已更新 ${data.length} 条模拟企业数据`; },
+      error: (err) => { error.value = err.message; },
+    });
+  });
+}
+
+function resetEnterpriseLayer() {
+  run('重置企业接口数据', () => {
+    const { TMap, Layer } = getEnterpriseLayerApi();
+    if (!TMap.getLayer(ENTERPRISE_LAYER_ID)) throw new Error('请先加载企业点位图层');
+    Layer.setDataSource(ENTERPRISE_LAYER_ID, {
+      layer: {
+        type: 'API',
+        data: ENTERPRISE_DATA_URL,
+        xField: 'LONGITUDE',
+        yField: 'LATITUDE',
+        path: 'data',
+      },
+      success: () => { result.value = '已恢复接口企业数据'; },
+      error: (err) => { error.value = err.message; },
+    });
+  });
+}
+
+function loadOverviewScene() {
+  run('加载总览分析场景', () => callBase('loadOverviewScene'));
+}
 
 // TMap 命名空间
 function goTo(city) {
@@ -194,6 +362,24 @@ function layerClear()   { run('Layer.clear',               () => mapRef.value.La
 function controlHideZoom() { run('Control.setWidgetVisibility zoom false', () => mapRef.value.Control.setWidgetVisibility('zoom', false)); }
 function controlShowZoom() { run('Control.setWidgetVisibility zoom true',  () => mapRef.value.Control.setWidgetVisibility('zoom', true)); }
 
+// HTML 特效图层：涟漪
+const RIPPLE_LAYER_ID = 'HTML渲染图层';
+function addRipple() {
+  run('添加涟漪效果', () => addRippleHTMLLayer({
+    TMap: mapRef.value?.TMap,
+    mapDocument: window.parent.document,
+    layerId: RIPPLE_LAYER_ID,
+    data: [{ LONGITUDE: 114.66, LATITUDE: 32.115 }],
+  }));
+}
+function removeRipple() {
+  run('移除涟漪效果', () => removeRippleHTMLLayer({
+    TMap: mapRef.value?.TMap,
+    mapDocument: window.parent.document,
+    layerId: RIPPLE_LAYER_ID,
+  }));
+}
+
 // 自由调用：mapRef 上任意方法
 const customMethod = ref('goTo');
 const customParams = ref('[{"center":{"x":119.296,"y":26.074},"level":11}]');
@@ -211,6 +397,25 @@ function callCustom() {
     return fn.apply(mapRef.value, params);
   });
 }
+
+// window 通道轮询：基座可能在微应用加载后才挂 window.xxx，
+// 此时 computed 不会自动重算，定期探一次，命中即停
+onMounted(() => {
+  pollTimer = setInterval(() => {
+    if (mapRef.value) { clearInterval(pollTimer); pollTimer = null; return; }
+    if (readWindowMapRef()) winTick.value++;   // 命中 window -> 触发 computed 重算
+  }, 500);
+});
+onUnmounted(() => {
+  if (pollTimer) clearInterval(pollTimer);
+  const TMap = mapRef.value?.TMap;
+  const Layer = mapRef.value?.Layer;
+  if (Layer && enterpriseEventHandles.value) {
+    Layer.unRegisterEvent(ENTERPRISE_LAYER_ID, enterpriseEventHandles.value);
+  }
+  if (TMap?.getLayer(ENTERPRISE_LAYER_ID)) TMap.removeLayer(ENTERPRISE_LAYER_ID);
+  removeRippleHTMLLayer({ TMap, mapDocument: window.parent.document, layerId: RIPPLE_LAYER_ID });
+});
 </script>
 
 <style scoped>
