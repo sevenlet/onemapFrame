@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "platform": "lego",
+  "developmentContext": "micro-app",
+  "bridgeModule": "@/bridge.js",
+  "capabilitySearch": "node docs/ai/search-lego-capabilities.mjs"
+}

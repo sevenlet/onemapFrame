@@ -12,7 +12,8 @@
     "dev:micro": "npm -w @template/micro run dev",
     "build": "npm -w @template/micro run build",
     "build:all": "npm -w @template/base run build && npm -w @template/micro run build",
-    "preview:micro": "npm -w @template/micro run preview"
+    "preview:micro": "npm -w @template/micro run preview",
+    "ai:search": "node docs/ai/search-lego-capabilities.mjs"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

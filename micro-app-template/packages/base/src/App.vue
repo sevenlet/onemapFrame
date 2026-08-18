@@ -93,8 +93,8 @@
         ref="baseMapRef"
 
         appID="507dafe62bd10c9ceebe65768595601a"
-        
-        
+
+
         resourceBaseUrl="http://192.168.0.202:7777/mapgo2.0/apps"
         :rulesByOrigin="{
             'http://localhost:3000': {
@@ -170,47 +170,92 @@
       </div>
     </footer>
 
-    <!-- ===== 弹窗（基座渲染，可以覆盖整个浏览器）===== -->
+    <!-- ===== 弹窗（基座渲染，可覆盖整个浏览器；支持 dialogService 多实例）===== -->
     <!--
-      关键点：
-      1. <el-dialog> 默认 append-to-body=true，会把弹窗挂到 document.body，
-         不受 .main-area / micro-app iframe 的范围限制，能盖住整个浏览器
-      2. 子应用通过 callBase('showDialog', {...}) 触发，本质是基座自己在渲染
-      3. 子应用要弹哪个组件，就在 dialogComponents 注册表里加一个
+      生产：callBase('dialogService', 'open', { component: 'XxxComponent', params })
+      调试模板：component 对应 dialogComponents 注册名（如 dialogDemoContentComponent）
+      兼容旧：callBase('showDialog', { componentName, props }) 仍可用
     -->
     <el-dialog
-      v-model="dialog.visible"
-      :title="dialog.title"
-      :width="dialog.width || '600px'"
-      :modal="true"
+      v-for="item in dialogService.dialogs"
+      :key="item.id"
+      v-model="item.visible"
+      :title="item.title || item.id"
+      :width="resolveDialogWidth(item)"
+      :modal="item.showMask !== false"
       :append-to-body="true"
-      @close="onDialogClose"
+      draggable
+      overflow
+      @close="onHostDialogClosed(item.id)"
     >
-      <!-- 按"组件名"渲染：dialogComponents[dialog.componentName] 是基座自己定义的组件 -->
-      <component
-        v-if="dialog.componentName && dialogComponents[dialog.componentName]"
-        :is="dialogComponents[dialog.componentName]"
-        v-bind="dialog.props"
-        @close="closeDialog"
-      />
-      <!-- 没注册的组件名，给个友好提示 -->
-      <div v-else-if="dialog.componentName" style="color: #f56c6c">
-        ⚠️ 未注册的弹窗组件名：<code>{{ dialog.componentName }}</code
-        ><br />
-        请在 base/src/App.vue 的 <code>dialogComponents</code> 里注册。
+      <div class="dialog-debug-meta">
+        <span>ID: <code>{{ item.id }}</code></span>
+        <span>size: <code>{{ item.initialSize }}</code></span>
+        <span>mask: <code>{{ item.showMask }}</code></span>
+        <span>locked: <code>{{ item.locked }}</code></span>
+        <span v-if="item.headerComponent">header: <code>{{ item.headerComponent }}</code></span>
+        <span v-if="item.content?.route">route: <code>{{ item.content.route }}</code></span>
       </div>
+      <DialogMicroAppContent
+        v-if="item.content?.type === 'micro-app'"
+        :key="item.microAppInstanceToken"
+        :dialog="item"
+      />
+      <component
+        v-else-if="item.component && dialogComponents[item.component]"
+        :is="dialogComponents[item.component]"
+        v-bind="resolveDialogContentProps(item)"
+        @close="(result) => onDialogContentClose(item.id, result)"
+      />
+      <div v-else-if="item.component" style="color: #f56c6c; font-size: 13px; line-height: 1.6;">
+        ⚠️ 未注册的弹窗组件名：<code>{{ item.component }}</code><br>
+        请在 base/src/App.vue 的 <code>dialogComponents</code> 里注册。<br>
+        生产环境这里应是宿主已有的 LEGO 组件名。
+      </div>
+      <div v-else style="color: #909399; font-size: 13px;">
+        未指定 component。params：
+        <pre style="margin-top:8px;white-space:pre-wrap;">{{ JSON.stringify(item.params, null, 2) }}</pre>
+      </div>
+      <template #footer>
+        <span v-if="item.locked" style="float:left;color:#e6a23c;font-size:12px;">已锁定</span>
+        <el-button
+          v-if="item.showLockButton"
+          size="small"
+          @click="dialogService.setLocked(item.id, !item.locked)"
+        >
+          {{ item.locked ? '解锁' : '锁定' }}
+        </el-button>
+        <el-button
+          v-if="item.showSizeButton"
+          size="small"
+          @click="toggleDialogSize(item)"
+        >
+          {{ item.initialSize === 'small' ? '放大' : '缩小' }}
+        </el-button>
+        <el-button size="small" @click="dialogService.close(item.id)">关闭</el-button>
+      </template>
     </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive, computed, nextTick, markRaw } from "vue";
-import { ElButton, ElDialog } from "element-plus";
-import { useChildBridge, useGlobalData } from "./bridge.js";
+import { ref, reactive, computed, nextTick, markRaw } from 'vue';
+import { ElButton, ElDialog } from 'element-plus';
+import {
+  useChildBridge,
+  useGlobalData,
+  registerSharedChildMethod,
+  registerContextualSharedChildMethod,
+} from './bridge.js';
+import {
+  createDialogService,
+  createContextualDialogServiceRpcFacade,
+} from './dialogService.js';
 
 // 弹窗里要显示的两个示例组件（基座自己定义，子应用按名字调）
-import DemoDialogContent from "./dialogs/DemoDialogContent.vue";
-import RegionPickerDialog from "./dialogs/RegionPickerDialog.vue";
+import DemoDialogContent from './dialogs/DemoDialogContent.vue';
+import DialogMicroAppContent from './dialogs/DialogMicroAppContent.vue';
+import RegionPickerDialog from './dialogs/RegionPickerDialog.vue';
 // 基座内嵌的真实 <TGisMap>（直连子路径，绕开 @ths/design 主入口拉全组件 + heavy peers）
 import TGisMap from "@ths/design/es/components/gis-map/index.js";
 import { TopicLayerPanel } from "./features/topic-layer";
@@ -434,49 +479,135 @@ registerMethod("loadOverviewScene", async () => {
   return { sceneId: overviewSceneLease.value.sceneId };
 });
 
-// ===== 基座弹窗 RPC =====
-// 仅允许渲染注册表中的基座组件。
+/**
+ * 等待地图 iframe 加载 + TMap 就绪
+ */
+function waitForTMapReady(timeout = 15000) {
+  return new Promise((resolve, reject) => {
+    const tIframeEl = document.getElementById('t-iframe-893f.c77f5f17d');
+    if (!tIframeEl) return reject('未找到地图容器');
+    const iframeEl = tIframeEl.querySelector('iframe');
+    if (!iframeEl) return reject('未找到 iframe');
+
+    const timer = setTimeout(() => reject('等待 TMap 就绪超时'), timeout);
+
+    function checkTMap() {
+      if (iframeEl.contentWindow?.TMap) {
+        clearTimeout(timer);
+        resolve('ok');
+      }
+    }
+
+    if (iframeEl.contentWindow?.TMap) {
+      clearTimeout(timer);
+      resolve('ok');
+      return;
+    }
+
+    iframeEl.addEventListener('load', () => {
+      // iframe 加载后再轮询 TMap
+      const poll = setInterval(() => {
+        if (iframeEl.contentWindow?.TMap) {
+          clearTimeout(timer);
+          clearInterval(poll);
+          resolve('ok');
+        }
+      }, 300);
+      setTimeout(() => clearInterval(poll), timeout);
+    });
+  });
+}
+
+// ===== 弹窗：生产对齐 dialogService + 兼容旧 showDialog =====
+// 注册表：组件名 → 组件对象。子应用只能弹已注册的组件。
+// 生产环境 component 是 LEGO 页面/组件名；本调试模板用本地 Vue SFC 名演示。
 const dialogComponents = {
-  DemoDialogContent: markRaw(DemoDialogContent),
+  // 与生产约定对齐：component 常写作 XxxComponent
+  dialogDemoContentComponent: markRaw(DemoDialogContent),
   RegionPickerDialog: markRaw(RegionPickerDialog),
 };
 
-const dialog = reactive({
-  visible: false,
-  componentName: null,
-  title: "",
-  width: "600px",
-  props: {},
-  resolver: null,
-});
+const dialogService = createDialogService();
 
-// 子应用调用 callBase("showDialog", config) 后，返回的 Promise 在弹窗关闭时 resolve。
-registerMethod("showDialog", (config) => {
-  pushToInbox("showDialog", config);
-  dialog.componentName = config?.componentName;
-  dialog.title = config?.title || "";
-  dialog.width = config?.width || "600px";
-  dialog.props = config?.props || {};
-  dialog.visible = true;
+function resolveDialogWidth(item) {
+  if (item?.width) return item.width;
+  const positionWidth = item?.initialSize === 'small'
+    ? item?.dialogStyle?.minPosition?.width
+    : item?.dialogStyle?.maxPosition?.width;
+  return positionWidth || (item?.initialSize === 'small' ? '520px' : '720px');
+}
 
-  return new Promise((resolve) => {
-    dialog.resolver = resolve;
+function toggleDialogSize(item) {
+  dialogService.update(item.id, {
+    initialSize: item.initialSize === 'small' ? 'large' : 'small',
+  });
+}
+
+function resolveDialogContentProps(item) {
+  const params = item?.params && typeof item.params === 'object' ? item.params : {};
+  return {
+    ...params,
+    message: params.message
+      ?? (params.stationName
+        ? `站点：${params.stationName}（${params.stationCode || '-'}）`
+        : undefined),
+    count: params.count,
+    regions: params.regions,
+    defaultCode: params.defaultCode,
+  };
+}
+
+function onDialogContentClose(dialogId, result) {
+  pushToInbox('dialogService.close(from content)', { dialogId, result });
+  dialogService.close(dialogId, result ?? null);
+}
+
+function onHostDialogClosed(dialogId) {
+  if (dialogService.isOpen(dialogId)) {
+    dialogService.close(dialogId, null);
+  }
+}
+
+// 生产同款：callBase('dialogService', action, ...params)
+registerContextualSharedChildMethod(
+  'dialogService',
+  createContextualDialogServiceRpcFacade(dialogService, (rpcContext) => {
+    const microAppName = rpcContext.ownerMicroAppName || rpcContext.microAppName;
+    const microAppElement = Array.from(document.querySelectorAll('micro-app'))
+      .find((element) => element.getAttribute('name') === microAppName);
+    const url = microAppElement?.getAttribute('url') || microAppElement?.url || '';
+    if (!url) {
+      throw new Error(`[DialogService RPC] unable to resolve caller micro-app: ${microAppName}`);
+    }
+    return {
+      instanceName: microAppName,
+      url,
+    };
+  }),
+);
+
+// 兼容旧示例：callBase('showDialog', { componentName, props, title, width })
+// 使用共享注册，否则只在模板默认的 `child` 实例上可用；
+// 平台实际注册的微应用名称通常不同，例如 `microAppDialogExample1`。
+registerSharedChildMethod('showDialog', (config) => {
+  pushToInbox('showDialog → dialogService', config);
+  return dialogService.openAndWait({
+    id: config?.id,
+    title: config?.title || '',
+    width: config?.width || '600px',
+    component: config?.componentName || config?.component || '',
+    params: config?.props || config?.params || {},
+    showMask: true,
+    locked: false,
+    closeOtherUnlocked: false,
   });
 });
 
-function closeDialog(result) {
-  dialog.resolver?.(result ?? null);
-  dialog.resolver = null;
-  dialog.visible = false;
-  dialog.componentName = null;
-  dialog.props = {};
+if (typeof window !== 'undefined') {
+  window.__template_dialogService = dialogService;
 }
 
-function onDialogClose() {
-  closeDialog(null);
-}
 
-// ===== 开发调试操作 =====
 function changeUser() {
   data.userName = data.userName === "张三" ? "李四" : "张三";
 }
@@ -523,6 +654,19 @@ body {
 </style>
 
 <style scoped>
+.dialog-debug-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  background: #f5f7fa;
+  border-radius: 4px;
+  color: #606266;
+  font-size: 11px;
+}
+.dialog-debug-meta code { color: #409eff; }
+
 .base-root {
   display: flex;
   flex-direction: column;

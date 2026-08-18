@@ -245,72 +245,65 @@ setGlobalData({ activeTheme: '蓝色版' })
 
 ## 弹窗 / 全屏遮罩怎么写
 
-iframe 沙箱模式下，**子应用的弹窗无法越过 iframe 边界**——即使 ElDialog 默认 `append-to-body: true`，那个 body 也是 iframe 自己的 body。
+iframe 沙箱下，子应用弹窗无法越过 iframe 边界。解决办法：弹窗由**基座**渲染，微应用用 RPC 调用。
 
-**解决方案**：弹窗组件**放在基座**，子应用通过 RPC 让基座弹。
-
-### 模板已内置示例
-
-- 基座弹窗组件库：[packages/base/src/dialogs/](packages/base/src/dialogs/)
-- 基座注册 RPC：[packages/base/src/App.vue](packages/base/src/App.vue) 里 `registerMethod('showDialog')`
-- 子应用调用：[packages/micro/src/views/Home.vue](packages/micro/src/views/Home.vue) 里 `showBaseDialog` / `showRegionPicker`
-
-### 子应用用法
+### 生产推荐：dialogService
 
 ```js
-import { callBase, useGlobalData, setGlobalData } from '@/bridge.js';
+import { callBase } from '@/bridge.js';
 
-// 弹一个简单提示弹窗
+const dialogId = await callBase('dialogService', 'open', {
+  id: 'micro-app-station-detail',
+  title: '站点详情',
+  // 调试模板：DemoDialogContent；生产：宿主 LEGO 组件名
+  component: 'DemoDialogContent',
+  params: { stationCode: '350100', stationName: '福州站' }, // 可序列化
+  showMask: false,
+  locked: false,
+});
+
+await callBase('dialogService', 'update', dialogId, {
+  title: '更新后的站点详情',
+  params: { stationCode: '350200', stationName: '厦门站' },
+});
+await callBase('dialogService', 'setLocked', dialogId, true);
+await callBase('dialogService', 'isOpen', dialogId);
+await callBase('dialogService', 'get', dialogId);
+await callBase('dialogService', 'getParams', dialogId);
+await callBase('dialogService', 'close', dialogId);
+await callBase('dialogService', 'closeAll', { includeLocked: false });
+```
+
+允许：`open | update | close | closeAll | setLocked | isOpen | get | getParams`  
+禁止：`destroy | configure | resetConfig | getConfig`
+
+### 模板已内置
+
+| 位置 | 作用 |
+|---|---|
+| `packages/base/src/dialogService.js` | 调试基座 DialogService |
+| `packages/base/src/App.vue` | `registerSharedChildMethod('dialogService', …)` + 多弹窗渲染 |
+| `packages/base/src/dialogs/*` | 示例内容组件 |
+| `packages/micro/src/views/demos/BaseDialog.vue` | **可点示例页**（首页「弹窗穿透 iframe」卡片） |
+
+### 兼容旧 API showDialog
+
+```js
 const result = await callBase('showDialog', {
-  componentName: 'DemoDialogContent',    // 基座 dialogComponents 里注册的组件名
+  componentName: 'DemoDialogContent',
   title: '提示',
-  width: '600px',
   props: { message: 'Hello', count: 42 },
 });
-console.log('用户点确认时回传:', result);   // { confirmed: true, reply: ... }
-
-// 业务弹窗（区域选择，拿回选中值）
-const region = await callBase('showDialog', {
-  componentName: 'RegionPickerDialog',
-  title: '请选择区域',
-  props: { regions: [...], defaultCode: '350800000000' },
-});
-if (region) {
-  setGlobalData({ regionaQuery: { ...region } });
-}
+// 内容组件 emit('close', data) 时拿到 result
 ```
 
 ### 新增一种弹窗
 
-1. 在 `packages/base/src/dialogs/` 里新建组件，`defineProps` 接收数据，`emit('close', result)` 回传结果
-2. 在 [packages/base/src/App.vue](packages/base/src/App.vue) 的 `dialogComponents` 里注册（一行：`MyDialog: markRaw(MyDialog)`）
-3. 子应用 `callBase('showDialog', { componentName: 'MyDialog', props: {...} })`
+1. `packages/base/src/dialogs/` 新建组件  
+2. `App.vue` 的 `dialogComponents` 注册  
+3. 微应用 `callBase('dialogService', 'open', { component: 'MyDialog', params: {...} })`
 
-> 💡 **生产基座（如 npdp）的写法略不同**：因为用的是 t-dialog（动态组件名是字符串），需要在 `app.component('MyDialog', MyDialog)` 全局注册，然后 t-dialog 内 `<component :is="componentName">` 按名字查找。
-
-### ⚠️ 几个限制
-
-- **props 必须可 JSON 序列化**：能传字符串/数字/纯对象/数组，不能传函数、Vue 组件实例、DOM 节点（iframe 边界会丢失这些）
-- **不能用 slot**：iframe 边界传不了 VNode，插槽内容必须由基座的组件自己定义
-- **生产环境对接**：实际项目里把 `ElDialog` 换成 `t-dialog`，把基座的 dialogs 组件库换成业务方提供的弹窗集合即可
-
----
-
-
-
-本模板的基座是通过从生产项目**复刻运行环境**得来：
-
-1. **`src/globals/`** —— 全局变量和函数，保持与原项目一致的字段名和函数名
-2. **`src/main.js`** —— 忠实还原原项目的初始化流程：
-   - `microApp.start()`
-   - `loadGlobalVariables()` + `loadGlobalFunctions()`
-   - `provide('root', rootValue)` 注入完整的 `rootEmit/rootOn/rootSocket/setSocketRoomId/sendMessage`
-   - `window.__lego_root`、`window.router`、`window.app` 全局引用
-   - `bindReactiveToGlobal(global)` 双向同步全局变量
-3. **`src/websocket.js`** —— socket.io + 原生 WebSocket 完整逻辑（`socketIp` 为空时不启动，不报错）
-4. **`src/utils.js`** —— 工具函数集合（guid, 页面缩放, 过滤器 等）
-
----
+> 生产环境 `component` 是宿主 LEGO 组件/页面名，不是微应用本地 SFC。
 
 ## 微应用依赖最佳实践
 
